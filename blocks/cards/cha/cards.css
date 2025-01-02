@@ -1,0 +1,233 @@
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-space-2x);
+}
+
+.cards-container h4 {
+  text-align: center;
+  margin: 0;
+  padding: var(--space-space-6x) 0 var(--spacing-xsmall) 0;
+}
+
+.cards-container h5 {
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+.cards > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(50px,1fr));
+  grid-gap: var(--grid-gutter) var(--grid-gutter);
+}
+
+.cards .home-offered-categories > ul{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: 1fr;
+  grid-gap: 1rem;
+}
+
+.cards > ul > li {
+  border: 1px solid var(--color-neutral-500);
+  background-color: var(--background-color)
+}
+
+.home-offered-categories > ul > li {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  padding: var(--space-space-0x);
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-space-2x);
+  position: relative;
+}
+
+.home-offered-categories > ul > li > a {
+  position: absolute;
+  inset: 0;
+}
+
+.cards .cards-card-image {
+  line-height: 0;
+}
+
+.home-offered-categories .cards-card-image picture {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.cards > ul > li img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.home-offered-categories .cards-card-body:nth-child(3) {
+  display: flex;
+  padding: var(--space-space-0x);
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  flex: 1 0 0;
+}
+
+.home-offered-categories .cards-card-body:nth-child(3) a.button {
+  font-size: var(--font-size-3);
+  font-weight: var(--font-weight-4)
+}
+
+.home-offered-categories .cards-card-body img {
+  object-fit: contain;
+  height: 5rem;
+}
+
+.home-offered-categories.circle-image .cards-card-body img, .home-offered-categories.circle-image .cards-card-image img {
+  border-radius: 50%;
+}
+
+.home-offered-categories > ul > li .cards-card-body p{
+  font-size: var(--font-size-3);
+  font-weight: var(--font-weight-6);
+  text-align: center;
+  line-height: 1.7rem;
+  margin: 0;
+  padding: 0;
+}
+
+.home-offered-categories > ul > li .cards-card-body:nth-child(2) .button-container:first-child {
+  font-size: var(--font-size-2);
+}
+
+.home-offered-categories .cards-card-body a{
+  all: unset;
+  cursor: pointer;
+  display: none;
+}
+
+.cards.navigation > ul {
+  display: none;
+}
+
+.home-offered-categories.mobile-only > ul {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.home-offered-categories.mobile-only .cards-card-body a {
+  display: block;
+  color: var(--color-neutral-white);
+  font: var(--type-details-semibold-1-font);
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translateY(-50%);
+}
+
+/* Take care class starts */
+
+.cards.block.take-care h6:nth-of-type(1){
+  padding: var(--space-space-14) var(--space-space-3) var(--space-space-0x);
+  font-size: var(--font-size11);
+  font-weight: var(--font-weight-6);
+  text-align: center;
+  margin-bottom: unset;
+  margin-top: unset;
+}
+
+.cards.block.take-care h6:nth-of-type(2){
+  font-size: var(--font-size11);
+  font-weight: var(--font-weight-4);
+  text-align: center;
+  margin-top: unset;
+  margin-bottom: var(--space-space-12);
+}
+
+.cards.block.take-care h6:nth-of-type(3),
+html[dir='rtl'] .cards.block.take-care h6:nth-of-type(3){
+  font-size: var(--font-size9);
+  font-weight: var(--font-weight-4);
+  text-align: center;
+  margin-bottom: var(--space-space-18);
+  margin-top: var(--space-space-0x);
+  padding: var(--space-space-0x) var(--space-space-8);
+}
+
+/* Take care class ends */
+
+@media (width >= 768px) {
+  .section[data-path]:has(> .cards-wrapper .home-offered-categories.mobile-only) {
+    display: none;
+  }
+
+  .home-offered-categories > ul {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+
+  .home-offered-categories > ul > li .cards-card-body p{
+    font-size: var(--font-size-4);
+  }
+
+  .home-offered-categories > ul > li .cards-card-body:nth-child(2) .button-container:first-child {
+    font-size: var(--font-size-3);
+  }
+
+  .cards.navigation > ul {
+    display: block;
+  }
+
+  .cards.navigation > ul > li {
+    border: none;
+  }
+
+  .cards.navigation .cards-card-body {
+    text-align: start;
+  }
+
+  .cards.navigation .cards-card-body p{
+    margin-top: 0;
+    margin-block: 0 0;
+    padding:0;
+  }
+
+  .cards.navigation a.button {
+    background-color: transparent;
+    color: var(--color-neutral-black);
+    border: none;
+    margin: 0;
+    padding: 0;
+    text-transform: none;
+    height: unset;
+  }
+
+  /* Take care class starts */
+  .cards.block.take-care h6:nth-of-type(1){
+    padding: var(--space-space-14) var(--space-space-10) var(--space-space-0x);
+    font-size:var(--font-size-16);
+  }
+
+  .cards.block.take-care h6:nth-of-type(2){
+    font-size: var(--font-size-16);
+  }
+
+  .cards.block.take-care h6:nth-of-type(3),
+  html[dir='rtl'] .cards.block.take-care h4{
+    font-size: var(--font-size11);
+  }
+
+/* Take care class ends */
+
+}
+
+/* cha specific code goes here */
+
+/* Always keep .cha scope for brand specific override 
+Example:
+.cha h2 {
+  color: var(--color-token);
+}
+*/

@@ -1,0 +1,125 @@
+@import url("../tokens.css");
+@import url("./tokens.css");
+@import "../styles.css";
+
+/* foo specific style goes here */
+
+div.dropin-design {
+  --type-base-font-family: "maven pro regular", "maven pro regular fallback",
+    "helvetica neue";
+}
+
+body {
+  font: var(--type-body-1-default-font);
+  letter-spacing: 0;
+}
+
+.foo {
+  h1 {
+    line-height: var(--line-height-l);
+  }
+
+  h2 {
+    line-height: var(--line-height-l);
+  }
+
+  h3 {
+    line-height: var(--line-height-s);
+  }
+
+  h4 {
+    line-height: var(--line-height-l-2);
+  }
+
+  a:hover {
+    color: var( --color-primary-90);
+  }
+
+  a.button:any-link,
+  button {
+    font: var(--type-button-1-font);
+    color: var(--color-neutral-white);
+    background-color: var(--color-primary-100);
+    margin: var(--space-space-4x) 0;
+    height: var(--btn-container-height);
+    border-radius: var(--shape-border-width-3);
+    text-transform: uppercase;
+  }
+
+  a.button:hover,
+  button:hover {
+    background-color: var(--color-button-hover);
+  }
+
+  a.button:disabled,
+  button:disabled,
+  button:disabled:hover {
+    background-color: var(--color-button-disabled-default-fill);
+    color: var(--color-disabled-default-text);
+  }
+
+  a.button.secondary,
+  button.secondary {
+    font: var(--type-button-1-font);
+    color: var(--color-text-main);
+    background-color: var(--color-neutral-white);
+    border-color: var(--shape-border-width-1) solid var(--color-text-main);
+  }
+
+  a.button.secondary:hover,
+  button.secondary:hover {
+    color: var(--color-text-main);
+    border-bottom: var(--shape-border-width-3) solid var(--tlc-button-secondary-hover-stroke, #000);
+  }
+
+  a.button.secondary:disabled,
+  button.secondary:disabled,
+  button.secondary:disabled:hover {
+    background-color: var(--color-button-disabled-default-fill);
+  }
+
+  input, main input {
+    padding: var(--space-space-2x) var(--space-space-3x);
+  }
+
+  input::placeholder {
+    color: var(--color-disabled-default-text);
+  }
+}
+
+@font-face {
+  font-family: "maven pro regular fallback";
+  size-adjust: 102.401%;
+  src: local("Arial");
+}
+
+@font-face {
+  font-family: "maven pro semibold fallback";
+  size-adjust: 104.741%;
+  src: local("Arial");
+}
+
+@font-face {
+  font-family: "maven pro bold fallback";
+  size-adjust: 107.811%;
+  src: local("Arial");
+}
+
+@font-face {
+  font-family: "avenir next bold fallback";
+  size-adjust: 108.961%;
+  src: local("Arial");
+}
+
+@media (width >=1024px) {
+  .foo main,
+  .foo .main-wrapper  {
+    max-width: var(--grid-fluid);
+  }
+}
+
+@media (width >=900px) {
+  .section:not(.full-width)>div {
+    max-width: var(--grid-fluid);
+  }
+}

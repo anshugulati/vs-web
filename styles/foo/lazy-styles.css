@@ -1,0 +1,255 @@
+/* add global styles that can be loaded post LCP here */
+
+/* Back to top button */
+
+button.backtotop {
+  position: fixed;
+  cursor: pointer;
+  z-index: 10;
+  outline: none;
+  border-radius: 0;
+  text-align: center;
+  right: 2rem;
+  bottom: 10rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  padding: var(--space-space-0x);
+  box-sizing: inherit;
+  border: 1px solid var(--color-neutral-40);
+  background: var(--color-neutral-30);
+  margin: 0;
+}
+
+[dir='rtl'] .backtotop {
+  left: 2rem;
+  right: unset;
+}
+
+.backtotop > .icon {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button.backtotop::after{
+  content: none;
+}
+
+.backtotop > .icon > img {
+  height: 1.6rem;
+  width: 1.6rem;
+}
+
+.scroll-to-top.hide {
+  display: none;
+}
+
+.toast-notification {
+  position: fixed;
+  top: calc(var(--space-space-4x) + var(--nav-height));
+  background-color: var(--color-success-100);
+  display: flex;
+  flex-direction: row;
+  padding: var(--space-space-3x);
+  gap: var(--space-space-3x);
+  z-index: 100;
+  justify-content: space-between;
+  align-items: center;
+  margin: var(--space-space-4x) var(--space-space-4x) 0;
+  width: calc(100% - 2 * var(--space-space-4x));
+  max-width: 75rem;
+}
+
+.toast-notification .icon {
+  height: 2rem;
+  width: 2rem;
+  filter: invert(100%);
+}
+
+.toast-notification .icon-close-small {
+  height: 1.6rem;
+  width: 1.6rem;
+}
+
+.toast-notification .toast-content {
+  color: var(--color-neutral-50);
+  font-size: var(--font-size-2);
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-space-1x);
+  align-items: center;
+}
+
+.toast-notification .toast-close {
+  cursor: pointer;
+  margin-top: .5rem;
+}
+
+.toast-tick {
+  margin-top: .5rem;
+}
+
+.generic-overlay-background {
+  display: none;
+}
+
+.generic-overlay-background.show {
+  width: 100%;
+  position: fixed;
+  inset: 0;
+  z-index: 2147483001;
+  height: 100%;
+  background-color: rgb(0 0 0 / 50%);
+  display: block;
+}
+
+input:focus-visible, textarea:focus-visible {
+  outline: none;
+}
+
+@media (width >= 768px) {
+  .backtotop {
+    bottom: 8rem;
+    right: 4rem;
+  }
+
+  [dir='rtl'] .backtotop {
+    bottom: 8rem;
+    left: 4rem;
+  }
+
+  .toast-notification {
+    position: fixed;
+    right: 0;
+    width: auto;
+    min-width: 33.6rem;
+  }
+
+  [dir='rtl'] .toast-notification {
+    left: 0;
+    right: unset;
+  }
+
+  .toast-notification.toast-notification-top {
+    position: fixed;
+    top: var(--space-space-4x);
+  }
+}
+
+/* foo specific code goes here */
+
+.foo #spr-live-chat-app > div {
+  right: var(--space-space-40);
+}
+
+/* Back to top button */
+
+.foo button.backtotop {
+  position: fixed;
+  cursor: pointer;
+  z-index: 99;
+  outline: none;
+  border-radius: 0;
+  text-align: center;
+  right: 4rem;
+  bottom: 10rem;
+  width: 6.5rem;
+  height: 6.5rem;
+  padding: var(--space-space-1x);
+  box-sizing: inherit;
+  border: none;
+  background: transparent;
+  margin: 0;
+  color: var(--color-text-main);
+  letter-spacing: normal;
+  font: var(--type-details-2-font);
+  flex-direction: column;
+  text-transform: none;
+
+
+}
+
+.foo .backtotop > .icon {
+  height: 4rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--shape-border-radius-3);
+  background-color: var(--color-opacity-white-75);
+  padding: var(--space-space-8);
+}
+
+html[dir='rtl'] .foo button.backtotop,
+html[dir='rtl'] .foo #spr-live-chat-app > div {
+  right: unset;
+}
+
+.foo .toast-notification {
+  background: var(--color-success-100);
+  border-bottom: var(--space-space-4) solid var(--color-primary-a);
+  padding: var(--space-space-8) var(--space-space-12);
+  top: 5.2rem;
+}
+
+.foo .toast-notification.error-toast {
+  background: var(--color-primary-error-red);
+  border-bottom: var(--space-space-4) solid var(--color-toast-error-border);
+}
+
+.foo .toast-notification.error-toast .toast-content::before {
+  content: "";
+  position: absolute;
+  background-image: url("/icons/information-circle-white.svg");
+  width: var(--sf-width-2);
+  height: var(--sf-height-2);
+}
+
+.foo .toast-notification.error-toast .toast-content .toast-message {
+  padding-inline-start: var(--space-space-28);
+}
+
+.foo .toast-notification .toast-content {
+  color: var(--color-neutral-50);
+  font: var(--type-details-3-font);
+  gap: var(--space-space-8);
+}
+
+.foo .toast-notification .toast-close {
+  display: none;
+}
+
+@media (width >= 768px) {
+  html[dir='rtl'] .foo #spr-live-chat-app > div {
+    left: var(--space-space-40);
+  }
+
+  .foo .toast-notification {
+    position: absolute;
+    top: 14.2rem;
+    margin: var(--space-space-4x) var(--space-space-40) var(--space-space-4x);
+  }
+
+  .foo .toast-notification.scrolled-toast {
+    position: fixed;
+    top: 0;
+  }
+}
+
+@media (width <= 767px) {
+  .foo button.backtotop,
+  .foo #spr-live-chat-app > div {
+    right: var(--space-space-12);
+  }
+
+  html[dir='rtl'] .foo button.backtotop {
+    right: unset;
+    left: var(--space-space-18);
+  }
+
+  html[dir='rtl'] .foo #spr-live-chat-app > div {
+    right: unset;
+  }
+}

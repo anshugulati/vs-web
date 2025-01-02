@@ -1,0 +1,490 @@
+.aura-join {
+  display: flex;
+  flex-grow: 1;
+}
+
+.modal-content .aura-join {
+  min-height: 33.6rem;
+}
+
+.aura-join > div {
+  display: none;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.aura-join > .show {
+  display: block;
+}
+
+.aura-join div p,
+.aura-join div {
+  font-size: var(--text-s);
+  line-height: var(--line-height-xs);
+}
+
+.aura-join div p a {
+  position: relative;
+  color: var(--color-primary-aura-100);
+}
+
+.aura-join .aura-buttons a {
+  font-size: var(--text-m);
+  line-height: var(--line-height-xxs);
+}
+
+.aura-join div p a:any-link {
+  position: relative;
+  color: var(--color-primary-aura-100);
+}
+
+.aura-join div > p a:hover {
+  color: var(--color-aura-primary-10);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.aura-join div p > a::after {
+  display: inline-block;
+  content: url("/icons/aura-link-arrow.svg");
+  height: 1.6rem;
+  width: 1.6rem;
+  position: absolute;
+}
+
+.aura-join div p > a:hover::after {
+  content: url("/icons/aura-hover-arrow.svg");
+}
+
+.aura-join .aura-mobile-number {
+  position: relative;
+}
+
+.aura-join .aura-mobile-number ul {
+  padding: var(--space-space-4);
+  margin: 0 0 var(--space-space-8);
+  display: flex;
+  flex-flow: column;
+  gap: var(--space-space-8);
+  background: var(--aura-primary-100-light);
+  height: 3.2rem;
+  overflow: hidden;
+}
+
+.aura-join .aura-mobile-number ul li {
+  display: flex;
+  gap: var(--space-space-4);
+  align-items: center;
+  background: var(--aura-color-primary-gradient);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: var(--text-s);
+  justify-content: center;
+  animation: vertical-bounce-in 6s infinite forwards;
+  visibility: hidden;
+}
+
+.aura-join .aura-mobile-number ul li:nth-child(2),
+.aura-join .aura-mobile-number ul li:nth-child(3) {
+  margin-top: -3.3rem;
+}
+
+.aura-join .aura-mobile-number ul li:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.aura-join .aura-mobile-number ul li:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.aura-join .aura-mobile-number ul li:nth-child(3) {
+  animation-delay: 4s;
+}
+
+@keyframes vertical-bounce-in {
+  0% {
+    transform: translateY(5rem);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  20% {
+    transform: translateY(-0.5rem);
+  }
+
+  23% {
+    transform: translateY(0.5rem);
+  }
+
+  30% {
+    transform: translateY(0%);
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  41% {
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(5rem);
+    opacity: 0;
+    visibility: visible;
+  }
+}
+
+.aura-join .aura-mobile-number ul span {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.aura-join .aura-mobile-number div > p {
+  margin: var(--space-space-0x);
+  padding-bottom: var(--space-space-24);
+  text-align: center;
+  color: var(--color-text-dark);
+}
+
+.aura-join .aura-mobile-number .aura-buttons {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.aura-join .aura-mobile-number .aura-buttons p {
+  padding: var(--space-space-12) var(--space-space-0x) var(--space-space-0x);
+  color: var(--color-text-dark);
+}
+
+.aura-join .aura-otp .otp-info-text p a {
+  font-size: var(--text-m);
+  line-height: var(--line-height-xxs);
+}
+
+.aura-join .aura-mobile-number .aura-buttons p a:hover {
+  color: var(--color-aura-primary-10);
+  text-decoration: underline;
+}
+
+.aura-join .aura-otp .otp-info-text p a.inactive {
+  color: var(--color-text-dark);
+}
+
+.aura-join .aura-otp .otp-info-text p a.inactive:hover {
+  text-decoration: none;
+}
+
+.aura-join .aura-otp .otp-info-text p a.inactive::after {
+  content: "";
+}
+
+.aura-join .aura-otp .otp-info-text p {
+  text-align: center;
+  padding-top: var(--space-space-12);
+  margin: var(--space-space-0x);
+  color: var(--color-text-dark);
+}
+
+.aura-join .aura-otp .otp-success-message p {
+  color: var(--color-neutral-50);
+  margin: var(--space-space-0x);
+  margin-inline-start: var(--space-space-28);
+  display: block;
+}
+
+.aura-join .aura-mobile-number div:first-child > p:last-child {
+  padding-bottom: var(--space-space-16);
+  color: var(--aura-color-text-main);
+}
+
+.aura-join .aura-mobile-number div:first-child > p a:hover {
+  color: var(--color-aura-primary-10);
+  text-decoration: underline;
+}
+
+.aura-join .aura-mobile-number div > p a::after {
+  top: var(--space-space-3x-3);
+}
+
+.aura-join .aura-mobile-number .input-field-wrapper .input-wrapper,
+.aura-join .aura-user-details .input-field-wrapper .mobile-disabled {
+  display: flex;
+  align-items: center;
+  gap: var(--space-space-4);
+  border-radius: var(--space-space-4);
+  border: var(--shape-border-width-01) solid var(--color-aura-primary-10);
+}
+
+.aura-join .aura-mobile-number .input-field-wrapper .input-wrapper label,
+.aura-join .aura-user-details .input-field-wrapper .mobile-disabled label {
+  all: unset;
+  margin-inline-start: var(--space-space-8);
+  font-size: var(--text-m);
+  color: var(--color-text-dark);
+}
+
+.aura-join .aura-mobile-number .input-field-wrapper .input-wrapper input,
+.aura-join .aura-user-details .input-field-wrapper .mobile-disabled input {
+  border: var(--space-space-0x);
+  padding: var(--space-space-14) var(--space-space-4) var(--space-space-14)
+    var(--space-space-0x);
+}
+
+.aura-join
+  .aura-mobile-number
+  .input-field-wrapper.invalid
+  .input-wrapper
+  input {
+  margin: var(--space-space-0x);
+}
+
+.aura-join .aura-otp {
+  position: relative;
+}
+
+.aura-join .user-details-form > div {
+  display: flex;
+  flex-flow: column;
+  gap: var(--space-space-16);
+}
+
+.aura-join .aura-otp > div:first-child {
+  text-align: center;
+  padding-bottom: var(--space-space-16);
+  color: var(--aura-color-text-main);
+}
+
+.aura-join .aura-otp .otp-success-message {
+  display: flex;
+  background-color: var(--color-success-100);
+  padding: var(--space-space-8);
+  border-radius: var(--space-space-8);
+  align-items: center;
+  bottom: 7.55rem;
+  margin-bottom: var(--space-space-12);
+  position: absolute;
+  width: 100%;
+}
+
+.aura-join .aura-otp .otp-success-message.hide-message {
+  display: none;
+}
+
+.aura-join .aura-otp .otp-success-message::before {
+  content: "";
+  background-image: url("/icons/otp-success-tick.svg");
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-inline-end: var(--space-space-4);
+  flex-basis: 100%;
+}
+
+.aura-join .aura-otp .otp-info-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.aura-join .aura-otp .otp-info-text .disabled {
+  display: block;
+}
+
+.aura-join .aura-otp .otp-info-text .disabled::after {
+  content: "";
+  background-image: url("/icons/resend-otp-clock.svg");
+  background-size: cover;
+  width: 1.6rem;
+  height: 1.6rem;
+  position: absolute;
+  margin: var(--spacing-xxxsmall) var(--space-space-4) var(--spacing-xxxsmall);
+  bottom: 0;
+}
+
+.aura-join .aura-otp .aura-otp-container .aura-buttons button {
+  position: absolute;
+  bottom: 2.75rem;
+}
+
+.aura-join .aura-otp .otp-info-text a::after {
+  top: var(--space-space-0x-1);
+}
+
+.aura-join .aura-user-details {
+  position: relative;
+}
+
+.aura-join .aura-user-details .user-details-form .aura-terms-condition {
+  padding: var(--space-space-16) var(--space-space-0x) var(--space-space-0x);
+}
+
+.aura-join .aura-user-details .aura-buttons {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.aura-join .aura-user-details .user-details-form .aura-terms-condition > div {
+  position: relative;
+  color: var(--color-text-dark);
+  text-align: center;
+}
+
+.aura-join
+  .aura-user-details
+  .user-details-form
+  .aura-terms-condition
+  a:any-link {
+  color: var(--color-primary-aura-100);
+}
+
+.aura-join .aura-user-details .user-details-form .aura-terms-condition a:hover {
+  color: var(--color-aura-primary-10);
+  text-decoration: underline;
+}
+
+.aura-join
+  .aura-user-details
+  .user-details-form
+  .aura-terms-condition
+  a::after {
+  display: inline-block;
+  content: url("/icons/aura-link-arrow.svg");
+  height: 1.6rem;
+  width: 1.6rem;
+  position: absolute;
+  bottom: var(--spacing-xxxsmall);
+}
+
+.aura-join
+  .aura-user-details
+  .user-details-form
+  .aura-terms-condition
+  a:hover::after {
+  content: url("/icons/aura-hover-arrow.svg");
+}
+
+.aura-join .aura-user-details .user-details-form .mobile-disabled {
+  border-radius: var(--space-space-4);
+  border: var(--shape-border-width-01) solid var(--color-brand-200);
+}
+
+.aura-modal
+  .aura-join
+  .aura-user-details
+  .user-details-form
+  .mobile-disabled
+  label {
+  color: var(--color-text-light);
+}
+
+.aura-modal
+  .aura-join
+  .aura-user-details
+  .user-details-form
+  .mobile-disabled
+  input {
+  color: var(--color-text-light);
+  border: none;
+}
+
+html[dir="rtl"] .modal .aura-modal .aura-join .aura-mobile-number p a::after,
+html[dir="rtl"] .modal .aura-modal .aura-join .aura-otp p a::after,
+html[dir="rtl"]
+  .modal
+  .aura-modal
+  .aura-join
+  .aura-user-details
+  .aura-terms-condition
+  a::after {
+  transform: rotate(180deg);
+}
+
+html[dir="rtl"]
+  .aura-join
+  .aura-mobile-number
+  .input-field-wrapper
+  .input-wrapper,
+html[dir="rtl"]
+  .aura-join
+  .aura-user-details
+  .input-field-wrapper
+  .mobile-disabled {
+  flex-flow: row-reverse;
+  gap: var(--space-space-0x);
+}
+
+html[dir="rtl"]
+  .aura-join
+  .aura-mobile-number
+  .input-field-wrapper
+  .input-wrapper
+  label,
+html[dir="rtl"]
+  .aura-join
+  .aura-user-details
+  .input-field-wrapper
+  .mobile-disabled
+  label {
+  margin-inline: var(--space-space-8);
+}
+
+html[dir="rtl"]
+  .aura-join
+  .aura-mobile-number
+  .input-field-wrapper
+  .input-wrapper
+  input,
+html[dir="rtl"]
+  .aura-join
+  .aura-user-details
+  .input-field-wrapper
+  .mobile-disabled
+  input {
+  direction: rtl;
+  padding-inline: var(--space-space-8) var(--space-space-0x);
+}
+
+@media (width>=768px) {
+  .aura-join .aura-otp .aura-otp-container .aura-buttons button {
+    position: absolute;
+    bottom: var(--space-space-30);
+  }
+
+  .aura-join .aura-otp .otp-success-message {
+    bottom: var(--space-space-78);
+  }
+
+  .aura-join .aura-otp .otp-info-text .disabled::after {
+    vertical-align: middle;
+  }
+
+  .aura-join
+    .aura-user-details
+    .user-details-form
+    .aura-terms-condition
+    a::after {
+    bottom: 0.35rem;
+  }
+}
+
+.aura-join .mob-number {
+  direction: ltr;
+  display: inline-block;
+}
+
+/* ame specific code goes here */
+
+/* Always keep .ame scope for brand specific override 
+Example:
+.ame h2 {
+  color: var(--color-token);
+}
+*/

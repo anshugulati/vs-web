@@ -1,0 +1,350 @@
+@import '../carousel.css';
+
+/* vif specific code goes here */
+
+/* Always keep .vif scope for brand specific override 
+Example:
+.vif h2 {
+  color: var(--color-token);
+}
+*/
+
+.vif .section.carousel-container {
+  background: #F5F5F5;
+  height: var(--sf-height-48);
+}
+
+.vif .section.promo-bar.carousel-container {
+  background-color: var(--color-primary-c);
+}
+
+.vif .hp-usp.carousel-wrapper.inline .carousel-nav-button {
+  top: 30%;
+}
+
+.vif .carousel.inline {
+  height: var(--sf-height-48);
+  padding: 0;
+  gap: var(--space-space-12);
+}
+
+.vif .carousel-wrapper.inline .carousel-nav-button.carousel-nav-right {
+  right: -0.8rem;
+}
+
+.vif .carousel-wrapper.inline .carousel-nav-button .icon img {
+  height: 4.2rem;
+  width: var(--sf-width-2);
+  position: relative;
+  top: -10px;
+  display: block;
+}
+
+.vif .carousel-wrapper.inline .carousel-nav-button.carousel-nav-left {
+  left: -0.8rem;
+}
+
+.vif .carousel-item-image {
+  text-wrap: nowrap;
+}
+
+.vif .carousel .carousel-item a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-space-4);
+  color: var(--color-primary-b);
+  font: var(--type-details-3-font);
+  line-height: var(--line-height-l);
+}
+
+.vif .icon-egift,
+.vif .icon-devices,
+.vif .icon-cash {
+  height: var(--sf-height-2-4);
+  width: var(--sf-width-2-4);
+  display: none;
+}
+
+.vif .section.carousel-container .carousel-wrapper.promo-bar {
+  height: inherit;
+}
+
+.vif header button.carousel-nav-left, .vif header button.carousel-nav-right {
+  display: none;
+}
+ 
+.vif main button.carousel-nav-left, .vif main button.carousel-nav-right {
+  display: block;
+}
+
+.vif .section.carousel-container .carousel-wrapper.promo-bar .carousel.promo-bar {
+  height: inherit;
+}
+
+.vif .section.carousel-container .carousel-wrapper.promo-bar .carousel.promo-bar .carousel-item {
+  padding: unset;
+}
+
+.vif .section.carousel-container .carousel-wrapper.promo-bar .carousel.promo-bar .carousel-item .carousel-item-columns-container .carousel-item-column .carousel-item-text {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-space-4);
+  font-size: var(--font-size-1);
+  line-height: var(--pb-line-height-130);
+  color: var(--color-primary-b);
+  text-transform: uppercase;
+}
+
+.vif main .section.carousel-container .carousel .carousel-item a { 
+  display: inline-block;
+  max-width: 100%;
+  word-wrap: break-word;
+  text-align: center;
+  white-space: normal;
+}
+
+.vif .section.carousel-container .carousel-wrapper.promo-bar .carousel.promo-bar .carousel-item .carousel-item-columns-container .carousel-item-column .carousel-item-text > a {
+  color: var(--color-text-text-dark);
+  gap: var(--space-space-4);
+  font-size: var(--font-size-1);
+  line-height: var(--pb-line-height-130);
+  border-bottom: 1px solid;
+}
+
+.vif .side-drawer-wrapper {
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+  height: calc(100% - var(--space-space-48));
+  max-height: fit-content;
+  background-color: var(--color-neutral-50);
+  overflow-x: hidden;
+  transition: 0.5s;
+  bottom: 0;
+  align-self: flex-end;
+}
+
+.vif .side-drawer-wrapper::-webkit-scrollbar {
+  width: var(--pb-width-16);
+}
+
+.vif .side-drawer-wrapper::-webkit-scrollbar-thumb {
+  background: var(--color-neutral-40);
+  border-radius: var(--space-space-10);
+  background-clip: content-box;
+  border: 5px solid transparent;
+  min-height: var(--grid-height-16);
+}
+
+.vif .side-drawer-wrapper .default-content-wrapper > p {
+  font-size: var(--font-size20);
+  font-weight: var(--font-weight-7);
+  line-height: var(--line-height-2-6);
+  flex: 1 0;
+  text-align: center;
+  margin: 0;
+}
+
+.vif .side-drawer-wrapper .side-drawer-content .side-drawer .fragment-wrapper .cards-container .cards-wrapper .cards > ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.vif .side-drawer-wrapper .side-drawer-content .side-drawer .fragment-wrapper .cards-container .cards-wrapper .cards > ul > li {
+  border-radius: var(--shape-border-radius-5);
+  overflow: hidden;
+}
+
+.vif .side-drawer-wrapper .side-drawer-content .side-drawer .fragment-wrapper .cards-container .cards-wrapper .cards >ul > li > div.cards-card-body {
+  padding: var(--space-space-4x);
+}
+
+.vif .side-drawer-wrapper .side-drawer-content .side-drawer .fragment-wrapper .cards-container .cards-wrapper .cards > ul > li > div.cards-card-body > p {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: unset;
+}
+
+.vif .side-drawer-wrapper .side-drawer-content .side-drawer .fragment-wrapper .cards-container .cards-wrapper .cards > ul > li > div.cards-card-body > p:nth-child(1) {
+  font-size: var(--font-size12);
+  font-weight: var(--font-weight-4);
+  line-height: var(--line-height-xl-2);
+  margin-top: var(--space-space-2);
+  margin-bottom: var(--space-space-2);
+  color: var(--color-text-text-dark);
+}
+
+.vif .side-drawer-wrapper .side-drawer-content .side-drawer .fragment-wrapper .cards-container .cards-wrapper .cards > ul > li > div.cards-card-body > p:nth-child(2) {
+  font-size: var(--font-size16);
+  font-weight: var(--font-weight-5);
+  line-height: var(--pb-line-height-224);
+  color: var(--color-primary-b);
+}
+
+.vif .side-drawer-wrapper .side-drawer-content .side-drawer .fragment-wrapper .cards-container .cards-wrapper .cards > ul > li > div.cards-card-body > p:nth-child(3) {
+  font-size: var(--font-size12);
+  font-weight: var(--font-weight-4);
+  line-height: var(--line-height-xl-2);
+  margin-top: var(--space-space-8);
+  margin-bottom: var(--space-space-8);
+  color: var(--color-text-text-dark);
+}
+
+.vif .side-drawer-wrapper .side-drawer-content .side-drawer .fragment-wrapper .cards-container .cards-wrapper .cards > ul > li > div.cards-card-image > picture > img {
+  min-width: var(--pb-width-312);
+  max-height: var(--pb-height-180);
+}
+
+.vif .side-drawer-wrapper .side-drawer-content {
+  padding: var(--space-space-48) var(--space-space-2x) var(--space-space-32) var(--space-space-24);
+  position: relative;
+  top: var(--space-space-16);
+}
+
+html[dir='rtl'] .vif .side-drawer-wrapper .side-drawer-content {
+  padding: var(--space-space-48) var(--space-space-24) var(--space-space-32) var(--space-space-2x);
+}
+
+.vif .side-drawer-wrapper .default-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  margin-bottom: var(--space-space-20);
+  border-bottom: 1px solid var(--color-tertiary-c);
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background-color: var(--color-neutral-50);
+  box-shadow: 0 1px 6px 0 var(--color-box-shadow);
+}
+
+/* side drawer button */
+.vif .side-drawer-wrapper .side-drawer-content .side-drawer .fragment-wrapper .cards-container .cards-wrapper .cards > ul > li > div.cards-card-body .button-container .button {
+  background-color: var(--color-neutral-50);
+  color: var(--color-brand-700);
+  border: 1px solid var(--color-brand-700);
+  border-radius: var(--shape-border-radius-5);
+  width: 100%;
+  font-weight: var(--font-weight-5);
+}
+
+.vif .side-drawer-wrapper .default-content-wrapper .close-button {
+  background-color: unset;
+  padding-right: 0;
+  margin: 0;
+  padding-left: 0;
+  border: none;
+}
+
+.vif .close-button>span {
+  background-color: var(--color-neutral-50);
+  background-image: url('/icons/closebtn-regular.svg');
+  background-repeat: no-repeat;
+}
+
+.vif .overlay {
+  position: fixed;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--color-primary-b);
+  z-index: 1160;
+  opacity: .5;
+}
+
+@media screen and (width >= 768px) {
+  .vif .side-drawer-wrapper {
+    height: 100%;
+    min-height: 100%;
+    min-width: var(--pb-width-288);
+    max-width: var(--grid-col-2);
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    right: 0;
+    background-color: var(--color-neutral-50);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding: var(--spacing-xxbig) var(--space-space-2x) var(--space-space-32) var(--space-space-6x);
+  }
+
+  html[dir='rtl'] .vif .side-drawer-wrapper {
+    right: unset;
+    left: 0;
+    padding: var(--spacing-xxbig) var(--space-space-6x) var(--space-space-32) var(--space-space-2x);
+  }
+
+  .vif .carousel.inline.fully-visible .carousel-item.carousel-item-1 {
+    max-width: 50.1rem;
+    padding: 0 var(--space-space-16);
+  }
+
+  .vif .carousel.inline.fully-visible .carousel-item.carousel-item-2,
+  .vif .carousel.inline.fully-visible .carousel-item.carousel-item-3 {
+    max-width: 51.7rem;
+    padding: 0 var(--space-space-8);
+  }
+
+  .vif .hp-usp .carousel-nav-button {
+    display: none;
+  }
+
+  .vif .side-drawer-wrapper.example {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .vif .side-drawer-wrapper .side-drawer-content .side-drawer .fragment-wrapper .cards-container .cards-wrapper .cards > ul > li > div.cards-card-image > picture > img {
+    min-width: var(--grid-col-2);
+    min-height: 180px;
+  }
+
+  .vif .side-drawer-wrapper .default-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    border-bottom: none;
+    margin-bottom: var(--space-space-10);
+    box-shadow: none;
+    position: static;
+  }
+
+  .vif .side-drawer-wrapper .default-content-wrapper > p {
+    font-size: var(--font-size16);
+    font-weight: var(--font-weight-4);
+    display: flex;
+    justify-content: left;
+  }
+
+  .vif .close-button > span {
+    position: relative;
+    left: 1rem;
+  }
+
+  .vif .side-drawer-wrapper .side-drawer-content {
+    padding: 0;
+    top: 0;
+  }
+
+  html[dir='rtl'] .vif .side-drawer-wrapper .default-content-wrapper > p {
+    justify-content: right;
+  }
+
+  html[dir='rtl'] .vif .close-button > span {
+    position: unset;
+  }
+
+  html[dir='rtl'] .vif .side-drawer-wrapper .side-drawer-content {
+    padding: 0;
+  }
+
+  .vif .close-button {
+    padding: var(--spacing-xxsmall-2) 0;
+  }
+}

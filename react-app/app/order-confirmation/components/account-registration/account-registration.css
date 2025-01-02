@@ -1,0 +1,128 @@
+.order-confirmation__account-registration__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-space-16);
+    background-color: var(--color-neutral-white);
+    padding: var(--space-space-16);
+    border: 1px solid var(--color-neutral-480);
+}
+
+.order-confirmation__account-registration__wrapper .account-registration__header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-space-12);
+}
+
+.order-confirmation__account-registration__wrapper .account-registration__title {
+    font: var(--type-details-semibold-4-font);
+}
+
+.order-confirmation__account-registration__wrapper .account-registration__offer {
+    display: flex;
+    align-items: center;
+    gap: var(--space-space-8);
+}
+
+.order-confirmation__account-registration__wrapper .account-registration__offer-text {
+    font: var(--type-details-4-font);
+}
+
+.order-confirmation__account-registration__wrapper .account-registration__offer .icon {
+    height: var(--space-space-24);
+    width: var(--space-space-24);
+}
+
+.order-confirmation__account-registration__wrapper .account-registration__confirmation__wrapper {
+    display: flex;
+    gap: var(--space-space-8);
+    align-items: center;
+    padding: var(--space-space-8) var(--space-space-12);
+    border: 1px solid var(--color-neutral-480);
+}
+
+.order-confirmation__account-registration__wrapper .account-registration__confirmation__wrapper {
+    font: var(--type-details-3-font);
+}
+
+.order-confirmation__account-registration__wrapper #account-registration-confirmation {
+    margin: 0;
+    height: var(--space-space-24);
+    width: var(--space-space-24);
+    cursor: pointer;
+}
+
+.order-confirmation__account-registration__wrapper .account-registration__confirmation-text {
+    cursor: pointer;
+}
+
+.order-confirmation__account-registration__wrapper .account-registration__password-validation {
+    display: flex;
+    align-items: center;
+    gap: var(--space-space-4);
+}
+
+.order-confirmation__account-registration__wrapper .account-registration__password-validation {
+    color: var(--color-brand-250);
+}
+
+.order-confirmation__account-registration__wrapper .account-registration__password-validation.valid {
+    color: var(--color-text-black);
+}
+
+.order-confirmation__account-registration__wrapper .account-registration__password-validation.invalid .icon-valid,
+.order-confirmation__account-registration__wrapper .account-registration__password-validation.valid .icon-default {
+    display: none;
+}
+
+.order-confirmation__account-registration__wrapper .account-registration__password-validation.invalid .icon-default,
+.order-confirmation__account-registration__wrapper .account-registration__password-validation.valid .icon-valid {
+    display: block;
+}
+
+.order-confirmation__account-registration__wrapper .account-registration__password-validations {
+    font: var(--type-details-3-font);
+}
+
+.order-confirmation__account-registration__wrapper .account-registration__password-validation-icon .icon {
+    height: var(--space-space-16);
+    width: var(--space-space-16);
+}
+
+.order-confirmation__account-registration__wrapper .account-registration__body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-space-8);
+}
+
+.order-confirmation__account-registration__wrapper .account-registration__actions {
+    padding: var(--space-space-12) 0;
+}
+
+.order-confirmation__account-registration__wrapper .account-registration__actions button {
+    margin: 0;
+    width: 100%;
+}
+
+.order-confirmation__account-registration__wrapper .account-registration__offers__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-space-8);
+}
+
+.order-confirmation__account-registration__wrapper .account-registration__success-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font: var(--type-details-semibold-4-font);
+    color: var(--color-success-100);
+}
+
+.order-confirmation__account-registration__wrapper .account-registration__success-message {
+    font: var(--type-details-semibold-4-font);
+    text-align: center;
+}
+
+.order-confirmation__account-registration__wrapper input {
+    max-width: 100%;
+}

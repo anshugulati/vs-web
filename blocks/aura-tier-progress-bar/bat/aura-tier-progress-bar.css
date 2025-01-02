@@ -1,0 +1,75 @@
+.section.aura-tier-progress-bar-container:has(.tier-3.block.aura-tier-progress-bar) {
+  padding: 0;
+}
+
+.aura-tier-progress-bar {
+  margin: var(--space-space-12) 0;
+  padding: var(--space-space-16) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-space-8);
+}
+
+.aura-tier-progress-bar.tier-3 {
+  display: none;
+}
+
+.aura-tier-progress-bar p {
+  font-family: var(--type-aura-font-family);
+  font-size: var(--text-s);
+  line-height: var(--line-height-xs);
+  margin: 0;
+  color: var(--aura-color-text-main);
+  white-space: nowrap;
+}
+
+.aura-tier-progress-bar .aura-progress-title div {
+  font-weight: var(--font-weight-7);
+  color: var(--color-aura-primary-100);
+  font-size: var(--text-s);
+  line-height: var(--aura-line-height-130);
+}
+
+.aura-tier-progress-bar .aura-progress-bar {
+  display: flex;
+  gap: var(--space-space-12);
+  width: 100%;
+}
+
+.aura-tier-progress-bar .aura-progress-bar .aura-progress {
+  height: var(--space-space-6);
+  border-radius: var(--shape-border-radius-2);
+  background-color: var(--color-neutral-30);
+  flex-grow: 1;
+  overflow: hidden;
+  width: 100%;
+  align-self: center;
+}
+
+.aura-tier-progress-bar .aura-progress-bar .aura-progress .fill {
+  height: var(--space-space-6);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  animation-fill-mode: forwards;
+  width: 0%;
+}
+
+.aura-tier-progress-bar .aura-progress-bar .aura-progress .fill-tier-tier1 {
+  background-image: var(--aura-color-tier-hello);
+}
+
+.aura-tier-progress-bar .aura-progress-bar .aura-progress .fill-tier-tier2 {
+  background-image: var(--aura-color-tier-star);
+}
+
+.aura-tier-progress-bar .aura-progress-text {
+  display: flex;
+  gap: var(--space-space-4);
+  flex-wrap: wrap;
+}
+
+.aura-tier-progress-bar .aura-progress-text .status-title {
+  color: var(--color-text-dark);
+}

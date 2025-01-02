@@ -1,0 +1,35 @@
+@import '../sitemap.css';
+
+/*  new specific code goes here */
+
+/* Always keep . new scope for brand specific override 
+Example:
+. new h2 {
+  color: var(--color-token);
+}
+*/
+
+.new .section {
+  &.sitemap-container {
+    padding: var(--space-space-0x);
+
+    h3 {
+      font: var(--type-details-semibold-8-font);
+      color: var(--color-secondary-a);
+      margin: var(--space-space-32) var(--space-space-0x) var(--space-space-48);
+    }
+
+    .sitemap-level-1>li>a {
+      font: var(--type-details-semibold-6-font);
+    }
+
+    .sitemap-level-1>li>ul>li a {
+      font: var(--type-md-regular-text);
+    }
+
+    .sitemap-level-1>li>ul>li>a {
+      font: var(--type-md-semibold-text);
+    }
+  }
+}
+

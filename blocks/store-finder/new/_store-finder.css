@@ -1,0 +1,10 @@
+@import '../store-finder.css';
+
+/*  new specific code goes here */
+
+/* Always keep . new scope for brand specific override 
+Example:
+. new h2 {
+  color: var(--color-token);
+}
+*/

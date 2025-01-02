@@ -1,0 +1,14 @@
+@import '../progress-bar.css';
+
+.bat .progress__bar-item:not(.active) .progress__bar-item-number-wrapper .progress__bar-item-number-div {
+    background-color: var(--color-neutral-white);
+}
+
+.bat .progress__bar-container {
+    background-color: var(--color-neutral-white);
+}
+
+.bat .progress__bar-item.active .progress__bar-item-number-div div {
+    font-family: var(--type-base-font-family-semibold);
+    font-weight: var(--font-weight-6);
+}

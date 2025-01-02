@@ -1,0 +1,37 @@
+.abc {
+  background-color: var(--color-neutral-500);
+  padding: var(--space-space-2x) var(--space-space-6x);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.abc .abc-content {
+  display: flex;
+  gap: var(--space-space-6x);
+}
+
+.abc .abc-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-space-2x);
+  color: var(--color-brand-700);
+  font: var(--type-body-2-strong-font);
+}
+
+.abc .abc-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+@media (max-width: 767px) {
+  .abc {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .abc .abc-content {
+    flex-direction: column;
+    gap: var(--space-space-4x);
+  }
+}

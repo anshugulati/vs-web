@@ -1,0 +1,243 @@
+/* vif specific code goes here */
+
+/* Always keep .vif scope for brand specific override 
+Example:
+.vif h2 {
+  color: var(--color-token);
+}
+*/
+
+/* Promotion bar */
+.vif .section.promo-bar-container {
+  width: 100%;
+  background-color: var(--color-primary-c);
+  min-height: var(--sf-height-48);
+  align-items: center;
+  display: grid;
+}
+
+.vif .header-promo-bar .promo-bar-wrapper .promo-bar > div > div {
+  display: flex;
+  justify-content: center;
+  padding-top: var(--space-space-3x);
+  padding-bottom: var(--space-space-3x);
+  font-size: var(--font-size-2);
+  gap: var(--space-space-4);
+  line-height: var(--line-height-xs);
+}
+
+.vif .header-promo-bar .promo-bar-wrapper .promo-bar > div > div > a {
+  border-bottom: 1px solid;
+}
+
+.vif .side-drawer-wrapper {
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+  height: calc(100% - var(--space-space-48));
+  max-height: fit-content;
+  background-color: var(--color-neutral-50);
+  overflow-x: hidden;
+  transition: 0.5s;
+  bottom: 0;
+  align-self: flex-end;
+}
+
+.vif .side-drawer-wrapper::-webkit-scrollbar {
+  width: var(--pb-width-16);
+}
+
+.vif .side-drawer-wrapper::-webkit-scrollbar-thumb {
+  background: var(--color-neutral-40);
+  border-radius: var(--space-space-10);
+  background-clip: content-box;
+  border: 5px solid transparent;
+  min-height: var(--grid-height-16);
+}
+
+.vif .side-drawer-wrapper .default-content-wrapper > p {
+  font-size: var(--font-size20);
+  font-weight: var(--font-weight-7);
+  line-height: var(--line-height-2-6);
+  flex: 1 0;
+  text-align: center;
+  margin: 0;
+}
+
+.vif .side-drawer-wrapper .side-drawer-content .side-drawer .fragment-wrapper .cards-container .cards-wrapper .cards > ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.vif .side-drawer-wrapper .side-drawer-content .side-drawer .fragment-wrapper .cards-container .cards-wrapper .cards > ul > li {
+  border-radius: var(--shape-border-radius-5);
+  overflow: hidden;
+}
+
+.vif .side-drawer-wrapper .side-drawer-content .side-drawer .fragment-wrapper .cards-container .cards-wrapper .cards >ul > li > div.cards-card-body {
+  padding: var(--space-space-4x);
+}
+
+.vif .side-drawer-wrapper .side-drawer-content .side-drawer .fragment-wrapper .cards-container .cards-wrapper .cards > ul > li > div.cards-card-body > p {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: unset;
+}
+
+.vif .side-drawer-wrapper .side-drawer-content .side-drawer .fragment-wrapper .cards-container .cards-wrapper .cards > ul > li > div.cards-card-body > p:nth-child(1) {
+  font-size: var(--font-size12);
+  font-weight: var(--font-weight-4);
+  line-height: var(--line-height-xl-2);
+  margin-top: var(--space-space-2);
+  margin-bottom: var(--space-space-2);
+  color: var(--color-text-text-dark);
+}
+
+.vif .side-drawer-wrapper .side-drawer-content .side-drawer .fragment-wrapper .cards-container .cards-wrapper .cards > ul > li > div.cards-card-body > p:nth-child(2) {
+  font-size: var(--font-size16);
+  font-weight: var(--font-weight-5);
+  line-height: var(--pb-line-height-224);
+  color: var(--color-primary-b);
+}
+
+.vif .side-drawer-wrapper .side-drawer-content .side-drawer .fragment-wrapper .cards-container .cards-wrapper .cards > ul > li > div.cards-card-body > p:nth-child(3) {
+  font-size: var(--font-size12);
+  font-weight: var(--font-weight-4);
+  line-height: var(--line-height-xl-2);
+  margin-top: var(--space-space-8);
+  margin-bottom: var(--space-space-8);
+  color: var(--color-text-text-dark);
+}
+
+.vif .side-drawer-wrapper .side-drawer-content .side-drawer .fragment-wrapper .cards-container .cards-wrapper .cards > ul > li > div.cards-card-image > picture > img {
+  min-width: var(--pb-width-312);
+  max-height: var(--pb-height-180);
+}
+
+.vif .side-drawer-wrapper .side-drawer-content {
+  padding: var(--space-space-48) var(--space-space-24) var(--space-space-32);
+  position: relative;
+  top: var(--space-space-16);
+}
+
+.vif .side-drawer-wrapper .default-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  margin-bottom: var(--space-space-20);
+  border-bottom: 1px solid var(--color-tertiary-c);
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background-color: var(--color-neutral-50);
+  box-shadow: 0 1px 6px 0 var(--color-box-shadow);
+}
+
+/* side drawer button */
+.vif .side-drawer-wrapper .side-drawer-content .side-drawer .fragment-wrapper .cards-container .cards-wrapper .cards > ul > li > div.cards-card-body .button-container .button {
+  background-color: var(--color-neutral-50);
+  color: var(--color-brand-700);
+  border: 1px solid var(--color-brand-700);
+  border-radius: var(--shape-border-radius-5);
+  width: 100%;
+  font-weight: var(--font-weight-5);
+}
+
+.vif .side-drawer-wrapper .default-content-wrapper .close-button {
+  background-color: unset;
+  padding-right: 0;
+  margin: 0;
+  padding-left: 0;
+  border: none;
+}
+
+.vif .close-button>span {
+  background-color: var(--color-neutral-50);
+  background-image: url('/icons/closebtn-regular.svg');
+  background-repeat: no-repeat;
+}
+
+.vif .overlay {
+  position: fixed;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--color-primary-b);
+  z-index: 1160;
+  opacity: .5;
+}
+
+html[dir='rtl'] .vif .side-drawer-wrapper {
+  height: 100%;
+  min-width: var(--pb-width-288);
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  background-color: var(--color-neutral-50);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding: var(--space-space-20) var(--space-space-30);
+}
+
+@media screen and (width >=768px) {
+  .vif .side-drawer-wrapper {
+    height: 100%;
+    min-height: 100%;
+    min-width: var(--pb-width-288);
+    max-width: var(--grid-col-2);
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    right: 0;
+    background-color: var(--color-neutral-50);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding: var(--spacing-xxbig) var(--space-space-6x) var(--space-space-32);
+  }
+
+  .vif .side-drawer-wrapper.example {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .vif .side-drawer-wrapper .side-drawer-content .side-drawer .fragment-wrapper .cards-container .cards-wrapper .cards > ul > li > div.cards-card-image > picture > img {
+    min-width: var(--grid-col-2);
+    min-height: 180px;
+  }
+
+  .vif .side-drawer-wrapper .default-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    border-bottom: none;
+    margin-bottom: var(--space-space-10);
+    box-shadow: none;
+    position: static;
+  }
+
+  .vif .side-drawer-wrapper .default-content-wrapper > p {
+    font-size: var(--font-size16);
+    font-weight: var(--font-weight-4);
+    display: flex;
+    justify-content: left;
+  }
+
+  .vif .side-drawer-wrapper .side-drawer-content {
+    padding: 0;
+    top: 0;
+  }
+
+  .vif .close-button > span {
+    position: relative;
+    left: 1rem;
+  }
+
+  .vif .close-button {
+    padding: var(--spacing-xxsmall-2) 0;
+  }
+}

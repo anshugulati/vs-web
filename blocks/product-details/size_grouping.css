@@ -1,0 +1,43 @@
+.size-eu,
+.size-us,
+.size-uk {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(9.2rem, 1fr));
+  gap: var(--spacing-xsmall-2);
+
+  .dropin-text-swatch__container label {
+    border: var(--shape-border-width-1) solid var(--color-neutral-30);
+    min-height: 4rem;
+
+    &.selected {
+      border: var(--shape-border-width-1) solid var(--color-neutral-black);
+    }
+  }
+}
+
+.hide,
+.group-wrapper {
+  display: none;
+}
+
+.pdp-swatches__options {
+  margin: 0 var(--space-space-3x);
+}
+
+.group-anchor-wrapper {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, minmax(16.2rem, 1fr));
+  border-bottom: var(--shape-border-width-1) solid var(--color-neutral-30);
+}
+
+.size-toggle {
+  text-align: center;
+  padding: var(--space-space-2x-1);
+  cursor: pointer;
+  font: var(--type-details-4-font);
+}
+
+.size-toggle.active {
+  border-bottom: var(--shape-border-width-1) solid var(--color-neutral-black);
+}

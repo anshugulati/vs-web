@@ -1,0 +1,61 @@
+@import '../accordion.css';
+
+/* foo specific code goes here */
+
+/* Always keep .foo scope for brand specific override 
+Example:
+.foo h2 {
+  color: var(--color-token);
+}
+*/
+.foo.static-page .accordion details .accordion-item-body {
+  padding: 0 2.5rem;
+  font-size: var(--font-size-4);
+}
+
+.foo.static-page .accordion details summary {
+  padding: 0 2.5rem;
+}
+
+.foo.static-page .accordion details summary::after {
+  right: 0.625rem;
+  bottom: 0.5rem;
+  top: 50%;
+  background-image: url("/icons/arrow-right.svg");
+  width: 3.5rem;
+  height: 3.5rem;
+  background-size: cover;
+}
+
+.foo.static-page .accordion details[open] summary::after{
+  transform: rotate(90deg);
+  top: 0;
+}
+
+html[dir="rtl"] .foo.static-page .accordion details summary::after {
+  right : unset;
+}
+
+.foo.static-page .accordion {
+  padding: var(--space-space-24) var(--grid-margin);
+  font-size: var(--font-size-5);
+}
+
+.foo.static-page .accordion details{
+  border: 1px solid var(--color-text-light);
+}
+
+.foo.static-page .accordion details[open] .accordion-item-body ul li ul {
+  list-style-type: disc;
+}
+
+@media (width >= 768px) {
+  .foo.static-page .accordion details summary {
+    padding: 0 1.5rem;
+  }
+
+  .foo.static-page .accordion details .accordion-item-body {
+    padding: 0 1.5rem;
+    font-size: var(--font-size-5);
+  }
+}

@@ -1,0 +1,81 @@
+@import url('../../styles/forms.css');
+
+.user main .section.contact-us-container {
+  margin: auto;
+  padding-top: 0;
+}
+
+.contact-us .contactus-container form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-space-16);
+}
+
+.contact-us .contactus-container form > .communication-channel label{
+  padding: var(--space-space-20) 0 var(--space-space-20) 0;
+}
+
+.contact-us .contactus-container form > .communication-channel .radio-button-wrapper {
+  display: flex;
+  padding-bottom: var(--space-space-12);
+  gap: var(--space-space-32);
+}
+
+.contact-us .contactus-container form > .communication-channel .radio-button-wrapper > div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: var(--space-space-8);
+}
+
+.contact-us .contactus-container form > .communication-channel .radio-button-wrapper > div > .communication-option {
+  height: var(--grid-3-gutters);
+  width: var(--grid-3-gutters);
+}
+
+.contact-us .contactus-container form .input-phone-prefix label{
+  transform: translateY(75%);
+  top: 0;
+}
+
+.contact-us .contactus-container form .input-phone-prefix input {
+  padding-top: var(--space-space-6);
+}
+
+.contact-us .contactus-container form .input-phone-prefix input,
+.contact-us .contactus-container form .dropdown .custom-select {
+  height: var(--space-space-52);
+  background-color: var(--color-neutral-white);
+}
+
+.contact-us .contactus-container form textarea.message {
+  height: 100%;
+  min-height: var(--space-space-110);
+  width: 100%;
+}
+
+.section.contact-us-container .default-content-wrapper {
+  text-align: center;
+}
+
+@media (width >=768px) {
+  .user main .section.contact-us-container {
+    padding-top: var(--space-space-6x);
+  }
+
+  .contact-us-container .default-content-wrapper h3 {
+    margin: 0;
+    padding-top: var(--space-space-4x);
+    padding-bottom: var(--space-space-6x);
+    border-bottom: none;
+    font: var(--type-details-8-font);
+  }
+}
+
+
+@media (width <=768px) {
+  .contact-us-container .default-content-wrapper h3 {
+    border-bottom: none;
+    font: var(--type-details-6-font);
+  }
+}

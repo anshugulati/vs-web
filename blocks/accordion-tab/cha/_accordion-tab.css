@@ -1,0 +1,20 @@
+@import '../accordion-tab.css';
+
+/* foo specific code goes here */
+
+/* Always keep .cha scope for brand specific override
+Example:
+.cha h2 {
+  color: var(--color-token);
+}
+*/
+
+@media (min-width: 768px) {
+    .cha {
+        .accordion-tabs {
+            .accordion-tab {
+                color: var(--color-brand-750);
+            }
+        }
+    }
+}

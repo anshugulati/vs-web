@@ -1,0 +1,84 @@
+@import "../../../styles/foo/forms.css";
+@import "../user.css";
+
+.foo.login .main-wrapper,
+.foo.user .signup-wizard {
+  display: flex;
+  padding: var(--space-space-0x) var(--space-space-12);
+  flex-direction: column;
+  align-items: flex-start;
+  border-top: var(--space-space-4x) solid var(--color-neutral-20);
+  border-bottom: var(--space-space-4x) solid var(--color-neutral-20);
+  margin: var(--space-space-52) auto auto;
+}
+
+.foo.login .main-wrapper .page-error-message {
+  margin: var(--space-space-6) 0 var(--space-space-24);
+  width: 100%;
+}
+
+.foo.user .section.terms-condition {
+  padding: var(--space-space-0x);
+  width: 100%;
+}
+
+.foo.user .checkout-flow .terms-condition {
+  padding: var(--space-space-0x) var(--space-space-12);
+  border: var(--shape-border-width-1) solid var(--color-neutral-480);
+  border-top-width: var(--space-space-0x);
+  margin-bottom: var(--space-space-16);
+}
+
+.foo.user .terms-condition p {
+  font-size: var(--text-xs);
+  text-align: center;
+  color: var(--color-secondary-b);
+  margin: var(--space-space-18) 0 var(--space-space-16);
+  line-height: var(--line-height-s);
+}
+
+.foo.user .terms-condition p a {
+  color: var(--color-secondary-b);
+  text-decoration: underline;
+}
+
+.foo .welcome-flow .section.terms-condition {
+  display: none;
+}
+
+.foo.user .main-wrapper button {
+  font: var(--type-details-bold-4-font);
+}
+
+@media (width>=768px) {
+  .foo.login .main-wrapper,
+  .foo.user .signup-wizard {
+    border: var(--space-space-4x) solid var(--color-neutral-480);
+    width: var(--grid-col-4);
+    padding: var(--space-space-4x);
+    margin-top: var(--space-space-64);
+  }
+
+  .user .main-wrapper button {
+    width: 100%;
+  }
+}
+
+.input-field-wrapper input[type="checkbox"]+label::before {
+  border: var(--shape-border-width-1) solid var(--color-primary-100);
+}
+
+.foo .input-field-wrapper input {
+  padding-block-end: var(--space-space-0x);
+  height: var(--space-space-48);
+  padding-bottom: var(--space-space-0x);
+  font-size: var(--font-size-4);
+}
+
+.foo .input-field-wrapper .unmask-password {
+  content: url("/icons/eye-black.svg");
+}
+
+.foo .input-field-wrapper .unmask-password.visible {
+  content: url("/icons/eye-black-crossed.svg");
+}

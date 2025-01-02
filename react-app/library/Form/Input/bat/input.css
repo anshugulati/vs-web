@@ -1,0 +1,64 @@
+.form-input__container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.form-input__container .form-input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--color-neutral-700);
+    padding: 0;
+    color: var(--color-brand-750);
+    outline: 0;
+    margin: 0;
+    border-radius: 0;
+}
+
+.form-input__container label {
+    font-size: var(--font-size-3);
+    color: var(--color-text-dark);
+    position: absolute;
+    left: 0;
+    top: 20%;
+    transition: font-size .2s ease-in-out, top .2s ease-in-out;
+    pointer-events: none;
+}
+
+html[dir='rtl'] .form-input__container label {
+    left: auto;
+    right: 0;
+}
+
+.form-input__container .form-input:focus-within~label,
+.form-input__container label.active {
+    top: -1rem;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    font-size: var(--font-size-2);
+}
+
+.form-input__container .error_message {
+    color: var(--color-alert-900);
+    font-size: var(--font-size-2-1);
+    margin: var(--space-space-0-3) 0 0;
+}
+
+.form-input__icon-container {
+    position: absolute;
+    right: 0;
+    height: var(--space-space-20);
+    width: var(--space-space-20);
+    top: 10%;
+    cursor: pointer;
+}
+
+/* bat specific code goes here */
+
+/* Always keep .bat scope for brand specific override 
+Example:
+.bat h2 {
+  color: var(--color-token);
+}
+*/

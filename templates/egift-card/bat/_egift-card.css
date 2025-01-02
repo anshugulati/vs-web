@@ -1,0 +1,25 @@
+@import "../egift-card.css";
+
+/* bat specific code goes here */
+
+/* Always keep .bat scope for brand specific override 
+Example:
+.bat h2 {
+  color: var(--color-token);
+}
+*/
+.bat .egift-balance-modal-content .input-field-wrapper .input-wrapper .input-number {
+  padding: var(--space-space-2) var(--space-space-12) var(--space-space-12);
+}
+
+.bat .egift-balance-modal-content .egift-balance-modal-ctas a:hover {
+  color: inherit;
+}
+
+.bat .egift-balance .egift-balance-modal-content .grey {
+  color: var(--color-secondary-b);
+}
+
+.bat .egift-balance .egift-balance-modal-content p {
+  color: var(--color-text-main);
+}

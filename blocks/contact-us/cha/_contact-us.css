@@ -1,0 +1,317 @@
+@import '../contact-us.css';
+
+/* cha specific code goes here */
+
+/* Always keep .cha scope for brand specific override 
+Example:
+.cha h2 {
+  color: var(--color-token);
+}
+*/
+
+.cha.user .section.contact-us-container {
+  padding-top: var(--space-space-32);
+  padding-bottom: var(--space-space-32);
+  margin: 0;
+}
+
+.cha.user .section.contact-us-container h3 {
+  margin: 0 0 var(--space-space-48);
+  font-family: var(--type-base-font-family-semibold);
+  color: var(--color-brand-700);
+  display: inline-block;
+  font-weight: var(--font-weight-5);
+  font-size: var(--font-size-8);
+  padding-bottom: 0;
+  letter-spacing: 0;
+  line-height: var(--line-height-m);
+}
+
+.cha .contact-us .contactus-container form {
+  gap: var(--space-space-48);
+}
+
+.cha .contact-us p.section-subhead,
+.cha .contact-us label.section-head {
+  margin-bottom: var(--space-space-16);
+  color: var(--color-brand-700);
+  font-family: var(--type-base-font-family-regular);
+  letter-spacing: 0;
+}
+
+.cha .contact-us .contactus-container form .radio-button-wrapper {
+  display: flex;
+  gap: var(--space-space-24);
+  padding-bottom: 0;
+}
+
+.input-field-wrapper input,
+.cha .dropdown .select-selected,
+.dropdown .select-items div:hover,
+.input-field-wrapper textarea,
+.input-field-wrapper select {
+  border: 1px solid var(--color-neutral-30);
+}
+
+.cha .prefix-inputcode .input-wrapper input {
+  padding-left: var(--space-space-52);
+}
+
+.cha .contact-us .contactus-container form .radio-button-wrapper .radio-wrapper {
+  display: flex;
+  gap: var(--space-space-8);
+  margin: 0;
+  font-family: var(--type-base-font-family-regular);
+}
+
+.cha .contact-us .input-field-wrapper span.textarea-maxleng {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  font-size: var(--font-size-2);
+  color: var(--color-text-light);
+  letter-spacing: 0;
+}
+
+html[dir='rtl'] .cha .contact-us .input-field-wrapper span.textarea-maxleng {
+  left: 0.5rem;
+  right: unset;
+}
+
+.cha .contact-us .contact-flex-items > div:not(.input-wrapper),
+.cha .contact-us .contact-flex-items.radio {
+  display: flex;
+  gap: var(--space-space-16) var(--space-space-12);
+  flex-flow: column wrap;
+}
+
+.cha .contact-us .contact-flex-items.radio > div:not(.input-wrapper) {
+  gap: 0;
+}
+
+.cha .contact-us .contact-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-space-16);
+}
+
+.cha .contact-us .contact-flex-items.radio,
+.cha .contact-blocks:has(.contact-flex-items.radio) {
+  gap: var(--space-space-24) var(--space-space-12);
+}
+
+.cha .contact-us .contact-flex-items .input-field-wrapper,
+.cha .contact-us .contact-flex-items.radio .input-wrapper {
+  flex: 1;
+  max-width: 100%;
+  width: 100%;
+  flex-basis: calc(50% - var(--space-space-16));
+}
+
+.cha .contact-us .input-field-wrapper.full-width {
+  width: 100%;
+  max-width: 100%;
+}
+
+.cha .contact-us .input-field-wrapper input {
+  max-width: 100%;
+  font-weight: var(--font-weight-3);
+  line-height: var(--line-height-xxs);
+  letter-spacing: 0;
+}
+
+.cha .contact-us .input-field-wrapper  .radio-button-wrapper input {
+  height: auto;
+  padding-bottom: 0;
+  border: none;
+}
+
+.cha .contact-us .input-field-wrapper.dropdown::after {
+  top: 5.7rem;
+}
+
+.cha .contact-us form textarea.message::placeholder {
+  color: var(--color-text-light);
+  padding-top: var(--space-space-8);
+}
+
+.cha .prefix-inputcode .input-coutrycode {
+  position: absolute;
+  left: 1rem;
+  right: unset;
+  color: var(--color-text-light);
+  top: 1.7rem;
+  direction: ltr;
+  display: none;
+}
+
+.cha .prefix-inputcode.show span.input-coutrycode,
+.cha .prefix-inputcode input:focus ~ span.input-coutrycode {
+  display: block;
+}
+
+html[dir="rtl"] .cha.user .section.contact-us-container h3 {
+  font-weight: var(--font-weight-6);
+}
+
+
+.cha .contact-us .contactus-container form .dropdown .custom-select {
+  max-width: 52.2rem;
+}
+
+.cha .input-field-wrapper:not(.notransistion) label {
+  line-height: var(--line-height-xxs);
+  width: auto;
+  letter-spacing: 0;
+  color: var(--color-text-light);
+  padding-left: var(--space-space-3x);
+}
+
+.cha .contact-us .contactus-container form textarea.message {
+  padding: var(--space-space-20) var(--space-space-16) var(--space-space-8) var(--space-space-12);
+  min-height: 13rem;
+  padding-top: 2.2rem;
+}
+
+.cha .radio-button-wrapper input:checked + label {
+  font-weight: var(--font-weight-5);
+}
+
+.cha .contact-us .input-field-wrapper:not(.no-transition) textarea~label {
+  transform: translateY(-50%);
+  font-size: var(--font-size-2);
+  position: absolute;
+  top: 1.5rem;
+  padding: 0 var(--space-space-12);
+  color: var(--color-brand-700);
+  width: 100%;
+  padding-bottom: 4px;
+  line-height: var(--line-height-xxs);
+  letter-spacing: 0;
+}
+
+.cha .input-field-wrapper textarea {
+  padding: var(--space-space-12);
+}
+
+.cha .input-field-wrapper .error-message,
+.cha .form-errors .error-message {
+  font-size: var(--font-size-3);
+  line-height: var(--line-height-xs);
+  font-family: var(--type-base-font-family-regular);
+  letter-spacing: 0;
+}
+
+/* Added fixed height to match with the figma design. */
+.cha .dropdown .select-selected {
+  font-weight: var(--font-weight-3);
+  display: flex;
+  align-items: center;
+  letter-spacing: 0;
+  height: var(--space-space-48);
+}
+
+.cha .contact-us .contactus-container button {
+  font-family: var(--type-base-font-family-semibold);
+  letter-spacing: 0;
+}
+
+html[dir='rtl'] .cha .prefix-inputcode .input-wrapper input {
+  padding-right: var(--space-space-54);
+  text-align: end;
+}
+ 
+html[dir='rtl'] .cha .prefix-inputcode .input-coutrycode {
+  left: unset;
+  right: var(--space-space-16);
+}
+
+@media screen and (width >= 768px) {
+  .cha .contact-us .contact-flex-items > div:not(.input-wrapper),
+  .cha .contact-us .contact-flex-items.radio {
+    flex-direction: row;
+  }
+
+  .cha .contact-us .contactus-container button {
+    max-width: calc(50% - var(--space-space-6));
+    width: unset;
+    font-family: var(--type-base-font-family-semibold);
+    letter-spacing: 0;
+  }
+
+  .cha .contact-us .input-field-wrapper {
+    max-width: 100%;
+  }
+
+  .cha .contact-us-container .default-content-wrapper h3 {
+    padding: 0;
+  }
+
+  .cha .contact-us-wrapper {
+    max-width: 10.56rem;
+  }
+
+  .cha .input-field-wrapper.dropdown::after {
+    width: 51%;
+    background-repeat: no-repeat;
+  }
+
+  .cha .order-item .dropdown .custom-select::after {
+    height: 1.6rem;
+  }
+
+  .cha .contact-us p.section-subhead,
+  .cha .contact-us label.section-head {
+    max-height: 2.2rem;
+  }
+}
+
+@media screen and (width <= 768px) {
+  .cha .main .section {
+    padding: 1.2rem;
+  }
+
+  .cha .input-field-wrapper input {
+    padding-left: var(--space-space-1x-2);
+  }
+
+  .cha .prefix-inputcode .input-coutrycode {
+    top: 2rem;
+  }
+
+  .cha input:not(:placeholder-shown)~label:not(.radiobuttonlabel) {
+    top: 1.3rem;
+  }
+
+  .cha .prefix-inputcode .input-wrapper input {
+    padding-top: var(--space-space-26);
+  }
+
+  .cha.user .section.contact-us-container {
+    padding-top: var(--space-space-8);
+    padding-bottom: var(--space-space-32);
+    padding-left: var(--space-space-12);
+  }
+
+  .cha .contact-us .input-field-wrapper:not(.notransistion) .radio-button-wrapper label {
+    line-height: var(--line-height-xxl);
+  }
+
+  .cha.user .section.contact-us-container h3 {
+    font-size: var(--font-size-7);
+    line-height: normal;
+  }
+
+  html[dir="rtl"] .cha.user .section.contact-us-container h3 {
+    padding-top: 2rem;
+  }
+
+  .cha .input-field-wrapper .error-message, .cha .form-errors .error-message {
+    font-size: var(--font-size-2);
+  }
+
+  .cha .input-field-wrapper.invalid input,
+  .input-field-wrapper.invalid .otp-button {
+    margin-bottom: var(--space-space-6);
+  }
+}

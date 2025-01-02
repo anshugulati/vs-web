@@ -1,0 +1,43 @@
+@import '../account-orders-detail.css';
+
+/* foo specific code goes here */
+
+/* Always keep .foo scope for brand specific override 
+Example:
+.foo h2 {
+  color: var(--color-token);
+}
+*/
+  .foo .account-orders-detail p.text-light,
+  .foo .account-orders p.text-light {
+    color: var(--color-secondary-100);
+  }
+
+  .foo .account-orders-detail h6.text-dark,
+  .foo .account-orders h6.text-dark {
+    color: var(--color-text-main);
+  }
+
+  .foo .account-orders-detail-container .default-content-wrapper > a {
+    color:var(--color-brand-250);
+    text-decoration: underline;
+    font: var(--type-details-3-font);
+  }
+
+  .foo .order-return .order-return-store {
+    color: var(--color-text-main);
+    font: var(--type-details-3-font);
+  }
+
+  .foo .order-return .order-return-text {
+    color: var(--color-text-main);
+    font: var(--type-details-4-font);
+  }
+
+  .foo .order-summary-row,
+  .foo .order-summary-row .order-total,
+  .foo .order-itemized-wrapper .order-item .total-info,
+  .foo .order-totals-wrapper .total-row  div,
+  .foo .order-totals-wrapper .total-row:last-child .price {
+    background-color: transparent;
+  }

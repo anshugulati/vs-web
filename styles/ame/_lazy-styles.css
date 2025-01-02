@@ -1,0 +1,48 @@
+@import '../lazy-styles.css';
+
+.ame button.backtotop {
+  position: fixed;
+  cursor: pointer;
+  z-index: 99;
+  outline: none;
+  border-radius: 0;
+  text-align: center;
+  bottom: var(--space-space-14x);
+  width: 6.3rem;
+  height: 5.6rem;
+  box-sizing: inherit;
+  border: none;
+  background: transparent;
+  margin: 0;
+  color: var(--color-text-light);
+  letter-spacing: normal;
+  font: var(--type-details-2-font);
+  flex-direction: column;
+  text-transform: none;
+  line-height: 130%;
+}
+
+.ame .backtotop > .icon {
+  height: var(--sf-height-4);
+  width: var(--sf-width-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--shape-border-radius-3);
+  background: var(--color-opacity-white-75);
+  border: 1px solid var(--color-neutral-30);
+}
+
+.ame .backtotop > .icon > img {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: var(--sf-height-2-4);
+  width: var(--sf-width-2-4);
+  min-width: max-content;
+}
+
+@media(width >= 1024px) {
+  html[dir='rtl'] .ame button.backtotop {
+    left: var(--space-space-20);
+  }
+}

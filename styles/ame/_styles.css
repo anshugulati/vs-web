@@ -1,0 +1,192 @@
+@import url('../tokens.css');
+@import url('./tokens.css');
+@import '../styles.css';
+
+/* ame specific style goes here */
+body {
+  font: var(--type-body-1-default-font);
+  letter-spacing: 0;
+}
+
+.ame {
+  a:any-link {
+    color: var(--color-text-link);
+    font-weight: var(--font-weight-5);
+    line-height: var(--text-xxs);
+  }
+
+  a:hover,
+  a:active {
+    color: var(--color-primary-a);
+  }
+
+  a:active {
+    font-weight: var(--font-weight-6);
+    color: var(--color-primary-a);
+  }
+
+  a.link-sm {
+    font-size: var(--font-size-sm);
+  }
+
+  a.link-md {
+    font-size: var(--font-size-0x);
+  }
+
+  a.button:any-link,
+  button {
+    font: var(--type-body-1-strong-font);
+    border-radius: var(--shape-border-radius-3);
+    border: var(--shape-border-width-1) solid var(--color-primary-a);
+    color: var(--color-white);
+    background-color: var(--color-primary-a);
+    margin: var(--space-space-4x) 0;
+  }
+
+  a.button:hover,
+  button:hover {
+    border-color: var(--color-neutral-40);
+  }
+
+  a.button:disabled,
+  button:disabled,
+  button:disabled:hover {
+    background-color: var(--color-neutral-30);
+    border-color: var(--color-neutral-30);
+    color: var(--color-disabled-default-text);
+  }
+
+  a.button.secondary,
+  button.secondary {
+    background-color: var(--color-white);
+    color: var(--color-primary-a);
+    border: var(--shape-border-width-1) solid var(--color-neutral-80);
+  }
+
+  a.button.secondary:hover,
+  button.secondary:hover {
+    border-color: var(--color-primary-a);
+  }
+
+  a.button.secondary:disabled,
+  button.secondary:disabled,
+  button.secondary:disabled:hover {
+    background-color: var(--color-neutral-30);
+    border-color: var(--color-neutral-30);
+    color: var(--color-disabled-default-text);
+  }
+
+  a.button.tertiary,
+  button.tertiary {
+    background-color: var(--color-tertiary-b);
+    color: var(--color-primary-a);
+    border: var(--shape-border-width-1) solid var(--color-white);
+  }
+
+  a.button.tertiary:hover,
+  button.tertiary:hover {
+    border-color: var(--color-primary-d);
+    background-color: var(--color-primary-d);
+  }
+
+  a.button.tertiary:disabled,
+  button.tertiary:disabled,
+  button.tertiary:disabled:hover {
+    background-color: var(--color-neutral-30);
+    border-color: var(--color-neutral-30);
+    color: var(--color-disabled-default-text);
+  }
+
+  a.button.flat,
+  button.flat {
+    font-weight: var(--font-weight-5);
+    background-color: var(--color-white);
+    color: var(--color-primary-a);
+    border: var(--shape-border-width-1) solid var(--color-neutral-60);
+    padding: var(--space-space-8px) var(--font-size-sm);
+  }
+
+  a.button.flat:hover,
+  button.flat:hover {
+    background-color: var(--color-primary-a);
+    color: var(--color-white);
+  }
+
+  a.button.flat:disabled,
+  button.flat:disabled,
+  button.flat:disabled:hover {
+    background-color: var(--color-neutral-30);
+    border-color: var(--color-neutral-30);
+    color: var(--color-disabled-default-text);
+  }
+
+  input, main input {
+    letter-spacing: var(--type-body-2-strong-letter-spacing);
+    padding-inline-start: var(--space-space-2x);
+    padding: var(--space-space-2x) var(--space-space-3x);
+    align-self: stretch;
+    border: 1px solid var(--color-disabled-default-text);
+    background: var(--background-color);
+    color: var(--color-text-dark);
+    font: var(--type-details-4-font);
+  }
+
+  .modal .modal-header button:hover { 
+    background-color: transparent;
+    border: none;
+  }
+
+   h1 {
+       font: var(--type-heading-1);
+   }
+
+   h2 {
+       font: var(--type-heading-2);
+   }
+
+   h3 {
+       font: var(--type-heading-3);
+   }
+
+   h4 {
+       font: var(--type-heading-4);
+   }
+
+   h5 {
+       font: var(--type-heading-5);
+   }
+
+   h6 {
+       font: var(--type-heading-6);
+   }
+
+   @media (width <=767px) {
+       h1 {
+           font-size: var(--font-size-9);
+       }
+
+       h2 {
+           font-size: var(--font-size-8);
+       }
+
+       h3 {
+           font-size: var(--font-size-7);
+           line-height: var(--line-height-l-2);
+       }
+
+       h4 {
+           font-size: var(--font-size-6);
+           line-height: var(--line-height-l);
+       }
+
+       h5 {
+           font-size: var(--font-size-5);
+           line-height: var(--line-height-l-2);
+       }
+
+       h6 {
+           font-size: var(--font-size-6);
+       }
+   }
+
+}

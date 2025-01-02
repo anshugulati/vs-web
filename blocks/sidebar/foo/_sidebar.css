@@ -1,0 +1,93 @@
+@import '../sidebar.css';
+
+/* foo specific code goes here - we have to write  the css */
+
+.foo .sidebar {
+  border: var(--shape-border-width-1) solid var(--color-stroke);
+  border-bottom: none;
+  padding: var(--space-space-8) 0 0;
+}
+
+.foo .sidebar .sidebar-item {
+  gap: 0;
+}
+
+.foo .sidebar .sidebar-item-heading a {
+  padding: var( --space-space-12) var( --space-space-16);
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+}
+
+.foo .sidebar-item .sidebar-item-heading {
+  border-bottom: var(--shape-border-width-1) solid var(--color-stroke);
+  border-top: 0;
+  padding: 0 var(--space-space-16);
+}
+
+.foo .sidebar-item .sidebar-item-heading span.icon {
+  width: var(--spacing-small);
+  height: var(--spacing-small);
+  margin-inline-end: var(--spacing-xsmall);
+}
+
+.foo .sidebar .sidebar-item .sidebar-item-heading a {
+  font: var(--type-details-4-font);
+}
+
+/* foo PLP sidebar */
+
+.foo .sidebar-plp .sidebar {
+  border: none;
+  letter-spacing: 0;
+}
+
+.foo .sidebar-plp .sidebar.dynamic .sidebar-item.level-3 a {
+  font: var(--type-details-3-font);
+  padding: var(--space-space-1x) var(--space-space-2x);
+}
+
+.foo .sidebar-plp .sidebar.dynamic .sidebar-item.level-2 {
+  gap: var(--grid-1-gutters);
+}
+
+.foo .sidebar-plp .sidebar.dynamic .sidebar-item.level-2 > .sidebar-item-heading > a {
+  font: var(--type-details-semibold-3-font);
+  text-transform: uppercase;
+  padding: var(--space-space-2x);
+}
+
+.sidebar-plp .sidebar.dynamic .sidebar-item.level-2 > .sidebar-item-heading > a:hover {
+  color: var(--color-primary-90);
+}
+
+.foo .sidebar-plp .sidebar.dynamic .sidebar-item.level-3 > li > a:hover,
+.foo .sidebar-plp .sidebar.dynamic .sidebar-item.level-4 > li > a:hover  {
+  color: var(--color-primary-90);
+  font: var(--type-details-semibold-3-font);
+}
+
+.foo .sidebar-plp .sidebar.dynamic .sidebar-item.level-3 > li.active > a,
+.foo .sidebar-plp .sidebar.dynamic .sidebar-item.level-4 > li.active > a  {
+  color: var(--color-primary-100);
+  font: var(--type-details-bold-3-font);
+}
+
+.foo .sidebar-plp .sidebar-container .sidebar-wrapper .sidebar.dynamic ul.sidebar-item li a {
+  line-height: var(--line-height-xs);
+}
+
+.foo .sidebar.dynamic .sidebar-item.level-4 {
+  padding-left: var(--space-space-8);
+}
+
+[dir='rtl'] .foo .sidebar.dynamic .sidebar-item.level-4 {
+  padding-left: 0;
+  padding-right: var(--space-space-12);
+}
+
+@media(width >=1024px) {
+  .foo .plp-header .filters-body .item-count-container .grid-layout-selectors {
+    display: none;
+  }
+}

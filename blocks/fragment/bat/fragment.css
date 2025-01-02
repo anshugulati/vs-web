@@ -1,0 +1,18 @@
+/* suppress nested section padding */
+.fragment-wrapper > .section {
+  padding-left: 0;
+  padding-right: 0;
+}
+.fragment-wrapper > .section:first-of-type {
+  padding-top: 0;
+}
+.fragment-wrapper > .section:last-of-type {
+  padding-bottom: 0;
+}
+/* bat specific code goes here */
+/* Always keep .bat scope for brand specific override 
+Example:
+.bat h2 {
+  color: var(--color-token);
+}
+*/

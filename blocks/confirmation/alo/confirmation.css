@@ -1,0 +1,113 @@
+.confirmation div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.confirmation.confirmation-page h3
+ {
+  font-size: var(--font-size-5); 
+  line-height: 2.2rem;
+  border-bottom: none;
+  padding: var(--space-space-16) 0 var(--space-space-24) 0;
+  margin: 0;
+  color: var(--color-text-main);
+}
+
+.confirmation p:nth-child(2) {
+  padding-top: var(--space-space-80);
+  padding-bottom: 0;
+}
+
+.confirmation.confirmation-page h4
+ {
+  color: var(--color-text-main);
+  text-align: center;
+  font-size: var(--font-size-4);
+  font-style: normal;
+  font-weight: var(--font-weight-6);
+  line-height: 2.2rem;
+  margin: 0;
+  border: 0;
+}
+
+.confirmation p:nth-child(4)
+{
+  padding: 0 0 var(--space-space-80) 0;
+  font-size: var(--font-size-4);
+  line-height: 2.2rem;
+  color: var(--color-text-main); 
+}
+
+.confirmation p:last-child a {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-space-8);
+  margin: var(--space-space-20) 0 0 0; 
+}
+
+.confirmation p:last-child{
+  position: relative;
+  width: 100%;
+  padding: 0;
+}
+
+/* Larger screen styles */
+
+@media screen and (width >= 768px) {
+  .confirmation div {
+    width: 100%;
+  }
+
+  .confirmation p:nth-child(2) {
+    padding-top: var(--space-space-60);
+    margin: 0;
+  }
+
+  .confirmation.confirmation-page h3{
+    font-size: var(--font-size-8);
+    line-height: 2.275rem;
+  }
+
+  .confirmation.confirmation-page h4
+ {
+    padding-bottom: 0;
+    font-size: var(--font-size-6);
+    line-height: var(--line-height-xxx1-2);
+  }
+
+ 
+  .confirmation p:nth-child(4){
+    padding-bottom: var(--space-space-60);
+    font-size: var(--font-size-2);
+    margin: 0;
+  }
+
+  .confirmation p:last-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 var(--space-space-25) 0;
+    }
+
+  .confirmation p:last-child a {
+    width: var(--grid-col-4);
+    padding: var(--space-space-12) var(--space-space-24);
+    margin-top: 0;
+  }
+
+  
+}
+
+/* alo specific code goes here */
+
+/* Always keep .alo scope for brand specific override 
+Example:
+.alo h2 {
+  color: var(--color-token);
+}
+*/

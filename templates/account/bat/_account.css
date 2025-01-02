@@ -1,0 +1,203 @@
+@import '../account.css';
+@import "../../../styles/bat/_forms.css";
+
+/* bat specific code goes here */
+
+/* Always keep .bat scope for brand specific override 
+Example:
+.bat h2 {
+  color: var(--color-token);
+}
+*/
+.bat.account .main-wrapper main h2, .account .main-wrapper main h3, .account .main-wrapper main h4 {
+  font: var(--type-details-semibold-6-font);
+  color:  var(--color-secondary-a);
+  border-bottom: var(--spacing-xxxsmall) solid var(--color-neutral-40);
+}
+
+.bat.account aside .welcome-message h4 {
+    padding-bottom: var(--space-space-3x);
+    font: var(--type-details-semibold-6-font);    
+}
+
+.bat .sign-out-modal .modal-header > span {
+  display: none;
+}
+
+.bat .modal dialog {
+  border: 0;
+}
+
+.bat.account .main-wrapper main .modal dialog .modal-header h4 {
+  font-weight: var(--font-weight-6);
+  font-size: var(--font-size-5);
+  color: var(--color-brand-750);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bat.account .modal .modal-close {
+  height: unset;
+  width: unset;
+  position: absolute;
+  right: var(--space-space-8);
+  top: var(--space-space-15);
+  background-color: initial;
+  border: 0;
+}
+
+html[dir='rtl'] .bat.account .modal .modal-close {
+  left: var(--space-space-8);
+  right: initial;
+}
+
+.bat .modal dialog.order-return-cancel-modal .modal-header .icon img,
+.bat.account .modal .sign-out-modal .modal-close .icon img {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.bat .modal dialog .modal-header {
+  border-bottom: 1px solid var(--color-neutral-480);
+  box-shadow: 0 1px 6px 0 rgba(0 0 0 / 8%);
+  padding: var(--space-space-12);
+  height: 5.4rem;
+}
+
+.bat .sign-out-modal .modal-content .sign-out-message {
+  font-weight: var(--font-weight-4);
+  font-size: var(--font-size-3);
+  color: var(--color-text-main);
+  text-align: center;
+  display: block;
+  margin: var(--space-space-0x);
+}
+
+.bat .sign-out-modal .modal-footer .sign-out-buttons {
+  text-align: center;
+  display: grid;
+  column-gap: var(--space-space-16);
+  grid-template-columns: auto auto;
+}
+
+.bat .sign-out-modal .modal-footer .sign-out-buttons button {
+  margin: var(--space-space-0x);
+}
+
+.bat .modal dialog::backdrop {
+  background-color: var(--color-opacity-75);
+}
+
+.bat .order-status-delivered,
+.bat .order-status-complete,
+.bat .order-status-collected {
+  background: var(--color-success-100);
+}
+
+.order-status-processing, .order-status-dispatched {
+  background: var(--color-order-status);
+}
+
+.order-status-ready-to-collect {
+  background: var(--color-order-info-10);
+}
+
+.bat .order-status-refunded {
+  background: var(--color-order-info-80);
+}
+
+.bat .order-itemized-wrapper .order-item {
+  background-color: transparent;
+}
+
+.bat .modal dialog.order-return-cancel-modal .modal-content {
+  padding: var(--space-space-16);
+  padding-top: var(--space-space-24);
+}
+
+.bat .modal dialog.order-return-cancel-modal .modal-content p {
+  margin: 0;
+}
+
+@media (width <= 767px) {
+  .bat.account .modal dialog {
+    width: 100%;
+    z-index: 10;
+    inset-block-start: initial;
+    max-width: initial;
+  }
+
+  .bat .sign-out-modal .modal-content {
+    padding: var(--space-space-24) var(--space-space-12);
+  }
+
+  .bat .sign-out-modal .modal-footer {
+    padding: var(--space-space-16) var(--space-space-12);
+  }
+
+  .bat.account .main-wrapper main {
+    padding: 0 var(--space-space-4x);
+   }
+
+   .bat.account.sub-page .main-wrapper .sidebar-main a.section-title {
+    margin: var(--space-space-4x) 0 var(--space-space-4x) 0;
+    padding: 0 0 var(--space-space-4) 0;
+    gap: var(--space-space-4);
+   }
+
+   .bat.account.sub-page .main-wrapper .sidebar-main a.section-title h5 {
+    margin: 0;
+   }
+
+   .bat.account.sub-page .main-wrapper .sidebar-main a.section-title::before {
+    height: 2.4rem;
+    width: 2.4rem;
+    background: url('/icons/icons-arrow-left-24.svg') no-repeat;
+  }
+
+  .bat.account.sub-page .main-wrapper .sidebar-main a.section-title::after {
+      margin-inline: 0;
+  }
+
+  .bat:has(.aura-my-account) .main-wrapper {
+    flex-direction: column-reverse;
+  }
+  
+  .bat:has(.aura-my-account) .welcome-back-wrapper .welcome-back .welcome-message h4 {
+    display: block;
+  }
+  
+  .bat:has(.aura-my-account) .main-wrapper .welcome-message {
+    display: none;
+  }
+  
+  .bat:has(.aura-my-account) .welcome-back-wrapper .welcome-message {
+    display: block;
+  }
+    
+}
+
+@media (width >= 768px) {
+  .bat .sign-out-modal .modal-content {
+    padding: var(--space-space-24) var(--space-space-16);
+  }
+
+  .bat .sign-out-modal .modal-footer {
+    padding: var(--space-space-16);
+  }
+  
+  .bat.account .main-wrapper aside .welcome-message {
+    display: none;
+  }
+
+  .account .main-wrapper .sidebar-main .section {
+    padding-block: var(--space-space-16);
+    padding-inline: var(--space-space-24) var(--space-space-0x);
+  }
+
+  .bat.account.sub-page .main-wrapper .sidebar-main > div.section.account-address-book-container {
+    padding: 0;
+    padding-inline-start: var(--space-space-7x);
+  } 
+}

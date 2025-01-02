@@ -1,0 +1,7 @@
+@import '../recommendations.css';
+
+/* foo specific code goes here */
+
+.foo .section.recommendations-container .default-content-wrapper p {
+  color: var(--color-text-light);
+}

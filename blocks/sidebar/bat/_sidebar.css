@@ -1,0 +1,129 @@
+@import '../sidebar.css';
+
+/* bat specific code goes here - we have to write  the css */
+
+.bat .sidebar {
+  border: var(--shape-border-width-1) solid var(--color-stroke);
+  border-bottom: none;
+  padding: var(--space-space-8) 0 0;
+  
+}
+
+.bat .sidebar .sidebar-item {
+  gap: 0;
+}
+
+.bat .sidebar .sidebar-item-heading a { 
+  padding: var( --space-space-12) var( --space-space-16);
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+}
+
+.bat .sidebar-item .sidebar-item-heading {
+  border: var(--shape-border-width-1) solid var(--color-stroke);
+  border-top: 0;
+  padding: 0 var(--space-space-16);
+}
+
+.bat .sidebar-item .sidebar-item-heading span.icon {
+  width: var(--spacing-small);
+  height: var(--spacing-small);
+  margin-inline-end: var(--spacing-xsmall);
+}
+
+.bat .sidebar .sidebar-item .sidebar-item-heading a {
+  font: var(--type-details-4-font);
+}
+
+.bat .sidebar .sidebar-item .sidebar-item-heading a.active {
+  font-weight: var(--font-weight-6);
+}
+
+/* Always keep .bat scope for brand specific override
+Example:
+.bat h2 {
+  color: var(--color-token);
+}
+*/
+
+.bat .sidebar-plp .sidebar {
+  border: none;
+  padding-top: var(--space-space-2);
+}
+
+.bat .sidebar.dynamic .sidebar-item.level-2 {
+  gap: var(--grid-1-gutters);
+  padding: var(--space-space-2x) var(--space-space-0x);
+}
+
+.bat .sidebar-plp .sidebar .sidebar-item-heading a {
+  font-size: var(--font-size-6);
+  font-weight: var(--font-weight-6);
+  line-height: var(--line-height-s);
+  padding: var(--space-space-1x);
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+}
+
+.bat .sidebar-plp .sidebar.dynamic .sidebar-item.level-3 a {
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-4);
+  color: var(--color-secondary-b);
+}
+
+.bat .sidebar-plp .sidebar .dynamic {
+  border: none;
+  padding: var(--space-space-16) var(--grid-margin);
+}
+
+.bat .sidebar-plp .sidebar-item .sidebar-item-heading {
+  border: none;
+  border-top: 0;
+  padding: 0;
+  gap:0;
+}
+
+.bat .sidebar-plp .sidebar.dynamic .sidebar-item.level-2 > li > a {
+  text-transform: uppercase;
+}
+
+.bat .sidebar-plp .sidebar.dynamic .sidebar-item.level-2 > li.active > a {
+  color: var(--color-text-main);
+}
+
+.bat .sidebar-plp .sidebar.dynamic .sidebar-item.level-3 > li.active > a {
+  color: var(--color-primary-a);
+}
+
+@media (width >= 1024px) {
+  .bat aside.sidebar-plp {
+    display: block;
+    padding: 0 var(--space-space-32) 0 var(--space-space-40);
+    min-width: 26%;
+    max-width: 26%;
+  }
+
+  html[dir='rtl'] .bat aside.sidebar-plp {
+    display: block;
+    padding: 0 var(--space-space-40) 0 var(--space-space-32);
+    min-width: 26%;
+    max-width: 26%;
+  }
+}
+
+@media (width >=768px) {
+  .bat .sidebar-plp .sidebar .sidebar-item-heading a:hover {
+    color: var(--color-primary-a);
+    text-decoration: underline;
+  }
+
+  .bat .sidebar.dynamic .level-2 > .sidebar-item-heading > a {
+    padding: var(--space-space-2x) var(--space-space-0x);
+  }
+
+  .bat .sidebar-plp .sidebar.dynamic .sidebar-item.level-3 a:hover {
+    color: var(--color-primary-a);
+  }
+}

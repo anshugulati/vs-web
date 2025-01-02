@@ -1,0 +1,94 @@
+.payment-method-version-two{
+    background-color: var(--color-neutral-50);
+    padding: 0 var(--space-space-16);
+}
+
+.spc-checkout-payment-options.in-active.payment-method-version-two .payment-method-title{
+  opacity: 0.2;
+}
+
+.payment-method-title {
+    font-size: var(--font-size-5);
+    line-height: var(--space-space-24);
+    font-weight: 600;
+    text-align: center;
+
+}
+
+.payment-method-version-two .payment-method .cc-label-title{
+    margin-top: var(--space-space-24);
+    font-size: var(--font-size-2);
+    text-align:left;
+    width: 100%;
+    line-height: var(--line-height-xs);
+}
+
+@media (width >=768px) {
+    .payment-method-version-two .payment-method .cc-label-title{
+        font-size: var(--font-size-3);
+    }
+
+    .payment-method-title {
+        font-size: var(--font-size-6);
+        line-height: var(--line-height-xxx1-2);
+        text-align: left;
+    }
+
+    html[dir="rtl"] .payment-method-title,
+    html[dir="rtl"] .checkout__billing-information .checkout__billing-information-title,
+    html[dir="rtl"] .checkout__delivery-information-title {
+        text-align: right;
+    }
+}
+
+.payment-methods.in-active .payment-method-top-panel,
+.payment-methods.in-active .payment-method-bottom-panel {
+    opacity: 0.2;
+    pointer-events: none;    
+}
+
+.tabby-method-label {
+    justify-content: unset !important;
+}
+
+.tabby-popup-btn {
+    position: relative;
+    height: var(--space-space-17);
+    padding-left: var(--spacing-xxsmall-2);
+}
+
+.payment-method-version-two .tabby-popup-btn{
+    display: none;
+}
+
+.payment-method-version-two .payment-method.payment-method-checkout_com_upapi{
+    gap: 0;
+} 
+
+.payment-method-version-two .payment-method__subtitle__two{
+    margin-inline-start: var(--space-space-15);
+    font-size: var(--font-size-2-1);
+    margin-top: var(--spacing-xxsmall-2);
+}
+
+.tabby-popup-btn button {
+    height: var(--space-space-17);
+    width: var(--space-space-17);
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+    position: relative;
+    background: unset;
+    top: var(--space-space-1x-2-neg);
+}
+
+.tabby-popup-btn .icon-container {
+    position: absolute;
+    top: 0;
+    z-index: 0;
+}
+
+.tabby-popup-btn .icon {
+    height: var(--space-space-17);
+    width: var(--space-space-17);
+}

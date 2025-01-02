@@ -1,0 +1,176 @@
+@import '../algolia-product-listing.css';
+
+.cha {
+  &.search {
+    .plp-header {
+      padding-top: var(--space-space-32);
+
+      .plp-category-title {
+        font-family: var(--type-base-font-family-semibold);
+        font-size: var(--font-size-10);
+        font-style: normal;
+        font-weight: var(--font-weight-5);
+        line-height: 1.3;
+        letter-spacing: 0;
+        padding: var(--space-space-16) 0 var(--space-space-12);
+
+        &.no-products {
+          &::before {
+            content: "";
+            display: flex;
+            width: var(--space-space-32);
+            height: var(--space-space-32);
+            background: url('/icons/bag.svg') no-repeat;
+            align-items: center;
+            margin: var(--space-space-0x) auto;
+            padding-bottom: var(--space-space-12);
+          }
+        }
+      }
+
+      &:has(.plp-category-title.no-products) {
+        padding-bottom: var(--space-space-0x);
+      }
+    }
+
+    .recommendations-container {
+      .default-content-wrapper {
+        p {
+          padding-bottom: var(--space-space-48);
+          margin-bottom: var(--space-space-32);
+          color: var(--color-text-light);
+          font-family: var(--type-base-font-family);
+          letter-spacing: 0.05rem;
+        }
+
+        h3 {
+          text-align: left;
+          padding: var(--space-space-40);
+        }
+      }
+    }
+
+    .algolia-product-listing {
+      .product-item {
+        .product-carousel-buttons {
+          button.product-image-btn {
+            margin: 0.8rem;
+            height: 0.8rem;
+            width: 0.8rem;
+
+            &.selected {
+              background-color: var(--color-text-main);
+            }
+          }
+        }
+
+        .wishlist-icon {
+          width: 2.6rem;
+          height: 2.6rem;
+        }
+      }
+    }
+  }
+
+  .cart-button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--space-space-48);
+    position: relative;
+
+    .add-to-bag-button {
+      width: 100%;
+      position: relative;
+      background-color: var(--color-neutral-50);
+      color: var(--color-text-main);
+      border: 1px solid var(--color-text-main);
+      font: var(--type-button-2-cart-font);
+
+      &:hover, &.loading, &.disable-click {
+        background-color: var(--color-add-to-bag-button-bg);
+        border: 1px solid var(--color-add-to-bag-button-border);
+      }
+
+      &:hover, &.disable-click {
+        color: var(--color-neutral-50);
+      }
+
+      &.loading, &.disable-click {
+        pointer-events: none;
+      }
+
+      &.loading {
+        color: transparent;
+
+        &::after {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 2.4rem;
+          height: 2.4rem;
+          animation: spin 1s linear infinite;
+          transform: translate(-50%, -50%);
+          opacity: 1;
+          background-image: url('/icons/atb-loader.svg');
+        }
+      }
+    }
+
+    .right-tick-icon {
+      width: 2.4rem;
+      height: 2.4rem;
+      margin-left: var(--spacing-xxsmall-2);
+      background-image: url('/icons/right-checked-white.svg');
+    }
+  }
+
+  @media (width < 1024px) {
+    &.search {
+      .plp-header {
+        padding: var(--space-space-3x);
+        margin-top: var(--space-space-0x);
+
+        .plp-category-title {
+          font-size: var(--font-size-9);
+          padding-bottom: var(--space-space-6);
+
+          &.no-products {
+            padding-top: 0;
+            line-height: 1.5;
+            font-size: var(--font-size-9);
+          }
+        }
+      }
+
+      .recommendations-container {
+        .default-content-wrapper {
+          p {
+            font-family: var(--type-base-font-family-medium);
+            font-size: var(--font-size-3);
+            font-weight: var(--font-weight-5);
+            line-height: 1.4;
+            font-style: normal;
+            margin-bottom: var(--space-space-0x);
+            padding: 0 var(--space-space-12) var(--space-space-32);
+            letter-spacing: 0;
+          }
+
+          h3 {
+            padding: var(--space-space-24) var(--space-space-0x) var(--space-space-16) var(--space-space-12);
+            margin: var(--space-space-0x);
+          }
+        }
+      }
+
+      &.show-breadcrumb-mobile {
+        .breadcrumb-wrapper {
+          .breadcrumbs {
+            margin-top: var(--space-space-57);
+            padding: var(--space-space-32) var(--space-space-12) var(--space-space-12);
+          }
+        }
+      }
+    }
+  }
+}

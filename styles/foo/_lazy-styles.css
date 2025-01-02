@@ -1,0 +1,115 @@
+@import '../lazy-styles.css';
+
+/* foo specific code goes here */
+.foo #spr-live-chat-app > div {
+  right: var(--space-space-40);
+}
+
+/* Back to top button */
+.foo button.backtotop {
+  position: fixed;
+  cursor: pointer;
+  z-index: 99;
+  outline: none;
+  border-radius: 0;
+  text-align: center;
+  right: 4rem;
+  bottom: 10rem;
+  width: 6.5rem;
+  height: 6.5rem;
+  padding: var(--space-space-1x);
+  box-sizing: inherit;
+  border: none;
+  background: transparent;
+  margin: 0;
+  color: var(--color-text-main);
+  letter-spacing: normal;
+  font: var(--type-details-2-font);
+  flex-direction: column;
+  text-transform: none;
+
+
+}
+
+.foo .backtotop > .icon {
+  height: 4rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--shape-border-radius-3);
+  background-color: var(--color-opacity-white-75);
+  padding: var(--space-space-8);
+}
+
+html[dir='rtl'] .foo button.backtotop,
+html[dir='rtl'] .foo #spr-live-chat-app > div {
+  right: unset;
+}
+
+.foo .toast-notification {
+  background: var(--color-success-100);
+  border-bottom: var(--space-space-4) solid var(--color-primary-a);
+  padding: var(--space-space-8) var(--space-space-12);
+  top: 5.2rem;
+}
+
+.foo .toast-notification.error-toast {
+  background: var(--color-primary-error-red);
+  border-bottom: var(--space-space-4) solid var(--color-toast-error-border);
+}
+
+.foo .toast-notification.error-toast .toast-content::before {
+  content: "";
+  position: absolute;
+  background-image: url("/icons/information-circle-white.svg");
+  width: var(--sf-width-2);
+  height: var(--sf-height-2);
+}
+
+.foo .toast-notification.error-toast .toast-content .toast-message {
+  padding-inline-start: var(--space-space-28);
+}
+
+.foo .toast-notification .toast-content {
+  color: var(--color-neutral-50);
+  font: var(--type-details-3-font);
+  gap: var(--space-space-8);
+}
+
+.foo .toast-notification .toast-close {
+  display: none;
+}
+
+@media (width >= 768px) {
+  html[dir='rtl'] .foo #spr-live-chat-app > div {
+    left: var(--space-space-40);
+  }
+
+  .foo .toast-notification {
+    position: absolute;
+    top: 14.2rem;
+    margin: var(--space-space-4x) var(--space-space-40) var(--space-space-4x);
+  }
+
+  .foo .toast-notification.scrolled-toast {
+    position: fixed;
+    top: 0;
+  }
+}
+
+@media (width <= 767px) {
+  .foo button.backtotop,
+  .foo #spr-live-chat-app > div {
+    right: var(--space-space-12);
+  }
+
+  html[dir='rtl'] .foo button.backtotop {
+    right: unset;
+    left: var(--space-space-18);
+  }
+
+  html[dir='rtl'] .foo #spr-live-chat-app > div {
+    right: unset;
+  }
+}

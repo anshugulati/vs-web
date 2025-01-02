@@ -1,0 +1,242 @@
+.nearby-stores-view .sf-store-block-delivery-details,
+#store-info-nearby-dialog .store-info-nearby-modal .modal-content .sf-store-nearby-details {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  gap: var(--space-space-4);
+  align-items: center;
+}
+
+.nearby-stores-view .sf-store-block-delivery-details .sf-store-or-pudo,
+#store-info-nearby-dialog .store-info-nearby-modal .modal-content .sf-store-nearby-store {
+  background-color: var(--color-neutral-901);
+  padding: var(--space-space-4);
+  color: var(--color-text-main);
+  font: var(--type-details-semibold-2-font);
+  min-width: var(--sf-width-3);
+  text-align: center;
+}
+
+.nearby-stores-view .sf-store-block-delivery-details .sf-store-delviery,
+#store-info-nearby-dialog .store-info-nearby-modal .modal-content .sf-store-nearby-collection {
+  color: var(--color-text-main);
+  font: var(--type-details-semibold-2-font);
+  width: calc(100% - 10.7rem);
+}
+
+#store-info-nearby-dialog .store-info-nearby-modal .modal-content .sf-store-nearby-collection {
+  width: 100%;
+}
+
+.nearby-stores-view
+  .sf-store-block-delivery-details
+  .sf-store-delviery.sf-store-delivery-space {
+  width: calc(100% - 7.4rem);
+}
+
+.nearby-stores-view .sf-store-block-delivery-details .sf-store-free-or-paid,
+#store-info-nearby-dialog .store-info-nearby-modal .modal-content .sf-store-nearby-free {
+  color: var(--color-success-100);
+  font-size: var(--font-size-2);
+  font-style: normal;
+  font-weight: var(--font-weight-6);
+  line-height: var(--line-height-xl-2);
+  width: 2.7rem;
+}
+
+.click-n-collect-sf-map-modal.modal.hide-modal,
+.click-n-collect-sf-map-modal .modal-content .sd-navigation,
+.nearby-stores-view .sf-content-mobile-details,
+#store-info-nearby-dialog .store-info-nearby-modal .modal-content .sd-name,
+#store-info-nearby-dialog .store-info-nearby-modal .modal-content .sd-opening-hours,
+#store-info-nearby-dialog .store-info-nearby-modal .modal-content .sd-navigation {
+  display: none;
+}
+
+.click-n-collect-sf-map-modal.modal .pdp-modal .modal-header h4, 
+#store-info-nearby-dialog .store-info-nearby-modal .modal-content .operating-hours {
+  margin: 0;
+}
+
+#store-info-nearby-dialog .store-info-nearby-modal .modal-header h4 {
+  color: var(--color-brand-750);
+  font-size: var(--font-size-5);
+  font-weight: var(--font-weight-6);
+  text-align: center;
+  font-style: normal;
+}
+
+.click-n-collect-sf-map-modal.modal .pdp-modal .modal-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#store-info-nearby-dialog .store-info-nearby-modal .modal-header {
+  height: 5rem;
+  border-bottom: var(--shape-border-width-1) solid var(--color-neutral-480);
+}
+
+.click-n-collect-sf-map-modal.modal .modal-content {
+  padding: 0;
+  background-color: var(--color-neutral-50);
+  height: 100%;
+}
+
+#store-info-nearby-dialog .store-info-nearby-modal .modal-content {
+  padding: var(--space-space-16) var(--space-space-12);
+}
+
+.modal .store-info-nearby-modal {
+  max-height: 80%;
+  max-width: 100%;
+  width: 100%;
+  margin: auto 0 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100%);
+  transition: transform 0.5s ease-in-out;
+}
+
+body.modal-open .modal .store-info-nearby-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.sf-store-nearby-name {
+  color: var(--color-text-black);
+  font-size: var(--font-size-3);
+  font-style: normal;
+  font-weight: var(--font-weight-6);
+}
+
+#store-info-nearby-dialog .store-info-nearby-modal .modal-content .sf-store-nearby-details {
+  margin: var(--space-space-4) 0 var(--space-space-12) 0;
+}
+
+#store-info-nearby-dialog .store-info-nearby-modal .modal-content .sf-store-nearby-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#store-info-nearby-dialog .store-info-nearby-modal .modal-content .sf-store-nearby-distance {
+  color: var(--color-brand-250);
+  text-align: end;
+  font-size: var(--font-size-2);
+  font-style: normal;
+  font-weight: var(--font-weight-6);
+}
+
+#store-info-nearby-dialog .store-info-nearby-modal .modal-content .sf-store-nearby-distance:dir(rtl) {
+  text-align: start;
+}
+
+#store-info-nearby-dialog .store-info-nearby-modal .modal-content .sf-store-nearby-address {
+  color: var(--color-text-black);
+  font-size: var(--font-size-2);
+  font-weight: var(--font-weight-4);
+}
+
+.click-n-collect-sf-map-modal.modal {
+  display: flex;
+  background-color: var(--color-background-overley);
+  height: 100%;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  inset-inline-start: 0;
+  z-index: 3;
+}
+
+.click-n-collect-sf-map-modal.modal .pdp-modal {
+  position: fixed;
+  height: 75%;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--color-neutral-50);
+}
+
+.click-n-collect-sf-map-modal.modal .pdp-modal .store-finder-container,
+.click-n-collect-sf-map-modal.modal .pdp-modal .store-finder-wrapper, 
+.click-n-collect-sf-map-modal.modal .pdp-modal .store-finder,
+.click-n-collect-sf-map-modal.modal .pdp-modal .sf-content-right,
+.click-n-collect-sf-map-modal.modal .pdp-modal .sf-content-map-container {
+  height: 100%;
+}
+
+.click-n-collect-sf-map-modal.modal .pdp-modal .sf-content-map-view {
+  height: calc(100% - var(--space-space-50));
+}
+
+.click-n-collect-sf-map-modal.modal .section.nearby-stores-view {
+  padding: 0;
+}
+
+.pdp-product__actions {
+  z-index: 1;
+}
+
+.click-n-collect-sf-map-modal.modal .icon.icon-close img {
+  content: url('/icons/close.svg');
+}
+
+@media (width >= 768px) {
+  .click-n-collect-sf-map-modal.modal .pdp-modal {
+    margin: 0 auto;
+    width: 58%;
+    height: 70%;
+    top: 15%;
+    overflow: scroll;
+  }
+
+  .nearby-stores-view .sf-content {
+    flex-direction: row-reverse;
+    height: 100%;
+  }
+
+  .nearby-stores-view .sf-content-right {
+    margin: 0;
+  }
+
+  .nearby-stores-view .sf-search-input-container {
+    padding: var(--space-space-12) var(--space-space-16);
+  }
+
+  .nearby-stores-view .sf-store-list-container {
+    padding: 0 var(--space-space-12) var(--space-space-16);
+  }
+
+  .click-n-collect-sf-map-modal.modal .locate-me-container {
+    top: var(--space-space-20);
+    inset-inline-end: var(--space-space-20);
+  }
+
+  .click-n-collect-sf-map-modal.modal .modal-content .sf-content-right {
+    width: 66%;
+  }
+
+  .click-n-collect-sf-map-modal.modal .modal-content .store-location-perm-alert,
+  .click-n-collect-sf-map-modal.modal .modal-content .sf-search-input-container.add-top-margin {
+    margin-top: var(--space-space-60);
+  }
+
+  .click-n-collect-sf-map-modal.modal .pdp-modal .modal-header {
+    position: absolute;
+    top: 0;
+    inset-inline-end: 0;
+    padding: var(--space-space-16) var(--space-space-12);
+    box-shadow: none;
+    border-bottom: var(--shape-border-width-1) solid var(--color-neutral-480);
+    width: 34%;
+  }
+
+  .click-n-collect-sf-map-modal.modal .store-mobile-tab-view .sf-content-left-list {
+    padding: 0;
+    overflow: hidden;
+  }
+
+}

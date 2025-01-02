@@ -1,0 +1,13 @@
+@import '../recommendations.css';
+
+/* cha specific code goes here */
+
+/* Always keep .cha scope for brand specific override
+Example:
+.cha h2 {
+  color: var(--color-token);
+}
+*/
+.section.no-results.recommendations-container .default-content-wrapper {
+  margin: 0;
+}

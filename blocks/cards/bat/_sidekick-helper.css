@@ -1,0 +1,15 @@
+.sidekick-library .cards-top-offer-banner a,
+.sidekick-library .carousel .carousel-item a,
+.sidekick-library .multi-col-cat-banner .button.hide,
+.sidekick-library .pricepoint .cards-image a {
+  display: none;
+}
+
+@media (width >= 768px) {
+  .multi-column-category-carousel button.carousel-nav-right, 
+  .multi-column-category-carousel button.carousel-nav-left {
+    top: calc(50% - var(--space-space-24));
+    background: none;
+    border: none;
+  }
+}

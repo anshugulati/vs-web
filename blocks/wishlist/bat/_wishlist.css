@@ -1,0 +1,201 @@
+@import '../wishlist.css';
+
+
+
+/* bat specific code goes here */
+
+/* Always keep .bat scope for brand specific override
+Example:
+.bat h2 {
+  color: var(--color-token);
+}
+*/
+/* stylelint-disable no-descending-specificity */
+
+.wishlist .info-message {
+  background-color: #ECFDF3;
+}
+
+.bat .wishlist-container h2 {
+  font: var(--type-details-semibold-6-font);
+  line-height: var(--line-height-2-6);
+  margin: var(--space-space-8) 0;
+  color: var(--color-secondary-a);
+  height: var(--space-space-48);
+  display: flex;
+  align-items: center;
+  padding-bottom: var(--space-space-8);
+}
+
+.bat .wishlist .empty-wishlist-container {
+  padding: var(--space-space-48) 0;
+}
+
+.bat .wishlist .empty-wishlist-container p {
+  margin: 0;
+}
+
+.bat .wishlist .empty-wishlist-container .text {
+  font: var(--type-details-semibold-7-font);
+  margin-bottom: var(--space-space-12);
+  line-height: var(--aura-line-height-132);
+}
+
+.bat .wishlist .empty-wishlist-container .sub-text {
+  margin-bottom: var(--space-space-24);
+  font: var(--type-details-4-font);
+  color: var(--color-secondary-b);
+  text-align: center;
+  line-height: var(--space-space-2-24);
+}
+
+.bat .wishlist .empty-wishlist-container .empty-fav-icon {
+  background-image: url('/icons/wishlist-empty.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: var(--space-space-12);
+}
+
+.bat .wishlist .empty-wishlist-container a {
+  margin: 0;
+}
+
+.bat .wishlist .empty-wishlist-container a.button {
+  padding: var(--space-space-12) var(--space-space-24);
+}
+
+.bat .wishlist .empty-wishlist-container a.button::after,
+.bat .wishlist .empty-wishlist-container button::after {
+  display: block;
+  background-image: url('/icons/chevron-right-white.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  content: '';
+  height: 3.2rem;
+  width: 3.2rem;
+  opacity: 1;
+  padding: 0;
+  margin: 0;
+}
+
+.bat .wishlist .header-message {
+  padding: var(--space-space-8) var(--space-space-12);
+  margin-top: var(--space-space-20);
+}
+
+.bat .wishlist .header-message div.section p {
+  line-height: var(--space-space-2-24);
+}
+
+.bat .wishlist .header-message div.section p em {
+  font: var(--type-details-3-font);
+  line-height: var(--line-height-18-2);
+}
+
+.bat .wishlist .header-message div.section ul li a {
+  color: var(--color-text-main);
+}
+
+.bat .wishlist .product-item-info {
+  order: 0;
+}
+
+.bat .wishlist .products-container .cart-button-wrapper {
+  display: none;
+}
+
+.bat .wishlist .products-container .remove-from-wishlist {
+  font: var(--type-details-3-font);
+  line-height: var(--line-height-18-2);
+  margin: var(--space-space-4x) 0;
+  color: var(--color-secondary-b);
+}
+
+.bat .wishlist .basket-buttons-container {
+  width: 100%;
+}
+
+.bat .wishlist .basket-buttons-container .add-to-basket {
+  width: 100%;
+  margin: 0;
+}
+
+.bat .algolia-product-listing .products-pager-container {
+  padding: var(--space-space-24) var(--space-space-12);
+}
+
+.bat .algolia-product-listing .products-pager-container .pager-progress > p {
+  margin: 0;
+}
+
+.bat.account .main-wrapper .sidebar-main .wishlist.algolia-product-listing .products-container.columns-4 {
+  grid-template-columns: repeat(4, calc(25% - var(--space-space-24)));
+}
+
+.bat .wishlist.algolia-product-listing .products-container.columns-4 {
+  grid-template-columns: repeat(5, calc(20% - var(--space-space-26)));
+}
+
+@media (width < 768px) {
+  .bat .wishlist-container h2 {
+    line-height: var(--line-height-2-3);
+    margin: var(--space-space-12) 0;
+    height: unset;
+    padding-bottom: var( --space-space-4);
+  }
+
+  .bat .wishlist .empty-wishlist-container .sub-text {
+    line-height: var(--space-space-96-1);
+  }
+
+  .bat .wishlist .header-message > div {
+    flex-direction: row;
+  }
+
+  .bat .wishlist .header-message {
+    display: flex;
+    align-items: center;
+    margin-top: var(--space-space-24);
+  }
+
+  .bat .wishlist .header-message .icon-info {
+    margin: 0 var(--space-space-8) 0 0;
+  }
+
+  .bat .wishlist .header-message div.section {
+    margin-inline-end: 0;
+  }
+
+  .bat .wishlist .header-message div.section p em {
+    line-height: var(--line-height-xl-2);
+  }
+
+  .bat .wishlist .header-message div.section p:first-of-type {
+    font: var(--type-details-semibold-4-font);
+    line-height: var(--space-space-96-1);
+  }
+
+  .bat .wishlist .header-message div.section ul li a {
+    font: var(--type-details-3-font);
+    min-width: var(--space-space-102);
+  }
+
+  .bat .wishlist .header-message div.section:last-child {
+    margin-inline-end: 0;
+  }
+
+  .bat .algolia-product-listing .products-pager-container {
+    margin-top: var(--space-space-20);
+  }
+}
+
+@media (width >= 1024) {
+  .bat .sidebar-main .section.plp-header,
+  html[dir='rtl'] .bat .sidebar-main .section.plp-header {
+    padding: 0 0 var(--space-space-32) 0;
+  }
+
+  .bat .sidebar-main .section.algolia-product-listing-container {
+    padding: 0;
+  }
+}

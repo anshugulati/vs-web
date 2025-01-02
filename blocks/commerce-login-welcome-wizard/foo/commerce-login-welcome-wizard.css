@@ -1,0 +1,170 @@
+/* stylelint-disable-line length-zero-no-unit */
+
+.section.commerce-login-welcome-wizard-container {
+    padding-top: var(--space-space-0x);
+    padding-bottom: var(--space-space-0x);
+}
+
+.login-container .input-wrapper {
+    height: 5.4rem;
+    position: relative;
+}
+
+.commerce-login-welcome-wizard-container .commerce-login form button {
+    margin: 0;
+}
+
+.commerce-login-welcome-wizard-wrapper form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-space-16);
+}
+
+.commerce-login-welcome-wizard-container  a.forgot-password {
+    font-size: var(--font-size-2);
+    line-height: var(--line-height-s);
+    text-align: center;
+    margin-top: var(--space-space-8);
+}
+
+@media(width >=768px) {
+    .commerce-login-welcome-wizard-container.social-login-container {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        padding-top: var(--space-space-32);
+    }
+
+    .commerce-login-welcome-wizard-container .commerce-login form input, .commerce-login-welcome-wizard-container .commerce-login form .input-field-wrapper {
+        max-width: unset;
+    }
+
+    .commerce-login-welcome-wizard-container .commerce-login form button {
+        width: 100%;
+        margin-top: var(--space-space-16);
+    }
+
+    .commerce-login-welcome-wizard-container .button-container a {
+        width: var(--grid-col-4);
+    }
+
+    .commerce-login-welcome-wizard-wrapper form {
+        gap: var(--space-space-24);
+    }
+
+    .commerce-login-welcome-wizard-container  a.forgot-password {
+        margin-top: 0;
+    }
+}
+
+/* bat specific code goes here */
+
+/* Always keep .bat scope for brand specific override 
+Example:
+.bat h2 {
+  color: var(--color-token);
+}
+*/
+
+.foo.user.login .commerce-login-welcome-wizard-container {
+  display: none;
+}
+
+.foo.user.login .welcome-flow .commerce-login-welcome-wizard-container {
+  display: block;
+  padding: var(--space-space-16) var(--space-space-0x);
+  width: 100%;
+}
+
+.foo.user.login .welcome-flow .commerce-login-welcome-wizard-container h2 {
+  display: flex;
+  gap: var(--space-space-8);
+  border: var(--space-space-0x);
+  margin: var(--space-space-0x);
+  justify-content: start;
+  align-items: center;
+  font: var(--type-details-semibold-6-font);
+  color: var(--color-secondary-a);
+}
+
+.foo.user.login .welcome-flow .commerce-login-welcome-wizard-container h2 span {
+  width: var(--space-space-24);
+  height: var(--space-space-24);
+  cursor: pointer;
+}
+
+.foo.user.login .welcome-flow .commerce-login-welcome-wizard-container p {
+  text-align: start;
+  color: var(--text-text-main);
+  padding: var(--space-space-22) 0 0;
+}
+
+.foo.user.login .commerce-login-welcome-wizard-container a.forgot-password {
+  margin-top: var(--space-space-6);
+  text-decoration: underline;
+  color: var(--text-text-main);
+  font-size: var(--text-m);
+}
+
+.foo.user.login .commerce-login-welcome-wizard-container .email-info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  max-height: var(--space-space-34);
+  padding-bottom: var(--space-space-12);
+  border-bottom: var(--shape-border-width-1) solid var(--color-neutral-480);
+  margin-bottom: var(--space-space-17);
+}
+
+.foo.user.login
+  .commerce-login-welcome-wizard-container
+  .email-info-container
+  p {
+  font: var(--type-details-semibold-4-font);
+  margin: var(--space-space-0x);
+}
+
+.foo.user.login
+  .commerce-login-welcome-wizard-container
+  .email-info-container
+  .change-link
+  a {
+  text-decoration: underline;
+  font-size: var(--text-m);
+  cursor: pointer;
+}
+
+.foo.user.login
+  .welcome-flow
+  .commerce-login-welcome-wizard-container
+  .default-content-wrapper
+  p {
+  font-size: var(--text-xs);
+  text-align: center;
+  color: var(--color-secondary-b);
+  padding: var(--space-space-24) var(--space-space-0x) var(--space-space-0x);
+}
+
+@media (width>=768px) {
+  .foo.user.login .welcome-flow .commerce-login-welcome-wizard-container {
+    padding:var(--space-space-0x);
+  }
+
+  .foo.user.login .welcome-flow .commerce-login-welcome-wizard-container p {
+    padding-top: var(--space-space-16);
+    margin: var(--space-space-0x);
+  }
+
+  .foo.user.login .welcome-flow .commerce-login-welcome-wizard-container h2 {
+    font-size: var(--font-size-6);
+    padding-bottom: var(--space-space-8);
+  }
+
+  .commerce-login-welcome-wizard-wrapper form {
+    gap: var(--space-space-16);
+  }
+
+  .foo.user.login .commerce-login-welcome-wizard-container .email-info-container {
+    max-height: var(--space-space-36);
+  }
+}

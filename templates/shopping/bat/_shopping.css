@@ -1,0 +1,28 @@
+@import '../shopping.css';
+
+.bat.shopping input[type='radio'] {
+  border: 1px solid var(--color-primary-a);
+}
+
+.bat.shopping input[type='radio']:checked {
+  border: 1px solid var(--color-primary-a);
+}
+
+.bat.shopping input[type='radio']:checked::before {
+  background-color: var(--color-primary-a);
+  border: 1px solid var(--color-primary-a);
+}
+
+.bat.shopping .breadcrumbs,
+.bat.shopping .footer-wrapper {
+  background-color: var(--color-neutral-white);
+}
+
+@media (width >=768px) {
+  .bat.shopping,
+  .bat.shopping header,
+  .bat.shopping .nav-wrapper,
+  .bat.shopping header .search-container {
+    background-color: var(--color-neutral-white);
+  }
+}

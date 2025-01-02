@@ -1,0 +1,245 @@
+:root {
+  /* New base design */
+
+  /* NEW colors */
+  --color-primary-a: #CF0A2C;
+  --color-primary-b: #D42341;
+  --color-primary-c: #E78596;
+  --color-primary-d: #FAE7EA;
+  --color-primary-90: #1A1A1A;
+  --color-secondary-a: #151415;
+  --color-secondary-b: #737273;
+  --color-secondary-c: #B9B9B9;
+  --color-tertiary-a: #737B82;
+  --color-tertiary-b: #B9BDC1;
+  --color-tertiary-c: #D5D7DA;
+  --color-tertiary-d: #F1F2F3;
+  --color-text-main: var(--color-secondary-a);
+  --color-text-light: #737273;
+  --color-text-dark: var(--color-secondary-a);
+  --color-text-white: #FFF;
+  --color-promo-free: #F7EFE6;
+  --color-form-error: #D92D20;
+  --color-text-background: #DDE8F4;
+  --color-stroke: #EFEFEF;
+  --color-opacity-white-75: rgba(255 255 255 / 75%);
+
+  /* grid */
+  --grid-fluid: var(--grid-full-frame);
+
+  /* type : base */
+  --type-base-font-family: 'proxima nova regular', 'proxima nova regular fallback', 'helvetica neue';
+  --type-base-font-family-semibold: 'proxima nova semibold', 'proxima nova semibold fallback', 'helvetica neue';
+  --type-base-font-family-bold: 'proxima nova bold', 'proxima nova bold fallback', 'helvetica neue';
+
+  /* type : display */
+  --type-display-1-font: normal normal 300 6rem/7.2rem var(--type-base-font-family);
+  --type-display-1-letter-spacing: 0.04em;
+  --type-display-2-font: normal normal 300 4.8rem/5.6rem var(--type-base-font-family);
+  --type-display-2-letter-spacing: 0.04em;
+  --type-display-3-font: normal normal 300 3.4rem/4rem var(--type-base-font-family);
+  --type-display-3-letter-spacing: 0.04em;
+
+  /* type : headline */
+  --type-headline-1-font: normal normal 400 2.4rem/3.2rem var(--type-base-font-family);
+  --type-headline-1-letter-spacing: 0.04em;
+  --type-headline-2-default-font: normal normal 300 2rem/2.4rem var(--type-base-font-family);
+  --type-headline-2-default-letter-spacing: 0.04em;
+  --type-headline-2-strong-font: normal normal 400 2rem/2.4rem var(--type-base-font-family);
+  --type-headline-2-strong-letter-spacing: 0.04em;
+
+  /* NB Desktop heading */
+  --type-heading-regular-font-1: normal normal var(--font-weight-4) var(--font-size-10)/var(--line-height-l) var(--type-base-font-family);
+  --type-heading-semi-bold-font-1: normal normal var(--font-weight-6) var(--font-size-10)/var(--line-height-l) var(--type-base-font-family-semibold);
+  --type-heading-bold-font-1: normal normal var(--font-weight-7) var(--font-size-10)/var(--line-height-l) var(--type-base-font-family-bold);
+  --type-heading-regular-font-2: normal normal var(--font-weight-4) var(--font-size-9)/var(--line-height-l) var(--type-base-font-family);
+  --type-heading-semi-bold-font-2: normal normal var(--font-weight-6) var(--font-size-9)/var(--line-height-l) var(--type-base-font-family-semibold);
+  --type-heading-bold-font-2: normal normal var(--font-weight-7) var(--font-size-9)/var(--line-height-l) var(--type-base-font-family-bold);
+  --type-heading-regular-font-3: normal normal var(--font-weight-4) var(--font-size-8)/var(--line-height-l) var(--type-base-font-family);
+  --type-heading-semi-bold-font-3: normal normal var(--font-weight-6) var(--font-size-8)/var(--line-height-l) var(--type-base-font-family-semibold);
+  --type-heading-bold-font-3: normal normal var(--font-weight-7) var(--font-size-8)/var(--line-height-l) var(--type-base-font-family-bold);
+  --type-heading-regular-font-4: normal normal var(--font-weight-4) var(--font-size-7)/var(--line-height-l-2) var(--type-base-font-family);
+  --type-heading-semi-bold-font-4: normal normal var(--font-weight-6) var(--font-size-7)/var(--line-height-l-2) var(--type-base-font-family-semibold);
+  --type-heading-bold-font-4: normal normal var(--font-weight-7) var(--font-size-7)/var(--line-height-l-2) var(--type-base-font-family-bold);
+  --type-heading-regular-font-5: normal normal var(--font-weight-4) var(--font-size-6)/var(--line-height-l) var(--type-base-font-family);
+  --type-heading-semi-bold-font-5: normal normal var(--font-weight-6) var(--font-size-6)/var(--line-height-l) var(--type-base-font-family-semibold);
+  --type-heading-bold-font-5: normal normal var(--font-weight-7) var(--font-size-6)/var(--line-height-l) var(--type-base-font-family-bold);
+  --type-heading-regular-font-6: normal normal var(--font-weight-4) var(--font-size-4)/var(--line-height-xl) var(--type-base-font-family);
+  --type-heading-semi-bold-font-6: normal normal var(--font-weight-6) var(--font-size-4)/var(--line-height-xl) var(--type-base-font-family-semibold);
+  --type-heading-bold-font-6: normal normal var(--font-weight-7) var(--font-size-4)/var(--line-height-xl) var(--type-base-font-family-bold);
+
+
+  /* type : body */
+  --type-body-1-default-font: normal normal var(--font-size-4)/var(--line-height-m) var(--type-base-font-family);
+  --type-body-1-default-letter-spacing: 0;
+  --type-body-1-strong-font: normal normal 400 1.6rem/2.4rem var(--type-base-font-family);
+  --type-body-1-strong-letter-spacing: 0;
+  --type-body-1-emphasized-font: normal normal 700 1.6rem/2.4rem var(--type-base-font-family);
+  --type-body-1-emphasized-letter-spacing: 0;
+  --type-body-2-default-font: normal normal 400 1.4rem/2rem var(--type-base-font-family);
+  --type-body-2-default-letter-spacing: 0;
+  --type-body-2-strong-font: normal normal 600 1.4rem/2rem var(--type-base-font-family);
+  --type-body-2-strong-letter-spacing: 0;
+  --type-body-2-emphasized-font: normal normal 700 1.4rem/2rem var(--type-base-font-family);
+  --type-body-2-emphasized-letter-spacing: 0;
+
+  /* type : text regular */
+  --type-lg-regular-text: normal normal 400 var(--font-size-5)/var(--line-height-l-2) var(--type-base-font-family);
+  --type-md-regular-text: normal normal 400 var(--font-size-4)/var(--line-height-m) var(--type-base-font-family);
+  --type-sm-regular-text: normal normal 400 var(--font-size-3)/var(--line-height-s) var(--type-base-font-family);
+  --type-xs-regular-text: normal normal 400 var(--font-size-2)/var(--line-height-s) var(--type-base-font-family);
+
+  /* type : text semibold */
+  --type-lg-semibold-text: normal normal 600 var(--font-size-5)/var(--line-height-l-2) var(--type-base-font-family-semibold);
+  --type-md-semibold-text: normal normal 600 var(--font-size-4)/var(--line-height-m) var(--type-base-font-family-semibold);
+  --type-sm-semibold-text: normal normal 600 var(--font-size-3)/var(--line-height-s) var(--type-base-font-family-semibold);
+  --type-xs-semibold-text: normal normal 600 var(--font-size-2)/var(--line-height-s) var(--type-base-font-family-semibold);
+
+  /* type : text bold */
+  --type-lg-bold-text: normal normal 700 var(--font-size-5)/var(--line-height-l-2) var(--type-base-font-family-bold);
+  --type-md-bold-text: normal normal 700 var(--font-size-4)/var(--line-height-m) var(--type-base-font-family-bold);
+  --type-sm-bold-text: normal normal 700 var(--font-size-3)/var(--line-height-s) var(--type-base-font-family-bold);
+  --type-xs-bold-text: normal normal 700 var(--font-size-2)/var(--line-height-s) var(--type-base-font-family-bold);
+
+  /* type : details */
+  --type-details-1-font: normal normal 400 var(--font-size-1) var(--type-base-font-family);
+  --type-details-2-font: normal normal 400 var(--font-size-2) var(--type-base-font-family);
+  --type-details-3-font: normal normal 400 var(--font-size-3) var(--type-base-font-family);
+  --type-details-4-font: normal normal 400 var(--font-size-4) var(--type-base-font-family);
+  --type-details-5-font: normal normal 400 var(--font-size-5) var(--type-base-font-family);
+  --type-details-6-font: normal normal 400 var(--font-size-6) var(--type-base-font-family);
+  --type-details-7-font: normal normal 400 var(--font-size-7) var(--type-base-font-family);
+  --type-details-8-font: normal normal 400 var(--font-size-8) var(--type-base-font-family);
+  --type-details-9-font: normal normal 400 var(--font-size-9) var(--type-base-font-family);
+  --type-details-10-font: normal normal 400 var(--font-size-10) var(--type-base-font-family);
+  --type-details-11-font: normal normal 400 var(--font-size-11) var(--type-base-font-family);
+  --type-details-12-font: normal normal 400 var(--font-size-12) var(--type-base-font-family);
+
+  /** type : details semibold */
+  --type-details-semibold-1-font: normal normal 600 var(--font-size-1) var(--type-base-font-family-semibold);
+  --type-details-semibold-2-font: normal normal 600 var(--font-size-2) var(--type-base-font-family-semibold);
+  --type-details-semibold-3-font: normal normal 600 var(--font-size-3) var(--type-base-font-family-semibold);
+  --type-details-semibold-4-font: normal normal 600 var(--font-size-4) var(--type-base-font-family-semibold);
+  --type-details-semibold-5-font: normal normal 600 var(--font-size-5) var(--type-base-font-family-semibold);
+  --type-details-semibold-6-font: normal normal 600 var(--font-size-6) var(--type-base-font-family-semibold);
+  --type-details-semibold-7-font: normal normal 600 var(--font-size-7) var(--type-base-font-family-semibold);
+  --type-details-semibold-8-font: normal normal 600 var(--font-size-8) var(--type-base-font-family-semibold);
+  --type-details-semibold-9-font: normal normal 600 var(--font-size-9) var(--type-base-font-family-semibold);
+  --type-details-semibold-10-font: normal normal 600 var(--font-size-10) var(--type-base-font-family-semibold);
+  --type-details-semibold-11-font: normal normal 600 var(--font-size-11) var(--type-base-font-family-semibold);
+  --type-details-semibold-12-font: normal normal 600 var(--font-size-12) var(--type-base-font-family-semibold);
+
+  /* type : button */
+  --type-button-1-font: normal normal 700 var(--font-size-4)/var(--line-height-m) var(--type-base-font-family);
+  --type-button-1-letter-spacing: 0;
+  --btn-container-height: 4.8rem;
+  --type-button-2-font: normal normal 400 1.6rem/2.4rem var(--type-base-font-family);
+  --type-button-2-letter-spacing: 0;
+
+  /* type : bold */
+  --type-details-bold-3-font: normal normal 700 var(--font-size-3) var(--type-base-font-family-bold);
+  --type-details-bold-4-font: normal normal 700 var(--font-size-10) var(--type-base-font-family-bold);
+  --type-details-bold-5-font: normal normal 700 var(--font-size-7) var(--type-base-font-family-bold);
+
+}
+
+@font-face {
+  font-family: "proxima nova regular fallback";
+  size-adjust: 97.57%;
+  src: local("Arial");
+  ascent-override: 92.5%;
+  descent-override: 35.6%;
+  line-gap-override: normal;
+}
+
+@font-face {
+  font-family: "proxima nova semibold fallback";
+  size-adjust: 99.75%;
+  src: local("Arial");
+  ascent-override: 92.5%;
+  descent-override: 35.6%;
+  line-gap-override: normal;
+}
+
+@font-face {
+  font-family: "proxima nova Bold fallback";
+  size-adjust: 101.28%;
+  src: local("Arial");
+  ascent-override: 92.5%;
+  descent-override: 35.6%;
+  line-gap-override: normal;
+}
+
+@media (width <=767px) {
+  :root {
+    /* grid */
+    --grid-margin: 1.6rem;
+
+    /* type : details */
+    --type-details-1-font: normal normal 400 var(--font-size-1) var(--type-base-font-family);
+    --type-details-2-font: normal normal 400 var(--font-size-1) var(--type-base-font-family);
+    --type-details-3-font: normal normal 400 var(--font-size-2) var(--type-base-font-family);
+    --type-details-4-font: normal normal 400 var(--font-size-3) var(--type-base-font-family);
+    --type-details-5-font: normal normal 400 var(--font-size-4) var(--type-base-font-family);
+    --type-details-6-font: normal normal 400 var(--font-size-5) var(--type-base-font-family);
+    --type-details-7-font: normal normal 400 var(--font-size-6) var(--type-base-font-family);
+    --type-details-8-font: normal normal 400 var(--font-size-7) var(--type-base-font-family);
+    --type-details-9-font: normal normal 400 var(--font-size-8) var(--type-base-font-family);
+    --type-details-10-font: normal normal 400 var(--font-size-9) var(--type-base-font-family);
+    --type-details-11-font: normal normal 400 var(--font-size-10) var(--type-base-font-family);
+    --type-details-12-font: normal normal 400 var(--font-size-11) var(--type-base-font-family);
+
+    /* type semibold: details */
+    --type-details-semibold-1-font: normal normal 600 var(--font-size-1) var(--type-base-font-family-semibold);
+    --type-details-semibold-2-font: normal normal 600 var(--font-size-1) var(--type-base-font-family-semibold);
+    --type-details-semibold-3-font: normal normal 600 var(--font-size-2) var(--type-base-font-family-semibold);
+    --type-details-semibold-4-font: normal normal 600 var(--font-size-3) var(--type-base-font-family-semibold);
+    --type-details-semibold-5-font: normal normal 600 var(--font-size-4) var(--type-base-font-family-semibold);
+    --type-details-semibold-6-font: normal normal 600 var(--font-size-5) var(--type-base-font-family-semibold);
+    --type-details-semibold-7-font: normal normal 600 var(--font-size-6) var(--type-base-font-family-semibold);
+    --type-details-semibold-8-font: normal normal 600 var(--font-size-7) var(--type-base-font-family-semibold);
+    --type-details-semibold-9-font: normal normal 600 var(--font-size-8) var(--type-base-font-family-semibold);
+    --type-details-semibold-10-font: normal normal 600 var(--font-size-9) var(--type-base-font-family-semibold);
+    --type-details-semibold-11-font: normal normal 600 var(--font-size-10) var(--type-base-font-family-semibold);
+    --type-details-semibold-12-font: normal normal 600 var(--font-size-11) var(--type-base-font-family-semibold);
+
+    /* type bold: details */
+    --type-details-bold-4-font: normal normal 700 var(--font-size-9) var(--type-base-font-family-bold);
+    --type-details-bold-5-font: normal normal 700 var(--font-size-6) var(--type-base-font-family-bold);
+
+    /* NB Mobile heading */
+    --type-heading-regular-font-1: normal normal var(--font-weight-4) var(--font-size-9)/var(--line-height-l) var(--type-base-font-family);
+    --type-heading-semi-bold-font-1: normal normal var(--font-weight-6) var(--font-size-9)/var(--line-height-l) var(--type-base-font-family-semibold);
+    --type-heading-bold-font-1: normal normal var(--font-weight-7) var(--font-size-9)/var(--line-height-l) var(--type-base-font-family-bold);
+    --type-heading-regular-font-2: normal normal var(--font-weight-4) var(--font-size-8)/var(--line-height-l) var(--type-base-font-family);
+    --type-heading-semi-bold-font-2: normal normal var(--font-weight-6) var(--font-size-8)/var(--line-height-l) var(--type-base-font-family-semibold);
+    --type-heading-bold-font-2: normal normal var(--font-weight-7) var(--font-size-8)/var(--line-height-l) var(--type-base-font-family-bold);
+    --type-heading-regular-font-3: normal normal var(--font-weight-4) var(--font-size-7)/var(--line-height-l-2) var(--type-base-font-family);
+    --type-heading-semi-bold-font-3: normal normal var(--font-weight-6) var(--font-size-7)/var(--line-height-l-2) var(--type-base-font-family-semibold);
+    --type-heading-bold-font-3: normal normal var(--font-weight-7) var(--font-size-7)/var(--line-height-l-2) var(--type-base-font-family-bold);
+    --type-heading-regular-font-4: normal normal var(--font-weight-4) var(--font-size-6)/var(--line-height-l) var(--type-base-font-family);
+    --type-heading-semi-bold-font-4: normal normal var(--font-weight-6) var(--font-size-6)/var(--line-height-l) var(--type-base-font-family-semibold);
+    --type-heading-bold-font-4: normal normal var(--font-weight-7) var(--font-size-6)/var(--line-height-l) var(--type-base-font-family-bold);
+    --type-heading-regular-font-5: normal normal var(--font-weight-4) var(--font-size-5)/var(--line-height-l-2) var(--type-base-font-family);
+    --type-heading-semi-bold-font-5: normal normal var(--font-weight-6) var(--font-size-5)/var(--line-height-l-2) var(--type-base-font-family-semibold);
+    --type-heading-bold-font-5: normal normal var(--font-weight-7) var(--font-size-5)/var(--line-height-l-2) var(--type-base-font-family-bold);
+
+    /* type : text regular */
+    --type-lg-regular-text: normal normal 400 var(--font-size-4)/var(--line-height-m) var(--type-base-font-family);
+    --type-md-regular-text: normal normal 400 var(--font-size-3)/var(--line-height-l) var(--type-base-font-family);
+    --type-sm-regular-text: normal normal 400 var(--font-size-2)/var(--line-height-s) var(--type-base-font-family);
+    --type-xs-regular-text: normal normal 400 var(--font-size-1)/var(--line-height-m) var(--type-base-font-family);
+
+    /* type : text semibold */
+    --type-lg-semibold-text: normal normal 600 var(--font-size-4)/var(--line-height-m) var(--type-base-font-family-semibold);
+    --type-md-semibold-text: normal normal 600 var(--font-size-3)/var(--line-height-l) var(--type-base-font-family-semibold);
+    --type-sm-semibold-text: normal normal 600 var(--font-size-2)/var(--line-height-s) var(--type-base-font-family-semibold);
+    --type-xs-semibold-text: normal normal 600 var(--font-size-1)/var(--line-height-m) var(--type-base-font-family-semibold);
+
+    /* type : text bold */
+    --type-lg-bold-text: normal normal 700 var(--font-size-4)/var(--line-height-m) var(--type-base-font-family-bold);
+    --type-md-bold-text: normal normal 700 var(--font-size-3)/var(--line-height-l) var(--type-base-font-family-bold);
+    --type-sm-bold-text: normal normal 700 var(--font-size-2)/var(--line-height-s) var(--type-base-font-family-bold);
+    --type-xs-bold-text: normal normal 700 var(--font-size-1)/var(--line-height-m) var(--type-base-font-family-bold);
+  }
+}

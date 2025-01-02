@@ -1,0 +1,43 @@
+.sidekick-library .collection-banner .desktop-bg-link, 
+.sidekick-library .collection-banner .mobile-bg-link,
+.sidekick-library .collection-banner .video-bg-link {
+    border: 1px solid var(--color-secondary-50);
+    color: var( --color-secondary-50);
+    font-size: var(--font-size-3);
+    padding: var(--space-space-2x);
+    height: 3rem;
+}
+
+.sidekick-library .collection-banner .desktop-bg-lbl, 
+.sidekick-library .collection-banner .mobile-bg-lbl,
+.sidekick-library .collection-banner .video-bg-lbl {
+    font-size: var(--font-size-3);
+    display: none;
+}
+
+.sidekick-library .collection-banner .image-wrapper {
+    position: absolute;
+    left: 1rem;
+    background: var(--color-neutral-50);
+    padding: var(--spacing-xxsmall-2);
+    top: 1rem;
+    text-align: left;
+    border: 1px solid var(--color-neutral-60);
+    border-radius: 5px;
+    display: none;
+    z-index: 10;
+} 
+
+.sidekick-library .collection-banner-container {
+    margin-top: var(--space-space-2x-2);
+}
+
+.settings-panel-active.sidekick-library .collection-banner .desktop-bg-link, 
+.settings-panel-active.sidekick-library .collection-banner .mobile-bg-link,
+.settings-panel-active.sidekick-library .collection-banner .video-bg-link,
+.settings-panel-active.sidekick-library .collection-banner .desktop-bg-lbl, 
+.settings-panel-active.sidekick-library .collection-banner .mobile-bg-lbl,
+.settings-panel-active.sidekick-library .collection-banner .video-bg-lbl,
+.settings-panel-active.sidekick-library .collection-banner .image-wrapper {
+    display: block;
+}

@@ -1,0 +1,317 @@
+.sidebar {
+  padding: var(--space-space-5x) 0;
+}
+
+.sidebar.hide-mobile,
+.sidebar.static.sidebar.hide-mobile {
+  display: none;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-space-20);
+  width: 100%;
+}
+
+.sidebar.dynamic .sidebar-item {
+  gap: unset;
+}
+
+.sidebar.static {
+  display: flex;
+  flex-direction: column;
+  gap: var(--radius-radius-xs);
+}
+
+.sidebar .sidebar-item-heading a {
+  font-size: var( --font-size-4);
+  color: var(--color-text-main);
+  display: block;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.sidebar.static .sidebar-item-heading a {
+  padding: var(--space-space-3x) var(--space-space-0x);
+  position: relative;
+  border-bottom: 1px solid var(--color-footer-border);
+}
+
+.sidebar.dynamic .sidebar-item-heading a,
+.sidebar.static .sidebar-item-heading a {
+  padding: var(--space-space-1x);
+}
+
+.sidebar.dynamic .sidebar-item.level-2 {
+  gap: var(--grid-gutter);
+}
+
+.sidebar.static .sidebar-item.level-2 {
+  gap: var(--radius-radius-xs);
+}
+
+.sidebar.static .sidebar-item.level-3,
+.sidebar.static .sidebar-item.level-4 {
+  gap: 0;
+}
+
+.sidebar.static .sidebar-item.level-4, .sidebar.dynamic .sidebar-item.level-4 {
+  padding-left: var(--space-space-8);
+}
+
+[dir='rtl'] .sidebar.static .sidebar-item.level-4, [dir='rtl'] .sidebar.dynamic .sidebar-item.level-4 {
+  padding-left: 0;
+  padding-right: var(--space-space-8);
+}
+
+.sidebar.dynamic .level-2 a, .sidebar.dynamic a.view-all,
+.sidebar.static .level-2 span {
+  font-weight: 600;
+}
+
+.sidebar.dynamic .sidebar-item.level-3 a {
+  font-size: var(--font-size-2);
+  font-weight: 400;
+}
+
+.sidebar.static .sidebar-item.level-3 a {
+  font-size: var(--font-size-3);
+  font-weight: 400;
+}
+
+.sidebar.dynamic .level-2 > .sidebar-item-heading:first-child > a{
+  padding-top: 0;
+}
+
+.sidebar-item-heading p {
+  margin: unset;
+}
+
+.sidebar.dynamic .sidebar-item-heading,
+.sidebar.static .sidebar-item-heading {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar.dynamic .level-2 .sidebar-item-heading,
+.sidebar.static .level-2 .sidebar-item-heading {
+  gap: var(--space-space-1x);
+}
+
+.sidebar .sidebar-item a.active {
+  font-weight: 600;
+}
+
+.sidebar.dynamic .sidebar-item a.active {
+  color: var(--color-text-dark);
+}
+
+.sidebar.static.grouped .sidebar-item a.active {
+  color: var(--color-primary-100);
+}
+
+.sidebar.static .sidebar-item a::after {
+  content: '';
+  position: absolute;
+  background-image: url('/icons/chevron-right.svg');
+  width: 1.6rem;
+  height: 1.6rem;
+  background-repeat: no-repeat;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+html[dir='rtl'] .sidebar.static .sidebar-item-heading a::after {
+  left: 0;
+  right: initial;
+  background-image: url('/icons/chevron-left.svg');
+}
+
+.sidebar.static .sidebar-item-nav {
+  display: none;
+}
+
+@media (width >= 768px) {
+  .sidebar, .sidebar.hide-mobile, .sidebar.static.sidebar.hide-mobile {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--space-space-8) 0 var(--space-space-16);
+    float: inline-start;
+    width: 100%;
+  }
+
+  .sidebar a {
+    cursor: pointer;
+  }
+
+  .sidebar-item-nav ul li a {
+    font-size: var(--font-size-2);
+  }
+
+  .sidebar a:hover {
+    color: var(--color-secondary-30);
+    text-decoration: underline;
+  }
+
+
+  .sidebar.static .sidebar-item-heading a {
+    padding: var(--space-space-1x) var(--space-space-0x);
+    border: none;
+  }
+
+  .sidebar.static .sidebar-item-heading a::after {
+    content: none;
+  }
+
+  .sidebar-item-nav ul {
+    list-style: none;
+    padding: unset;
+    margin: unset;
+  }
+
+  .sidebar-item-nav ul li {
+    padding: var(--space-space-1x) 0;
+  }
+
+  .sidebar-item-nav ul li strong {
+    font-family: 'hm sans semibold', Arial, Helvetica, sans-serif;
+  }
+}
+
+/* bat specific code goes here - we have to write  the css */
+
+.bat .sidebar {
+  border: var(--shape-border-width-1) solid var(--color-stroke);
+  border-bottom: none;
+  padding: var(--space-space-8) 0 0;
+  
+}
+
+.bat .sidebar .sidebar-item {
+  gap: 0;
+}
+
+.bat .sidebar .sidebar-item-heading a { 
+  padding: var( --space-space-12) var( --space-space-16);
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+}
+
+.bat .sidebar-item .sidebar-item-heading {
+  border: var(--shape-border-width-1) solid var(--color-stroke);
+  border-top: 0;
+  padding: 0 var(--space-space-16);
+}
+
+.bat .sidebar-item .sidebar-item-heading span.icon {
+  width: var(--spacing-small);
+  height: var(--spacing-small);
+  margin-inline-end: var(--spacing-xsmall);
+}
+
+.bat .sidebar .sidebar-item .sidebar-item-heading a {
+  font: var(--type-details-4-font);
+}
+
+.bat .sidebar .sidebar-item .sidebar-item-heading a.active {
+  font-weight: var(--font-weight-6);
+}
+
+/* Always keep .bat scope for brand specific override
+Example:
+.bat h2 {
+  color: var(--color-token);
+}
+*/
+
+.bat .sidebar-plp .sidebar {
+  border: none;
+  padding-top: var(--space-space-2);
+}
+
+.bat .sidebar.dynamic .sidebar-item.level-2 {
+  gap: var(--grid-1-gutters);
+  padding: var(--space-space-2x) var(--space-space-0x);
+}
+
+.bat .sidebar-plp .sidebar .sidebar-item-heading a {
+  font-size: var(--font-size-6);
+  font-weight: var(--font-weight-6);
+  line-height: var(--line-height-s);
+  padding: var(--space-space-1x);
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+}
+
+.bat .sidebar-plp .sidebar.dynamic .sidebar-item.level-3 a {
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-4);
+  color: var(--color-secondary-b);
+}
+
+.bat .sidebar-plp .sidebar .dynamic {
+  border: none;
+  padding: var(--space-space-16) var(--grid-margin);
+}
+
+.bat .sidebar-plp .sidebar-item .sidebar-item-heading {
+  border: none;
+  border-top: 0;
+  padding: 0;
+  gap:0;
+}
+
+.bat .sidebar-plp .sidebar.dynamic .sidebar-item.level-2 > li > a {
+  text-transform: uppercase;
+}
+
+.bat .sidebar-plp .sidebar.dynamic .sidebar-item.level-2 > li.active > a {
+  color: var(--color-text-main);
+}
+
+.bat .sidebar-plp .sidebar.dynamic .sidebar-item.level-3 > li.active > a {
+  color: var(--color-primary-a);
+}
+
+@media (width >= 1024px) {
+  .bat aside.sidebar-plp {
+    display: block;
+    padding: 0 var(--space-space-32) 0 var(--space-space-40);
+    min-width: 26%;
+    max-width: 26%;
+  }
+
+  html[dir='rtl'] .bat aside.sidebar-plp {
+    display: block;
+    padding: 0 var(--space-space-40) 0 var(--space-space-32);
+    min-width: 26%;
+    max-width: 26%;
+  }
+}
+
+@media (width >=768px) {
+  .bat .sidebar-plp .sidebar .sidebar-item-heading a:hover {
+    color: var(--color-primary-a);
+    text-decoration: underline;
+  }
+
+  .bat .sidebar.dynamic .level-2 > .sidebar-item-heading > a {
+    padding: var(--space-space-2x) var(--space-space-0x);
+  }
+
+  .bat .sidebar-plp .sidebar.dynamic .sidebar-item.level-3 a:hover {
+    color: var(--color-primary-a);
+  }
+}

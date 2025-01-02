@@ -1,0 +1,24 @@
+@import "../action-cards.css";
+
+/* bat specific code goes here */
+
+/* Always keep .bat scope for brand specific override 
+Example:
+.bat h2 {
+  color: var(--color-token);
+}
+*/
+
+.bat .action-cards-container .teaser-item h3,
+.bat .egift.action-cards .action-cards-content h4 {
+  font: var(--type-details-semibold-6-font);
+}
+
+.bat.egift-card .action-cards-container .teaser-item p {
+  font: var(--type-details-3-font);
+  color: var(--color-secondary-b);
+}
+
+.bat .action-cards-container .teaser-buttons .button-container a{
+  display: inline-flex;
+}

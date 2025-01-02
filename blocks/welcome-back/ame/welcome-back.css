@@ -1,0 +1,12 @@
+.welcome-back .welcome-message{
+    padding-inline-start: var(--space-space-0x);
+}
+
+/* ame specific code goes here */
+
+/* Always keep .ame scope for brand specific override 
+Example:
+.ame h2 {
+  color: var(--color-token);
+}
+*/

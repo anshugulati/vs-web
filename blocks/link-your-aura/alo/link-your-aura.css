@@ -1,0 +1,392 @@
+.link-your-aura > div {
+  display: none;
+}
+
+.link-your-aura {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.link-your-aura > .show {
+  display: block;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.link-your-aura div,
+.link-your-aura p {
+  font-size: var(--text-s);
+  line-height: var(--line-height-xs);
+}
+
+.link-your-aura div p a {
+  position: relative;
+  color: var(--color-primary-aura-100);
+}
+
+.link-your-aura.otp-info-text a {
+  color: var(--color-primary-aura-100);
+}
+
+.otp-info-text a:hover {
+  color: var(--color-primary-aura-100);
+}
+
+.link-your-aura div p a:any-link {
+  position: relative;
+  color: var(--color-primary-aura-100);
+}
+
+.link-your-aura div > p a:hover {
+  color: var(--aura-color-primary-50);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.link-your-aura div p > a::after {
+  display: inline-block;
+  content: url("/icons/aura-link-arrow.svg");
+  height: var(--space-space-4x);
+  width: var(--space-space-4x);
+  position: absolute;
+  top: var(--spacing-xxxsmall);
+}
+
+.link-your-aura div p > a:hover::after {
+  content: url("/icons/aura-hover-arrow.svg");
+}
+
+.link-your-aura .aura-mobile-number {
+  position: relative;
+}
+
+.link-your-aura .otp-success-message::before {
+  display: inline-block;
+  content: url("/icons/otp-success-tick.svg");
+  height: var(--space-space-4x);
+  width: var(--space-space-4x);
+  position: absolute;
+  left: var(--space-space-30);
+  bottom: var(--space-space-13);
+}
+
+.link-your-aura .icon-hide {
+  display: none;
+}
+
+.link-your-aura .aura-mobile-number ul span {
+  width: var(--space-space-6x);
+  height: var(--space-space-6x);
+}
+
+.link-your-aura .otp-info-text p {
+  margin: 0;
+}
+
+.link-your-aura .aura-mobile-number div > p {
+  margin: 0;
+  padding-bottom: var(--space-space-24);
+  text-align: center;
+  color: var(--color-text-dark);
+}
+
+.link-your-aura .aura-mobile-number .aura-buttons {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.link-your-aura .aura-otp .otp-info-text p {
+  text-align: center;
+  padding-top: var(--space-space-12);
+  margin: 0;
+}
+
+.link-your-aura .aura-otp .otp-info-text a:hover {
+  cursor: pointer;
+}
+
+.link-your-aura .aura-mobile-number div:first-child > p:last-child {
+  padding-bottom: var(--space-space-16);
+  color: var(--aura-color-text-main);
+}
+
+.link-your-aura .aura-mobile-number div:first-child > p a:hover {
+  color: var(--aura-color-primary-50);
+  text-decoration: underline;
+}
+
+.contact-method .input-field-wrapper .input-wrapper {
+  display: none;
+}
+
+.link-your-aura .aura-otp .input-field-wrapper .input-wrapper,
+.link-your-aura
+  .aura-mobile-number
+  .contact-method
+  .input-field-wrapper
+  .input-wrapper {
+  border-radius: var(--space-space-4);
+  border: var(--shape-border-width-01) solid var(--aura-color-primary-50);
+  gap: var(--space-space-4);
+  position: relative;
+}
+
+.link-your-aura .mobile-field label {
+  direction: ltr;
+}
+
+.aura-mobile-number .contact-method .input-field-wrapper .input-wrapper label {
+  all: unset;
+  margin-inline-start: var(--space-space-8);
+  font-size: var(--text-m);
+  color: var(--color-text-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-space-31);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  padding: var(--space-space-13) 0;
+  line-height: var(--line-height-m);
+}
+
+.aura-otp .input-field-wrapper .input-wrapper input,
+.aura-mobile-number .contact-method .input-field-wrapper .input-wrapper input {
+  border-radius: var(--space-space-4);
+  border: 0;
+}
+
+.aura-mobile-number .contact-method .input-field-wrapper .input-wrapper label + input {
+  padding: var(--space-space-13) 0 var(--space-space-13) var(--space-space-50);
+  line-height: var(--line-height-m);
+  font-size: var(--text-m);
+}
+
+html[dir="rtl"]
+  .link-your-aura
+  .aura-mobile-number
+  .contact-method
+  .mobile-field
+  input {
+  direction: rtl;
+}
+
+.link-your-aura
+  .aura-mobile-number
+  .contact-method
+  .input-field-wrapper.invalid
+  .input-wrapper
+  input {
+  margin: 0;
+}
+
+.link-your-aura
+  .aura-mobile-number
+  .contact-method
+  .input-field-wrapper
+  .input-show,
+.otp-clock-show {
+  display: block;
+}
+
+.aura-mobile-number .radio-button-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--space-space-8);
+}
+
+.aura-mobile-number
+  .radio-button-container
+  .radio-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-space-4);
+  margin: var(--space-space-2x-2) 0;
+  font-size: var(--text-m);
+  color: var(--aura-color-text-main);
+}
+
+.aura-mobile-number
+  .aura-contact-container
+  .radio-button-container
+  .radio-wrapper
+  input[type="radio"] {
+  accent-color: var(--color-primary-aura-100);
+  width: var(--space-space-6x);
+  height: var(--space-space-6x);
+  appearance: auto;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.aura-mobile-number
+  .aura-contact-container
+  .radio-button-container
+  .radio-wrapper
+  label {
+  margin-top: var(--space-space-0x-1);
+}
+
+.link-your-aura .aura-otp {
+  position: relative;
+}
+
+.link-your-aura .aura-otp > div:first-child {
+  text-align: center;
+  padding-bottom: var(--space-space-16);
+}
+
+.link-your-aura .aura-otp .otp-info-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.link-your-aura .aura-otp .otp-info-text .disabled {
+  display: block;
+}
+
+.link-your-aura .aura-otp .otp-info-text .disabled::after {
+  content: "";
+  background-image: url("/icons/resend-otp-clock.svg");
+  background-size: cover;
+  width: var(--space-space-4x);
+  height: var(--space-space-4x);
+  position: absolute;
+  margin: var(--spacing-xxxsmall) var(--space-space-4) var(--spacing-xxxsmall);
+  vertical-align: middle;
+}
+
+.link-your-aura .aura-otp .otp-info-text div {
+  position: relative;
+}
+
+.link-your-aura .aura-otp-container .aura-otp-form .aura-buttons {
+  bottom: var(--space-space-28);
+  position: absolute;
+  width: 100%;
+}
+
+.otp-success-message {
+  width: 100%;
+  position: absolute;
+  bottom: var(--space-space-90);
+  background: var(--color-success-100);
+  border-radius: var(--shape-border-radius-2);
+  padding: var(--space-space-8);
+  font-weight: var(--font-weight-4);
+  line-height: var(--space-space-18);
+  text-align: center;
+  color: var(--color-neutral-50);
+}
+
+.otp-success-message.hide-message {
+  display: none;
+}
+
+.otp-success-message:empty {
+  display: none;
+}
+
+.link-your-aura .aura-mobile-number ul {
+  padding: var(--space-space-4);
+  margin: 0 0 var(--space-space-8);
+  display: flex;
+  flex-flow: column;
+  gap: var(--space-space-8);
+  background: var(--aura-primary-100-light);
+  height: 3.2rem;
+  overflow: hidden;
+}
+
+.link-your-aura .aura-mobile-number ul li {
+  display: flex;
+  gap: var(--space-space-4);
+  align-items: center;
+  background: var(--aura-color-primary-gradient);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: var(--text-s);
+  justify-content: center;
+  animation: vertical-bounce-in 6s infinite forwards;
+  visibility: hidden;
+}
+
+.link-your-aura .aura-mobile-number ul li:nth-child(2),
+.link-your-aura .aura-mobile-number ul li:nth-child(3) {
+  margin-top: -3.3rem;
+}
+
+.link-your-aura .aura-mobile-number ul li:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.link-your-aura .aura-mobile-number ul li:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.link-your-aura .aura-mobile-number ul li:nth-child(3) {
+  animation-delay: 4s;
+}
+
+@keyframes vertical-bounce-in {
+  0% {
+    transform: translateY(5rem);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  20% {
+    transform: translateY(-0.5rem);
+  }
+
+  23% {
+    transform: translateY(0.5rem);
+  }
+
+  30% {
+    transform: translateY(0%);
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  41% {
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(5rem);
+    opacity: 0;
+    visibility: visible;
+  }
+}
+
+.modal-content .link-your-aura {
+  min-height: 33.6rem;
+}
+
+@media (width>=768px) {
+  .link-your-aura .aura-mobile-number div > p a::after {
+    top: var(--space-space-3x-3);
+  }
+}
+
+/* alo specific code goes here */
+
+/* Always keep .alo scope for brand specific override 
+Example:
+.alo h2 {
+  color: var(--color-token);
+}
+*/

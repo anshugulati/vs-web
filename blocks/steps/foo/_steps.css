@@ -1,0 +1,68 @@
+@import '../steps.css';
+
+/* foo specific code goes here */
+
+/* Always keep .foo scope for brand specific override 
+Example:
+.foo h2 {
+  color: var(--color-token);
+}
+*/
+
+.steps-wrapper .count-position .steps-list {
+  gap: var(--space-space-20);
+  margin-top: var(--space-space-16);
+}
+
+.count-position .steps-list li {
+  border: var(--shape-icon-stroke-1) solid var(--color-neutral-480);
+  position: relative;
+  flex: 1;
+  margin: 0;
+}
+
+.count-position .steps-wrapper .steps-list .step-item {
+  height: 100%;
+}
+
+.count-position .steps-list .step-number {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--color-text-background);
+  font: var(--type-details-2-font);
+  padding: var(--space-space-8);
+  margin: 0;
+  color: var(--color-primary-90);
+}
+
+html[dir = 'rtl'] .count-position .steps-list .step-number {
+  left: 0;
+  right: unset;
+  margin: 0;
+}
+
+.count-position .steps-list .step-content {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.count-position .steps-list .step-icon {
+  height: 6.4rem;
+  width: 6.4rem;
+  padding: var(--space-space-8);
+  display: flex;
+  align-items: center;
+}
+
+.count-position .steps-list .step-icon img {
+  width: 4.8rem;
+  height: 4.8rem;
+}
+
+.count-position .steps-list .step-content .step-text {
+  height: unset;
+  padding: var(--space-space-16) var(--space-space-12) var(--space-space-18);
+}

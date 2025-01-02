@@ -1,0 +1,73 @@
+.section.tabs-container:has(.aura) {
+  padding: var(--space-space-16) var(--space-space-12);
+}
+
+.account .section.tabs-container:has(.aura) {
+  padding: var(--space-space-16) var(--space-space-12);
+}
+
+.tabs.aura {
+  font-family: var(--type-aura-font-family);
+}
+
+.aura .tabs-list {
+  display: flex;
+  margin: var(--space-space-12) 0 0 0;
+  font-family: inherit;
+  gap: 0;
+}
+
+.aura .tabs-list .tabs-tab {
+  flex: 1;
+  padding: var(--space-space-12);
+  color: var(--aura-text-main);
+  font-weight: var(--font-weight-4);
+  font-size: var(--text-m);
+  text-transform: none;
+  font-family: inherit;
+  border-bottom: var( --shape-border-width-01) solid var( --aura-color-stroke) ;
+}
+
+.aura .tabs-list button[aria-selected="true"] {
+  border-bottom: var(--space-space-2) solid var(--aura-color-primary);
+  color: var(--aura-text-main);
+}
+
+/* About Benefit Section */
+
+.section.aura-benefits-container {
+  padding: var(--space-space-4x) 0;
+}
+
+.aura-benefits-wrapper {
+  padding: var(--space-space-32) 0;
+  text-align: center;
+  font-family: var(--type-aura-font-family);
+  font-size: var(--text-m);
+  color: var(--aura-text-main);
+}
+
+.aura-benefits h3, .main-wrapper main .aura-benefits h3 {
+  margin: 0 0 var(--space-space-20) 0;
+  padding: var(--space-space-8) 0;
+  font-size: var(--font-size-7);
+  font-weight: var(--font-weight-7);
+  color: var(--aura-color-primary-10);
+  border: 0;
+  font-family: inherit;
+}
+
+@media (width >=768px) {
+  .aura-benefits h3, .main-wrapper main .aura-benefits h3{
+    font-size: var(--font-size-8);
+  }
+}
+
+/* alo specific code goes here */
+
+/* Always keep .alo scope for brand specific override 
+Example:
+.alo h2 {
+  color: var(--color-token);
+}
+*/

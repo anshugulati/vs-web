@@ -1,0 +1,148 @@
+@import '../footer.css';
+
+/* ame specific code goes here */
+
+/* Always keep .ame scope for brand specific override 
+Example:
+.ame h2 {
+  color: var(--color-token);
+}
+*/
+ 
+.ame .footer-primary {
+  padding-bottom: var(--space-space-32);
+}
+
+.ame .expand {
+  background-color:   var(--color-primary-a);
+  color: var(--color-white);
+}
+
+.ame .footer-primary .footer-list {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.ame .footer-primary h3 {
+  font-size: var(--font-size-3);
+  border-top: var(--shape-border-width-1) solid var(--color-footer-border);
+  padding: var(--space-space-12);
+  height: inherit;
+  margin: 0;
+}
+
+.ame .footer-primary ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-space-6);
+  margin:0;
+}
+
+.ame .footer-list ul li {
+  padding:0;
+  padding-left: var(--space-space-12);
+}
+
+.ame .footer-primary h4 + ul {
+  flex-direction: row;
+} 
+
+.ame .footer-primary .expand + ul {
+  padding: var(--space-space-16) var(--space-space-12);
+}
+
+.ame .footer-primary .expand + ul li {
+  padding:0;
+}
+
+.ame .footer-primary .footer-list-wrapper > div:nth-child(3) {
+  border-bottom: var(--shape-border-width-1) solid var(--color-footer-border);
+}
+
+.ame .footer-list-wrapper > div:nth-child(4) h3 {
+  border-top: none;
+  padding: 0;
+}
+
+.ame .footer-primary .footer-list-wrapper > div:nth-child(4) {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: var(--space-space-32) var(--space-space-12) 0;
+}
+
+.ame .footer-primary .email-container {
+  display: flex;
+  gap: var(--space-space-8);
+  padding-top: var(--space-space-12) ;
+}
+
+.ame .footer-primary .email-container button {
+  border-radius: var(--shape-border-radius-3);
+}
+
+
+
+.ame .footer-primary h4 {
+  padding-top: var(--space-space-20);
+}
+
+.ame .footer-logo {
+  visibility: hidden;
+}
+
+.footer-primary .footer-list-item a { 
+  color: var(--color-text-link);
+}
+
+@media (width >= 1024px) {
+  .ame .footer-primary {
+    padding: var(--space-space-20) var(--space-space-40);
+  }
+
+  .ame .footer-primary ul {
+    padding: 0;
+    gap: 0;
+  }
+
+  .ame .footer-primary ul li {
+    padding: 0;
+  }
+
+  .ame .footer .section.footer-info {
+    padding: 0;
+  }
+
+  .ame .footer-primary .footer-list-wrapper > div:nth-child(4) {
+    padding: 0;
+  }
+
+  .ame .footer-primary .expand {
+    background-color: var(--color-white);
+    color: var(--color-primary-a) ;
+  }
+
+   .ame .footer-primary h3 {
+    font-size: var(--font-size-3);
+    border: none;
+    padding: 0;
+  }
+
+  .ame .footer-primary .footer-list-wrapper > div:nth-child(3) {
+    border-bottom: none;
+  }
+
+  .ame .footer-logo {
+    visibility: visible;
+  }
+
+  .ame .footer-logo p {
+    padding-left:var(--space-space-40);
+  }
+
+  .ame .footer-logo span {
+    height: inherit;
+    width: var(--grid-col-6);
+  }
+  
+}

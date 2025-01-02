@@ -1,0 +1,180 @@
+@import url('../tokens.css');
+@import url('./tokens.css');
+@import url("../../styles/aura.css");
+@import '../styles.css';
+
+
+/* bat specific style goes here */
+
+div.dropin-design {
+  --type-base-font-family: 'source sans pro regular',
+    'source sans pro regular fallback', 'helvetica neue';
+}
+
+body {
+  font: var(--type-body-1-default-font);
+  letter-spacing: 0;
+}
+
+.bat {
+  h1 {
+    line-height: var(--line-height-l);
+  }
+
+  h2 {
+    line-height: var(--line-height-l);
+  }
+
+  h3 {
+    line-height: var(--line-height-s);
+  }
+
+  h4 {
+    line-height: var(--line-height-l-2);
+  }
+
+  a:any-link {
+    color: var(--color-secondary-b);
+  }
+
+  a:hover,
+  a:active {
+    color: var(--color-primary-a);
+  }
+
+  a.button:any-link,
+  button {
+    font: var(--type-body-1-strong-font);
+    border: var(--shape-border-width-1) solid var(--color-secondary-a);
+    color: var(--color-white);
+    background-color: var(--color-secondary-a);
+    margin: var(--space-space-4x) 0;
+    height: var(--container-height);
+    text-transform: uppercase;
+  }
+
+  a.button:hover,
+  button:hover {
+    background-color: var(--color-secondary-b);
+    border: 1px solid var(--color-secondary-b);
+  }
+
+  a.button:disabled,
+  button:disabled,
+  button:disabled:hover {
+    border: 1px solid var(--color-button-disabled-default-fill);
+    background-color: var(--color-button-disabled-default-fill);
+    color: var(--color-disabled-default-text);
+  }
+
+  a.button.secondary,
+  button.secondary {
+    color: var(--color-text-main);
+    background-color: var(--color-white);
+    border-color: 1px solid var(--color-secondary-a);
+  }
+
+  a.button.secondary:hover,
+  button.secondary:hover {
+    color: var(--color-text-main);
+    background-color: var(--color-white);
+    border-color: var(--color-secondary-b);
+  }
+
+  a.button.secondary:disabled,
+  button.secondary:disabled,
+  button.secondary:disabled:hover {
+    background-color: var(--color-white);
+    border-color: 1px solid var(--color-button-disabled-default-fill);
+  }
+
+  a.button.tertiary,
+  button.tertiary {
+    color: var(--color-text-main);
+    background-color: var(--color-opacity-0);
+    border-color: 1px solid var(--color-opacity-0);
+  }
+
+  input, main input {
+    letter-spacing: var(--type-body-2-strong-letter-spacing);
+    padding-inline-start: var(--space-space-2x);
+    padding: var(--space-space-2x) var(--space-space-3x);
+    align-self: stretch;
+    border: 1px solid var(--color-disabled-default-text);
+    background: var(--background-color);
+    color: var(--color-text-main);
+    font: var(--type-details-4-font);
+  }
+
+  input::placeholder {
+    color: var(--color-disabled-default-text);
+  }
+
+  .hide-on-mobile {
+    display: none;
+  }
+
+  .modal .modal-header button:hover {
+    background-color: transparent;
+    border: none;
+  }
+
+  .section.fragment-container:has(.fragment-wrapper:empty) {
+    padding: 0;
+  }
+
+  @media (width <=767px) {
+    h3 {
+      line-height: var(--line-height-l-2);
+    }
+
+    h4 {
+      line-height: var(--line-height-s);
+    }
+
+    h5 {
+      line-height: var(--line-height-l-2);
+    }
+  }
+
+  @media (width >= 768px) {
+    .hide-on-mobile {
+      display: block;
+    }
+  }
+
+  @media (width >= 1024px) {
+    .main-wrapper {
+      max-width: var(--grid-xlg-max-width);
+      margin: 0 auto;
+      padding: var(--space-space-32) 0;
+    }
+  }
+}
+
+@font-face {
+  font-family: 'source sans pro regular fallback';
+  src: local('Arial');
+  size-adjust: 102%;
+  ascent-override: 107%;
+  descent-override: 32%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: 'source sans pro semibold fallback';
+  src: local('Arial');
+  size-adjust: 105%;
+  ascent-override: 102%;
+  descent-override: 29%;
+  line-gap-override: 2%;
+}
+
+@font-face {
+  font-family: 'source sans pro bold fallback';
+  src: local('Arial');
+  size-adjust: 106%;
+  ascent-override: 102%;
+  descent-override: 35%;
+  line-gap-override: 0%;
+}

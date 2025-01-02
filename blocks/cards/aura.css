@@ -1,0 +1,68 @@
+.aura .cards-container {
+  background-color: var(--aura-primary-100-light);
+  padding: var(--space-space-24) 0;
+  gap: var(--space-space-24);
+  font-family: var(--type-aura-font-family);
+}
+
+.aura .cards > ul {
+  grid-template-columns: repeat(1, minmax(50px, 1fr));
+}
+
+@media (width >=768px) {
+  .aura .cards > ul {
+    grid-template-columns: repeat(3, minmax(50px, 1fr));
+  }
+}
+
+.aura .cards > ul > li {
+  border: 0;
+}
+
+.aura .cards-container h3, .main-wrapper main .aura .cards-container h3{
+  margin: 0;
+  padding: var(--space-space-8) 0;
+  font-size: var(--font-size-7);
+  font-weight: var(--font-weight-7);
+  color: var(--aura-color-primary-10);
+  text-align: center;
+  border: 0;
+  font-family: inherit;
+}
+
+@media (width >=768px) {
+  .aura .cards-container h3, .main-wrapper main .aura .cards-container h3 {
+    font-size: var(--font-size-8);
+  }
+}
+
+.aura .cards .cards-card-body {
+  background-color: var(--aura-primary-100-light);
+  padding: var(--space-space-16) var(--space-space-12) var(--space-space-24);
+}
+
+.aura .cards .cards-card-body h4 {
+  padding: 0;
+  margin-bottom: var(--space-space-12);
+  font-size: var(--font-size-6);
+  font-weight: var(--font-weight-6);
+  color: var(--aura-color-primary-10);
+  text-align: start;
+  font-family: inherit;
+  border: 0;
+}
+
+@media (width >=768px) {
+  .aura .cards .cards-card-body h4 {
+    font-size: var(--font-size-7);
+  }
+}
+
+.aura .cards .cards-card-body ul {
+  padding: 0;
+  padding-inline-start: var(--space-space-24);
+  margin: 0;
+  list-style-type: disc;
+  font-size: var(--text-m);
+  color: var(--aura-text-main);
+}

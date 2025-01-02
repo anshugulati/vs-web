@@ -1,0 +1,314 @@
+.payment-method-card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-space-10px);
+}
+
+.payment-method-radio {
+    height: var(--space-space-24);
+    width: var(--space-space-24);
+    padding: var(--space-space-3x-2);
+    border: 1px solid var(--color-success-100);
+    margin: var(--space-space-5px);
+}
+
+.payment-method-card .payment-method-icon-container {
+    display: flex;
+    cursor: default;
+}
+
+.payment-method-card .payment-method-icon-container .icon {
+    width: 4.9rem;
+    height: 3.3rem;
+}
+
+.payment-method-card input[type='radio']:checked::before {
+    content: '';
+    position: absolute;
+    width: var(--space-space-15);
+    height: var(--space-space-15);
+    background-color: var(--color-success-100);
+    border: 1px solid var(--color-success-100);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.radio-label {
+    font-weight: bold;
+    font-size: var(--font-size-3);
+    line-height: var(--text-l-1);
+}
+
+html[dir="rtl"] .radio-label {
+    font-weight: bold;
+}
+
+.payment-method-card input[type='radio'] {
+    cursor: pointer;
+}
+
+.payment-method-version-two .payment-method-card input[type='radio']{
+    align-self: auto;
+    border-color: var(--color-radio-icon-blue);
+    top: 0;
+}
+
+main .payment-method-version-two .payment-method-card input{
+    appearance: none;
+    border-radius: 50%;
+    border: 1px solid var(--color-radio-icon-blue);
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+    width: var(--space-space-5x);
+    height: var(--space-space-5x);
+    padding: var(--space-space-2x-1);
+    margin-inline-end: 2.5px;
+}
+
+.payment-method-version-two .payment-method-card input[type='radio']:checked::before{
+    background-color: var(--color-radio-icon-blue);
+    border: 1px solid var(--color-radio-icon-blue);
+}
+
+.payment-method-version-two .payment-method-card input[type='radio']:checked + label{
+    font-weight: var(--font-weight-6);
+}
+
+@media (width >=768px) {
+    .payment-method-card input[type='radio'] {
+        width: var(--space-space-5x);
+        height: var(--space-space-5x);
+        padding: var(--space-space-2x-1);
+    }
+
+    .radio-label {
+        font-weight: normal;
+        font-size: var(--space-space-16);
+        line-height: var(--embed-height-1-2);
+    }
+
+
+    html[dir="rtl"] .radio-label {
+        font-weight: bold;
+    }
+
+    .payment-method-card input[type='radio']:checked::before {
+        content: '';
+        position: absolute;
+        width: var(--space-space-12);
+        height: var(--space-space-12);
+        background-color: var(--color-success-100);
+        border: 1px solid var(--color-success-100);
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .payment-method-version-two .payment-method-card input[type='radio']:checked::before{
+        background-color: var(--color-radio-icon-blue);
+        border: 1px solid var(--color-radio-icon-blue);
+    }
+
+}
+
+.payment-method-card input[type='radio']:checked {
+    border-color: var(--color-success-100);
+    position: relative;
+    appearance: none;
+    border-radius: 100%;
+}
+
+.payment-method-version-two .payment-method-card input[type='radio']:checked{
+    border-color: var(--color-radio-icon-blue);
+}
+
+.payment-method {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-space-8);
+    margin-bottom: var(--space-space-8);
+    background-color: var(--color-neutral-50);
+    padding: var(--space-space-3x) var(--space-space-4x);
+}
+
+.payment-method-version-two .payment-method {
+  margin-bottom: 0;
+  border-bottom: 1px solid var(--color-neutral-30);
+  padding: var(--space-space-12) 0;
+}
+
+.payment-method-version-two .payment-method:last-child{
+    border-bottom: 0;
+}
+
+.radio-sim>div,
+.radio-sim>div>p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.payment-method-top-panel {
+    cursor: pointer;
+}
+
+.payment-method-version-two .payment-method .payment-method-top-panel .payment-method-card .payment-method-icon-container .icon{
+    height: var(--sf-height-4);
+    width: var(--sf-width-4);
+}
+
+.payment-method-version-two .payment-method .payment-method-top-panel .payment-method-tamara__info{
+    padding: 0;
+    background: transparent;
+    border: 0;
+    height: auto;
+}
+
+.payment-method-version-two .payment-method .payment-method-top-panel .payment-method-tamara__info span{
+    border-left: var(--spacing-xxsmall-2) solid var(--color-radio-icon-blue);
+}
+
+.radio-sim,
+.payment-method-top-panel,
+.payment-method-card {
+    width: 100%;
+}
+
+.payment-method-card label {
+    cursor: pointer;
+}
+
+.payment-method.payment-method__egift-card {
+    align-items: inherit;
+}
+
+.payment-method-bottom-panel {
+    width: 100%;
+}
+
+.payment-method-version-two .payment-method-bottom-panel .spc-type-textfield{
+    position: relative;
+}
+
+.payment-method-version-two .payment-method-bottom-panel input{
+  min-height: var(--sf-height-48);
+  z-index: 2;
+  position: relative;
+  background-color: transparent;
+  padding-top: var(--space-space-23);
+}
+
+.payment-method-version-two .payment-method-bottom-panel input::placeholder{
+    color: transparent;
+}
+
+.payment-method-version-two .payment-method-bottom-panel label{
+    font-weight: var(--font-weight-4);
+    position: absolute;
+    top: var(--space-space-13);
+    left: var(--space-space-13);
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+    color:var(--color-neutral-700)
+}
+
+.payment-method-version-two .payment-method-bottom-panel input:focus + label,
+.payment-method-version-two .payment-method-bottom-panel input:not(:placeholder-shown) + label,
+.payment-method-version-two .payment-method-bottom-panel input:focus + label,
+.payment-method-version-two .payment-method-bottom-panel input:not(:placeholder-shown) + label {
+    top: var(--space-space-4);
+    color: var(--color-brand-250);
+    font-size: var( --font-size-2);
+}
+
+.payment-method.in-active .payment-method-top-panel,
+.payment-method.in-active .payment-method-bottom-panel {
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+.payment-method.payment-method__egift-card .payment-method-bottom-panel {
+    width: 100%;
+    max-width: 430px;
+    font-size: var(--font-size-3);
+    padding: 0 var(--space-space-12) var(--space-space-12) var(--space-space-30);
+}
+
+.payment-method.payment-method__egift-card .payment-method-bottom-panel .desc-content {
+    color: var(--color-order-info-10);
+}
+
+.payment-method__egift-card .payment-method-label-wrapper {
+    display: flex;
+}
+
+.payment-method__egift-card input[type='checkbox'] {
+    display: none;
+}
+
+.payment-method__egift-card input[type='checkbox']+label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.payment-method__egift-card input[type='checkbox']:checked+label .checkmark::before {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 6px;
+    width: 4px;
+    height: 10px;
+    border: solid var(--color-neutral-50);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.payment-method__egift-card .checkmark {
+    width: var(--space-space-20);
+    height: var(--space-space-20);
+    background-color: var(--color-neutral-50);
+    border: 1px solid var(--color-neutral-black);
+    border-radius: 4px;
+    margin-inline-end: 10px;
+    position: relative;
+}
+
+.payment-method__egift-card input[type='checkbox']:checked+label .checkmark {
+    background-color: var(--color-neutral-black);
+}
+
+.payment-method__egift-card .edit-egift-payment-amount {
+    text-decoration: underline;
+    cursor: pointer;
+    font-family: var(--type-base-font-family-semibold);
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    color: var(--color-neutral-black);
+    border: 0;
+}
+
+.payment-method__subtitle {
+    margin-left: var(--space-space-15);
+    font-size: var(--font-size-2-1);
+    margin-top: var(--spacing-xxsmall-2);
+}
+
+.payment-method-version-two .payment-method__subtitle{
+  display: none;
+}
+
+/* alo specific code goes here */
+
+/* Always keep .alo scope for brand specific override 
+Example:
+.alo h2 {
+  color: var(--color-token);
+}
+*/

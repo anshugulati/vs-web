@@ -1,0 +1,162 @@
+@import "../commerce-guest-checkout-wizard.css";
+
+.bat form .exist-signin,
+.bat form .guest-checkout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-space-16);
+}
+
+.bat .header-flow .commerce-guest-checkout-wizard-container,
+.bat .welcome-flow .commerce-guest-checkout-wizard-container,
+.bat .header-flow .commerce-guest-checkout-wizard-partition,
+.bat .welcome-flow .commerce-guest-checkout-wizard-partition,
+.bat.user.login .checkout-flow form .exist-signin,
+.bat .checkout-flow .init-guest {
+  display: none;
+}
+
+.bat.user.login .checkout-flow form .guest-checkout,
+.bat .checkout-flow .continue-signin,
+.bat.user.login .checkout-flow.toggle-button form .exist-signin,
+.bat .checkout-flow.toggle-button .init-guest {
+  display: flex;
+}
+
+.bat.user.login .checkout-flow.toggle-button form .guest-checkout,
+.bat .checkout-flow.toggle-button .continue-signin {
+  display: none;
+}
+
+.bat .checkout-flow .commerce-guest-checkout-wizard-container {
+  padding: var(--space-space-0x);
+  width: 100%;
+}
+
+.bat .checkout-flow .commerce-guest-checkout-wizard-container p {
+  color: var(--color-text-main);
+}
+
+.bat .checkout-flow .title h5 {
+  margin: var(--space-space-0x);
+  padding: var(--space-space-16) var(--space-space-0x);
+  color: var(--color-secondary-a);
+}
+
+.bat .checkout-flow .sub-text {
+  padding: var(--space-space-12) var(--space-space-12) var(--space-space-16);
+  border: var(--shape-border-width-1) solid var(--color-neutral-480);
+  border-bottom-width: var(--space-space-0x);
+}
+
+.bat .checkout-flow .sub-text .sign-in-text {
+  padding: var(--space-space-0x);
+  margin-bottom: var(--space-space-4);
+}
+
+.bat .checkout-flow .sub-text .sign-in-text strong {
+  font-size: var(--text-m);
+  color: var(--color-text-main);
+}
+
+.bat .checkout-flow .sub-text .offers-title {
+  padding: var(--space-space-0x);
+  font-size: var(--text-s);
+  color: var(--color-text-main);
+}
+
+.bat .checkout-flow .commerce-guest-checkout-wizard-container div ul {
+  padding: var(--space-space-0x);
+  margin: var(--space-space-0x);
+}
+
+.bat .checkout-flow .commerce-guest-checkout-wizard-container div ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: var(--space-space-8);
+  align-self: stretch;
+  font-size: var(--text-s);
+  margin: var(--space-space-6) var(--space-space-0x);
+  color: var(--color-secondary-b);
+  letter-spacing: normal;
+}
+
+.bat .checkout-flow .commerce-guest-checkout-wizard-container div ul li span {
+  width: var(--space-space-20);
+  height: var(--space-space-20);
+}
+
+.bat .checkout-flow .commerce-guest-checkout-wizard-container .or-label {
+  text-align: center;
+  border: var(--shape-border-width-1) solid var(--color-neutral-480);
+  border-top-width: var(--space-space-0x);
+  border-bottom-width: var(--space-space-0x);
+}
+
+.bat .checkout-flow .commerce-guest-checkout-wizard-container .or-label p {
+  padding: var(--space-space-12) var(--space-space-0x);
+  margin: auto;
+  font-size: var(--text-s);
+  color: var(--color-secondary-b);
+}
+
+.bat.user.login
+  .checkout-flow
+  .commerce-guest-checkout-wizard
+  .login-container {
+  padding: var(--space-space-0x) var(--space-space-12);
+  border: var(--shape-border-width-1) solid var(--color-neutral-480);
+  border-top-width: var(--space-space-0x);
+  border-bottom-width: var(--space-space-0x);
+}
+
+.bat .checkout-flow .commerce-guest-checkout-wizard-partition {
+  width: 100%;
+  padding: var(--space-space-12);
+  border: var(--shape-border-width-1) solid var(--color-neutral-480);
+  margin-bottom: var(--space-space-16);
+}
+
+.bat .checkout-flow .commerce-guest-checkout-wizard-partition .checkout-title {
+  font-size: var(--text-m);
+  padding: var(--space-space-0x);
+  color: var(--color-text-main);
+  margin-bottom: var(--space-space-4);
+}
+
+.bat .checkout-flow .commerce-guest-checkout-wizard-partition .checkout-desc {
+  font-size: var(--text-s);
+  padding: var(--space-space-0x) var(--space-space-0x) var(--space-space-12);
+  color: var(--color-text-main);
+}
+
+@media (width >= 768px) {
+  .bat.login .checkout-flow .title h5 {
+    padding: var(--space-space-0x) var(--space-space-0x) var(--space-space-16);
+  }
+
+  .bat .checkout-flow .sub-text {
+    padding: var(--space-space-12) var(--space-space-16) var(--space-space-16);
+  }
+
+  .bat .checkout-flow .sub-text .offers-title {
+    margin: var(--space-space-0x) var(--space-space-0x) var(--space-space-12);
+  }
+
+  .bat.user.login
+    .checkout-flow
+    .commerce-guest-checkout-wizard
+    .login-container {
+    padding: var(--space-space-0x) var(--space-space-16);
+  }
+
+  .bat .checkout-flow .commerce-guest-checkout-wizard-partition {
+    padding:  var(--space-space-12) var(--space-space-16) var(--space-space-16);
+    margin:var(--space-space-0x);
+  }
+
+  .bat .checkout-flow .commerce-guest-checkout-wizard-partition .checkout-desc {
+    margin: var(--space-space-0x);
+  }
+}

@@ -1,0 +1,96 @@
+/* aura-table-heading */
+.account .main-wrapper .sidebar-main section.table-container:has(.aura) {
+  padding-inline-start: 0;
+}
+.aura .table-container {
+  padding: var(--space-space-12) 0;
+  margin-top: var(--space-space-12);
+  font-family: inherit;
+}
+@media (width >=768px) {
+  .aura .table-container {
+    padding: var(--space-space-24) 0;
+  }
+}
+.aura .table-container h3, .main-wrapper main .aura .table-container h3{
+  padding: var(--space-space-8) 0 var(--space-space-4) 0;
+  margin: 0;
+  text-align: center;
+  font-size: var(--font-size-7);
+  font-weight: var(--font-weight-7);
+  color: var(--aura-color-primary-10);
+  font-family: inherit;
+  border: 0;
+}
+@media (width >=768px) {
+  .aura .table-container h3, .main-wrapper main .aura .table-container h3 {
+    font-size: var(--font-size-8);
+  }
+}
+.aura .table-container p {
+  margin: 0;
+  font-family: inherit;
+  font-size: var(--text-s);
+  color: var(--color-text-dark);
+  text-align: center;
+  padding-bottom: var(--space-space-8);
+}
+/* aura-table */
+.aura table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--color-aura-primary-100);
+  font-family: inherit;
+  font-size: var(--text-m);
+}
+.aura table th,
+td {
+  padding: var(--space-space-16) 0;
+  width: var(--grid-col-2);
+  text-align: center;
+}
+.aura table tr td:first-child,
+.aura table tr th:first-child {
+  width: var(--grid-col-4);
+  padding-inline-start: var(--space-space-12);
+  text-align: start;
+  font-size: var(--text-xs);
+}
+.aura table tr th:nth-child(2),
+.aura table tr td:nth-child(2) {
+  background: var(--aura-tier-hello);
+}
+.aura table tr th:nth-child(3),
+.aura table tr td:nth-child(3) {
+  background: var(--aura-tier-star);
+}
+.aura table tr th:nth-child(4),
+.aura table tr td:nth-child(4) {
+  background: var(--aura-tier-vip);
+}
+.aura table tr th:nth-child(2),
+.aura table tr td:nth-child(2),
+.aura table tr th:nth-child(3),
+.aura table tr td:nth-child(3),
+.aura table tr th:nth-child(4),
+.aura table tr td:nth-child(4) {
+  background-clip: text;
+  color: transparent;
+}
+.aura table thead tr:nth-child(odd) {
+  background: none;
+}
+.aura table tbody tr:nth-child(odd) {
+  background: var(--aura-primary-100-light);
+}
+.aura table tr td:first-child strong,
+.aura table tr th:first-child strong {
+  font-size: var(--text-s);
+}
+/* ame specific code goes here */
+/* Always keep .ame scope for brand specific override 
+Example:
+.ame h2 {
+  color: var(--color-token);
+}
+*/

@@ -1,0 +1,81 @@
+@import "../commerce-login-wizard.css";
+
+.bat form .exist-signin {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-space-16);
+}
+
+.bat .checkout-flow .commerce-login-wizard-container,
+.bat .welcome-flow .commerce-login-wizard-container {
+  display: none;
+}
+
+.bat .header-flow .commerce-login-wizard-container {
+  width: 100%;
+  padding: var(--space-space-0x);
+}
+
+.bat .header-flow .commerce-login-wizard-container div h5 {
+  margin: var(--space-space-0x);
+  padding: var(--space-space-16) var(--space-space-0x);
+  font-size: var(--font-size-5);
+  color: var(--color-secondary-a);
+}
+
+.bat .header-flow .commerce-login-wizard-container div p {
+  padding: var(--space-space-12) var(--space-space-0x);
+  font-size: var(--font-size-2);
+  color: var(--color-text-main);
+}
+
+.bat .header-flow .commerce-login-wizard-container div ul {
+  padding: var(--space-space-0x);
+  margin: var(--space-space-0x) var(--space-space-0x) var(--space-space-16);
+}
+
+.bat .header-flow .commerce-login-wizard-container div ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: var(--space-space-8);
+  align-self: stretch;
+  font-size: var(--text-s);
+  margin: var(--space-space-6) var(--space-space-0x);
+  color: var(--color-secondary-b);
+  letter-spacing: normal;
+}
+
+.bat .header-flow .commerce-login-wizard-container div ul li span {
+  width: var(--space-space-20);
+  height: var(--space-space-20);
+}
+
+.bat .header-flow .commerce-login-wizard .or-label {
+  font-size: var(--font-size-2);
+  text-align: center;
+}
+
+.bat .header-flow .commerce-login-wizard .or-label p {
+  font-size: var(--text-s);
+  color: var(--color-secondary-b);
+}
+
+@media (width>=768px) {
+  .bat.login .header-flow .commerce-login-wizard-container {
+    padding: var(--space-space-0x);
+  }
+
+  .bat .header-flow .commerce-login-wizard-container div h5 {
+    padding: var(--space-space-0x) var(--space-space-0x) var(--space-space-16);
+    font-size: var(--font-size-6);
+  }
+
+  .bat .header-flow .commerce-login-wizard-container div p {
+    margin: var(--space-space-0x);
+  }
+
+  .bat .header-flow .commerce-login-wizard-container div p strong {
+    font-size: var(--font-size-3);
+  }
+}

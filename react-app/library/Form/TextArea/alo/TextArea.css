@@ -1,0 +1,14 @@
+textarea {
+  border: 2px solid red;
+  width: 200px;
+  height: 200px;
+}
+
+/* alo specific code goes here */
+
+/* Always keep .alo scope for brand specific override 
+Example:
+.alo h2 {
+  color: var(--color-token);
+}
+*/

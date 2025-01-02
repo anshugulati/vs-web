@@ -1,0 +1,91 @@
+@import '../lazy-styles.css';
+
+/* vif specific code goes here */
+
+/* Always keep .vif scope for brand specific override 
+Example:
+.vif h2 {
+  color: var(--color-token);
+}
+*/
+
+.vif button.backtotop,
+.vif #spr-live-chat-app > div {
+  right: var(--space-space-12);
+}
+
+/* Back to top button */
+.vif button.backtotop {
+  position: fixed;
+  cursor: pointer;
+  z-index: 99;
+  outline: none;
+  border-radius: 0;
+  text-align: center;
+  right: var(--space-space-12);
+  bottom: var(--space-space-14x);
+  width: var(--spacing-large-big);
+  height: var(--sf-height-11);
+  padding: var(--space-space-1x);
+  box-sizing: inherit;
+  border: none;
+  background: transparent;
+  margin: 0;
+  color: var(--color-text-main);
+  letter-spacing: normal;
+  font: var(--type-details-2-font);
+  flex-direction: column;
+  text-transform: none;
+ }
+
+ .vif #spr-live-chat-app > div {
+  bottom: var(--space-space-60);
+ }
+
+ html[dir='rtl'] .vif #spr-live-chat-app > div {
+  left: var(--space-space-12);
+  right: auto;
+}
+
+html[dir='rtl'] .vif button.backtotop {
+ left: var(--space-space-8);
+ right: auto;
+}
+
+@media (width >= 768px) {
+.vif #spr-live-chat-app > div {
+  right: var(--space-space-40);
+  bottom: var(--space-space-20);
+ }
+
+ /* Back to top button */
+.vif button.backtotop {
+  right: var(--space-space-40);
+  height: var(--spacing-large-big);
+}
+
+.vif .backtotop > .icon {
+  height: var(--sf-height-4);
+  width: var(--sf-width-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--shape-border-radius-3);
+  background-color: var(--color-opacity-white-75);
+  padding: var(--space-space-8);
+ }
+
+ .vif .backtotop > .icon > img {
+  height: var(--sf-height-2-4);
+  width: var(--sf-width-2-4);
+ }
+
+ html[dir='rtl'] .vif #spr-live-chat-app > div {
+  left: var(--space-space-40);
+ }
+
+ html[dir='rtl'] .vif button.backtotop {
+  left: var(--space-space-35);
+  right: auto;
+ }
+}

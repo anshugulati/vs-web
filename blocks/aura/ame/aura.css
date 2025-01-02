@@ -1,0 +1,454 @@
+.aura-banners {
+  display: flex;
+  padding: var(--space-space-16) var(--space-space-12);
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--space-space-12);
+  flex: 1 0 0;
+  border-radius: var(--shape-border-width-8);
+  background: linear-gradient(
+    135deg,
+    var(--aura-color-primary) 0%,
+    var(--aura-color-primary-10) 100%
+  );
+  font-family: var(--type-aura-font-family);
+  margin-block-start: var(--space-space-24);
+}
+
+.aura-banners:has(.aura-exist-container) {
+  padding: var(--space-space-16) var(--space-space-12);
+}
+
+.aura-banner .logo-container {
+  display: flex;
+  width: 100%;
+  height: 4rem;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-space-4);
+  direction: ltr;
+}
+
+.aura-banner .icon-auralogo {
+  width: 4rem;
+  height: 4rem;
+  flex-shrink: 0;
+}
+
+.aura-banner .icon-aura-word {
+  width: 6.1936rem;
+  height: 1.6774rem;
+  flex-shrink: 0;
+}
+
+.aura-banner .bottom-container {
+  display: flex;
+  align-items: center;
+  gap: var(--space-space-40);
+  align-self: stretch;
+  flex-direction: column;
+  margin-top: var(--space-space-12);
+}
+
+.aura-banner .bottom-container .left-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 0;
+}
+
+.aura-banner .bottom-container .right-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--grid-gutter);
+  flex: 1 0 0;
+  flex-direction: column;
+}
+
+.aura-banner .bottom-container.aura-exist-container {
+  margin: 0;
+  gap: var(--space-space-12);
+}
+
+.aura-banner button {
+  display: flex;
+  min-width: var(--grid-col-2);
+  height: 4.8rem;
+  padding: var(--space-space-12) var(--space-space-16);
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-space-4);
+  border-radius: var(--radius-radius-xs);
+  font-size: var(--text-m);
+  font-weight: var(--font-weight-7);
+  margin: var(--space-space-8) var(--space-space-0x) var(--space-space-0x);
+  border: var(--shape-border-width-3) solid var(--aura-color-primary);
+  background: var(--aura-color-secondary);
+  color: var(--aura-color-primary-10);
+  text-transform: none;
+  font-family: var(--type-aura-font-family);
+}
+
+.aura-banner .aura-linking-button-container button {
+  margin: 0;
+  width: var(--grid-col-2);
+}
+
+.aura-banner .secondary-btn {
+  border: var(--shape-border-width-3) solid var(--aura-color-primary);
+  background: var(--aura-color-secondary);
+  color: var(--aura-color-primary-10);
+  width:auto;
+}
+
+.aura-banner .secondary-btn:hover,
+.aura-banner button:hover {
+  border: var(--shape-border-width-3) solid var(--aura-color-primary);
+  background: var(--aura-color-primary);
+  color: var(--aura-color-secondary);
+}
+
+.aura-banner .primary-btn {
+  border: var(--shape-border-width-01) solid var(--aura-color-primary-10);
+  background: linear-gradient(
+    135deg,
+    var(--aura-color-primary) 0%,
+    var(--aura-color-primary-10) 100%
+  );
+  color: var(--aura-color-secondary);
+}
+
+.aura-banner .primary-btn:hover {
+  border: var(--shape-border-width-01) solid var(--aura-color-primary-10);
+  background: var(--aura-color-primary-10);
+  color: var(--aura-color-secondary);
+}
+
+.aura-banner .aura-linking-button-container {
+  display: flex;
+  align-items: center;
+  gap: var(--space-space-12);
+  align-self: stretch;
+  flex-direction: column;
+  margin-top: var(--space-space-8);
+}
+
+.aura-banner .membership-aura-container p {
+  padding: var(--shape-border-width-3) var(--space-space-0x);
+}
+
+.aura-banner .aura-banner-container h3.membership-name {
+  color: var(--aura-color-secondary);
+  font-size: var(--font-size-6);
+  font-weight: var(--font-weight-7);
+  line-height: var(--aura-line-height-132);
+  margin: var(--space-space-12) var(--space-space-0x);
+  border-bottom: 0;
+}
+
+.aura-banner .aura-linking-now-container {
+  margin-top: var(--space-space-12);
+  text-align: center;
+}
+
+.aura-banner .auto-text {
+  color: var(--aura-color-secondary);
+  font-size: var(--text-s);
+  font-weight: var(--font-weight-4);
+  line-height: var(--line-height-130);
+  margin: 0;
+}
+
+.aura-banner .right-container p {
+  color: var(--aura-color-secondary);
+  text-align: center;
+  font-size: var(--text-s);
+  font-weight: var(--font-weight-4);
+  line-height: var(--line-height-130);
+  margin: 0;
+}
+
+.aura-banner .left-container h6 {
+  color: var(--aura-color-secondary);
+  font-size: var(--text-m);
+  font-weight: var(--font-weight-7);
+  margin: 0;
+}
+
+.aura-banner .auto-bold-text {
+  font-weight: var(--font-weight-7);
+}
+
+.aura-banner {
+  width: 100%;
+}
+
+.aura-banner .aura-link-not-now {
+  font-size: var(--text-m);
+}
+
+.aura-banner p.membership-number {
+  padding: var(--space-space-8);
+  border-radius: var(--shape-border-radius-5);
+  background: var(--aura-color-opacity);
+  color: var(--aura-color-secondary);
+  text-align: center;
+  font-size: var(--text-m);
+  font-weight: var(--font-weight-7);
+  line-height: var(--line-height-140);
+  direction: ltr;
+}
+
+.aura-container .default-content-wrapper:first-child {
+  padding: var(--space-space-12) var(--space-space-0x);
+  margin: 0;
+  border-bottom: var(--shape-border-width-01) solid var(--color-neutral-480);
+  color: var(--color-brand-750);
+}
+
+.account .aura-container .default-content-wrapper:first-child {
+  display:none;
+}
+
+.aura-banner .aura-linking-button-container .aura-link-not-now {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.aura-banner .aura-linking-button-container .aura-link-not-now:hover {
+  color: var(--aura-color-primary);
+}
+
+.aura-container .default-content-wrapper:first-child h5 {
+  padding: var(--space-space-8) var(--space-space-0x);
+  margin: 0;
+}
+
+.aura-banner .banner-aura-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-space-12);
+  align-self: stretch;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.aura-banner .banner-left-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-space-12);
+  flex: 1 0 0;
+}
+
+.aura-banner .banner-right-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-space-8);
+  justify-content: center;
+  flex: 0 0 60%;
+  padding-block-start: var(--space-space-10);
+}
+
+.aura-banner .enrolled-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.aura-banner .info-value-widget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 calc(50% - 1.2rem);
+}
+
+.account .aura-container {
+  padding-inline : 0;
+}
+
+.aura-banner .info-value {
+  display: block;
+  padding: var(--space-space-8);
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-space-4);
+  align-self: stretch;
+  border-radius: var(--shape-border-radius-5);
+  background: var(--aura-color-opacity);
+  margin: 0;
+  color: var(--aura-color-secondary);
+  text-align: center;
+  font-size: var(--text-m);
+  font-weight: var(--font-weight-7);
+  line-height: var(--line-height-140);
+}
+
+.aura-banner
+  .aura-banner-container
+  .enrolled-banner
+  h3.enrolled-membership-name {
+  margin: 0;
+  background: none;
+  padding: 0;
+}
+
+.aura-banner .membership-aura-container .membership-number.enrolled-member {
+  margin: 0;
+  background: none;
+  padding: 0;
+}
+
+.aura-banners:has(.enrolled-banner) {
+  padding: var(--space-space-16) var(--space-space-12);
+}
+
+.aura-banners:has(.tier1) {
+  background: var(--aura-color-tier-hello);
+}
+
+.aura-banners:has(.tier2) {
+  background: var(--aura-color-tier-star);
+}
+
+.aura-banners:has(.tier3) {
+  background: var(--aura-color-tier-vip);
+}
+
+@media (min-width: 768px) {
+  .aura-banner .bottom-container {
+    flex-direction: row;
+    gap: var(--space-space-24);
+  }
+
+  .aura-banner button {
+    min-width: auto;
+  }
+
+  .aura-banners {
+    padding: var(--space-space-40);
+    margin-block-start: var(--space-space-20);
+  }
+
+  .aura-banners:has(.enrolled-banner) {
+    padding: var(--space-space-16) var(--space-space-40);
+  }
+
+  .aura-banner .enrolled-banner {
+    flex-direction: row;
+  }
+
+  .aura-banner .aura-linking-button-container {
+    flex-direction: row;
+    padding-inline-start: 0;
+  }
+
+  .aura-banner .aura-banner-container h3.membership-name {
+    margin: var(--space-space-16) var(--space-space-0x);
+    font-size: var(--font-size-7);
+  }
+
+  .aura-banner .aura-linking-now-container {
+    margin-top: var(--space-space-16);
+    text-align: start;
+  }
+
+  .aura-banner .bottom-container .right-container {
+    flex-direction: row;
+  }
+
+  .aura-banner .logo-container {
+    width: 10.6rem;
+  }
+
+  .aura-banner .left-container h6 {
+    text-align: start;
+  }
+
+  .aura-banners:has(.aura-exist-container) {
+    padding: var(--space-space-16) var(--space-space-40);
+  }
+
+  .aura-banner .bottom-container.aura-exist-container .left-container {
+    align-items: flex-start;
+  }
+
+  .aura-container .default-content-wrapper:first-child {
+    margin-bottom: var(--space-space-20);
+    display: block;
+  }
+
+  .aura-container .default-content-wrapper:first-child h5 {
+    padding: var(--space-space-8) var(--space-space-0x);
+    margin: 0;
+  }
+
+  .aura-banner .auto-text {
+    text-align: start;
+  }
+
+  .aura-banner .banner-aura-info {
+    justify-content: flex-end;
+    gap: var(--space-space-16);
+  }
+
+  .aura-banner .banner-left-container {
+    align-items: flex-start;
+  }
+
+  .aura-banner .membership-aura-container .membership-number.enrolled-member {
+    text-align: start;
+    direction: ltr;
+  }
+
+  .aura-banner p.aura-app-info {
+    text-align: end;
+  }
+
+  .aura-banner .info-value-widget {
+    min-width: 13.8rem;
+    flex: none;
+  }
+
+  .aura-banner .info-value {
+    display: flex;
+  }
+
+  .account .aura-container .default-content-wrapper:first-child {
+    display:block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .aura-banner button {
+    min-width: var(--grid-col-2);
+  }
+}
+
+.aura-banner-loader.hide {
+  display: none;
+}
+
+.aura-banner-loader {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+}
+
+.aura-banner .info-value .date{
+  direction: ltr;
+}
+
+/* ame specific code goes here */
+
+/* Always keep .ame scope for brand specific override 
+Example:
+.ame h2 {
+  color: var(--color-token);
+}
+*/

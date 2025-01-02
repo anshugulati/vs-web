@@ -1,0 +1,9 @@
+@import '../breadcrumb.css';
+
+/*  new specific code goes here */
+
+.new {
+  .breadcrumb-wrapper .breadcrumbs {
+    max-width: var(--grid-fluid);
+  }
+}

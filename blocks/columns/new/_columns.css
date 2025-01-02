@@ -1,0 +1,92 @@
+@import '../columns.css';
+
+/*  new specific code goes here */
+
+.new .columns.nb-two-col {
+  h2 {
+    margin: 0;
+
+    &::after {
+      content: "";
+      display: block;
+      background-color: var(--color-alert-100);
+      width: 8.9rem;
+      height: var(--shape-border-width-4);
+    }
+  }
+
+  >div {
+    gap: 0;
+
+    >div a h2 {
+          display: flex;
+          padding: 0;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          gap: var(--space-space-24);
+          align-self: stretch;
+        }
+
+        p {
+          padding: var(--space-space-4x) var(--space-space-0x) var(--space-space-6x);
+          margin: 0;
+        }
+      }
+
+  .button-container {
+    a {
+      padding: var(--space-space-3x) var(--space-space-7x);
+      width: 100%;
+    }
+  }
+}
+
+@media (width >=1024px) {
+  .new .columns.nb-two-col {
+    margin: 0 auto;
+    padding: var(--space-space-24) 17.6rem;
+  }
+}
+
+@media (width >=768px) {
+  .new {
+    .section.columns-container.nb-banner {
+      display: flex;
+      align-items: flex-start;
+      align-self: stretch;
+      padding: var(--space-space-32) 0;
+    }
+
+    .columns.nb-two-col {
+      >div>div a h2 {
+        height: var(--space-space-90);
+        position: relative;
+        padding-bottom: var(--space-space-6x);
+        width: 100%;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        overflow: hidden;
+      }
+
+      &::after {
+        position: absolute;
+        bottom: 0;
+      }
+
+      & > div p {
+        padding: var(--space-space-40) var(--space-space-0x) var(--space-space-6x);
+      }
+
+      & > div p.button-container {
+        padding: 0;
+      }
+
+      .button-container a {
+          width: auto;
+        }
+    }
+  }
+}

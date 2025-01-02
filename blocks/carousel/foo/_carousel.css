@@ -1,0 +1,67 @@
+@import '../carousel.css';
+
+/* foo specific code goes here */
+
+.foo .section.usp-container {
+  background-color: var(--color-neutral-200);
+  padding: var(--space-space-4x);
+}
+
+.foo .section.usp-container .carousel.inline .carousel-item a {
+  display: flex;
+  flex-flow:row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-space-4);
+  font: var(--type-details-caption-1-font);
+  letter-spacing: 0;
+  line-height: var(--line-height-l);
+}
+
+.foo .section.usp-container .carousel.inline .carousel-item a:hover {
+  color: inherit;
+}
+
+.foo .section.usp-container .carousel.inline .carousel-item a .icon {
+  width: var(--sf-width-2);
+  height: var(--sf-width-2);
+  margin-right: var(--space-space-2);
+}
+
+.foo .section.usp-container .carousel.inline {
+  padding: 0;
+}
+
+.foo .section.usp-container .carousel.inline .carousel-item {
+  padding: var(--space-space-4x) 0;
+}
+
+.foo .section.usp-container .carousel.inline .carousel-item .carousel-nav-button .icon {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.foo .section.usp-container .carousel-wrapper.inline .carousel-nav-button {
+  top: 50%;
+  transform: translateY(-50%)
+}
+
+
+html[dir='rtl'] .foo .section.usp-container .carousel.inline .carousel-item a .icon {
+  margin-right: 0;
+  margin-left: var(--space-space-2);
+}
+
+/* override rules */
+@media only screen and (width >= 768px) {
+  .foo .section.usp-container .carousel.inline {
+    padding: var(--space-space-2x);
+  }
+}
+
+
+@media only screen and (width >= 1024px) {
+  .foo .section.usp-container .carousel.inline {
+    max-width: var(--grid-col-10);
+  }
+}

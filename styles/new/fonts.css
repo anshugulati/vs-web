@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'proxima nova regular';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../../fonts/new/ProximaNova-Regular.woff2') format('woff2');
+  unicode-range: U+000D, U+0020-007E, U+00A0-017F, U+0192, U+01A0-01A1, U+01AF-01B0, U+01FC-01FF, U+0218-021B, U+0237, U+02B0, U+02BC, U+02C6-02C9, U+02CB, U+02D8-02DD, U+0309, U+037E, U+0384-0386, U+0388-038A, U+038C, U+038E-03A1, U+03A3-03CE, U+0401-040C, U+040E-044F, U+0451-045C, U+045E-045F, U+0490-0491, U+1E02-1E03, U+1E0A-1E0B, U+1E1E-1E1F, U+1E22-1E23, U+1E56-1E57, U+1E60-1E61, U+1E6A-1E6B, U+1E80-1E85, U+1EA0-1EF3, U+2009, U+2013-2015, U+2018-201E, U+2020-2022, U+2026, U+2030, U+2039-203A, U+203E, U+2044, U+2070, U+2074-2079, U+207D-2089, U+208D-208E, U+20A1, U+20A3-20A4, U+20A6-20AC, U+2113, U+2116-2117, U+2120, U+2122, U+2126, U+212E, U+2153-2154, U+215B-215E, U+2190-2193, U+2202, U+2206, U+220F, U+2211-2212, U+2215, U+2219-221A, U+221E, U+222B, U+2248, U+2260, U+2264-2265, U+22B2-22B3, U+22C5, U+2318, U+25A0, U+25B2, U+25BC, U+25CA, U+25CF, U+2605, U+2610-2611, U+2666, U+2713, U+E004-E005, U+F628, U+F637-F652, U+F654-F65E, U+F661-F66A, U+F66D-F6A4, U+F6A6, U+F6A9, U+F6AB-F6BF, U+F6C3, U+F6DC-F6DD, U+F6DF-F6F3, U+F6F9-F6FA, U+F6FD, U+F6FF, U+F721, U+F724, U+F726, U+F730-F739, U+F73F, U+F761-F77A, U+F7E0-F7F6, U+F7F8-F7FF, U+F8FF, U+FB00-FB04;
+}
+
+@font-face {
+  font-family: 'proxima nova semibold';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../../fonts/new/ProximaNova-Semibold.woff2') format('woff2');
+  unicode-range: U+0020-007E, U+00A0-00AC, U+00AE-017F, U+0192, U+01FC-01FF, U+0218-0219, U+02B0, U+02C6-02C8, U+02D8-02DD, U+0394, U+03A9, U+03C0, U+2013-2014, U+2018-201A, U+201C-201E, U+2020-2022, U+2026, U+2030, U+2039-203A, U+2044, U+2070, U+2074-2079, U+207D-2089, U+208D-208E, U+20A1, U+20A3-20A4, U+20A6-20AA, U+20AC, U+2113, U+2116-2117, U+2120, U+2122, U+212E, U+2153-2154, U+215B-215E, U+2190-2193, U+2202, U+220F, U+2211-2212, U+221A, U+221E, U+222B, U+2248, U+2260, U+2264-2265, U+22B2-22B3, U+2318, U+25A0, U+25B2, U+25BC, U+25CA, U+25CF, U+2605, U+2610-2611, U+2666, U+2713, U+E004-E005, U+F628, U+F638-F652, U+F654-F65E, U+F661-F66A, U+F66D-F6A4, U+F6A6, U+F6A9, U+F6AB-F6BF, U+F6C3, U+F6DC-F6DD, U+F6DF-F6F3, U+F6F9-F6FA, U+F6FD, U+F6FF, U+F721, U+F724, U+F726, U+F730-F739, U+F73F, U+F761-F77A, U+F7A1, U+F7B8, U+F7E0-F7F6, U+F7F8-F7FF, U+FB00-FB04;
+}
+
+@font-face {
+  font-family: 'proxima nova bold';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../../fonts/new/ProximaNova-Bold.woff2') format('woff2');
+  unicode-range: U+000D, U+0020-007E, U+00A0-017F, U+0192, U+01A0-01A1, U+01AF-01B0, U+01FC-01FF, U+0218-021B, U+0237, U+02B0, U+02BC, U+02C6-02C9, U+02CB, U+02D8-02DD, U+0309, U+037E, U+0384-0386, U+0388-038A, U+038C, U+038E-03A1, U+03A3-03CE, U+0401-040C, U+040E-044F, U+0451-045C, U+045E-045F, U+0490-0491, U+1E02-1E03, U+1E0A-1E0B, U+1E1E-1E1F, U+1E22-1E23, U+1E56-1E57, U+1E60-1E61, U+1E6A-1E6B, U+1E80-1E85, U+1EA0-1EF3, U+2009, U+2013-2015, U+2018-201E, U+2020-2022, U+2026, U+2030, U+2039-203A, U+203E, U+2044, U+2070, U+2074-2079, U+207D-2089, U+208D-208E, U+20A1, U+20A3-20A4, U+20A6-20AC, U+2113, U+2116-2117, U+2120, U+2122, U+2126, U+212E, U+2153-2154, U+215B-215E, U+2190-2193, U+2202, U+2206, U+220F, U+2211-2212, U+2215, U+2219-221A, U+221E, U+222B, U+2248, U+2260, U+2264-2265, U+22B2-22B3, U+22C5, U+2318, U+25A0, U+25B2, U+25BC, U+25CA, U+25CF, U+2605, U+2610-2611, U+2666, U+2713, U+E004-E005, U+F628, U+F637-F652, U+F654-F65E, U+F661-F66A, U+F66D-F6A4, U+F6A6, U+F6A9, U+F6AB-F6BF, U+F6C3, U+F6DC-F6DD, U+F6DF-F6F3, U+F6F9-F6FA, U+F6FD, U+F6FF, U+F721, U+F724, U+F726, U+F730-F739, U+F73F, U+F761-F77A, U+F7E0-F7F6, U+F7F8-F7FF, U+F8FF, U+FB00-FB04;
+}
+
+@font-face {
+  font-family: 'proxima nova regular';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../../fonts/bat/NotoSansArabic-Regular.ttf') format('truetype');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-089F, U+08A0-08FF;
+}
+
+@font-face {
+  font-family: 'proxima nova semibold';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../../fonts/bat/NotoSansArabic-SemiBold.ttf') format('truetype');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-089F, U+08A0-08FF;
+}
+
+@font-face {
+  font-family: 'proxima nova bold';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../../fonts/bat/NotoSansArabic-Bold.ttf') format('truetype');
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-089F, U+08A0-08FF;
+}

@@ -1,0 +1,214 @@
+@import '../forms.css';
+
+error-message-container.hide,
+.form-errors.hide {
+  display: none;
+}
+
+.foo .input-field-wrapper:not(.notransistion) label {
+  color: var(--color-text-dark);
+  padding: var(--space-space-2) var(--space-space-12) var(--space-space-12) var(--space-space-8);
+}
+
+.foo .input-field-wrapper input {
+  padding-block-end: var(--space-space-0x);
+  height: var(--space-space-48);
+  padding-bottom: var(--space-space-0x);
+  font-size: var(--font-size-4);
+}
+
+.foo .input-wrapper .radio-button-wrapper input {
+  width: 2.4rem;
+  height: 2.4rem;
+  appearance: none;
+  border: none;
+}
+
+.foo form .input-field-wrapper>.input-wrapper>input {
+  font-size: var(--font-size-4);
+  color: var(--color-text-main);
+  padding-bottom: var(--space-space-0x);
+}
+
+.foo .input-field-wrapper textarea,
+.foo .input-field-wrapper select {
+  padding-bottom: var(--space-space-0x);
+}
+
+.foo form textarea:hover,
+.foo form .dropdown .select-selected:hover {
+  border-color: var(--color-neutral-700);
+}
+
+.foo form .input-field-wrapper input:focus,
+.foo .input-field-wrapper textarea:focus,
+.foo .input-field-wrapper select:focus {
+  padding-bottom: var(--space-space-0x);
+}
+
+.foo .commerce-login-wizard-container .commerce-login form button {
+  margin: var(--space-space-0x);
+}
+
+.foo.user .input-field-wrapper.invalid input {
+  border-color: var(--color-error-100);
+  margin-bottom: var(--space-space-0x);
+}
+
+.foo.user .input-field-wrapper.invalid textarea,
+.foo.user .input-field-wrapper.dropdown.invalid .select-selected {
+  border-color: var(--color-error-100);
+}
+
+.foo .commerce-login-wrapper form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-space-16);
+}
+
+.foo .login-container .input-wrapper {
+  height: var(--space-space-54);
+  position: relative;
+}
+
+.login-container .input-field-wrapper {
+  gap: var(--space-space-16);
+}
+
+.login-container .error-message-container {
+  margin-top: calc(-1 * var(--space-space-8));
+}
+
+.foo .input-field-wrapper .unmask-password {
+  content: url("/icons/eye-blue.svg");
+  cursor: pointer;
+  padding: 0;
+  margin-inline-end: var(--space-space-6);
+  z-index: 1;
+  transform: translateY(-50%);
+  position: absolute;
+  right: var(--shape-border-width-5);
+  top: 50%;
+}
+
+.foo .input-field-wrapper .unmask-password.visible {
+  content: url("/icons/eye-blue-crossed.svg");
+}
+
+.foo .input-field-wrapper .error-message-container:not(.hide),
+.form-errors {
+  padding: 0;
+}
+
+.foo .radio-button-wrapper input:checked + label {
+  font-family: var(--type-base-font-family-semibold);
+}
+
+.foo .radio-button-wrapper label::before {
+  background-image: url("/icons/radio-icon.svg");
+  content: "";
+  position: absolute;
+  left: -3.2rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  top: -0.1rem;
+}
+
+.foo .radio-button-wrapper input:checked + label::after {
+  background-image: url("/icons/foo-radio-active.svg");
+  content: "";
+  position: absolute;
+  left: -3.2rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  top: -0.1rem;
+}
+
+.foo.user .input-field-wrapper:not(.notransistion) label {
+  position: absolute;
+  font-size: var(--font-size-4);
+  line-height: var(--line-height-l);
+  top: 1.5rem;
+  padding: 0 var(--space-space-16);
+  z-index: 1;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  color: var(--color-text-light);
+  letter-spacing: var(--space-space-0x);
+}
+
+.foo.user .input-field-wrapper:not(.notransistion) .radio-button-wrapper label {
+  position: relative;
+  font-size: var(--font-size-3);
+  padding: 0;
+  top: 0;
+  color: var(--color-text-main);
+  line-height: var(--line-height-m);
+  height: 100%;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.foo.user .input-field-wrapper:not(.no-transition) input:focus ~ label,
+.foo.user
+  .input-field-wrapper:not(.no-transition)
+  input:not(:placeholder-shown)
+  ~ label:not(.radiobuttonlabel) {
+  transform: translateY(-50%);
+  font-size: var(--font-size-2);
+  color: var(--color-secondary-b);
+  padding: var(--space-space-2) var(--space-space-12) var(--space-space-12)
+    var(--space-space-8);
+}
+
+html[dir="rtl"] .foo .radio-button-wrapper input:checked + label::after,
+html[dir="rtl"] .foo .radio-button-wrapper label::before {
+  right: -3.2rem;
+  left: 0;
+}
+
+@media (width >=768px) {
+  .foo .commerce-login-wizard-container .commerce-login form input,
+  .foo .commerce-login-wizard-container .commerce-login form .input-field-wrapper {
+    max-width: unset;
+  }
+
+  .foo .commerce-login-wizard-container .commerce-login form button {
+    width: 100%;
+    margin-top: var(--space-space-16);
+  }
+
+  .foo .commerce-login-wrapper form {
+    gap: var(--space-space-24);
+  }
+
+  .foo .input-field-wrapper:not(.notransistion) label {
+    padding: var(--space-space-2) var(--space-space-12) var(--space-space-12) var(--space-space-13);
+  }
+
+  .foo.user .input-field-wrapper:not(.notransistion) .radio-button-wrapper label {
+    font-size: var(--font-size-4);
+  }
+
+  .foo.user .input-field-wrapper:not(.no-transition) input:focus ~ label,
+  .foo.user
+    .input-field-wrapper:not(.no-transition)
+    input:not(:placeholder-shown)
+    ~ label:not(.radiobuttonlabel) {
+    padding: var(--space-space-2) var(--space-space-12) var(--space-space-12);
+  }
+
+}
+
+.foo .input-field-wrapper>.input-wrapper a.terms-condition-link {
+  color: var(--color-secondary-b);
+  text-decoration: underline;
+}
+
+.foo form .input-field-wrapper>.input-wrapper>.newsletter:checked {
+  max-height: var(--space-space-6);
+}
+
+.foo .section.commerce-sign-up-wizard-container .input:focus {
+  color: var(--color-neutral-black);
+}

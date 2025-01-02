@@ -1,0 +1,181 @@
+@import '../contact-us.css';
+
+/*  new specific code goes here */
+
+/* Always keep . new scope for brand specific override 
+Example:
+. new h2 {
+  color: var(--color-token);
+}
+*/
+
+.new.user {
+  .section.contact-us-container {
+    padding: var(--space-space-32) var(--space-space-0x);
+    margin: var(--space-space-0x);
+
+    h3 {
+      padding: var(--space-space-0x);
+      margin: var(--space-space-0x) var(--space-space-0x) var(--space-space-48);
+      font: var(--type-details-semibold-8-font);
+    }
+  }
+}
+
+.new {
+  .contact-us {
+    .input-field-wrapper .error-message, .form-errors .error-message {
+      color: var(--color-form-error);
+    }
+
+    form textarea.message {
+      padding-top: var(--space-space-26);
+    }
+
+    .contactus-container {
+      form {
+        gap: var(--space-space-48);
+
+        .radio-button-wrapper {
+          display: flex;
+          gap: var(--space-space-24);
+          padding-bottom: var(--space-space-0x);
+
+          .radio-wrapper {
+            display: flex;
+            gap: var(--space-space-8);
+          }
+        }
+      }
+    }
+
+    p.section-subhead {
+      margin: var(--space-space-0x) var(--space-space-0x) var(--space-space-16) var(--space-space-0x);
+      padding: var(--space-space-0x);
+      color: var(--color-text-main);
+    }
+
+    label.section-head {
+      margin: var(--space-space-0x) var(--space-space-0x) var(--space-space-16) var(--space-space-0x);
+      padding: var(--space-space-0x);
+      color: var(--color-text-main);
+    }
+
+    .input-field-wrapper {
+      &:not(.no-transition) {
+        textarea~label {
+          transform: translateY(-50%);
+          font: var(--type-lg-regular-text);
+          position: absolute;
+          top: var(--space-space-15);
+          padding: var(--space-space-0x) var(--space-space-16);
+          color: var(--color-secondary-b);
+        }
+      }
+
+      span.textarea-maxleng {
+        position: absolute;
+        right: var(--space-space-8px);
+        top: var(--space-space-86);
+        font: var(--type-lg-regular-text);
+        color: var(--color-text-light);
+      }
+    }
+
+    .contact-flex-items {
+      >div:not(.input-wrapper) {
+        display: flex;
+        gap: var(--space-space-16) var(--space-space-12);
+        flex-flow: column wrap;
+      }
+
+      .input-field-wrapper {
+        flex: 1;
+        max-width: 100%;
+        width: 100%;
+        flex-basis: calc(50% - var(--space-space-16));
+      }
+    }
+
+    .contact-flex-items.radio {
+      display: flex;
+      flex-flow: column wrap;
+      gap: var(--space-space-24);
+
+      >div:not(.input-wrapper) {
+        gap: var(--space-space-0x);
+      }
+
+      .input-wrapper {
+        flex: 1;
+        max-width: 100%;
+        width: 100%;
+        flex-basis: calc(50% - var(--space-space-16));
+      }
+    }
+
+    .contact-blocks {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-space-16);
+
+      &:has(.contact-flex-items.radio) {
+        gap: var(--space-space-24);
+      }
+    }
+
+    .input-field-wrapper.full-width {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .input-field-wrapper.dropdown::after {
+        top: var(--space-space-57);
+    }
+  }
+
+  .prefix-inputcode {
+    .input-coutrycode {
+      display: none;
+    }
+
+    &.show span.input-coutrycode,
+    input:focus~span.input-coutrycode {
+      font: var(--type-details-4-font);
+      display: block;
+      position: absolute;
+      left: var(--space-space-12);
+      right: unset;
+      color: var(--color-text-light);
+      top: var(--space-space-24);
+      direction: ltr;
+    }
+
+    .input-wrapper input {
+      padding-left: var(--space-space-52);
+    }
+  }
+
+  html[dir='rtl'] & .contact-us .input-field-wrapper span.textarea-maxleng {
+    left: var(--space-space-8px);
+    right: unset;
+  }
+}
+
+@media (width >=768px) {
+  .new {
+    .contact-us {
+      .contact-flex-items>div:not(.input-wrapper) {
+        flex-direction: row;
+      }
+
+      .contactus-container button {
+        max-width: calc(50% - var(--space-space-6));
+      }
+
+      .input-field-wrapper {
+        max-width: calc(50% - var(--space-space-6));
+      }
+    }
+  }
+}

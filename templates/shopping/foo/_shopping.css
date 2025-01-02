@@ -1,0 +1,10 @@
+@import '../shopping.css';
+
+/* foo specific code goes here */
+
+/* Always keep .foo scope for brand specific override 
+Example:
+.foo h2 {
+  color: var(--color-token);
+}
+*/

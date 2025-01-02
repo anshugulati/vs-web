@@ -1,0 +1,24 @@
+@import "../action-cards.css";
+
+/* foo specific code goes here */
+
+/* Always keep .foo scope for brand specific override 
+Example:
+.foo h2 {
+  color: var(--color-token);
+}
+*/
+
+.foo .action-cards-container .teaser-item h3,
+.foo .egift.action-cards .action-cards-content h4 {
+  font: var(--type-details-semibold-6-font);
+}
+
+.foo.egift-card .action-cards-container .teaser-item p {
+  font: var(--type-details-3-font);
+  color: var(--color-secondary-b);
+}
+
+.foo .action-cards-container .teaser-buttons .button-container a{
+  display: inline-flex;
+}

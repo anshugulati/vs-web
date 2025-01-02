@@ -1,0 +1,173 @@
+@import "../commerce-sign-up-wizard.css";
+
+.bat.user .signup-wizard a {
+  text-decoration: none;
+}
+
+.bat.user .signup-wizard .section {
+  padding: var(--space-space-0x);
+  width: 100%;
+}
+
+.bat.user .signup-wizard .section h5 {
+  margin: var(--space-space-0x);
+  text-align: start;
+  padding: var(--space-space-16) var(--space-space-0x);
+  color: var(--color-secondary-a);
+  display: flex;
+  gap: var(--space-space-8);
+  align-items: center;
+  font-weight: var(--font-weight-6);
+}
+
+.bat.user .signup-wizard .section h5::before {
+  content: "";
+  display: inline-block;
+  height: 2.4rem;
+  width: 2.4rem;
+  background: url("/icons/blue-arrow-left.svg") no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+html[dir="rtl"] .bat.user .signup-wizard .section h5::before {
+  content: "";
+  display: inline-block;
+  height: 2.4rem;
+  width: 2.4rem;
+  background: url("/icons/arrow-right-blue.svg") no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.bat.user .signup-wizard .email-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: var(--text-m);
+  color: var(--color-text-main);
+  justify-content: space-between;
+  padding: var(--space-space-8) var(--space-space-0x) var(--space-space-12);
+  border-bottom: var(--shape-border-width-1) solid var(--color-neutral-480);
+}
+
+.bat.user .signup-wizard .email-wrapper div {
+  flex-basis: 100%;
+}
+
+.bat.user .signup-wizard .email-add {
+  font-weight: var(--font-weight-6);
+}
+
+.bat.user .signup-wizard .change-link {
+  color: var(--color-text-main);
+  text-decoration: underline;
+}
+
+.bat
+  .commerce-sign-up-wizard-container
+  .input-field-wrapper
+  > .input-wrapper
+  input[type="checkbox"] {
+  width: 2rem;
+  height: 2rem;
+}
+
+.bat
+  .commerce-sign-up-wizard-container
+  .input-field-wrapper
+  > .input-wrapper
+  input[type="checkbox"]:not(:checked)
+  + label[for="newsletter"] {
+  color: var(--color-text-main);
+  font-size: var(--text-s);
+  padding-inline-start:var(--space-space-0x);
+}
+
+.bat
+  .commerce-sign-up-wizard-container
+  form
+  .input-field-wrapper
+  > .input-wrapper
+  input[type="checkbox"]:checked
+  + label[for="newsletter"] {
+  color: var(--color-text-main);
+  font-size: var(--text-s);
+  padding-inline-start:var(--space-space-0x);
+}
+
+.bat
+  .commerce-sign-up-wizard-container
+  .input-field-wrapper
+  input[type="checkbox"]:checked
+  + label::before {
+  background-image: url("/icons/checkbox-blue.svg");
+}
+
+.bat.user .signup-wizard .input-field-wrapper > .input-wrapper > .newsletter {
+  max-height: 2rem;
+}
+
+.bat.user .commerce-sign-up-wizard-container .validation-container {
+  padding: var(--space-space-0x) var(--space-space-0x) var(--space-space-12);
+}
+
+.bat.user .commerce-sign-up-wizard-container .validation-container li {
+  font-size: var(--text-s);
+  color: var(--color-text-main);
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: var(--space-space-8);
+  align-self: stretch;
+  font-weight: var(--font-weight-4);
+}
+
+.bat.user .commerce-sign-up-wizard-container .validation-container li.invalid {
+  color: var(--color-secondary-b);
+}
+
+.bat .commerce-sign-up-wizard-container li.valid::before {
+  content: "";
+  display: inline-block;
+  height: var(--space-space-16);
+  width: var(--space-space-16);
+  background: url("/icons/tick-green.svg") no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+.bat .commerce-sign-up-wizard-container li.invalid::before {
+  content: "";
+  display: inline-block;
+  height: 1.6rem;
+  width: 1.6rem;
+  background: url("/icons/grey-radio-icon.svg") no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+  color: var(--color-secondary-b);
+}
+
+.bat .commerce-sign-up-wizard-container .error-container:empty {
+  display: none;
+}
+
+.bat .commerce-sign-up-wizard-container .success-container {
+  display: none;
+}
+
+@media (width>=768px) {
+  .bat.user .signup-wizard .section h5 {
+    padding-top: var(--space-space-0x);
+  }
+
+  .bat.user .signup-wizard .terms-condition p {
+    padding-bottom: var(--space-space-0x);
+  }
+  
+  .bat.user .commerce-sign-up-wizard-container .validation-container {
+    padding: var(--space-space-0x) var(--space-space-0x) var(--space-space-16);
+  }
+}

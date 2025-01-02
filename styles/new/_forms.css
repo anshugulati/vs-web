@@ -1,0 +1,157 @@
+@import '../forms.css';
+
+/*  new specific code goes here */
+
+/* Always keep . new scope for brand specific override 
+Example:
+. new h2 {
+  color: var(--color-token);
+}
+*/
+
+error-message-container.hide,
+.form-errors.hide {
+  display: none;
+}
+
+.new {
+  html[dir="rtl"] & {
+    .radio-button-wrapper {
+      input:checked+label::after,
+      label::before {
+        right: -3.2rem;
+        left: var(--space-space-0x);
+      }
+    }
+  }
+
+  .input-field-wrapper {
+    &:not(.notransistion) {
+      label {
+        color: var(--color-text-dark);
+        padding: var(--space-space-2) var(--space-space-12) var(--space-space-12) var(--space-space-8);
+      }
+    }
+
+    input {
+      padding-block-end: var(--space-space-0x);
+      height: var(--space-space-48);
+      padding-bottom: var(--space-space-0x);
+      font: var(--type-details-4-font);
+    }
+
+    >.input-wrapper>input {
+      font: var(--type-details-4-font);
+      color: var(--color-text-main);
+      padding-bottom: var(--space-space-0x);
+    }
+
+    input:focus {
+      padding-bottom: var(--space-space-0x);
+    }
+
+    &.invalid input {
+      border-color: var(--color-form-error);
+      margin-bottom: var(--space-space-0x);
+    }
+
+    .input-wrapper .radio-button-wrapper {
+      input {
+        width: var(--sf-width-2-4);
+        height: var(--sf-height-2-4);
+        appearance: none;
+        border: none;
+      }
+
+      label::before,
+      input:checked+label::after {
+        content: "";
+        position: absolute;
+        top: var(--space-space-0-1);
+        left: -3.2rem;
+        width: var(--sf-width-2-4);
+        height: var(--sf-height-2-4);
+      }
+
+      label::before {
+        background-image: url("/icons/radio-icon.svg");
+      }
+
+      input:checked+label::after {
+        background-image: url("/icons/foo-radio-active.svg");
+      }
+    }
+
+    textarea,
+    select {
+      padding-bottom: var(--space-space-0x);
+
+      &:focus {
+        padding-bottom: var(--space-space-0x);
+      }
+    }
+
+    &.invalid textarea,
+    &.dropdown.invalid .select-selected {
+      border-color: var(--color-form-error);
+    }
+
+    .error-message-container:not(.hide),
+    .form-errors {
+      padding: var(--space-space-0x);
+    }
+  }
+}
+
+.new.user {
+  .input-field-wrapper {
+    &:not(.notransistion) {
+      label {
+        position: absolute;
+        font: var(--type-md-regular-text);
+        top: var(--space-space-15);
+        padding: var(--space-space-0x) var(--space-space-16);
+        z-index: 1;
+        pointer-events: none;
+        transition: all 0.3s ease;
+        color: var(--color-text-light);
+        letter-spacing: var(--space-space-0x);
+      }
+
+      .radio-button-wrapper label {
+        position: relative;
+        font: var(--type-md-regular-text);
+        padding: var(--space-space-0x);
+        top: var(--space-space-0x);
+        color: var(--color-text-main);
+        height: 100%;
+        pointer-events: auto;
+        cursor: pointer;
+        align-content: center;
+      }
+    }
+
+    >.input-wrapper {
+      a.terms-condition-link {
+        color: var(--color-secondary-b);
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media (width >=768px) {
+  .new {
+    .input-field-wrapper {
+      &:not(.notransistion) label {
+        padding: var(--space-space-2) var(--space-space-12) var(--space-space-12) var(--space-space-13);
+      }
+
+      input:focus~label,
+      input:not(:placeholder-shown)~label:not(.radiobuttonlabel) {
+        padding: var(--space-space-2) var(--space-space-12) var(--space-space-12);
+      }
+    }
+  }
+
+}

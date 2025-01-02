@@ -1,0 +1,28 @@
+@import '../login.css';
+
+@media (width <768px) {
+  .bat.login .main-wrapper {
+    margin: 0;
+    border: none;
+    background-color: var(--color-neutral-white);
+  }
+  
+  .bat.login .main-wrapper.cart__login-container {
+    margin-top: var(--space-space-16);
+    margin-bottom: var(--space-space-16);
+  }
+  
+  .bat.login .main-wrapper.cart__login-container > div {
+    width: 100%;
+  }
+  
+  .bat .checkout-flow .sub-text {
+    padding-bottom: var(--space-space-12);
+  }
+}
+
+@media (width >=768px) {
+  .bat.login .main-wrapper {
+    margin-top: var(--space-space-32);
+  }
+}

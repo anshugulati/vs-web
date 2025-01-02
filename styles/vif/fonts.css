@@ -1,0 +1,167 @@
+@font-face {
+    font-family: 'Victoria Two';
+    src: url('../../fonts/vif/VictoriaTwo-Display-v1.6.otf') format("opentype");
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PinkSans 70';
+    src: url('../../fonts/vif/PinkSans-070.otf') format("opentype");
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PinkSans 100';
+    src: url('../../fonts/vif/PinkSans-100.otf') format("opentype");
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PinkSans 130';
+    src: url('../../fonts/vif/PinkSans-130.otf') format("opentype");
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PinkSans 160';
+    src: url('../../fonts/vif/PinkSans-160.otf') format("opentype");
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PinkSans 190';
+    src: url('../../fonts/vif/PinkSans-190.otf') format("opentype");
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PublicSans Black';
+    src: url('../../fonts/vif/PublicSans-Black.ttf') format("truetype");
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PublicSans BlackItalic';
+    src: url('../../fonts/vif/PublicSans-BlackItalic.ttf') format("truetype");
+    font-display: swap;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PublicSans Bold';
+    src: url('../../fonts/vif/PublicSans-Bold.ttf') format("truetype");
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PublicSans BoldItalic';
+    src: url('../../fonts/vif/PublicSans-BoldItalic.ttf') format("truetype");
+    font-display: swap;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PublicSans ExtraBold';
+    src: url('../../fonts/vif/PublicSans-ExtraBold.ttf') format("truetype");
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PublicSans ExtraBoldItalic';
+    src: url('../../fonts/vif/PublicSans-ExtraBoldItalic.ttf') format("truetype");
+    font-display: swap;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PublicSans ExtraLight';
+    src: url('../../fonts/vif/PublicSans-ExtraLight.ttf') format("truetype");
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PublicSans ExtraLightItalic';
+    src: url('../../fonts/vif/PublicSans-ExtraLightItalic.ttf') format("truetype");
+    font-display: swap;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PublicSans Italic';
+    src: url('../../fonts/vif/PublicSans-Italic.ttf') format("truetype");
+    font-display: swap;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PublicSans Light';
+    src: url('../../fonts/vif/PublicSans-Light.ttf') format("truetype");
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PublicSans LightItalic';
+    src: url('../../fonts/vif/PublicSans-LightItalic.ttf') format("truetype");
+    font-display: swap;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PublicSans Regular';
+    src: url('../../fonts/vif/PublicSans-Regular.ttf') format("truetype");
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PublicSans SemiBold';
+    src: url('../../fonts/vif/PublicSans-SemiBold.ttf') format("truetype");
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PublicSans Medium';
+    src: url('../../fonts/vif/PublicSans-Medium.ttf') format("truetype");
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PublicSans MediumItalic';
+    src: url('../../fonts/vif/PublicSans-MediumItalic.ttf') format("truetype");
+    font-display: swap;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PublicSans SemiBoldItalic';
+    src: url('../../fonts/vif/PublicSans-SemiBoldItalic.ttf') format("truetype");
+    font-display: swap;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PublicSans Thin';
+    src: url('../../fonts/vif/PublicSans-Thin.ttf') format("truetype");
+    font-display: swap;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PublicSans ThinItalic';
+    src: url('../../fonts/vif/PublicSans-ThinItalic.ttf') format("truetype");
+    font-display: swap;
+    font-style: italic;
+}

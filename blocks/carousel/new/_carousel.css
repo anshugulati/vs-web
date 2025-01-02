@@ -1,0 +1,89 @@
+@import '../carousel.css';
+
+/*  new specific code goes here */
+
+.new .section.usp-container {
+  background-color: var(--color-tertiary-d);
+  padding: var(--space-space-4x);
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50vw);
+    background: var(--color-tertiary-d);
+    z-index: -1;
+  }
+
+  .carousel.inline .carousel-item {
+    padding: var(--space-space-4x) 0;
+
+    a {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center;
+      gap: var(--space-space-4);
+      font: var(--type-xs-regular-text);
+
+      strong {
+        font: var(--type-xs-semibold-text);
+      }
+    }
+
+    .carousel-nav-button .icon {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
+
+  &.carousel-container .carousel-wrapper.inline .carousel-nav-button {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+
+    .icon {
+      width: 1.6rem;
+      height: 1.6rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &.carousel-nav-left {
+      left: 0;
+      right: unset;
+    }
+  }
+}
+
+/* override rules */
+@media (width >=768px) {
+  .new .section.usp-container .carousel.inline {
+    padding: var(--space-space-2x);
+  }
+}
+
+@media (width >=1024px) {
+  .new .section.usp-container .carousel.inline {
+    max-width: var(--grid-col-8);
+  }
+}
+
+@media (width <768px) {
+  .new .section.usp-container .carousel.inline {
+    .carousel-item a {
+      font: var(--type-sm-regular-text);
+
+      strong {
+        font: var(--type-sm-semibold-text);
+      }
+    }
+  }
+}

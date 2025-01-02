@@ -1,0 +1,164 @@
+@import '../added-to-bag.css';
+
+/* foo specific code goes here. */
+
+.foo .modal dialog.added-to-bag-dialog {
+  top: auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+.foo .modal dialog.added-to-bag-dialog .modal-header {
+  height: auto;
+  box-shadow: 0 0.1rem 0.6rem 0 rgba(0 0 0 / 8%);
+  border: none;
+  padding: var(--space-space-16) var(--space-space-12);
+}
+
+.foo .added-to-bag-dialog .modal-footer h4 {
+  font: var(--type-details-semibold-4-font);
+}
+
+.foo .added-to-bag-dialog .product-content h4 {
+  margin-bottom: var(--space-space-4);
+  font-weight: var(--font-weight-6);
+  color: var(--color-text-main);
+}
+
+.foo .modal dialog.added-to-bag-dialog .modal-header h4 {
+  font: var(--type-details-semibold-6-font);
+}
+
+.foo .modal dialog.added-to-bag-dialog .modal-header .modal-close,
+.foo .modal dialog.added-to-bag-dialog .modal-header .icon-close img {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.foo .modal dialog.added-to-bag-dialog .modal-header .icon-title-left {
+  position: unset;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.foo .added-to-bag-dialog .modal-product .product-configs li {
+  font: var(--type-details-3-font);
+}
+
+.foo .added-to-bag-dialog .modal-product .product-configs li:first-child {
+  line-height: var(--line-height-s);
+}
+
+.foo .added-to-bag-dialog .product-content .product-price .promotions span {
+  background-color: var(--color-secondary-30);
+  font: var(--type-details-2-font);
+  color: var(--color-secondary-100);
+  padding: var(--space-space-1x);
+}
+
+.foo .added-to-bag-dialog .product-content .product-configs li span:first-child {
+  color: var(--color-text-main);
+}
+
+.foo .added-to-bag-dialog .modal-buttons {
+  border: 0;
+  padding: var(--space-space-12) 0;
+  margin: 0 var(--space-space-12);
+  flex-direction: column-reverse;
+}
+
+.foo .added-to-bag-dialog .modal-footer {
+  position: sticky;
+  bottom: 0;
+  padding: var(--space-space-24) var(--space-space-16);
+  background-color: var(--color-white);
+  border: 0;
+  box-shadow: 0 -0.4rem 0.4rem 0 rgba(0 0 0 / 4%);
+  height: unset;
+  z-index: 2;
+}
+
+.foo .added-to-bag-dialog .product-content>p {
+  margin: 0 0 var(--space-space-2);
+  color: var(--color-primary-40);
+  font-size: var(--font-size-3);
+  line-height: var(--line-height-s);
+}
+
+.foo .added-to-bag-dialog .product-content .product-price {
+  margin-bottom: var(--space-space-4);
+}
+
+.foo .added-to-bag-dialog .product-content .product-price h4.price-final {
+  font: var(--type-details-semibold-5-font);
+  margin-bottom: 0;
+  color: var(--color-secondary-100);
+}
+
+.foo .added-to-bag-dialog .recommendations-container h5 {
+  font: var(--type-details-semibold-6-font);
+  text-align: left;
+}
+
+.foo .added-to-bag-dialog .product-content .product-price h5 {
+  color: var(--color-secondary-b);
+  font-size: var(--font-size-3);
+  line-height: var(--line-height-s);
+}
+
+.foo .added-to-bag-dialog .modal-product {
+  margin: var(--space-space-12);
+  gap: var(--space-space-8);
+  padding: 0;
+}
+
+.foo .added-to-bag-dialog .product-content .product-price .promotions {
+  display: flex;
+  gap: var(--space-space-8);
+}
+
+.foo .added-to-bag-dialog .recommendations-container {
+  padding: 0;
+}
+
+.foo .added-to-bag-dialog .carousel.cards .carousel-item .card .product-image-container>a>.item-images>img {
+  height: 100%;
+}
+
+.foo .added-to-bag-dialog .products-container .product-item .product-item-info a {
+  overflow: visible;
+}
+
+.foo .added-to-bag-dialog .product-price .promotions .promo-label {
+  font: var(--type-details-semibold-2-font);
+  background-color: var(--color-primary-30);
+  padding: var(--space-space-4);
+  color: var(--color-text-light);
+}
+
+@media (width >=768px) {
+  .foo .modal dialog.added-to-bag-dialog {
+    top: 0;
+    width: var(--grid-col-6);
+  }
+
+  .foo .modal dialog.added-to-bag-dialog .modal-header h4 {
+    font: var(--type-details-semibold-5-font);
+  }
+
+  .foo .added-to-bag-dialog .modal-product {
+    position: relative;
+    margin: var(--space-space-16);
+    gap: var(--space-space-12);
+  }
+
+  html[dir='rtl'] .foo .added-to-bag-dialog .modal-product .product-configs li:first-child {
+    left: 0;
+    right: unset;
+  }
+
+  .foo .added-to-bag-dialog .modal-buttons {
+    margin: 0 var(--space-space-16);
+    flex-direction: row;
+  }
+}

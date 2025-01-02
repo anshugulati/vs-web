@@ -1,0 +1,77 @@
+.shopping {
+  background-color: var(--color-brand-100);
+}
+
+.shopping input[type='radio'] {
+  align-self: flex-start;
+  top: 0;
+  appearance: none;
+  border-radius: 50%;
+  border: 1px solid var(--color-neutral-700);
+  cursor: pointer;
+  margin: 0;
+  position: relative;
+  width: var(--space-space-24);
+  height: var(--space-space-24);
+  padding: var(--space-space-3x-2);
+}
+
+.shopping input[type='radio']:checked {
+  border: 1px solid var(--color-success-100);
+}
+
+.shopping input[type='radio']:checked::before {
+  content: '';
+  position: absolute;
+  width: var(--space-space-15);
+  height: var(--space-space-15);
+  background-color: var(--color-success-100);
+  border: 1px solid var(--color-success-100);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (width >=768px) {
+  .shopping header,
+  .shopping .nav-wrapper,
+  .shopping header .search-container {
+    background-color: var(--color-brand-100);
+  }
+
+  .shopping input[type='radio'] {
+    top: var(--spacing-xxsmall-2);
+    appearance: none;
+    border-radius: 50%;
+    border: 1px solid var(--color-neutral-700);
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+    width: var(--space-space-5x);
+    height: var(--space-space-5x);
+    padding: var(--space-space-2x-1);
+  }
+
+  .shopping input[type='radio']:checked::before {
+    content: '';
+    position: absolute;
+    width: var(--space-space-3x);
+    height: var(--space-space-3x);
+    background-color: var(--color-success-100);
+    border: 1px solid var(--color-success-100);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* ame specific code goes here */
+
+/* Always keep .ame scope for brand specific override 
+Example:
+.ame h2 {
+  color: var(--color-token);
+}
+*/

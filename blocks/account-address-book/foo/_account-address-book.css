@@ -1,0 +1,676 @@
+@import '../account-address-book.css';
+
+/* foo specific code goes here */
+
+/* Always keep .foo scope for brand specific override 
+Example:
+.foo h2 {
+  color: var(--color-token);
+}
+*/
+
+.foo .account-address-book-container {
+    padding: var(--space-space-16) var(--space-space-0x);
+}
+
+.foo.account .main-wrapper main .account-address-book-container .default-content-wrapper h2 {
+    padding: var(--space-space-19) var(--space-space-0x) var(--space-space-11);
+}
+
+.foo .account-address-book-container .account-address-book-wrapper .account-address-book{
+    letter-spacing: unset;
+}
+
+.foo .account-address-book-container h5 {
+    font: var(--type-details-semibold-6-font);
+    margin: var(--space-space-19) 0;
+}
+
+.foo .new-address-wrapper a.new-address {
+    font: var(--type-details-3-font);
+}
+
+.account-address-book-container .new-address-container {
+    padding: var(--space-space-0x);
+}
+
+.foo .account-address-book-container .new-address-wrapper {
+    border: none;
+    gap: var(--space-space-2);
+    padding: var(--space-space-6) var(--space-space-24) var(--space-space-14) var(--space-space-24);
+}
+
+.foo .account-no-address {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-space-68);
+}
+
+.foo .account-no-address p {
+  margin: 0;
+  text-align: center;
+}
+
+.foo .account-no-address #oh-no-address-yet {
+  padding: var(--space-space-12) 0;
+  border-bottom: 0;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.foo .account-no-address .button-container {
+  padding-top: var(--space-space-24);
+}
+
+.foo .account-no-address .button-container a {
+  margin: 0;
+}
+
+.foo .account-no-address .icon.icon-plus-white-small {
+  margin-inline-start: var(--space-space-2x);
+}
+
+.foo .new-address-wrapper span.icon {
+    height: 1.6rem;
+    width: 1.6rem;
+    display: block;
+}
+
+.foo .select-city-modal li.no-results,
+.foo .select-area-modal li.no-results {
+  pointer-events: none;
+  user-select: none;
+}
+
+.foo .account-no-address.hide,
+.foo .select-city-modal .select-city-content ul li.hide,
+.foo .select-area-modal .select-area-content ul li.hide,
+.foo .input-field-wrapper .error-message-container.hide,
+.foo .form-errors.hide,
+.foo.account dialog.select-city-modal .modal-close,
+.foo.account dialog.select-area-modal .modal-close,
+.foo .address-form .country_id,
+.foo .address-form .address_city_segment .select-items,
+.foo .address-form .address_city_segment .select-search,
+.foo .add-address-modal .input-field-wrapper .custom-select div.no-results.hide,
+.foo .add-address-modal .address-form .input-field-wrapper.phonevalidation label.countrycode.hidden {
+  display: none;
+}
+
+.foo .addresses-container .address-wrapper{
+    margin-bottom: var(--space-space-12);
+}
+
+.foo .address-section .label {
+    color: var(--color-text-main);
+}
+
+.foo .address-section .address-value {
+    color: var(--color-secondary-b);
+}
+
+.foo .address-section .primary-address-cta-wrapper span {
+    font: var(--type-details-3-font);
+    color: var(--color-success-100);
+}
+
+.foo .address-section .make-primary-cta-wrapper .make-primary-cta span{
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+    font: var(--type-details-3-font);
+    color: var(--color-secondary-b);
+}
+
+.foo .address .address-data {
+    flex-wrap: wrap;
+    display: flex;
+    padding: var(--space-space-0x);
+    align-items: flex-start;
+    gap: var(--grid-gutter);
+    background-color: white;
+    min-height: 15rem;
+}
+
+.foo .address .address-section.cta-container {
+    padding-block: var(--space-space-12);
+    padding-inline-start: var(--space-space-12);
+    flex-basis: 100%;
+    justify-content: space-between;
+}
+
+html[dir='rtl'] .emailValidation label.input-label {
+    right: var(--space-space-12);
+}
+
+.foo .address-form .input-field-wrapper .error-message-container .icon-info-small-error img {
+  margin-top: var(--space-space-0x);
+}
+
+.foo.account .modal-header .modal-close .icon img {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.foo.account .delete-address-modal .modal-header .modal-close .icon img {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.foo .select-city-modal .modal-content,
+.foo .select-area-modal .modal-content {
+    padding: var(--space-space-0x);
+}
+
+.foo .address-form label.countrycode {
+  padding: 0;
+  top: var(--space-space-8);
+  inset-inline-start: var(--space-space-10);
+}
+
+.foo .edit-address-modal .modal-content,
+.foo .add-address-modal .modal-content {
+  padding: var(--space-space-12) var(--space-space-0x) var(--space-space-0x);
+  max-height: 62rem;
+}
+
+.foo.account .delete-address-modal .modal-content {
+    padding: var(--space-space-0x);
+}
+
+.foo.account .delete-address-modal .modal-content .delete-content .delete-message {
+    padding: var(--space-space-24) var(--space-space-12);
+}
+
+.foo.account dialog::backdrop {
+  background-color: var(--color-overlay-black-75);
+}
+
+.foo.account .delete-address-modal .delete-content .delete-buttons {
+    flex-direction: row;
+    gap: var(--space-space-16);
+    align-self: stretch;
+    padding: var(--space-space-16) var(--space-space-12);
+}
+
+.foo.account .delete-address-modal .delete-content .delete-buttons button.delete-cancel,
+.foo.account .delete-address-modal .delete-content .delete-buttons button.delete-confirm {
+    margin-top: var(--space-space-0x);
+}
+
+.foo .address-section.cta-container .edit-address-cta-wrapper{
+    margin-inline-end: var(--space-space-12);
+}
+
+.foo .address .cta-container .primary-address-cta-wrapper, .address .cta-container .make-primary-cta-wrapper {
+    padding: var(--space-space-0x);
+    gap: var(--space-space-4);
+}
+
+.foo .address .cta-container .primary-address-cta-wrapper, .address .cta-container .make-primary-cta-wrapper, .address .cta-container .delete-address-cta-wrapper {
+    border: none;
+}
+
+.foo .address .delete-address-cta-wrapper {
+    margin: unset;
+    padding: var(--space-space-0x);
+    padding-inline-end: var(--space-space-12);
+}
+    
+.foo .address-section.cta-container .make-primary-cta-wrapper,
+.foo .address-section.cta-container .edit-address-cta-wrapper,
+.foo .address-section.cta-container .delete-address-cta-wrapper {
+    flex: unset;
+}
+
+.foo .address-section.cta-container .edit-address-cta-wrapper a.edit-address-cta,
+.foo .address-section.cta-container .delete-address-cta-wrapper a.delete-address-cta {
+    border: var(--shape-border-width-01) solid var(--color-secondary-a);
+    min-width: 3.5rem; 
+    display: flex;
+    padding: var(--space-space-12);
+    justify-content: center;
+    align-items: center;
+}
+
+.foo .address .address-userinfo {
+    gap: var(--space-space-12);
+    padding-block-start: var(--space-space-12);
+    padding-inline-start: var(--space-space-12);
+}
+
+.foo .address-userinfo .col-1, .foo .address-section.address-line {
+    gap: var(--space-space-2);
+}
+
+.foo .address .address-section.address-line {
+    padding-block-start: var(--space-space-12);
+    padding-inline-end: var(--space-space-12);
+}
+
+.foo .select-city-modal,
+.foo .select-area-modal {
+    height : auto;
+}
+
+.foo .select-city-modal .modal-content .select-city-content,
+.foo .select-area-modal .modal-content .select-area-content {
+    overflow-y: unset;
+}
+
+.foo .select-city-modal .modal-content .select-city-content .search-field,
+.foo .select-area-modal .modal-content .select-area-content .search-field {
+    display: flex;
+    gap: var(--space-space-12);
+    border-bottom: var(--shape-border-width-1) solid var(--color-neutral-30);
+    padding: var(--space-space-12);
+    height: var(--container-height);
+    margin-top: var(--space-space-16);
+}
+
+.foo .select-city-modal .modal-content .select-city-content .icon.search-icon,
+.foo .select-area-modal .modal-content .select-area-content .icon.search-icon {    
+    background-image: url('/icons/search.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    align-self: center;
+}
+
+.foo .select-city-modal .modal-content .select-city-content .search-field .search-input,
+.foo .select-area-modal .modal-content .select-area-content .search-field .search-input  {
+    border: none;
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-4);
+    padding: 0;
+    margin: 0;
+    align-self: center;
+}
+
+.foo .select-city-modal .select-city-content ul,
+.foo .select-area-modal .select-area-content ul {
+  display: flex;
+  padding: var(--space-space-0x) var(--space-space-12);
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: var(--space-space-8);
+  margin-bottom: var(--space-space-0x);
+}
+
+/* Add Address Styling */  
+  
+  .foo .address-form form {
+    margin-top: var(--space-space-0x);
+    gap: var(--space-space-16);
+    padding-inline: var(--space-space-12);
+  }
+  
+  .foo .address-form form,
+  .foo .address-form form input {
+    max-width: 100%;
+  }
+  
+  .foo .address-form .input-field-wrapper {
+    max-width: 100%;
+  }
+
+  .foo .edit-address-modal,
+  .foo .add-address-modal {
+    inset-block-start: revert;
+    margin-bottom: var(--space-space-0x);
+    max-height: 84%;
+  }
+
+  .foo .select-city-modal {
+    inset-block-start: revert;
+    margin-bottom: var(--space-space-0x);
+    max-height: 72rem;
+  }
+
+
+  .foo .address-form-button-wrapper {
+    padding: var(--space-space-16) var(--space-space-0x);
+    box-shadow: 0 -4px 4px 0 rgba(0 0 0 / 4%);
+    margin-top: var(--space-space-72);
+    display: block;
+    width: 100%;
+  }
+  
+  .foo .address-form .address-form-button-wrapper button {
+    width: 100%;
+    background-color: var(--color-secondary-a);
+    border: var(--shape-border-width-01) solid var(--color-secondary-a);
+  }
+  
+  .foo .address-form-button-wrapper button:disabled {
+    background-color: var(--color-button-disabled-default-fill);
+    border-color: var(--color-button-disabled-default-fill);
+  }
+    
+  .foo .address-form .input-field-wrapper.emailValidation label.input-label {
+    inset-inline-start: var(--space-space-8);
+    font-size: var(--font-size-2);
+  }
+
+  .foo .address-form textarea {
+    height: var(--space-space-48);
+    border: var(--shape-border-width-01) solid var(--color-disabled-default-text);
+    padding-bottom: 0;
+    padding-inline-start: var(--space-space-8);
+  }
+
+  .foo .address-form textarea:focus~label,
+  .foo .address-form textarea:not(:placeholder-shown)~label {
+    color: var(--color-secondary-b);
+    padding: var(--space-space-2) var(--space-space-12) var(--space-space-12) var(--space-space-8);
+  }
+
+  .foo .address-form .input-field-wrapper.dropdown label {
+    position: absolute;
+    top: var(--spacing-xxsmall-2);
+    inset-inline-start: var(--space-space-16);
+    font-size: var(--font-size-2);
+  }
+
+  .foo .address-form .input-field-wrapper:not(.no-transition) textarea:focus ~ label,
+  .foo .address-form .input-field-wrapper:not(.no-transition) textarea:not(:placeholder-shown) ~ label {
+    font-size: var(--font-size-2);
+  }
+
+  .foo .address-form input:disabled,
+  .foo .address-form .input-field-wrapper.dropdown .select-selected[aria-disabled="true"] {
+    border: var(--shape-border-width-01) solid var(--color-brand-200);
+    background-color: var(--color-neutral-200);
+    color: var(--color-secondary-30);
+  }
+  
+  .foo .address-form .dropdown .select-selected {
+    color: var(--color-secondary-b);
+    align-items: center;
+    border: var(--shape-border-width-01) solid var(--color-disabled-default-text); 
+  }
+  
+  .foo .address-form .input-field-wrapper.invalid input, 
+  .foo .address-form .input-field-wrapper.invalid textarea, 
+  .foo .address-form .input-field-wrapper.invalid.dropdown .select-selected {
+    border: var(--shape-border-width-01) solid var(--color-form-error);
+    margin: 0;
+  }
+  
+  .foo .address-form .input-field-wrapper .error-message-container:not(.hide) {
+    padding: var(--space-space-4);
+  }
+  
+  .foo .address-form .input-field-wrapper .error-message-container .icon {
+    height: 1.6rem;
+    padding-inline-end: var(--space-space-4);
+  }
+  
+  .foo .address-form .input-field-wrapper .error-message {
+    font-size: var(--font-size-3);
+    margin-top: var(--space-space-0-3);
+  }
+  
+  .foo .address-form .input-field-wrapper.dropdown::after {
+    height: var(--space-space-20);
+    width: var(--space-space-20);
+    top: var(--space-space-15);
+    background-repeat: no-repeat;
+    background-image: url('/icons/chevron-down-blue.svg');
+  }
+
+  .foo .address-form .input-field-wrapper.dropdown:has(.select-selected[aria-disabled="true"])::after {
+    background-image: url('/icons/chevron-down-lightgrey.svg');
+  }
+
+  .foo .add-address-modal .dropdown.area .custom-select:has(.select-selected[aria-disabled="true"]) {
+    pointer-events: none;
+  }
+  
+  .foo .address-form .input-field-wrapper .input-phone-prefix input {
+    padding-inline-start: var(--space-space-48);
+  }
+
+  .foo .address-form .input-field-wrapper.dropdown .select-selected span {
+    position: relative;
+    top: var(--space-space-10);
+  }
+
+  .foo .address-form .input-field-wrapper.dropdown .select-selected.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .foo .address-form .input-field-wrapper.phonevalidation {
+    margin-bottom: var(--space-space-11);
+  }
+
+  .foo .address-form .input-field-wrapper.dropdown.address_city_segment {
+    margin-bottom: var(--space-space-16);
+  }
+
+  
+.foo .select-city-modal .select-city-content ul li,
+.foo .select-area-modal .select-area-content ul li{
+  display: flex;
+  padding: var(--space-space-12) var(--space-space-12);
+  align-items: center;
+  gap: var(--space-space-8);
+  align-self: stretch;
+  border-bottom: var(--shape-border-width-01) solid var(--color-neutral-480);
+  background: var(--color-neutral-white);
+}
+
+.foo .address-form .area .select-search {
+  margin-top: -4.2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.foo .add-address-modal .input-field-wrapper .custom-select div.no-results {
+  pointer-events: none;
+  user-select: none;
+}
+
+.foo .address-form .input-field-wrapper.phonevalidation label.input-label {
+  left: 0;
+}
+
+.foo .address-form .input-field-wrapper:not(.no-transition).phonevalidation input:focus~label,
+.foo .address-form .input-field-wrapper:not(.no-transition).phonevalidation input:not(:placeholder-shown)~label {
+  top: 1.5rem;
+  left:0;
+}
+
+.foo .address-form .input-field-wrapper.dropdown.area .select-selected[aria-disabled="true"] label {
+  color: var(--color-secondary-30);
+}
+
+.foo .address-form .input-field-wrapper:not(.no-transition) .email-field input.email:disabled:not(:placeholder-shown)~label:not(.radiobuttonlabel) {
+  color: var(--color-secondary-30);
+}
+
+html[dir='rtl'] .foo .add-address-modal .address-form .input-field-wrapper.phonevalidation label.input-label {
+  padding-inline-start: var(--space-space-16);
+}
+
+  @media (width >= 768px) {
+    .foo .address-wrapper {
+        margin-bottom: unset;
+        width: 100%;
+    }
+
+    .foo .addresses-container {
+        margin-top: var(--space-space-20);
+        gap: var(--space-space-0x);
+    }
+
+    .foo .account-address-book-container .new-address-wrapper {
+      padding: var(--space-space-8) 0 var(--space-space-14);
+      padding-inline-start: var(--space-space-24);
+    }
+
+    .foo .modal-header{
+        padding: var(--space-space-12) var(--space-space-16);
+    }
+
+    .foo .address .address-data {
+        padding: var(--space-space-12);
+    }
+    
+    .foo .address-section .primary-address-cta-wrapper{
+        flex: unset;
+        gap: var(--space-space-4);
+    }
+    
+    .foo .address-section.cta-container{
+        justify-content: flex-end;
+    }
+
+    .foo .select-city-modal .select-city-content ul,
+    .foo .select-area-modal .select-area-content ul {
+      margin-top: var(--space-space-16);
+      padding: var(--space-space-0x) var(--space-space-16);
+    }
+
+    .foo .select-city-modal .select-city-content ul li,
+    .foo .select-area-modal .select-area-content ul li {
+      padding: var(--space-space-12) var(--space-space-16);
+    }
+
+    .foo .select-city-modal .modal-content .search-field,
+    .foo .select-area-modal .modal-content .select-area-content .search-field {
+        margin-top: var(--space-space-32);
+    }
+
+    .foo .address-section.address-cta-container,
+    .foo .address-section.primary-address-cta-container {
+        align-self: unset;
+        padding: var(--space-space-0x);
+        gap: var(--space-space-12);
+    }
+
+    .foo .address-section .make-primary-cta-wrapper {
+        white-space: nowrap;
+    }
+        
+    .foo .address-section.cta-container .edit-address-cta-wrapper {
+        margin: var(--space-space-0x);
+    }
+
+    .foo .edit-address-cta-wrapper a.edit-address-cta {
+        gap: var(--space-space-16);
+    }
+
+    html[dir='rtl'] .foo .edit-address-cta-wrapper a.edit-address-cta {
+        padding: var(--space-space-12);
+    }
+
+    .foo.account .delete-address-modal .delete-content .delete-message {
+        padding: var(--space-space-24) var(--space-space-16);
+    }
+
+    .foo.account dialog.delete-address-modal .delete-content .delete-buttons {
+        gap: var(--space-space-16);
+        align-self: stretch;
+        padding: var(--space-space-16);
+    }
+
+    .foo .address .address-section.cta-container {
+        gap: var(--space-space-12);
+        border: none;
+        flex-basis: 18%;
+        justify-content: flex-end;
+        padding-top: var(--space-space-0x);
+    }
+
+    .foo .address .address-userinfo {
+        flex-direction: unset;
+        gap: var(--grid-gutter);
+        padding: var(--space-space-0x);
+    }
+
+    .foo .address .address-section.address-line {
+        padding: var(--space-space-0x);
+    }
+    
+    .foo .address .delete-address-cta-wrapper {
+        padding-inline-end: var(--space-space-0x);
+    }
+
+    .foo .edit-address-modal,
+    .foo .add-address-modal {
+      width: 65rem;
+      max-height: 63.4rem;
+      margin-bottom: auto;
+    }
+
+    .foo .select-city-modal,
+    .foo .select-area-modal {
+      width: var(--grid-col-6);
+      max-height: 68.4rem;
+      margin-bottom: auto;
+    }
+
+  .foo .edit-address-modal .address-form-button-wrapper {
+    margin-top: var(--space-space-20);
+  }
+
+  .foo .modal dialog.edit-address-modal .modal-content,
+  .foo .modal dialog.add-address-modal .modal-content {
+    padding: var(--space-space-16) var(--space-space-0x) var(--space-space-0x);
+    max-height: 58%;
+  }
+
+  .foo .address-form .input-field-wrapper > .input-field-wrapper {
+    padding-inline: var(--space-space-0x);
+  }
+
+  .foo .address-form .form__phone-email-wrapper,
+   .foo .address-form .form__city-area-wrapper {
+    display: flex; 
+    padding-inline: var(--space-space-0x);
+  }
+
+  .foo .address-form textarea,
+  .foo .address-form textarea:focus~label,
+  .foo .address-form textarea:not(:placeholder-shown)~label {
+    padding-inline-start: var(--space-space-12);
+  }
+
+  .foo .address-form .input-field-wrapper.phonevalidation {
+    margin-bottom: var(--space-space-0x);
+  }
+
+  .foo .address-form .input-field-wrapper.dropdown.address_city_segment {
+    margin-bottom: var(--space-space-0x);
+  }
+
+  .foo .address-form .input-field-wrapper.phonevalidation,
+  .foo .address-form .input-field-wrapper.dropdown.address_city_segment {
+    padding-inline-end: var(--space-space-6);
+    flex: 1;
+  }
+
+  .foo .address-form .input-field-wrapper.emailValidation,
+  .foo .address-form .input-field-wrapper.dropdown.area {
+    padding-inline-start: var(--space-space-6);
+    flex: 1;
+  }
+
+  .foo .address-form .input-field-wrapper.emailValidation label.input-label {
+    inset-inline-start: var(--space-space-12);
+  }
+
+}
+
+@media (width >= 1024px) {
+  .address-wrapper {
+      width: 100%;
+  }
+}

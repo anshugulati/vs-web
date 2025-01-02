@@ -1,0 +1,11 @@
+@import url('../tokens.css');
+@import url('./tokens.css');
+@import '../styles.css';
+
+.cha {
+  @media (width < 1024px) {
+    &.search header+main {
+      padding-top: var(--space-space-11x);
+    }
+  }
+}

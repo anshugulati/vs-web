@@ -1,0 +1,26 @@
+@import '../checkout.css';
+
+
+.bat.shopping .checkout-form form {
+  padding-inline: 0;
+}
+
+.bat.shopping .checkout-form form .address-form-button-wrapper,
+.bat.shopping .checkout-form form .address-form-button-wrapper button {
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+.bat.shopping .checkout-form form .address-form-button-wrapper button {
+  margin-top: var(--space-space-16);
+}
+
+/* bat specific code goes here */
+
+/* Always keep .bat scope for brand specific override 
+Example:
+.bat h2 {
+  color: var(--color-token);
+}
+*/

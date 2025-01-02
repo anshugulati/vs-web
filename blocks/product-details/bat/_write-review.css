@@ -1,0 +1,306 @@
+@import '../write-review.css';
+
+/* bat specific code goes here */
+
+/* Always keep .bat scope for brand specific override
+Example:
+.bat h2 {
+  color: var(--color-token);
+}
+*/
+.bat .write-review-form-container {
+  padding: 0;
+}
+
+.bat .write-review-form {
+  gap: var(--space-space-16);
+}
+
+.bat .write-review-progress {
+  padding: var(--space-space-0x) var(--space-space-4x);
+}
+
+.bat .product-review-fields {
+  padding: 0 var(--space-space-16) var(--space-space-16);
+}
+
+.bat .product-review-fields .rating-field > label {
+  display: none;
+}
+
+.bat .write-review-product {
+  padding: var(--space-space-16) var(--space-space-16) 0;
+  align-items: flex-start;
+}
+
+.bat .write-review-progress ul {
+  padding: var(--space-space-24) var(--space-space-0x);
+}
+
+.bat .write-review-product picture {
+  margin-right: var(--space-space-2x);
+  background-color: transparent;
+}
+
+.bat .write-review-progress-steps li {
+  font: var(--type-details-1-font);
+  line-height: var(--line-height-s);
+}
+
+.bat .write-review-progress-steps li::before {
+  margin-bottom: var(--space-space-2x);
+  font: var(--type-details-semibold-2-font);
+}
+
+.bat .write-review-progress-steps li.active::before {
+  background-color: var(--color-secondary-a);
+}
+
+.bat .write-review-product .product-name {
+  font: var(--type-body-1-strong-font);
+}
+
+.bat .rate-product-container{
+  display: none;
+}
+
+.bat .recommendation-options {
+  flex-direction: column;
+}
+
+.bat .success-content span {
+  font: var(--type-body-1-default-font);
+  color: var(--color-secondary-b);
+}
+
+.bat .recommendation-wrapper > span,
+.bat .write-review-form .recommendation-option input[type='radio']:checked + label span{
+  font: var(--type-body-1-strong-font);
+  color: var(--color-text-black);
+}
+
+.bat .write-review-form h5 {
+  font-weight: var(--font-weight-6);
+}
+
+.bat .star-wrapper span.icon {
+  width: var(--space-space-32);
+  height: var(--space-space-32);
+}
+
+.bat .write-review-form-container .write-review-form .your-information-title-wrapper {
+  padding: var(--space-space-16) var(--space-space-16) 0;
+}
+
+.bat .write-review-form-container .write-review-form.form-2  .name-field.input-field-wrapper {
+  margin: 0 var(--space-space-16) var(--space-space-16) var(--space-space-16);
+}
+
+.bat .success-screen,
+.bat .error-screen {
+  padding: var(--space-space-40) var(--space-space-0x) var(--space-space-0x) var(--space-space-0x);
+}
+
+.bat .success-content,
+.bat .error-content {
+  padding: var(--space-space-0x) var(--space-space-16);
+}
+
+.bat .success-content h5,
+.bat .error-content h5 {
+  font: var(--type-details-semibold-7-font);
+  line-height: var(--aura-line-height-132);
+  color: var(--color-text-main);
+}
+
+.bat .error-content .error-list {
+  font: var(--type-body-1-default-font);
+}
+
+.bat .write-review-form-container .input-field-wrapper input[type='text'] {
+  height: var(--space-space-48);
+  padding: var(--space-space-20) var(--space-space-12) var(--space-space-8);
+  line-height: var(--line-height-m);
+}
+
+.bat .write-review-form-container .write-review-form.form-2 h5 {
+  color: var(--color-secondary-a);
+  font-weight: var(--font-weight-7);
+}
+
+.bat .write-review-form-container .write-review-form.form-2 .sub-title {
+  color: var(--color-text-main);
+  padding: var(--space-space-16) 0 0;
+  display: block;
+}
+
+.bat .write-review-form-container .input-field-wrapper.invalid input {
+  border: 0.1rem solid var(--color-form-error);
+}
+
+.bat .write-review-form-container .input-field-wrapper .error-message {
+  color: var(--color-form-error);
+  font-size: var(--font-size-3);
+  line-height: var(--text-l-1);
+}
+
+.bat .image-field .image-error-wrapper .icon {
+  width: var(--space-space-16);
+  height: var(--space-space-16);
+  margin-right: var(--space-space-4);
+}
+
+.bat .write-review-form-container .form-errors .icon,
+.bat .write-review-form-container .input-field-wrapper .error-message-container .icon {
+  width: var(--space-space-16);
+  height: var(--space-space-16);
+  margin-right: var(--space-space-4);
+}
+
+.bat .write-review-form .buttons-container a {
+  text-align: center;
+}
+
+.bat .image-container .image-preview-item .delete-image img {
+  width: var(--space-space-12);
+  height: var(--space-space-12);
+}
+
+.bat .write-review-form.form-3 .form-content {
+  padding: var(--space-space-16);
+}
+
+.bat .write-review-form.form-3 .add-images-link-wrapper .icon {
+  width: var(--space-space-16);
+  height: var(--space-space-16);
+  margin-right: var(--space-space-4);
+}
+
+.bat .write-review-form.form-3 .add-images-link-wrapper .icon img {
+  filter: invert(100%) brightness(0);
+
+}
+
+.bat .write-review-form button {
+  height: var(--container-height);
+  padding: var(--space-space-16) var(--space-space-24);
+}
+
+.bat .buttons-container {
+  padding: var(--space-space-16);
+  box-shadow: 0 var(--space-space-4-neg) var(--space-space-4) 0 var(--color-opacity-4);
+}
+
+.bat .success-content .icon-success {
+  width: var(--space-space-64);
+  height: var(--space-space-64);
+}
+
+.bat .error-content .icon-error {
+  width: var(--space-space-64);
+  height: var(--space-space-64);
+}
+
+.bat .input-field-wrapper:not(.notransistion) label {
+  padding: 0 var(--space-space-12);
+  line-height: var(--line-height-m);
+  top: var(--space-space-12);
+}
+
+.bat .review-field.input-field-wrapper textarea {
+  height: var(--space-space-130);
+  padding: var(--space-space-28) var(--space-space-12) var(--space-space-8);
+}
+
+.bat .input-field-wrapper:not(.no-transition) input:not(:placeholder-shown)~label:not(.radiobuttonlabel) {
+  transform: translate(0%, -50%);
+}
+
+.bat .pdp-modal-write-review span.icon.icon-arrow-left.icon-title-left img {
+  display: none;
+}
+
+.bat .pdp-modal-write-review span.icon.icon-arrow-left.icon-title-left::before {
+  background-image: url('/icons/arrow-left-blue.svg');
+  content: '';
+  display: inline-block;
+  width: var(--space-space-24);
+  height: var(--space-space-24);
+}
+
+html[dir='rtl'] .bat .pdp-modal-write-review span.icon.icon-arrow-left.icon-title-left::before {
+  transform: rotate(180deg);
+}
+
+@media (width >= 768px) {
+  .bat.modal-open #write-ratings-dialog dialog.pdp-modal,
+  .bat.modal-open #write-ratings-dialog dialog.pdp-modal.pdp-modal--ratings {
+    top:0;
+    left: unset;
+    transform: translateX(0);
+    max-height: 100vh;
+    height: 100%;
+    width: 51.2rem;
+  }
+
+  .bat .write-review-progress-steps li::before{
+    width: var(--space-space-24);
+    height: var(--space-space-24);
+    line-height: var(--space-space-22);
+  }
+
+  .bat .image-field label {
+    font-size: var(--font-size-4);
+  }
+
+  .bat .star-wrapper span.icon {
+    width: var(--space-space-32);
+    height: var(--space-space-32);
+  }
+
+  .bat .write-review-form .recommendation-option input[type='radio'] + label {
+    font-size: var(--font-size-4);
+  }
+
+  html[dir='rtl'] .bat.modal-open #write-ratings-dialog dialog.pdp-modal {
+    left: 0;
+    right: unset;
+  }
+}
+
+@media (width < 767px) {
+  .bat .buttons-container {
+    padding: var(--space-space-16) var(--space-space-12);
+  }
+
+  .bat .success-content span,
+  .bat .error-content .error-list {
+    font: var(--type-details-4-font);
+    line-height: var(--line-height-xl);
+  }
+
+  .bat .write-review-product .product-name {
+    font-size: var(--font-size-3);
+  }
+
+  .bat .recommendation-wrapper > span,
+  .bat .write-review-form .recommendation-option input[type='radio']:checked + label span {
+    font-size: var(--font-size-3);
+  }
+
+  .bat .write-review-form-container .input-field-wrapper .error-message {
+    font-size: var(--font-size-2);
+  }
+
+  .bat .write-review-form.form-3 .sub-title,
+  .bat .write-review-form.form-3 .instructions,
+  .bat .write-review-form .buttons-container a {
+    font-size: var(--font-size-2);
+  }
+}
+
+@media (width <= 767px) {
+  .bat .input-field-wrapper:not(.no-transition) input:not(:placeholder-shown)~label:not(.radiobuttonlabel) {
+    transform: translate(0%, -50%);
+  }
+}

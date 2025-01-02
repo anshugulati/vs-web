@@ -1,0 +1,139 @@
+@import '../carousel.css';
+
+/* cha specific code goes here */
+
+/* Always keep .cha scope for brand specific override
+Example:
+.cha h2 {
+  color: var(--color-token);
+}
+*/
+
+.cha .footer-usp {
+  background-color: var(--color-brand-700);
+  padding: 0;
+}
+
+.cha .footer-usp .carousel.inline .carousel-item-image a {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-space-8);
+  font: var(--type-details-caption-1-font);
+  letter-spacing: 0;
+  line-height: var(--line-height-l);
+  color: var(--color-neutral-50);
+}
+
+.cha .footer-usp .carousel.inline .carousel-item a:hover {
+  color: var(--color-neutral-50);
+}
+
+.cha .footer-usp .carousel-item .card div:first-child {
+  display: none;
+}
+
+.cha .footer-usp .carousel-item .card div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-neutral-white);
+  font-size: var(--font-size-2);
+  font-family: var(--type-base-font-family);
+  text-align: center;
+}
+
+.cha .footer-usp .carousel-nav-button .icon img {
+  display: none;
+  padding: 0;
+}
+
+.cha .footer-usp .carousel-item .card div span img {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.cha .footer-usp .carousel-item .card div span.icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  margin: 0 0 0.8rem;
+}
+
+.cha .footer-usp .carousel.inline {
+  padding: 0;
+}
+
+.cha .carousel.cards .carousel-item {
+  display: block;
+  width: 50%;
+  padding: 2.4rem 0.8rem 0;
+}
+
+.cha .footer-usp .carousel.inline .carousel-item {
+  padding: 1.8rem 0;
+}
+
+
+.cha .footer-usp .carousel-wrapper.inline .carousel-nav-button {
+  top: 50%;
+  transform: translateY(-50%)
+}
+
+.cha .footer-usp button.carousel-dot-button {
+  background-color: var(--color-neutral-50);
+  border: 0;
+  opacity: 0.5;
+  margin: 0.8rem 0 1rem;
+}
+
+.cha .footer-usp button.carousel-dot-button button {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.cha .footer-usp button.carousel-dot-button.selected {
+  background-color: var(--color-neutral-50);
+  border: 0;
+  opacity: 1;
+}
+
+/* override rules */
+@media (width >=768px) {
+  .cha .footer-usp {
+    background-color: var(--color-brand-700);
+    padding: 0;
+  }
+
+  .cha .footer-usp .carousel.inline {
+    padding: var(--space-space-2x);
+  }
+
+  .cha .footer-usp .carousel-dot-buttons {
+    display: none;
+  }
+
+  .cha .carousel.cards .carousel-item {
+    display: block;
+    width: 100%;
+    padding: 2.4rem 0.5rem;
+    margin: 0;
+  }
+
+  .cha .footer-usp .carousel-item .card div:nth-child(2) {
+    max-width: 20rem;
+    margin: auto;
+  }
+}
+
+@media (width >=1024px) {
+  .cha .footer-usp .carousel-item .card div:nth-child(2) {
+    max-width: 0;
+    white-space: nowrap;
+  }
+}
+
+.cha .footer-usp .carousel-item .card div span {
+  font-family: var(--type-base-font-family);
+  font-size: var(--font-size-2);
+}

@@ -1,0 +1,58 @@
+:root {
+    --color-bg-banner: var(--color-background-banner);
+    --color-vignette: var(--color-text-banner-vignette);
+    --color-header: var(--color-text-banner-header);
+    --color-preamble: var(--color-text-banner-preamble);
+    --color-usp: var(--color-text-banner-usp);
+    --color-offer: var(--color-text-banner-offer);
+    --color-bg-cta: var(--color-background-banner-cta);
+    --color-text-cta: var(--color-text-banner-cta);
+    --color-border-cta: var(--color-neutral-black);
+    --color-bg-countdown: var(--color-background-banner-countdown);
+    --color-text-countdown: var(--color-text-banner-countdown);
+  
+    /** price tag tokens */
+    --color-bg-price:var(--color-background-banner-price);
+    --color-text-price:var(--color-text-banner-price);
+    --opacity-price:var(--opacity-banner-price);
+  
+    /** font size tokens */
+  
+    --size-text-header: var(--text-xxl);
+    --line-height-header: var(--line-height-xs);
+    --desktop-size-text-header: var(--text-xxl);
+    --desktop-line-height-header: var(--line-height-xs);
+    --size-text-vignette: var(--text-xl);
+    --line-height-vignette: var(--line-height-xs);
+    --desktop-size-text-vignette: var(--text-xl);
+    --desktop-line-height-vignette: var(--line-height-xs);
+    --size-text-preamble: var(--text-xl);
+    --line-height-preamble: var(--line-height-xs);
+    --desktop-size-text-preamble: var(--text-xl);
+    --desktop-line-height-preamble: var(--line-height-xs);
+    --size-text-usp: var(--text-xl);
+    --line-height-usp: var(--line-height-xs);
+    --desktop-size-text-usp: var(--text-xl);
+    --desktop-line-height-usp: var(--line-height-xs);
+    --size-text-offer: var(--text-s);
+    --line-height-offer: var(--line-height-xs);
+    --desktop-size-text-offer: var(--text-s);
+    --desktop-line-height-offer: var(--line-height-xs);
+    --size-text-cta: var(--text-s);
+    --line-height-cta: var(--line-height-xs);
+    --desktop-size-text-cta: var(--text-s);
+    --desktop-line-height-cta: var(--line-height-xs);
+    --size-text-countdown: var(--text-s);
+    --line-height-countdown: var(--line-height-xxs);
+    --desktop-size-text-countdown: var(--text-s);
+    --desktop-line-height-countdown: var(--line-height-xxs);
+  }
+
+/*  new specific code goes here */
+
+/* Always keep . new scope for brand specific override 
+Example:
+. new h2 {
+  color: var(--color-token);
+}
+*/

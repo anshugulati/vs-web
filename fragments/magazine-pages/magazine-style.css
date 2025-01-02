@@ -1,0 +1,274 @@
+@font-face {
+    font-family: 'hm sans regular';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/HMSans-Regular.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  
+  @font-face {
+    font-family: 'hm sans semibold';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('../fonts/HMSans-SemiBold.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  
+  @font-face {
+    font-family: 'hm sans bold';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../fonts/HMSans-Bold.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  
+  @font-face {
+    font-family: 'hm sans regular';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/HMSansArabic-Regular.woff2') format('woff2');
+    unicode-range: U+0600-06FF, U+0750-077F, U+0870-089F, U+08A0-08FF;
+  }
+  
+  @font-face {
+    font-family: 'hm sans semibold';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('../fonts/HMSansArabic-SemiBold.woff2') format('woff2');
+    unicode-range: U+0600-06FF, U+0750-077F, U+0870-089F, U+08A0-08FF;
+  }
+  
+  @font-face {
+    font-family: 'hm sans bold';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../fonts/HMSansArabic-Bold.woff2') format('woff2');
+    unicode-range: U+0600-06FF, U+0750-077F, U+0870-089F, U+08A0-08FF;
+  }
+
+body{
+    margin: 0;
+}
+.hm-magazine-wrap {
+    /* max-width: 52.75rem; */
+    max-width: 1040px;
+    margin: auto;
+}
+.hm-magazine-date-hold {
+    display: flex;
+    justify-content: center;
+    padding: 2.125rem 0;
+    background: #ffffff;
+    margin-top: 50px;
+}
+
+p.date-p {
+    font-size: 14px;
+    line-height: 1.25rem;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+    color: #222;
+    font-family: "hm sans regular", "HM Sans Arabic Regular", "sans-serif", "Arial";
+    margin: 0;
+}
+.hm-magazine-text-hold {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    align-items: center;
+    align-content: center;
+    row-gap: 15px;
+    background: #fff;
+    max-width: 970px;
+    margin: auto;
+}
+
+p.hm-magazine-preample, h1.hm-magazine-h1, p.hm-magazine-description {
+    margin: 0;
+}
+p.hm-magazine-preample {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #222;
+    font-family: "hm sans regular", "HM Sans Arabic Regular", "sans-serif", "Arial";
+}
+
+h1.hm-magazine-h1 {
+    font-size: 28px;
+    line-height: normal;
+    font-family: "hm sans semibold", "HM Sans Arabic Semi Bold", "sans-serif", "Arial";
+    font-weight: 400;
+    text-transform: none;
+    text-align: center;
+    color: #222;
+    text-transform: uppercase;
+}
+
+
+
+p.hm-magazine-description {
+    font-family: "HM Serif Regular", "Times New Roman", "Arial";
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 400;
+    font-style: normal;
+    color: #222;
+    text-align: center;
+}
+.hm-magazine-cta-arrow  {
+    font-family: "hm sans bold", "HM Sans Arabic Bold", "sans-serif", "Arial";
+    text-transform: capitalize;
+    background: none;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 1rem;
+    position: relative;
+    padding: 0.5rem 1.5625rem 0.4375rem 0.1875rem;
+    font-weight: 700;
+    color: #222;
+}
+.hm-magazine-cta-arrow:after {
+    content: "";
+    background: url(img/forward-arrow-dark.svg) no-repeat center;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-block;
+    background-size: 0.75rem;
+    position: absolute;
+    bottom: 0rem;
+    right: 0;
+}
+
+.hm-magazine-col-1-img-hold img {
+    width: 100%;
+}
+
+a.hm-magazine-link-hold{
+    text-decoration: none;
+}
+
+main .section {
+    padding: 1.6rem 2.4rem;
+    background: #ffffff;
+}
+.hm-magazine-dp-block-container {
+    max-width: 570px;
+    margin: auto;
+}
+p.hm-magazine-description-dp {
+    font-family: "HM Serif Regular", "Times New Roman", "Arial";
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 400;
+    font-style: normal;
+    color: #222;
+    text-align: left;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.hm-magazine-text-hold-dp{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+    align-items: center;
+    align-content: center;
+    row-gap: 15px;
+    /* background: #fff; */
+}
+
+a.hm-magazine-description-dp {
+    text-decoration: underline;
+    font-family: "HM Serif Regular", "Times New Roman", "Arial";
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 400;
+    font-style: normal;
+    color: #222;
+}
+
+
+h2.hm-magazine-h2 {
+    font-size: 22px;
+    line-height: normal;
+    font-family: "hm sans semibold", "HM Sans Arabic Semi Bold", "sans-serif", "Arial";
+    font-weight: 400;
+    text-transform: none;
+    text-align: center;
+    color: #222;
+    margin-bottom: 0;
+    width: 100%;
+}
+.text-left{
+    text-align: left!important;
+}
+.text-right{
+    text-align: right!important;
+}
+
+.hm-magazine-col-1-img-hold iframe{
+    aspect-ratio: 9 / 5;
+    margin-bottom: 30px;
+}
+
+.text-center{
+    text-align: center!important;
+}
+
+html[dir='rtl'] body, html[dir='rtl'] body * p.hm-magazine-description-dp {
+    text-align: right;
+    font-family: 'hm sans regular', "Times New Roman", "Arial", 'hm sans regular';
+    line-height: normal;
+}
+
+html[dir='rtl'] body, html[dir='rtl'] body * .text-left{
+    text-align: right!important;
+}
+
+html[dir='rtl'] body, html[dir='rtl'] body * .text-right{
+    text-align: left;
+}
+html[dir='rtl'] body, html[dir='rtl'] body * p.hm-magazine-description{
+font-family: 'hm sans regular', "Times New Roman", "Arial", 'hm sans regular';
+    line-height: normal;
+}
+
+.magazine-dp-a-div {
+    display: flex;
+    column-gap: 20px;
+    text-align: center;
+}
+
+.hm-magazine-wrap.hm-magazine-wrap-dp a {
+    text-decoration: underline;
+}
+@media only screen and (max-width: 767px) {
+    h1.hm-magazine-h1 {
+        font-size: 22px;
+        line-height: 1.4;}
+
+        .hm-magazine-date-hold {
+            margin-top: 30px;
+        }
+        .hm-magazine-dp-block-container {
+            padding: 0 5px;
+        }
+        
+        .hm-magazine-text-hold {
+            padding: 20px 10px;
+        }
+        .magazine-dp-a-div {
+            flex-direction: column;
+        }
+}
+

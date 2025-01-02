@@ -1,0 +1,20 @@
+@import '../index.css';
+
+.bat .cart-title-mobile {
+    text-align: left;
+    font-size: var(--font-size-5);
+    line-height: var(--line-height-2-3);
+    background-color: var(--color-neutral-white);
+    color: var(--color-brand-750);
+    font-weight: var(--font-weight-6);
+    padding: var(--space-space-24) var(--space-space-12) var(--space-space-16) var(--space-space-12);
+    margin-bottom: 0;
+}
+
+.bat .checkout__order_summary_border_bottom {
+    margin: 0;
+}
+
+.bat .checkout__common_container {
+    margin-top: 0;
+}

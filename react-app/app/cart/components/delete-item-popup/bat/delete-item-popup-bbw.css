@@ -1,0 +1,125 @@
+@media (width >=768px) {
+    .popup-delete {
+        min-height: var(--grid-height-27);
+        ;
+        height: auto;
+        padding: 0;
+        min-width: var(--grid-width-46);
+    }
+
+    .delete_popup_main {
+        height: auto;
+        min-height: var(--grid-height-16);
+        width: 100%;
+        padding: 0;
+    }
+
+    .popup_body {
+        align-items: center;
+        padding: var(--space-space-24) var(--space-space-16);
+        height: auto;
+    }
+
+    .popup_footer {
+        flex-direction: column;
+        padding: var(--space-space-16);
+        gap: var(--space-space-16);
+    }
+
+    .popup_footer button {
+        margin-block-start: 0;
+    }
+
+    .popup_footer #remove_from_cart .loading-spinner {
+        width: auto;
+        margin-inline-start: var(--space-space-8);
+        position: static;
+    }
+
+    .popup_header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: var(--space-space-3x) 0;
+        border-block-end: 1px solid var(--color-neutral-200);
+        font-size: var(--font-size-5);
+        font-weight: var(--font-weight-7);
+        box-shadow: var(--shape-shadow-5);
+    }
+
+    .icon-close {
+        position: absolute;
+        inset-inline-end: var(--space-space-4x);
+        inset-block-start: var(--space-space-4x);
+    }
+    .remove-cart .popup-delete #item-popup-modal {
+        transform: unset;
+    }
+}
+
+.cart__product-card-v2 .product-summary__card .product-summary__container .product-summary__actions .delete-item span.remove-item-error span {
+    color: #CC0000;
+    font-weight: 600;
+}
+
+.remove-cart #item-popup-modal {
+    padding: 0;
+    width: 100%;
+    bottom: 0;
+    top: unset;
+    transform: translate(-50%, 0);
+}
+
+.remove-cart .popup_header {
+    padding: var(--space-space-12);
+    font-size: var(--font-size-5);
+    font-weight: var(--font-weight-7);
+    justify-content: center;
+}
+
+.remove-cart .icon-close {
+    position: absolute;
+    inset-inline-end: var(--space-space-4x);
+    inset-block-start: var(--space-space-4x);
+}
+
+#move_to_fav_list {
+    background-color: var(--color-neutral-50);
+    color: var(--color-secondary-100);
+}
+
+#remove_from_cart {
+    background-color: var(--color-secondary-100);
+    color: var(--color-neutral-50);
+    margin-inline-start: 0;
+}
+
+#move_to_fav_list:hover {
+    background-color: var(--color-neutral-50);
+}
+
+.remove-cart .popup_footer button {
+    width: 100%;
+}
+
+.remove-cart .popup_footer {
+    padding: var(--space-space-12) var(--space-space-16)
+}
+
+.remove-cart .popup_body img {
+    height: var(--space-space-110);
+    width: var(--space-space-86);
+}
+
+.remove-cart .popup_footer button {
+    max-height: unset;
+}
+
+/* bat specific code goes here */
+
+/* Always keep .bat scope for brand specific override 
+Example:
+.bat h2 {
+  color: var(--color-token);
+}
+*/

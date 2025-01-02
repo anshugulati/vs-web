@@ -1,0 +1,23 @@
+@import "../cards.css";
+@import "../aura.css";
+
+/* bat specific code goes here */
+
+/* Always keep .bat scope for brand specific override 
+Example:
+.bat h2 {
+  color: var(--color-token);
+}
+*/
+
+.bat .cards.navigation > ul > li img {
+  width: var(--space-space-162);
+}
+
+.bat .cards.navigation a.button {
+  color: var(--color-text-main);
+}
+
+.section.cards-container:has(.pricepoint){
+  display:none;
+}

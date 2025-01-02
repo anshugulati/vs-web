@@ -1,0 +1,88 @@
+@import "../commerce-login-wizard.css";
+
+.foo form .exist-signin {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-space-16);
+}
+
+.foo .checkout-flow .commerce-login-wizard-container,
+.foo .welcome-flow .commerce-login-wizard-container {
+  display: none;
+}
+
+.foo .header-flow .commerce-login-wizard-container {
+  width: 100%;
+  padding: var(--space-space-0x);
+}
+
+.foo .header-flow .commerce-login-wizard-container div h5 {
+  margin: var(--space-space-0x);
+  padding: var(--space-space-16) var(--space-space-0x);
+  font: var(--type-details-semibold-6-font);
+  color: var(--color-secondary-a);
+}
+
+.foo .header-flow .commerce-login-wizard-container div p {
+  padding: var(--space-space-12) var(--space-space-0x);
+  font-size: var(--font-size-2);
+  color: var(--color-text-main);
+}
+
+.foo .header-flow .commerce-login-wizard-container div p strong {
+  font: var(--type-details-semibold-3-font);
+}
+
+.foo .header-flow .commerce-login-wizard-container .login-container .exist-signin {
+  gap: var(--space-space-2);
+}
+
+.foo .header-flow .commerce-login-wizard-container div ul {
+  padding: 0;
+  margin: 0 0 var(--space-space-20);
+}
+
+.foo .header-flow .commerce-login-wizard-container div ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: var(--space-space-8);
+  align-self: stretch;
+  font: var(--type-details-semibold-3-font);
+  margin: var(--space-space-4) var(--space-space-0x);
+  color: var(--color-secondary-b);
+  letter-spacing: normal;
+}
+
+.foo .header-flow .commerce-login-wizard-container div ul li span {
+  width: var(--space-space-20);
+  height: var(--space-space-20);
+}
+
+.foo .header-flow .commerce-login-wizard .or-label {
+  font-size: var(--font-size-2);
+  text-align: center;
+}
+
+.foo .header-flow .commerce-login-wizard .or-label p {
+  font: var(--type-details-semibold-3-font);
+  color: var(--color-secondary-b);
+}
+
+@media (width>=768px) {
+  .foo.login .header-flow .commerce-login-wizard-container {
+    padding: var(--space-space-0x);
+  }
+
+  .foo .header-flow .commerce-login-wizard-container div h5 {
+    padding: var(--space-space-2) 0 var(--space-space-4x);
+  }
+
+  .foo .header-flow .commerce-login-wizard-container div p {
+    margin: var(--space-space-0x);
+  }
+
+  .foo .header-flow .commerce-login-wizard-container div p strong {
+    font-size: var(--font-size-3);
+  }
+}

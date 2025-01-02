@@ -1,0 +1,97 @@
+@import "../commerce-login-welcome-wizard.css";
+
+.bat.user.login .commerce-login-welcome-wizard-container {
+  display: none;
+}
+
+.bat.user.login .welcome-flow .commerce-login-welcome-wizard-container {
+  display: block;
+  padding: var(--space-space-16) var(--space-space-0x);
+  width: 100%;
+}
+
+.bat.user.login .welcome-flow .commerce-login-welcome-wizard-container h2 {
+  display: flex;
+  font-weight: var(--font-weight-6);
+  gap: var(--space-space-8);
+  border: var(--space-space-0x);
+  margin: var(--space-space-0x);
+  justify-content: start;
+  align-items: center;
+  color: var(--color-secondary-a);
+}
+
+.bat.user.login .welcome-flow .commerce-login-welcome-wizard-container h2 span {
+  width: var(--space-space-24);
+  height: var(--space-space-24);
+  cursor: pointer;
+}
+
+.bat.user.login .welcome-flow .commerce-login-welcome-wizard-container p {
+  font-size: var(--text-m);
+  text-align: start;
+  color: var(--text-text-main);
+  padding-bottom: var(--space-space-0x);
+}
+
+.bat.user.login .commerce-login-welcome-wizard-container a.forgot-password {
+  margin-top: var(--space-space-4);
+  text-decoration: underline;
+  color: var(--text-text-main);
+  font-size: var(--text-m);
+}
+
+.bat.user.login .commerce-login-welcome-wizard-container .email-info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  max-height: var(--space-space-40);
+  padding-bottom: var(--space-space-12);
+  border-bottom: var(--shape-border-width-1) solid var(--color-neutral-480);
+  margin-bottom: var(--space-space-16);
+}
+
+.bat.user.login
+  .commerce-login-welcome-wizard-container
+  .email-info-container
+  p {
+  font-weight: var(--font-weight-6);
+  margin: var(--space-space-0x);
+}
+
+.bat.user.login
+  .commerce-login-welcome-wizard-container
+  .email-info-container
+  .change-link
+  a {
+  text-decoration: underline;
+  font-size: var(--text-m);
+  cursor: pointer;
+}
+
+.bat.user.login
+  .welcome-flow
+  .commerce-login-welcome-wizard-container
+  .default-content-wrapper
+  p {
+  font-size: var(--text-xs);
+  text-align: center;
+  color: var(--color-secondary-b);
+  padding: var(--space-space-24) var(--space-space-0x) var(--space-space-0x);
+}
+
+@media (width>=768px) {
+  .bat.user.login .welcome-flow .commerce-login-welcome-wizard-container {
+    padding:var(--space-space-0x);
+  }
+
+  .bat.user.login .welcome-flow .commerce-login-welcome-wizard-container p {
+    padding-top: var(--space-space-16);
+    margin: var(--space-space-0x);
+  }
+
+  .bat.user.login .welcome-flow .commerce-login-welcome-wizard-container h2 {
+    font-size: var(--font-size-6);
+    padding-bottom: var(--space-space-8);
+  }
+}

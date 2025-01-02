@@ -1,0 +1,18 @@
+@import '../menu-chips.css';
+
+.new {
+  .menu-chips li {
+    border-color: var(--color-tertiary-d);
+    padding: var(--space-space-8) var(--space-space-18);
+
+    a {
+      font: var(--type-md-semibold-text);
+    }
+  }
+
+  @media (width < 1024px) {
+    &.home header:has(.menu-chips)+main {
+      padding-top: var(--spacing-large-big);
+    }
+  }
+}

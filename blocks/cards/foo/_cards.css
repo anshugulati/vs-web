@@ -1,0 +1,152 @@
+@import '../cards.css';
+
+/* foo specific code goes here */
+
+/* Always keep .foo scope for brand specific override 
+Example:
+.foo h2 {
+  color: var(--color-token);
+}
+*/
+
+.foo .home-categories.cards {
+  max-width: var(--grid-col-11);
+}
+
+.foo .home-categories.cards ul {
+  grid-template-columns: repeat(2, minmax(50px, 1fr));
+  gap : var(--grid-1-gutters);
+}
+
+.foo .home-categories.cards ul li  .cards-card-body .button  {
+  background-color: transparent;
+  color: var(--color-primary-100);
+  text-decoration: underline;
+}
+
+.foo .fl-multi-column-carousel .multi-col-cat-carousel.carousel .carousel-item .custom-action {
+  font: var(--type-body-1-strong-font);
+  font-size: var(--font-size-2);
+}
+
+.foo .fl-multi-column-carousel .multi-col-cat-carousel .carousel-item {
+    width: 42%;
+}
+
+.foo .multi-banner.cards-container h4,
+.foo .multi-block.cards-container h4,
+.foo .multi-col-category.cards-container h4 { 
+  font: var(--type-details-bold-6-font);
+  font-size: var(--font-size-7);
+  line-height: normal;
+}
+
+.foo .multi-col-carousel-section .default-content-wrapper h3 {
+  font-size: var(--font-size-7);
+  line-height: normal;
+}
+
+
+@media (width >= 768px) {
+  .foo .multi-col-category.cards-container h4 {
+    padding: var(--space-space-18) 0 var(--spacing-xsmall) 0;
+  }
+
+  .foo .home-categories.cards ul {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .foo .multi-banner.cards-container h4,
+  .foo .multi-block.cards-container h4,
+  .foo .multi-col-category.cards-container h4 {
+    font-size: var(--font-size-9);
+  }
+
+  .foo .multi-col-carousel-section .default-content-wrapper h3 {
+    font-size: var(--font-size-9);
+  }
+
+  .foo .brand-categories.cards ul {
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--space-space-10);
+  }
+
+  .foo .home-categories.cards ul li,
+  .foo .brand-categories.cards ul li {
+    flex: 1;
+    flex-wrap: wrap;
+    flex-basis: 10%;
+    max-width:  31.5rem;
+  } 
+
+  .foo .multi-cloumn-banner.cards ul li {
+    max-width: 33.8rem;
+    min-width: 32.8rem;
+  }
+
+  .foo .multi-cloumn-banner.cards .cards-card-image img {
+    max-height: 43.3rem;
+  }
+
+  .foo .multi-cloumn-banner.cards .cards-card-body a {
+    height: var(--space-space-26);
+    margin: 0;
+  }
+
+  .foo .fl-multi-column-carousel .multi-col-cat-carousel.carousel .carousel-item .custom-action {
+    font: var(--type-body-1-strong-font);
+  }
+
+  .foo .fl-multi-column-carousel.carousel-wrapper {
+    padding: 0;
+    margin: var(--space-space-32) var(--space-space-10);
+  }
+
+  .foo .fl-multi-column-carousel span.icon-chevron-right {
+    background-color: var(--color-neutral-white);
+    mask: url("/icons/chevron-right-white.svg") no-repeat center;
+  }
+
+  .foo .fl-multi-column-carousel span.icon-chevron-left {
+    background-color: var(--color-neutral-white);
+    mask: url("/icons/chevron-left.svg") no-repeat center;
+    }
+
+  .foo .fl-multi-column-carousel button.carousel-nav-button .icon img {
+    display: none;
+  }
+
+  .foo .fl-multi-column-carousel button.carousel-nav-button {
+    background: var(--color-primary-100);
+    height: 3.2rem;
+    width: 3.2rem;
+  }
+
+  .foo .section.fl-carousel-banner-fragment:not(.full-width)>div {
+    margin: 0;
+  }
+
+  .foo .cards.brand-multi-column-category-banner {
+    margin: auto;
+  }
+
+  .foo .multi-block .cards > ul {
+    gap: var(--space-space-4x);
+  }
+
+  .foo .multi-block .cards > ul > li {
+    gap: var(--space-space-15);
+  }
+
+  .foo .section.fl-carousel-banner-fragment .carousel-nav-left.carousel-nav-button,  
+  .foo .section.fl-carousel-banner-fragment .carousel-nav-right.carousel-nav-button {
+    display: block;
+  }
+
+  .foo main .section.fl-carousel-banner-fragment {
+    padding: var(--space-space-16) 0;
+  }
+  
+}

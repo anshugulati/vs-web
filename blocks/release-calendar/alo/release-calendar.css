@@ -1,0 +1,132 @@
+a[href$=".json"] {
+  display: none !important;
+}
+
+.release-calendar {
+  padding: var(--space-space-24) 0;
+}
+
+.release-calendar .tabs-list {
+  display: flex;
+  gap: var(--space-space-5x);
+  max-width: 100%;
+  font-size: var(--body-font-size-xs);
+  overflow-x: auto;
+}
+
+.release-calendar .card-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(162px, 1fr));
+  grid-gap: var(--space-space-4x);
+}
+
+.release-calendar .card-list ul li .card-link:hover {
+  color: initial;
+}
+
+.release-calendar ul li .card-img-wrapper {
+  background: var(--color-tertiary-40);
+  position: relative;
+  display: flex;
+}
+
+.release-calendar ul li .card-img-wrapper img {
+  aspect-ratio: 1/1;
+}
+
+@media (width >=600px) {
+  .release-calendar .tabs-list {
+    font-size: var(--body-font-size-s);
+  }
+}
+
+.release-calendar .tabs-list button {
+  flex: 1;
+  margin: 0;
+  border-bottom: 0.2rem solid transparent;
+  border-radius: 0;
+  padding: var(--space-space-4x);
+  background-color: var(--light-color);
+  color: initial;
+  font: var(--type-details-semibold-4-font);
+  transition: background-color 0.2s;
+}
+
+.release-calendar .tabs-list button p {
+  margin: 0;
+}
+
+.release-calendar .tabs-list button[aria-selected='true'] {
+  border-bottom: 0.2rem solid var(--color-primary-100);
+  cursor: initial;
+}
+
+.release-calendar .tabs-panel {
+  margin-top: -1px;
+  border-top: 0.1rem solid  var(--color-neutral-30);
+  overflow: auto;
+  padding: var(--space-space-4x);
+}
+
+.release-calendar .tabs-panel[aria-hidden='true'] {
+  display: none;
+}
+
+.release-calendar ul li .card-img-wrapper .date {
+  padding: var(--space-space-4) var(--space-space-8);
+  border-radius: var(--space-space-2);
+  border: 0.1rem solid var(--color-primary-100);
+  position: absolute;
+  top: var(--space-space-12);
+  left: var(--space-space-12);
+  background-color: var(--color-neutral-white);
+  text-transform: uppercase;
+  font:var(--type-details-semibold-4-font);
+}
+
+html[dir='rtl'] .release-calendar ul li .card-img-wrapper .date {
+  left: auto;
+  right: var(--space-space-12);
+}
+
+.release-calendar ul li .card-info {
+  padding: var(--space-space-8) var(--space-space-4) var(--space-space-12);
+}
+
+.release-calendar ul li .card-info .brand {
+  font: var(--type-details-semibold-4-font);
+  color: var(--color-text-light);
+}
+
+.release-calendar ul li .card-info .product-name {
+  font:  var(--type-details-4-font);
+}
+
+@media (width >=768px) {
+  .release-calendar .tabs-list {
+    font-size: var(--body-font-size-m);
+    width: 85%;
+    margin: auto;
+  }
+
+  .release-calendar .tabs-panel {
+    padding: 2.4rem;
+  }
+
+  .release-calendar .card-list ul {
+    grid-template-columns: repeat(auto-fill, minmax(316px, 1fr));
+    margin: auto 6%;
+  }
+}
+
+/* alo specific code goes here */
+
+/* Always keep .alo scope for brand specific override 
+Example:
+.alo h2 {
+  color: var(--color-token);
+}
+*/

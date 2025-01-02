@@ -1,0 +1,134 @@
+@import url('../tokens.css');
+@import url('./tokens.css');
+@import '../styles.css';
+
+/*  new specific style goes here */
+
+@font-face {
+  font-family: "proxima nova regular fallback";
+  size-adjust: 97.57%;
+  src: local("Arial");
+  ascent-override: 92.5%;
+  descent-override: 35.6%;
+  line-gap-override: normal;
+}
+
+@font-face {
+  font-family: "proxima nova semibold fallback";
+  size-adjust: 99.75%;
+  src: local("Arial");
+  ascent-override: 92.5%;
+  descent-override: 35.6%;
+  line-gap-override: normal;
+}
+
+@font-face {
+  font-family: "proxima nova Bold fallback";
+  size-adjust: 101.28%;
+  src: local("Arial");
+  ascent-override: 92.5%;
+  descent-override: 35.6%;
+  line-gap-override: normal;
+}
+
+div.dropin-design {
+  --type-base-font-family: 'proxima nova regular', 'proxima nova regular fallback', 'helvetica neue';
+}
+
+.new {
+  & body {
+    font: var(--type-body-1-default-font);
+    color: var(--color-secondary-a);
+  }
+
+  h1 {
+    font: var(--type-heading-bold-font-1);
+  }
+
+  h2 {
+    font: var(--type-heading-bold-font-2);
+  }
+
+  h3 {
+    font: var(--type-heading-bold-font-3);
+  }
+
+  h4 {
+    font: var(--type-heading-bold-font-4);
+  }
+
+  h5 {
+    font: var(--type-heading-bold-font-5);
+  }
+
+  h6 {
+    font: var(--type-heading-bold-font-6);
+  }
+
+  a:hover {
+    color: var(--color-primary-a);
+  }
+
+  a.button:any-link,
+  button {
+    font: var(--type-button-1-font);
+    color: var(--color-neutral-white);
+    background-color: var(--color-primary-a);
+    margin: var(--space-space-4x) 0;
+    height: var(--btn-container-height);
+    border: var(--shape-border-width-1) solid var(--color-primary-a);
+    border-radius: 0;
+  }
+
+  a.button:hover,
+  button:hover {
+    background-color: var(--color-primary-b);
+  }
+
+  a.button:disabled,
+  button:disabled,
+  button:disabled:hover {
+    background-color: var(--color-tertiary-c);
+    color: var(--color-disabled-default-text);
+  }
+
+  a.button.secondary,
+  button.secondary {
+    font: var(--type-button-1-font);
+    color: var(--color-text-main);
+    background-color: var(--color-neutral-white);
+    border: var(--shape-border-width-1) solid var(--color-tertiary-d);
+  }
+
+  a.button.secondary:hover,
+  button.secondary:hover {
+    color: var(--color-text-main);
+    border: var(--shape-border-width-1) solid var(--color-tertiary-b);
+  }
+
+  a.button.secondary:disabled,
+  button.secondary:disabled,
+  button.secondary:disabled:hover {
+    background-color: var(--color-tertiary-c);
+    color: var(--color-disabled-default-text);
+    border: var(--shape-border-width-1) solid var(--color-tertiary-c);
+  }
+}
+
+.new main,
+.new .main-wrapper  {
+  padding:0 var(--grid-margin);
+}
+
+@media (width >=1024px) {
+  .new main,
+  .new .main-wrapper  {
+    max-width: var(--grid-fluid);
+  }
+}
+
+@media (width >=900px) {
+  .section:not(.full-width)>div {
+    max-width: var(--grid-fluid);
+  }
+}

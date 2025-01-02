@@ -1,0 +1,25 @@
+@import "../egift-card.css";
+
+/* foo specific code goes here */
+
+/* Always keep .foo scope for brand specific override 
+Example:
+.foo h2 {
+  color: var(--color-token);
+}
+*/
+.foo .egift-balance-modal-content .input-field-wrapper .input-wrapper .input-number {
+  padding: var(--space-space-2) var(--space-space-12) var(--space-space-12);
+}
+
+.foo .egift-balance-modal-content .egift-balance-modal-ctas a:hover {
+  color: inherit;
+}
+
+.foo .egift-balance .egift-balance-modal-content .grey {
+  color: var(--color-secondary-b);
+}
+
+.foo .egift-balance .egift-balance-modal-content p {
+  color: var(--color-text-main);
+}

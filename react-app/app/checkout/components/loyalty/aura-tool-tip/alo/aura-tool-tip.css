@@ -1,0 +1,246 @@
+.aura-tool-tip {
+    display: flex;
+    align-items: center;
+    gap: var(--space-space-2x);
+}
+
+.aura-tool-tip.question {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-left: var(--space-space-1x);
+}
+
+.aura-tool-tip__title {
+    font: var(--type-details-semibold-3-font);
+}
+
+.aura-tool-tip.question .aura-tool-tip__title::before,
+.loyalty__salesinfo__points-earned-message::before {
+    content: '?';
+    font-size: var(--font-size-2);
+    font-weight: bold;
+    width: 18px;
+    height: 1.8rem;
+    color: var(--background-color);
+    background: var(--color-aura-info-question);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loyalty__salesinfo__points-earned-message::before {
+    content: '!';
+    margin-right: var(--space-space-1x);
+}
+
+.aura-tool-tip .aura-tool-tip__wrapper {
+    position: relative;
+}
+
+.aura-tool-tip .aura-tool-tip__wrapper .icon-container .icon-info {
+    width: 1.6rem;
+    height: 20px;
+}
+
+.aura-tool-tip .aura-tool-tip__info-value {
+    visibility: hidden;
+    width: 11rem;
+    background-color: var(--color-neutral-white);
+    color: var(--color-icon-base);
+    text-align: center;
+    padding: var(--spacing-xsmall);
+    border-radius: var(--spacing-xxsmall-2);
+    border: var(--shape-border-width-1) solid var(--color-icon-base);
+    position: absolute;
+    z-index: 1;
+    bottom: var(--spacing-big);
+    font-size: var(--shape-border-width-11);
+    right: 0;
+    left: unset;
+    margin-right: -8px;
+}
+
+.aura-tool-tip .aura-tool-tip__info-value.blue-bg {
+    background-color: var(--color-tooltip-blue);
+    border-color: var(--color-tooltip-blue);
+    color: var(--color-neutral-white);
+    right: 8px;
+    padding-left: 7px;
+}
+
+.aura-tool-tip.position-left .aura-tool-tip__info-value.blue-bg {
+    left: -10px;
+    right: unset;
+}
+
+.aura-tool-tip:hover .aura-tool-tip__info-value {
+    visibility: visible;
+    width: var(--space-space-162);
+}
+
+.aura-tool-tip .aura-tool-tip__info-value::before {
+    content: '';
+    display: block;
+    position: absolute;
+    rotate: 180deg;
+    border: var(--shape-border-width-10) solid transparent;
+    border-bottom-color: black;
+    top: 100%;
+    right: unset;
+    left: 140px
+}
+
+html[dir="rtl"] .aura-tool-tip .aura-tool-tip__info-value::before {
+    content: '';
+    display: block;
+    position: absolute;
+    rotate: 180deg;
+    border: var(--shape-border-width-10) solid transparent;
+    border-bottom-color: black;
+    top: 100%;
+    right: 61%;
+}
+
+.aura-tool-tip.aura-tool-tip.position-left .aura-tool-tip__info-value::before {
+    left: 10px;
+}
+
+.aura-tool-tip .aura-tool-tip__info-value.blue-bg::before {
+    border-bottom-color: var(--color-tooltip-blue);
+}
+
+.aura-tool-tip .aura-tool-tip__info-value::after {
+    content: '';
+    display: block;
+    position: absolute;
+    rotate: 180deg;
+    border: var(--shape-border-width-9) solid transparent;
+    border-bottom-color: var(--color-neutral-white);
+    top: 100%;
+    right: unset;
+    left: 140px
+}
+
+html[dir="rtl"] .aura-tool-tip .aura-tool-tip__info-value::after {
+    content: '';
+    display: block;
+    position: absolute;
+    rotate: 180deg;
+    border: var(--shape-border-width-9) solid transparent;
+    border-bottom-color: var(--color-neutral-white);
+    top: 100%;
+    right: 62%;
+}
+
+.aura-tool-tip.aura-tool-tip.position-left .aura-tool-tip__info-value::after {
+    left: 10px;
+}
+
+.aura-tool-tip .aura-tool-tip__info-value.blue-bg::after {
+    border-bottom-color: var(--color-tooltip-blue);
+}
+
+html[dir="rtl"] .aura-tool-tip.position-left .aura-tool-tip__info-value::before {
+    right: unset;
+    left: 135px;
+}
+
+html[dir="rtl"] .aura-tool-tip .aura-tool-tip__info-value {
+    right: unset;
+    left: 0;
+    margin-left: -45px;
+}
+
+html[dir="rtl"] .aura-tool-tip.position-left .aura-tool-tip__info-value {
+    right: unset;
+    left: 0;
+    margin-left: 0;
+}
+
+html[dir="rtl"] .aura-tool-tip .aura-tool-tip__info-value.blue-bg {
+    background-color: var(--color-tooltip-blue);
+    border-color: var(--color-tooltip-blue);
+    color: var(--color-neutral-white);
+    right: unset;
+    left: 0;
+    padding: 7px;
+}
+
+html[dir="rtl"] .aura-tool-tip.position-left .aura-tool-tip__info-value.blue-bg {
+    right: 0;
+    left: unset;
+}
+
+html[dir="rtl"] .aura-tool-tip:hover .aura-tool-tip__info-value {
+    visibility: visible;
+}
+
+html[dir="rtl"] .aura-tool-tip .aura-tool-tip__info-value.blue-bg::before {
+    border-bottom-color: var(--color-tooltip-blue);
+}
+
+html[dir="rtl"] .aura-tool-tip.position-left .aura-tool-tip__info-value::after {
+    right: unset;
+    left: 135px;
+}
+
+html[dir="rtl"] .aura-tool-tip .aura-tool-tip__info-value.blue-bg::after {
+    border-bottom-color: var(--color-tooltip-blue);
+}
+
+@media (width>=768px) {
+    .aura-tool-tip .aura-tool-tip__info-value.blue-bg {
+        right: -20px;
+        padding-left: 7px;
+    }
+
+    .aura-tool-tip .aura-tool-tip__info-value::before {
+        top: 100%;
+        left: 115px;
+    }
+
+    .aura-tool-tip .aura-tool-tip__info-value::after {
+        top: 100%;
+        left: 115px;
+    }
+
+    .aura-tool-tip:hover .aura-tool-tip__info-value {
+        visibility: visible;
+    }
+
+    html[dir="rtl"] .aura-tool-tip .aura-tool-tip__info-value {
+        left: -44px;
+        right: unset;
+        margin-left: -8px;
+    }
+
+
+    html[dir="rtl"] .aura-tool-tip .aura-tool-tip__info-value.blue-bg {
+        right: -85px;
+        padding: 7px;
+    }
+
+    html[dir="rtl"] .aura-tool-tip:hover .aura-tool-tip__info-value {
+        visibility: visible;
+    }
+
+    html[dir="rtl"] .aura-tool-tip .aura-tool-tip__info-value::before {
+        top: 100%;
+        right: 57%;
+    }
+
+    html[dir="rtl"] .aura-tool-tip .aura-tool-tip__info-value::after {
+        top: 100%;
+        right: 57.5%;
+    }
+}
+
+/* alo specific code goes here */
+
+/* Always keep .alo scope for brand specific override 
+Example:
+.alo h2 {
+  color: var(--color-token);
+}
+*/

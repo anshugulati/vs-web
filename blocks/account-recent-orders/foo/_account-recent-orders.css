@@ -1,0 +1,211 @@
+@import '../account-recent-orders.css';
+
+/* foo specific code goes here */
+
+/* Always keep .foo scope for brand specific override 
+Example:
+.foo h2 {
+  color: var(--color-token);
+}
+*/
+.foo .order-items-cancelled > a {
+    color: var(--color-error);
+    text-decoration: none;
+}
+
+.foo .recent-orders-list .recent-order-item .order-summary > div {
+    flex-direction: unset;
+    flex-wrap: wrap;
+}
+
+.foo .order-total-items.order-header > span:nth-last-child(-n+2) {
+    flex-basis: auto;
+}
+
+.foo .order-total-items.order-header > span:nth-child(1) {
+    flex-basis: 100%;
+}
+
+.foo.account .recent-orders-container .hidden{
+    display: none;
+}
+
+.foo .recent-orders-container .empty-orders {
+    text-align: center;
+}
+
+.foo .account .main-wrapper main .recent-orders-container h5 {
+    margin-top: var(--space-space-15-2);
+    text-align: center;
+    flex: 1 0 0;
+}
+
+.foo .recent-orders-container .empty-orders .button-container a {
+    width: var(--grid-col-2);
+    font: var(--type-body-1-strong-font);
+}
+
+.foo .recent-orders-container .empty-orders .button-container a.button::after {
+    content: unset;
+}
+
+.foo .empty-orders .button-container .button .icon img {
+    margin-top: var(--space-space-4);
+    width: 2.4rem;
+    height: 2.4rem;
+    position: relative;
+    inset-inline-start: var(--space-space-8);
+}
+
+.foo .account-recent-orders-wrapper .account-recent-orders .recent-orders-container .empty-orders h4{
+    font: var(--type-details-semibold-7-font);
+    padding-bottom: var(--space-space-0x);
+}
+
+.foo .recent-orders-container .empty-orders p {
+    margin-bottom: var(--space-space-12);
+}
+
+.foo .recent-orders-container .empty-orders p:nth-of-type(2) {
+    color: var(--color-secondary-b);
+    font: var(--type-details-4-font);
+    margin-top: var(--space-space-12);
+}
+
+.foo .recent-orders-list .recent-order-item .order-detail-value {
+    font: var(--type-details-3-font);
+    color: var(--color-secondary-b);
+}
+
+.foo .recent-orders-list .recent-order-item .order-detail-label {
+    font: var(--type-details-3-font);
+    color: var(--color-text-main);
+}
+
+.foo .order-notes {
+    background-color: var(--color-neutral-white);
+}
+
+.foo .recent-orders-container .order-notes {
+    padding-top: var(--space-space-0x);
+}
+
+.foo .recent-orders-container .order-notes .button-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+.foo .recent-orders-container .order-notes .button-container a {
+    padding: var(--space-space-8) var(--space-space-12);
+    font: var(--type-details-3-font);
+    text-align: center;
+    white-space: unset;
+    background-color: var(--color-neutral-white);
+    border: var(--shape-border-width-1) solid var(--color-secondary-a);
+    color: var(--color-text-main);
+
+}
+
+.foo .recent-orders-container .order-notes .button-container a span {
+    height: 1.6rem;
+    width: 1.6rem;
+    position: relative;
+    inset-inline-start: var(--space-space-8);
+}
+
+.foo .recent-orders-container .order-notes .button-container a.button:hover,
+button:hover {
+    background-color: var(--color-neutral-white);
+    border: var(--shape-border-width-1) solid var(--color-secondary-a);
+}
+
+.foo .recent-orders-container.has-orders .title-wrapper a {
+    display: none;
+}
+
+.foo .recent-orders-list .recent-order-item {
+    border: var(--shape-border-width-1) solid var(--color-neutral-480);
+    margin-bottom: var(--space-space-12);
+}
+
+.foo .recent-orders-container .title-wrapper {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: var(--spacing-xsmall-2) var(--space-space-0x);
+    flex-wrap: wrap;
+}
+
+.foo .recent-orders-container .title-wrapper::before,
+.foo .recent-orders-container .title-wrapper::after {
+    content: "";
+    flex: 1;
+    border-bottom: var(--shape-border-width-1) solid var(--color-stroke);
+    margin: var(--space-space-0x) var(--space-space-6);
+}
+
+.foo .recent-orders-list .recent-order-item .order-summary .order-items,
+.foo .recent-order-item.expanded .order-details-wrapper{
+    display: none;
+}
+
+.foo .recent-orders-list .recent-order-item .order-summary .order-status-processing,
+.foo .recent-orders-list .recent-order-item .order-summary .order-status-dispatched {
+    background: var(--color-order-status);
+    color: var(--color-neutral-white);
+}
+
+.foo .recent-orders-list .recent-order-item .order-summary .order-status-ready-to-collect{
+    background: var(--color-order-info-80);
+    color: var(--color-neutral-white);
+}
+
+.foo .recent-orders-list .recent-order-item .order-summary .order-status-delivered,
+.foo .recent-orders-list .recent-order-item .order-summary .order-status-complete,
+.foo .recent-orders-list .recent-order-item .order-summary .order-status-collected {
+    background: var(--color-success-100);
+    color: var(--color-neutral-white);
+}
+
+.foo .recent-orders-list .recent-order-item .order-summary .order-status-refunded{
+    background: var(--color-order-info);
+    color: var(--color-neutral-white);
+}
+
+.foo .recent-orders-list .recent-order-item .order-summary .order-status-cancelled,
+.foo .recent-orders-list .recent-order-item .order-summary .order-status-closed,
+.foo .recent-orders-list .recent-order-item .order-summary .order-status-refunded-fully {
+    background: var(--color-neutral-70);
+    color: var(--color-neutral-white);
+}
+
+.foo .recent-orders-list .recent-order-item .order-summary .order-detail .order-detail-link .icon{
+    height: 2.4rem;
+    width: 2.4rem;
+}
+
+[dir='rtl'] .foo .recent-orders-container .order-notes .button-container a span img, 
+[dir='rtl'] .foo .recent-orders-container .empty-orders .button-container .button .icon img,
+[dir='rtl'] .foo .recent-orders-list .recent-order-item .order-summary .order-detail .order-detail-link .icon img {
+    transform: rotate(180deg);
+}
+
+.foo .recent-orders-list .recent-order-item .order-status {
+    padding: var(--space-space-8) var(--space-space-12);
+    text-transform: unset;
+    font: var(--type-details-3-font);
+}
+
+@media (width >= 768px) {
+    .foo .recent-orders-list {
+        padding: var(--space-space-0x);
+    }
+
+    .foo .recent-orders-list .recent-order-item .order-summary {
+        grid-template-columns: minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) minmax(100px, 1fr) 1fr 5rem;
+        grid-template-rows: none;
+        padding: var(--space-space-16);
+    }
+}
+

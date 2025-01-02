@@ -1,0 +1,143 @@
+.accordion-tabs {
+  display: none;
+
+  .accordion-tab {
+    font: var(--type-details-4-font);
+  }
+}
+
+.accordion-item {
+  padding-bottom: var(--spacing-xxsmall-2);
+}
+
+.accordion-item__label {
+  font: var(--type-details-5-font);
+  margin: var(--grid-1-margins);
+  cursor: pointer;
+  position: relative;
+  padding: var(--space-space-6x);
+  background-color: var(--color-background-border-color);
+  color: var(--color-neutral-white);
+
+  &::after {
+    cursor: pointer;
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    border: var(--shape-border-width-10) solid transparent;
+    border-left-color: var(--color-neutral-white);
+    right: var(--space-space-6x);
+  }
+}
+
+.accordion-item__container {
+  height: 0;
+  overflow: hidden;
+}
+
+.accordion-active .accordion-item__container {
+  height: auto;
+  padding: var(--space-space-2x-2) var(--space-space-6x);
+  border: var(--shape-border-width-01) solid var(--color-background-border-color);
+}
+
+.accordion-item__container ul {
+  list-style: none;
+  margin: var(--grid-1-margins);
+  padding: var(--grid-1-margins);
+}
+
+.accordion-item__container ul li {
+  padding-bottom: var(--spacing-xxsmall-2);
+  color: var(--color-neutral-700);
+}
+
+.accordion-tab-wrapper.column {
+  padding: var(--grid-1-margins) var(--space-space-3x);
+}
+
+.accordion-active .accordion-item__label::after {
+  border: var(--shape-border-width-10) solid transparent;
+  border-top-color: var(--color-neutral-white);
+}
+
+html[dir='rtl'] .accordion-item__label::after {
+  left: var(--space-space-5x);
+  right: unset;
+  border-left: unset;
+  border-right: var(--shape-border-width-10) solid var(--color-neutral-white);
+}
+
+html[dir='rtl'] .accordion-active .accordion-item__label::after {
+  border-left: var(--shape-border-width-10) solid transparent;
+  border-right: var(--shape-border-width-10) solid transparent;
+}
+
+@media (width>=768px) {
+  .accordion-tab-wrapper.column {
+    padding: var(--grid-1-margins) var(--space-space-40);
+  }
+
+  .accordion-tabs {
+    display: flex;
+  }
+
+  .accordion-tab::after,
+  .accordion-tab::before,
+  .accordion-item__label,
+  .accordion-item {
+    display: none;
+  }
+
+  .accordion-tabs .accordion-tab {
+    text-transform: unset;
+    background: var(--color-neutral-white);
+    padding: var(--grid-1-margins) var(--space-space-2x-2);
+    cursor: pointer;
+    border: var(--shape-border-width-01) solid var(--color-brand-200);
+    margin: unset;
+    border-bottom-color: var(--color-background-border-color);
+    border-radius: unset;
+
+    &.accordion-active {
+      border-color: var(--color-background-border-color);
+      border-bottom-color: var(--color-neutral-white);
+    }
+  }
+
+  .accordion-item__container ul {
+    padding: var(--space-space-5x) var(--grid-1-margins);
+  }
+
+  .accordion-item {
+    padding: var(--spacing-xxsmall-2) var(--space-space-5x);
+    min-height: var(--space-space-15-2);
+
+    &.accordion-active {
+      display: block;
+
+      .accordion-item__container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1%;
+        padding: var(--grid-1-margins);
+        border: 0;
+      }
+    }
+  }
+
+  .accordion-content {
+    border: var(--shape-border-width-01) solid var(--color-background-border-color);
+    margin-top: -0.1rem;
+  }
+}
+
+/* alo specific code goes here */
+
+/* Always keep .alo scope for brand specific override 
+Example:
+.alo h2 {
+  color: var(--color-token);
+}
+*/

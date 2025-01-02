@@ -1,0 +1,525 @@
+@import "../static-page.css";
+
+/* bat specific code goes here */
+
+/* Always keep .bat scope for brand specific override 
+Example:
+.bat h2 {
+  color: var(--color-token);
+}
+*/
+.bat.static-page .section {
+  padding: 0 var(--space-space-12);
+}
+
+.bat.static-page .section.info {
+  margin: var(--space-space-32) 0;
+}
+
+.bat .highlight div {
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  flex-basis: calc(33.3% - var(--space-space-12));
+}
+
+.bat.static-page .fragrance-finder div,
+.bat.static-page .fragrance-finder .button-container,
+.bat.static-page .fragrance-finder .button-container .button,
+.bat.static-page .fragrance-finder h2,
+.bat.static-page .fragrance-finder h4,
+.bat.static-page .fragrance-finder h5,
+.bat.static-page .fragrance-finder h3 {
+  margin: 0;
+}
+
+.bat.static-page .fragrance-finder h5 {
+  color: var(--color-secondary-b);
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-4);
+  margin-top: var(--space-space-2x);
+}
+
+.bat.static-page .accordion-container h5,
+.bat.static-page main .default-content-wrapper > h5 {
+  margin: var(--space-space-32) 0 var(--space-space-8);
+  font-weight: var(--font-weight-6);
+}
+
+.bat.static-page .accordion details {
+  border: 1px solid var(--color-button-disabled-default-fill);
+  margin-top: var(--space-space-16);
+  padding: var(--space-space-4x);
+}
+
+.bat.static-page .fragrance-finder h3 {
+  padding-top: var(--space-space-32);
+}
+
+.bat.static-page main .default-content-wrapper > h3 {
+  font-weight: var(--font-weight-6);
+  color: var(--color-secondary-a);
+}
+
+.bat.static-page main h3:first-child {
+  padding: var(--space-space-12) 0;
+  margin: var(--space-space-32) 0 0;
+}
+
+.bat.static-page .accordion details summary,
+.bat.static-page .accordion details summary h3 {
+  font: var(--type-details-4-font);
+  padding: 0 var(--space-space-32) 0 0;
+  margin: 0;
+}
+
+.bat .section .steps-wrapper ~ .default-content-wrapper h5:last-child {
+  padding: var(--space-space-12) 0;
+}
+
+.bat.static-page .aboutus p {
+  margin-bottom: 0;
+}
+
+.bat.static-page .aboutus p:has(picture) {
+  margin: var(--space-space-20) 0 var(--space-space-32);
+}
+
+.bat.static-page.get-app main {
+  padding: var(--space-space-32) 0;
+}
+
+.bat.static-page.get-app .columns {
+  margin-top: var(--space-space-32);
+  font-size: var(--text-m);
+  letter-spacing: normal;
+}
+
+.bat.static-page.get-app .column-title h3 {
+  max-width: 19.6rem;
+  margin: auto;
+  margin-top: var(--space-space-32);
+  letter-spacing: normal;
+  padding: var(--space-space-16) 0;
+}
+
+.bat.static-page .two-column ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bat.static-page.get-app div ul {
+  margin: 0;
+}
+
+.bat.static-page .get-inspired .default-content-wrapper h3 {
+  text-align: center;
+  margin: var(--space-space-16) 0 var(--space-space-24);
+  padding: 0;
+  font: var(--type-details-semibold-4-font);
+  font-size: var(--font-size-3);
+}
+
+.bat.static-page .get-inspired {
+  padding-top: 0;
+}
+
+.bat .highlight div img {
+  width: auto;
+  height: 2.5rem;
+  max-width: 100%;
+}
+
+.bat .highlight div .button-container a {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  background: none;
+  border: none;
+  color: inherit;
+  font: var(--type-details-semibold-4-font);
+  font-size: var(--font-size-2);
+  text-align: center;
+}
+
+.bat.static-page main .about-fragrance-finder .default-content-wrapper p {
+  color: var(--color-secondary-b);
+  font-size: var(--font-size-2);
+  font-weight: var(--font-weight-4);
+}
+
+.bat.static-page .two-column ul li .cards-card-body p {
+  font: var(--type-details-3-font);
+  padding-bottom: var(--space-space-4);
+  margin: 0;
+  font-size: var(--font-size-1);
+}
+
+.bat.static-page .fragrance-finder .default-content-wrapper:last-child p {
+  font-size: var(--font-size-3);
+  font-weight: var(--font-weight-6);
+  margin: var(--space-space-16) 0 0 0;
+  max-width: 22.3rem;
+}
+
+.bat
+  .steps-wrapper:has(.count-position)
+  + .default-content-wrapper
+  p:has(span.icon) {
+  margin: var(--space-space-16) 0 0;
+  display: flex;
+  gap: var(--space-space-8);
+}
+
+.bat.static-page .two-column ul li a:hover .cards-card-body {
+  color: var(--color-secondary-b);
+}
+
+.bat.static-page .two-column ul li {
+  border: none;
+}
+
+.bat.static-page .two-column ul li a img {
+  width: auto;
+}
+
+.bat.static-page .fragrance-finder h4 {
+  color: var(--color-secondary-b);
+  font-size: var(--font-size-6);
+  font-weight: var(--font-weight-4);
+  padding: 0;
+}
+
+.bat.static-page .fragrance-finder h4:last-child {
+  color: var(--color-secondary-b);
+  font-size: var(--font-size-3);
+  margin-top: var(--space-space-2x);
+  padding: 0;
+}
+
+.bat.static-page .two-column ul li .cards-card-body h4 {
+  font: var(--type-details-semibold-5-font);
+  text-align: start;
+  margin: var(--space-space-8) 0;
+  padding: var(--space-space-8) 0;
+  font-size: var(--font-size-3);
+}
+
+.bat.static-page main .fragrance-finder .default-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--space-space-40);
+  align-items: center;
+}
+
+.bat.static-page
+  .section.cards-container:has(.two-column)
+  .default-content-wrapper {
+  display: flex;
+  margin: var(--space-space-24) 0 var(--space-space-16);
+  border-bottom: var(--shape-border-width-1) solid var(--color-neutral-black);
+}
+
+.bat.static-page main .fragrance-finder .cards li img {
+  max-height: var(--space-space-60);
+}
+
+.bat.static-page
+  .section.cards-container:has(.two-column)
+  .default-content-wrapper
+  img {
+  height: 2.4rem;
+}
+
+.bat.static-page main .about-fragrance-finder .default-content-wrapper h3 {
+  margin: 0;
+  padding: 0;
+  color: var(--color-text-main);
+  font-size: var(--font-size-5);
+  font-weight: var(--font-weight-6);
+  margin-bottom: var(--space-space-12);
+  text-align: start;
+}
+
+.bat.static-page main .fragrance-finder .cards ul li h3,
+.bat.static-page main .fragrance-finder .cards ul li a {
+  color: var(--color-neutral-50);
+  text-shadow: 0 var(--space-space-2) var(--space-space-2)
+    var(--color-neutral-black);
+  font-size: var(--font-size-6);
+  font-weight: var(--font-weight-6);
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+.bat.static-page main .fragrance-finder .default-content-wrapper:last-child > h3 {
+  width: auto;
+  margin: var(--space-space-12) 0 var(--space-space-12) 0;
+  padding: 0 var(--space-space-8) 0 var(--space-space-8);
+  position: relative;
+  text-align: center;
+  z-index: 2;
+  font-size: var(--font-size-7);
+  background-color: var(--color-neutral-50);
+}
+
+.bat.static-page
+  .section.cards-container:has(.two-column)
+  .default-content-wrapper
+  h3 {
+  font: var(--type-details-semibold-8-font);
+  text-align: left;
+  padding: 0 0 var(--space-space-16);
+  margin: 0 var(--space-space-1x-4);
+  order: 2;
+}
+
+.bat.static-page .fragrance-finder .button-container {
+  width: 100%;
+  border-bottom: var(--shape-border-width-1) solid var(--color-brand-200);
+}
+
+.bat.static-page main .no-fragrance-found .search-fragrance-wrapper .button-container {
+  display: none;
+}
+
+.bat.static-page .two-column ul li .cards-card-body .button-container {
+  margin: 0;
+  padding: var(--space-space-2) 0;
+}
+
+.bat.static-page .two-column ul li .cards-card-body .button-container a {
+  margin: 0;
+  padding: 0;
+  color: var(--color-primary-a);
+  font: var(--type-details-semibold-4-font);
+  font-size: var(--font-size-4);
+  text-decoration: underline;
+  background: none;
+  border: none;
+  text-align: start;
+}
+
+.bat.static-page .two-column ul li .cards-card-body .button-container a::after {
+  height: 1.6rem;
+  background-image: url("/icons/chevron-right-blue.svg");
+  background-repeat: no-repeat;
+  width: 1.6rem;
+  opacity: 1;
+}
+
+html[dir="rtl"]
+  .bat.static-page
+  .two-column
+  ul
+  li
+  .cards-card-body
+  .button-container
+  a::after {
+  transform: rotate(180deg);
+}
+
+.bat .highlight {
+  flex-wrap: wrap;
+  margin-bottom: var(--space-space-12);
+}
+
+.bat
+  .steps-wrapper:has(.count-position)
+  + .default-content-wrapper
+  p:has(span.icon)
+  span {
+  width: 7.2rem;
+  height: 3rem;
+}
+
+.bat.static-page main .about-fragrance-finder {
+  padding: var(--space-space-80) var(--space-space-12);
+}
+
+@media (width >= 768px) {
+  .bat .highlight {
+    margin: 0 var(--spacing-huge) var(--space-space-8);
+  }
+
+  .bat .highlight div img {
+    height: 7rem;
+  }
+
+  .bat.static-page .get-inspired .default-content-wrapper h3 {
+    margin: var(--space-space-80) 0 var(--space-space-36);
+    font-size: var(--font-size-9);
+  }
+
+  .bat.static-page .get-inspired .default-content-wrapper p {
+    margin-top: var(--space-space-80);
+    text-align: center;
+  }
+
+  .bat.static-page .two-column ul li .cards-card-body h4 {
+    margin-top: var(--space-space-12);
+    font-size: var(--font-size-5);
+    font-weight: var(--font-weight-7);
+    color: var(--color-text-main);
+    padding: var(--space-space-4) 0;
+  }
+
+  .bat.static-page .two-column ul li .cards-card-body p {
+    font-size: var(--font-size-4);
+  }
+
+  .bat.static-page.get-app main {
+    padding-bottom: 0;
+  }
+
+  .bat.static-page:has(.get-inspired) main {
+    max-width: var(--grid-lg-max-width);
+  }
+
+  .bat.static-page.get-app .hide-on-mobile h3 {
+    padding-top: 0;
+  }
+
+  .bat.static-page.get-app .column-title h3 {
+    max-width: revert;
+  }
+
+  .bat.static-page .two-column ul li {
+    flex-basis: calc(33.33% - var(--space-space-22));
+  }
+
+  .bat .highlight div {
+    flex-basis: calc(20% - var(--space-space-7x));
+  }
+
+  .bat .highlight div .button-container a {
+    font-size: var(--font-size-4);
+  }
+
+  .bat.static-page .section.cards-container:has(.two-column) {
+    margin: 0 var(--space-space-40);
+  }
+
+  .bat.static-page
+    .section.cards-container:has(.two-column)
+    .default-content-wrapper {
+    margin: var(--space-space-32) 0 var(--space-space-32);
+  }
+
+  .bat.static-page
+    .section.cards-container:has(.two-column)
+    .default-content-wrapper
+    p {
+    margin: var(--space-space-1x);
+  }
+}
+
+.bat.static-page .fragrance-finder {
+  text-align: center;
+  max-width: var(--grid-lg-max-width);
+  margin: 0 auto;
+}
+
+.bat.static-page .fragrance-finder h2 {
+  color: var(--color-text-main);
+  font-size: var(--font-size-8);
+  font-weight: var(--font-weight-7);
+  padding-top: var(--space-space-34);
+}
+
+.bat.static-page .fragrance-finder .button-container .button {
+  margin: var(--space-space-30) 0;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.bat.static-page main .fragrance-finder .cards ul li {
+  flex-basis: calc(50% - var(--space-space-6));
+  text-align: center;
+  border: none;
+  height: fit-content;
+  cursor: pointer;
+  position: relative;
+}
+
+.bat.static-page main .fragrance-finder .cards ul li .cards-card-body {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+}
+
+.bat.static-page main .fragrance-finder .cards ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-space-4x);
+  padding: var(--space-space-0x);
+  justify-content: center;
+  margin: var(--space-space-24) 0 var(--space-space-32) 0;
+}
+
+@media (width >=768px) {
+  .bat.static-page .fragrance-finder h2 {
+    font-size: var(--font-size-9);
+  }
+
+  .bat.static-page .fragrance-finder h4 {
+    font-size: var(--font-size-7);
+  }
+
+  .bat.static-page .fragrance-finder .button-container .button,
+  .bat.static-page .fragrance-finder h4:last-child {
+    font-size: var(--font-size-4);
+  }
+
+  .bat.static-page main .fragrance-finder .default-content-wrapper > h3 {
+    font-size: var(--font-size-8);
+  }
+
+  .bat.static-page main .section.fragrance-finder {
+    margin-top: var(--space-space-80);
+  }
+
+  .bat.static-page main .fragrance-finder .cards ul {
+    gap: var(--space-space-32);
+  }
+
+  .bat.static-page main .fragrance-finder .cards ul li {
+    flex-basis: calc(20% - var(--space-space-26));
+  }
+
+  .bat.static-page main .fragrance-finder .cards ul li a {
+    font-size: var(--font-size-7);
+  }
+
+  .bat.static-page main .fragrance-finder .cards li img {
+    max-height: var(--space-space-70);
+  }
+
+  .bat.static-page main .fragrance-finder .default-content-wrapper:last-child > h3 {
+    font-size: var(--font-size-8);
+  }
+
+  .bat.static-page .fragrance-finder .default-content-wrapper:last-child p {
+    font-size: var(--font-weight-4);
+    max-width: fit-content;
+  }
+}
+
+@media (width >=1024px) {
+  .bat.static-page main .section:not(.about-fragrance-finder) {
+    padding: 0;
+  }
+
+  .static-page.fragrance-finder main {
+    padding: 0 17.6rem;
+    max-width: unset;
+  }
+}

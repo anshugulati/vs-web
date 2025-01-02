@@ -1,0 +1,128 @@
+@import "../banner.css";
+
+/* bat specific code goes here */
+
+/* Always keep .bat scope for brand specific override 
+Example:
+.bat h2 {
+  color: var(--color-token);
+}
+*/
+
+:root {
+  /** font size tokens */
+  --size-text-preamble: var(--text-xl);
+  --line-height-preamble: var(--line-height-xs);
+  --desktop-size-text-preamble: var(--text-xl);
+  --desktop-line-height-preamble: var(--line-height-xs);
+  --size-text-subheader: var(--text-xl);
+  --line-height-subheader: var(--line-height-xs);
+  --desktop-size-text-subheader: var(--text-xl);
+  --desktop-line-height-subheader: var(--line-height-xs);
+  --size-text-legal: var(--text-s);
+  --line-height-legal: var(--line-height-xs);
+  --desktop-size-text-legal: var(--text-s);
+  --desktop-line-height-legal: var(--line-height-xs);
+}
+
+.bat .banner-wrapper .button-container a.button {
+  border: none;
+  background-color: var(--color-bg-cta);
+}
+
+.bat .banner.vertical-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bat .banner.vertical-banner.block .banner-content-wrapper {
+  background: var(--color-opacity-white-75);
+  width: calc(100% - 40px);
+  margin: 0 auto;
+}
+
+.bat .banner.vertical-banner .banner-content-wrapper .banner-content {
+  padding: var(--space-space-8);
+  text-align: center;
+}
+
+.bat .banner.vertical-banner .banner-content-wrapper .banner-content > p {
+  padding: 0 var(--space-space-8);
+  margin-top: 0;
+}
+
+.bat .banner.vertical-banner .banner-content-wrapper .banner-content p {
+  font-size: var(--size-text-legal);
+  font-weight: var(--font-weight-6);
+}
+
+.bat .banner.vertical-banner .banner-content-wrapper .banner-content .button-group {
+  display: flex;
+  justify-content: center;
+}
+
+.bat .banner.vertical-banner .banner-content-wrapper .banner-content .button-group .button-container {
+  background: var(--color-bg-cta);
+  margin: 0;
+  margin-top: var(--space-space-4);
+  border: var(--shape-border-width-1) solid var(--color-border-cta);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bat .banner.vertical-banner .banner-content-wrapper .banner-content .button-group a {
+  color: var(--color-text-cta);
+  background: none;
+  padding: var(--space-space-8) var(--space-space-12);
+  margin: 0;
+  font-weight: var(--font-weight-4);
+  height: auto;
+}
+
+.bat .banner.vertical-banner .banner-content-wrapper .banner-content .button-group a::after {
+  display: none;
+}
+
+@media screen and (width >=768px) {
+  /* Preamble text */
+  .bat .banner .banner-content h3:first-of-type {
+    font-size: var(--desktop-size-text-preamble);
+    line-height: var(--desktop-line-height-preamble);
+  }
+
+  /* Subheader text */
+  .bat .banner .banner-content h3:nth-of-type(2) {
+    font-size: var(--desktop-size-text-subheader);
+    line-height: var(--desktop-line-height-subheader);
+  }
+
+  /* Legal text */
+  .bat .banner .banner-content p {
+    font-size: var(--desktop-size-text-legal);
+    line-height: var(--desktop-line-height-legal);
+  }
+
+ .bat .banner .banner-content .button-container .button {
+    margin: 0 var(--spacing-xsmall);
+  }
+
+  .bat .banner.vertical-banner.block .banner-content-wrapper {
+    max-width: unset;
+  }
+
+  .bat .banner.vertical-banner .banner-content-wrapper .banner-content > p {
+    padding: 0 var(--space-space-12);
+  }
+
+  .bat .banner.vertical-banner.block .banner-bg .mobile-bg {
+    display: none;
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .bat .banner .banner-content .button {
+    padding: var(--space-space-14) calc(100vw / 20);
+  }
+}

@@ -1,0 +1,178 @@
+.fragrance-search-field .default-content-wrapper h3 {
+  display: none;
+}
+
+.bat.static-page main .fragrance-search-field .default-content-wrapper h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.search-fragrance-wrapper ul.search-list-items {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: var(--space-space-7x);
+  padding: 0;
+  margin: var(--space-space-7x) 0 0 0;
+}
+
+.search-fragrance-wrapper ul.search-list-items h5 {
+  text-transform: uppercase;
+  color: var(--color-brand-750);
+  font-size: var(--font-size-5);
+  font-weight: var(--font-weight-6);
+  line-height: var(--line-height-xs);
+  margin: var(--space-space-4x) 0 var(--space-space-4x) 0;
+  border-bottom: var(--shape-border-width-1) solid var(--color-tertiary-b);
+  text-align: start;
+}
+
+.search-fragrance-wrapper ul.search-card-child {
+  text-align: start;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.search-fragrance-wrapper ul.search-card-child .search-card-child-items {
+  color: var(--color-secondary-b);
+  margin: var(--space-space-2x) 0 var(--space-space-2x) 0;
+}
+
+.search-fragrance-wrapper ul.search-card-child .search-card-child-items a {
+  color: var(--color-brand-250);
+  font-size: var(--font-size-2);
+  font-style: normal;
+}
+
+.search-fragrance-wrapper ul.search-list-items .search-card {
+  width: 100%;
+}
+
+.static-page main .fragrance-search-field .default-content-wrapper p {
+  color: var(--color-text-main);
+  text-align: center;
+  font-size: var(--font-size-2);
+  font-weight: var(--font-weight-4);
+  margin-bottom: var(--space-space-8);
+  font-style: normal;
+}
+
+.bat.static-page main .fragrance-search-field .search-field-wrapper .icon-reset {
+  background-image: url('/icons/close-round-grey.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  position: absolute;
+  right: var(--space-space-10);
+}
+
+.bat.static-page main .fragrance-search-field .search-field-wrapper .icon-hidden {
+  visibility: hidden;
+}
+
+.bat.static-page main .fragrance-search-field .search-field-wrapper .icon-reset:dir(rtl) {
+  left: var(--space-space-10);
+  right: unset;
+}
+
+.bat.static-page main .fragrance-search-field .search-field-wrapper {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-space-32) 0;
+}
+
+.bat.static-page main .fragrance-search-field .search-field-wrapper .search-input {
+  padding-inline-start: var(--space-space-36);
+  margin: 0;
+}
+
+.bat.static-page main .fragrance-search-field .search-field-wrapper .search-input::placeholder {
+  color: var(--color-neutral-700);
+  font-size: var(--font-size-4);
+}
+
+.bat.static-page main .fragrance-search-field .search-field-wrapper .icon-search {
+  position: absolute;
+  left: var(--space-space-12);
+  width: var(--space-space-20);
+  height: var(--space-space-20);
+}
+
+.bat.static-page main .fragrance-search-field .search-field-wrapper .icon-search:dir(rtl) {
+  right: var(--space-space-12);
+}
+
+.bat.static-page main .no-fragrance-found {
+  text-align: center;
+}
+
+.bat.static-page main .no-fragrance-found .default-content-wrapper {
+  margin: var(--space-space-48) 0;
+}
+
+.bat.static-page main .no-fragrance-found .default-content-wrapper p {
+  color: var(--color-brand-250);
+  text-align: center;
+  font-size: var(--font-size-3);
+  font-weight: var(--font-weight-4);
+}
+
+.bat.static-page main .fragrance-finder .default-content-wrapper:last-child::before {
+  display: inline-block;
+  position: relative;
+  content: "";
+  width: 100%;
+  border-top: var(--shape-border-width-1) solid #e5e5e5;
+  top: var(--space-space-30);
+  left: 0;
+  z-index: 1;
+}
+
+@media (width >= 768px) {
+  .bat.static-page main .fragrance-search-field .default-content-wrapper p {
+    margin: 0;
+    font-size: var(--font-size-3);
+    text-align: center;
+  }
+
+  .search-fragrance-wrapper ul.search-list-items .search-card {
+    width: calc((100% / 5) - var(--space-space-7x));
+  }
+
+  .search-fragrance-wrapper ul.search-list-items h5 {
+    font-size: var(--font-size-6);
+  }
+
+  .search-fragrance-wrapper ul.search-card-child .search-card-child-items a {
+    font-size: var(--font-size-3);
+  }
+
+  .bat.static-page main .fragrance-search-field .search-field-wrapper .icon-reset {
+    position: relative;
+    right: var(--space-space-30);
+  }
+  
+  .bat.static-page main .fragrance-search-field .search-field-wrapper .icon-reset:dir(rtl) {
+    left: var(--space-space-32);
+    right: unset;
+  }
+
+  .bat.static-page main .fragrance-search-field .search-field-wrapper .icon-search {
+    position: relative;
+    left: var(--space-space-30);
+  }
+  
+  .bat.static-page main .fragrance-search-field .search-field-wrapper .icon-search:dir(rtl) {
+    right: var(--space-space-30);
+  }
+
+  .bat.static-page main .no-fragrance-found .default-content-wrapper p {
+    font-size: var(--font-size-4);
+  }
+
+}

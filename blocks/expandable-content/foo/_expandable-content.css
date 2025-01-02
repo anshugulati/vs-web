@@ -1,0 +1,68 @@
+@import "../expandable-content.css";
+
+/* foo specific code goes here */
+.foo .expandable-content {
+  padding: var(--space-space-3x) var(--space-space-0x);
+  letter-spacing: 0;
+}
+
+.foo .expandable-content p {
+  font: var(--type-body-1-default-font);
+  color: var(--color-text-main);
+  margin: var(--space-space-8) 0;
+}
+
+.foo .expandable-content h4 {
+  font: var(--type-details-bold-6-font);
+  padding-top: var(--space-space-4x);
+  margin-bottom: var(--space-space-12);
+  margin-top: var(--space-space-6x);
+}
+
+.expandable-content .read-more button {
+  font: var(--type-details-semibold-4-font);
+  color: var(--color-text-main);
+  text-transform: unset;
+  padding: var(--space-space-0x-1) var(--space-space-0x);
+  margin: var(--space-space-2x) var(--space-space-0x) var(--space-space-0x)
+    var(--space-space-0x);
+  text-underline-offset: var(--space-space-4);
+}
+
+.foo .expandable-content .read-more .read-more-button-text:hover {
+  background-color: transparent;
+  border: none;
+}
+
+html[dir="rtl"] .foo .expandable-content p {
+  font-weight: var(--font-weight-5);
+}
+
+@media (width < 768px) {
+  .foo .expandable-content h4 {
+    font: var(--type-details-semibold-6-font);
+    padding-bottom: var(--space-space-0x);
+    margin-top: var(--space-space-8x);
+    line-height: var(--line-height-s);
+    text-align: center;
+  }
+
+  .foo .expandable-content {
+    padding: var(--space-space-4x) var(--space-space-0x) var(--space-space-0x)
+      var(--space-space-0x);
+    text-align: center;
+  }
+
+  .foo .expandable-content p {
+    font-size: var(--font-size-2);
+    margin-top: var(--space-space-4x);
+    line-height: var(--line-height-s);
+    text-align: center;
+  }
+
+  .expandable-content .read-more button {
+    font: var(--type-details-3-font);
+    letter-spacing: 0;
+    text-underline-offset: var(--space-space-2);
+  }
+}

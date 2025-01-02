@@ -1,0 +1,239 @@
+:root .pricepoint{
+  --size-text-header: var(--font-size-7);
+  --desktop-size-text-header: var(--font-size-9);
+  --size-text-subheader: var(--font-size-4);
+  --desktop-size-text-subheader: var(--font-size-5);
+  --size-text-preamble: var(--font-size-3);
+  --size-text-cta: var(--font-size-3);
+  --desktop-size-text-cta: var(--font-size-4);
+  --font-size-17:2.6rem;
+  --font-size-14:7rem;
+  --font-size-15:8rem;
+  --font-size-16:10.2rem;
+  --line-height-0x:0rem;
+  --line-height-6:6rem;
+  --line-height-6s:6.6rem;
+  --line-height-8:8rem;
+}
+  
+section .pricepoint.block {
+  position: relative;
+}
+  
+.section.cards-container:has(.pricepoint.active){
+  display:block;
+  margin: var(--space-space-0x);
+}
+  
+.section .price-point-block-header h2{
+  font-size: var(--font-size-6);
+  margin-bottom: var(--space-space-12);
+  text-align: center;
+}
+  
+.pricepoint ul{
+  display: flex;
+  justify-content: center;
+  gap: var(--space-space-12);
+  padding: var(--space-space-0x);
+  flex-wrap: wrap;
+}
+  
+.pricepoint ul li{
+  border: none;
+  list-style: none;
+  flex-basis: calc(50% - var(--space-space-12));
+  position: relative;
+  min-height: 20rem;
+}
+  
+.pricepoint ul li .cards-image{
+  position: absolute;
+  top: 0;
+  height: calc(100% - var(--space-space-40));
+  width: 100%;
+  z-index: 1;
+}
+  
+.pricepoint ul li .cards-image picture{
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  margin: 0;
+}
+  
+.pricepoint ul li a {
+  display: block;
+  height: 100%;
+  position:relative;
+  font-weight: var(--font-weight-6);
+}
+  
+.pricepoint ul li .content p{
+  position: relative;
+  font-size: var(--font-size-14);
+  width: 100%;
+  line-height: var(--line-height-6);
+  display: flex;
+  margin: var(--space-space-0x);
+  justify-content: center;
+  color: var(--color-header);
+}
+  
+.pricepoint ul li .cards-image img{
+  position: absolute;
+  height: 100%;
+  top: 0;
+}
+  
+.pricepoint ul li .content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-space-6);
+  height: calc(100% - var(--space-space-40));
+  position: relative;
+  background: var(--color-bg-banner);
+  z-index: 2;
+}
+  
+.pricepoint ul li .cards-image ~ .content {
+  background: none;
+}
+  
+.pricepoint ul li .content h3{
+  font-size: var(--size-text-preamble);
+  text-align: center;
+  margin:var(--space-space-0x);
+  color: var(--color-preamble);
+  text-transform: uppercase;
+  
+}
+  
+.pricepoint ul li .content h4{
+  font-size: var(--size-text-subheader);
+  text-align: center;
+  margin:var(--space-space-0x);
+  padding: var(--space-space-0x);
+  text-transform: uppercase;
+  color: var(--color-subheader)
+}
+  
+.pricepoint ul li .content p sup{
+  display: flex;
+  margin-top: var(--space-space-0x);
+  font-size: var(--size-text-header);
+  justify-content: center;
+  margin-bottom: var(--space-space-6);
+  position: relative;
+  line-height: var(--line-height-0x);
+  vertical-align: baseline;
+  top: 1.6rem;
+}
+  
+.pricepoint ul li .content p sup:nth-child(2){
+  font-size: var(--font-size-17);
+  top:1.7rem;
+}
+  
+.section .pricepoint ul li .button-container{
+  padding-top: var(--space-space-2x);
+  text-align: center;
+  margin: var(--space-space-0x);
+  color: var(--color-text-cta);
+}
+  
+.section .pricepoint ul li .button-container a{
+  background: none;
+  text-decoration: underline;
+  font-size: var(--size-text-cta);
+  line-height: var(--line-height-cta);
+  color: var(--color-text-cta);
+  margin: var(--space-space-0x);
+  padding: var(--space-space-0x);
+  border: none;
+  height: auto;
+}
+  
+@media (width >= 768px) {
+  .pricepoint{
+    padding: var(--space-space-0x) var(--space-space-115);
+  }
+
+  .cards-container .price-point-block-header h2{
+    margin-bottom: var(--space-space-30);
+    font-size: var(--font-size-7);
+  }
+
+  .cards-container:has(.min-col) .price-point-block-header h2{
+    margin-bottom: var(--space-space-25);
+  }
+
+  .pricepoint ul{
+    flex-wrap: nowrap;
+    gap: var(--space-space-16);
+  }
+  
+  .pricepoint ul li{
+    flex:1;
+    min-height: 22rem;
+  }
+  
+  .pricepoint ul.min-col li{
+    flex: none;
+    min-height: 28rem;
+    flex-basis: calc(25% - var(--space-space-12));  
+  }
+  
+  .pricepoint ul li .content{
+    gap: var(--space-space-4);
+  }
+  
+  .pricepoint ul.min-col li .content{
+    gap: var(--space-space-2x-1)  ;
+  }
+
+  .pricepoint ul li .content h3{
+    font-size: var(--desktop-size-text-preamble);
+  }
+  
+  .pricepoint ul.min-col li .content h4{
+    font-size: var(--desktop-size-text-subheader);
+  }
+  
+  .pricepoint ul li .content p sup,
+  .pricepoint ul li .content p sup:nth-child(2){
+    font-size: var(--size-text-header);
+    top:2rem;
+  }
+  
+  .pricepoint ul.min-col li .content p sup,
+  .pricepoint ul.min-col li .content p sup:nth-child(2){
+    font-size: var(--desktop-size-text-header);
+  }
+  
+  .pricepoint ul li .content p{
+    font-size: var(--font-size-15);
+    line-height: var(--line-height-6s);
+  }
+  
+  .pricepoint ul.min-col li .content p{
+    font-size: var(--font-size-16);
+    line-height: var(--line-height-8);
+  }
+  
+  .section .pricepoint ul li .button-container a{
+    font-size: var(--desktop-size-text-cta);
+  }
+  
+}
+  
+/* vif specific code goes here */
+  
+/* Always keep .vif scope for brand specific override 
+Example:
+.vif h2 {
+  color: var(--color-token);
+}
+*/

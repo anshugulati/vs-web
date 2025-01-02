@@ -1,0 +1,84 @@
+:root {
+    --color-header: var(--color-text-banner-header);
+    --color-preamble: var(--color-text-banner-preamble);
+    --color-bg-cta: var(--color-background-banner-cta);
+  }
+  
+  .bat .section .block {
+    position: relative;
+  }
+  
+  .section .block-header h2 {
+    font-size: var(--font-size-7);
+    margin-bottom: var(--space-space-20);
+    text-align: center;
+  }
+  
+  .section.cards-container:has(.multictabanner){
+    display:none;
+  }
+    
+  .section.cards-container:has(.multictabanner.active){
+    display:block;
+  }
+  
+  .bat .cards-wrapper {
+    width: 100%;
+  }
+  
+  .bat .multictabanner ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    margin: var(--space-space-0x);
+    gap: var(--space-space-4x);
+    padding: var(--space-space-0x);
+  }
+  
+  .bat .multictabanner ul li {
+    flex-basis: calc(50% - var(--space-space-6));
+    background-color: var(--color-bg-cta);
+    text-align: center;
+  }
+  
+  .bat .multictabanner ul li a {
+    display: block;
+    padding: var(--space-space-14) var(--space-space-20) var(--space-space-12);
+  }
+  
+  .bat .multictabanner li h3 {
+    font-size: var(--size-text-preamble);
+    line-height: var(--line-height-preamble);
+    margin: var(--space-space-0x);
+    padding: var(--space-space-0x);
+    color: var(--color-preamble);
+  }
+  
+  .bat .multictabanner li h4 {
+    font: var(--type-body-1-emphasized-font);
+    line-height: var(--line-height-header);
+    font-size: var(--size-text-header);
+    margin: var(--space-space-0x);
+    color: var(--color-header);
+    padding: var(--space-space-0x);
+  }
+  
+  @media (min-width: 768px) {
+    .multictabanner{
+      padding: var(--space-space-0x) var(--space-space-115);
+    }
+    
+    .bat .multictabanner ul {
+      gap: var(--space-space-16);
+    }
+  
+    .bat .multictabanner ul li {
+      flex-basis: calc(25% - var(--space-space-12));
+    }
+  
+    .bat .multictabanner ul li h3 {
+      font-size: var(--desktop-size-text-preamble);
+      line-height: var(--desktop-line-height-preamble);
+    }
+  }

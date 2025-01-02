@@ -1,0 +1,75 @@
+.delivery-eligibility__container {
+  padding: var(--space-space-3x);
+  border-radius: 5px;
+  width: 100%;
+  border-radius: var(--radius-radius-none, 0px);
+  border: 1px solid var(--color-neutral-480);
+  background: var(--color-free-shipping-bg);
+}
+
+.bat .delivery-eligibility__container {
+  border: 1px solid var(--aura-stroke);
+  background: var(--aura-primary-100-light);
+}
+
+.delivery-eligibility__container .delivery-content {
+  display: flex;
+  align-items: center;
+  gap: var(--space-space-12);
+  font-size: var(--font-size-2);
+  line-height: var(--line-height-s);
+}
+
+.bat .delivery-eligibility__container .delivery-content{
+  color: var(--aura-color-primary-10);
+}
+
+.delivery-eligibility__container .delivery-content .icon {
+  width: var(--sf-width-2-4);
+  height: var(--sf-width-2-4);
+}
+
+.delivery-eligibility__container .delivery-content>.delivery-content-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-space-8);
+}
+
+.delivery-eligibility__container .delivery-content>.delivery-content-info span {
+  font-weight: 600;
+}
+
+.delivery-eligibility__container .delivery-content>.delivery-content-info .free-delivery__progress-bar__wrapper {
+  height: 2px;
+  background-color: var(--color-neutral-40);
+  border-radius: 100px;
+  display: none;
+}
+
+.delivery-eligibility__container .delivery-content>.delivery-content-info .free-delivery__progress-bar__wrapper .free-delivery__progress-bar {
+  background-color: var(--color-radio-icon-blue);
+  border-radius: 1000px;
+  width: 50%;
+  height: 100%;
+}
+
+.delivery-eligibility__mobile-wrapper {
+  padding-bottom: var(--space-space-5x);
+  background-color: var(--color-neutral-20);
+}
+
+@media (width >=768px) {
+  .delivery-eligibility__container .delivery-content {
+    font-size: var(--font-size-3);
+  }
+}
+
+/* bat specific code goes here */
+
+/* Always keep .bat scope for brand specific override 
+Example:
+.bat h2 {
+  color: var(--color-token);
+}
+*/

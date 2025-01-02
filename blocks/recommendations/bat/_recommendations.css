@@ -1,0 +1,82 @@
+@import '../recommendations.css';
+
+/* bat specific code goes here */
+
+/* Always keep .bat scope for brand specific override
+Example:
+.bat h2 {
+  color: var(--color-token);
+}
+*/
+.bat .recommendations-container .default-content-wrapper {
+  text-align: start;
+  margin-top: 0;
+  font-size: var(--font-size-5);
+  font-weight: var(--font-weight-6);
+  color: var(--color-secondary-a);
+  line-height: var(--line-height-l);
+}
+
+.bat.search .no-results {
+  padding: 0;
+}
+
+.bat.search .no-results .default-content-wrapper p {
+  color: var(--color-secondary-b);
+  font-size: var(--font-size-3);
+  padding: 0 var(--space-space-12);
+}
+
+.bat .section.recommendations-container {
+  padding: var(--space-space-32) 0 var(--space-space-32) var(--space-space-12);
+}
+
+.bat.search .section.recommendations-container {
+  padding-top: var(--space-space-64);
+}
+
+.bat .recommendations-container .default-content-wrapper.recommendation-carousel-subtext {
+  color: var(--color-brand-250);
+  font: var(--type-details-4-font);
+  line-height: var(--line-height-m);
+  margin-top: 0;
+  display: none;
+}
+
+html[dir='rtl'] .bat .section.recommendations-container {
+  padding: var(--space-space-32) var(--space-space-12) var(--space-space-32) 0;
+}
+
+html[dir='rtl'] .bat.search .section.recommendations-container {
+  padding: var(--space-space-64) var(--space-space-12) var(--space-space-16) 0;
+}
+
+@media (width >= 768px) {
+  .bat .recommendations-container .default-content-wrapper.recommendation-carousel-subtext {
+    color: var(--color-brand-250);
+    font: var(--type-details-4-font);
+    margin-top: 0;
+    display: block;
+  }
+
+  .bat.search .recommendations-container .default-content-wrapper {
+    text-align: center;
+  }
+
+  .bat.search .recommendations-container .default-content-wrapper.recommendation-carousel-subtext {
+    display: none;
+  }
+
+  .bat.search .no-results .default-content-wrapper p {
+    padding-bottom: var(--space-space-16);
+    margin: auto;
+  }
+
+  .bat .section.recommendations-container {
+    padding: var(--space-space-32) var(--space-space-40);
+  }
+
+  .bat.search .section.recommendations-container {
+    padding-top: var(--space-space-96);
+  }
+}
