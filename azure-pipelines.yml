@@ -1,0 +1,37 @@
+trigger:
+- uat
+ 
+ 
+jobs:
+- job: CheckmarxSast
+  pool:
+    name: checkmarx
+  steps:
+  - task: Application security testing@2023
+    inputs:
+      projectName: 'eds-web'
+      enableProxy: false
+      enableSastScan: true
+      CheckmarxService: 'SAST-Alshaya_AdobeIntegration'
+      customPreset: 'ASA Premium'
+      engineConfigId: '5'
+      fullTeamName: '/CxServer'
+      sastCaChainFilePath: 'F:\checkmarx.pem'
+      incScan: false
+      fullScansScheduled: true
+      fullScanCycle: '20'
+      folderExclusion: 'cvs, .svn, .hg , .git, .bzr, bin , obj, backup, .idea, node_modules, debug, test, spec, lib, docs, swagger, jquery, angular, ,bootstrap, modernizer, yui,dojo, react,example, plugins, build,deploy, dist, tests,unit, unit tests, pids,logs,.sass-cache, .DS_Store, .idea, .tmp, .grunt, coverage, doc, mock, mockito, stub, androidTest'
+      fileExtension: '!**/*.DS_Store, !**/*.ipr, !**/*.iws, !**/*.bak, !**/*.tmp, !**/*.aac, !**/*.aif, !**/*.iff, !**/*.m3u, !**/*.mid, !**/*.mp3, !**/*.mpa, !**/*.ra, !**/*.wav, !**/*.wma, !**/*.3g2, !**/*.3gp, !**/*.asf, !**/*.asx, !**/*.avi,!**/*.flv, !**/*.mov, !**/*.mp4, !**/*.mpg,  !**/*.rm, !**/*.swf, !**/*.vob, !**/*.wmv, !**/*.bmp, !**/*.gif, !**/*.jpg, !**/*.png, !**/*.psd, !**/*.tif, !**/*.swf, !**/*.jar, !**/*.zip, !**/*.rar, !**/*.exe, !**/*.dll, !**/*.pdb, !**/*.7z, !**/*.gz, !**/*.tar.gz, !**/*.tar, !**/*.gz, !**/*.ahtm, !**/*.ahtml, !**/*.fhtml, !**/*.hdm, !**/*.hdml,   !**/*.hsql, !**/*.ht, !**/*.hta, !**/*.htc, !**/*.htd, !**/*.war, !**/*.ear, !**/*.htmls, !**/*.ihtml, !**/*.mht, !**/*.mhtm, !**/*.mhtml, !**/*.ssi, !**/*.stm, !**/*.stml, !**/*.ttml, !**/*.txn, !**/*.xhtm, !**/*.xhtml, !**/*.class, !**/*.iml,!**/*.min.js,!**/*test*'
+      generatePDFReport: true
+      enableDependencyScan: false
+- job: CheckmarxSca
+  pool:
+    vmImage: 'ubuntu-latest'
+  steps:
+  - task: Checkmarx AST@2
+    inputs:
+      CheckmarxService: 'SCA-Alshaya_AdobeIntegration'
+      projectName: '$(Build.Repository.Name)-Azure'
+      branchName: '$(Build.SourceBranchName)'
+      tenantName: 'alshaya'
+      additionalParams: '--scan-types sca --debug'
