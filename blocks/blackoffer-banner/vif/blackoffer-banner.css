@@ -1,0 +1,53 @@
+.blackoffer-banner { 
+  background-color: var(--color-neutral-black); 
+  color: var(--color-neutral-50); 
+  text-align: center; 
+  padding: var(--space-space-16) var(--space-space-4x); 
+} 
+
+.blackoffer-banner h1 { 
+  font-size: var(--font-size-10); 
+  line-height: var(--line-height-m); 
+  margin: var(--space-space-4x) 0; 
+} 
+
+.blackoffer-banner h2 { 
+  font-size: var(--font-size-8); 
+  line-height: var(--line-height-m); 
+  margin: var(--space-space-4x) 0; 
+} 
+
+.blackoffer-banner p { 
+  font-size: var(--font-size-6); 
+  margin: var(--space-space-4x) 0; 
+} 
+
+.blackoffer-banner .shoplink { 
+  margin-top: var(--space-space-4x); 
+  font-size: var(--font-size-4); 
+  line-height: var(--line-height-m); 
+  text-decoration: underline;
+  color: var(--color-neutral-50) !important;
+} 
+
+.blackoffer-banner-wrapper {
+  cursor: pointer; 
+}
+
+@media (max-width: 767px) { 
+  .blackoffer-banner { 
+    padding: var(--space-space-8) var(--space-space-2x); 
+  } 
+  .blackoffer-banner h1 { 
+    font-size: var(--font-size-8); 
+  } 
+  .blackoffer-banner h2 { 
+    font-size: var(--font-size-6); 
+  } 
+  .blackoffer-banner p { 
+    font-size: var(--font-size-4); 
+  } 
+  .blackoffer-banner .shoplink { 
+    font-size: var(--font-size-3); 
+  } 
+}
