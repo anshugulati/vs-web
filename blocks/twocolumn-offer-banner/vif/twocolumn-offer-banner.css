@@ -1,0 +1,114 @@
+.twocolumn-offer-banner {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-space-6x);
+}
+
+.twocolumn-offer-banner-card {
+  flex: 1;
+  position: relative;
+  text-align: center;
+}
+
+.twocolumn-offer-banner-card img {
+  width: 100%;
+  height: auto;
+}
+
+.offer-details {
+  padding: var(--space-space-2x);
+  font-family: var(--font-family-body, "Calibre 2");
+}
+
+.offer-details h6 {
+  font-size: var(--font-size-2);
+  font-weight: var(--font-weight-4);
+  color: var(--color-text-main);
+  margin-block-start: 0.1em;
+  margin-block-end: 0.1em;
+  
+  
+}
+
+.offer-details h1 {
+  font-size: var(--font-size-8);
+  font-weight: var(--font-weight-4);
+  margin: var(--space-space-2x) 0;
+  font-family: var(--font-family-body, "Victoria Two");
+}
+
+.offer-details h3 {
+  font-size: var(--font-size-5);
+  font-weight: var(--font-weight-3);
+  margin: var(--space-space-2x) 0;
+  font-family: var(--font-family-body, "Victoria Two");
+}
+
+.offer-details h5 {
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-3);
+  margin: var(--space-space-2x) 0;
+}
+
+.offer-details p {
+  font-size: var(--font-size-4);
+  color: var(--color-text-main);
+  margin: var(--space-space-2x) 0;
+}
+
+.offer-details a {
+  color: var(--tlc-text-links-default-text, var(--tlc-text-links-default-text, #605858))  !important;
+  /* underline/lg/bold */
+  font-family: var(--font-family-body, "Calibre 2");
+  font-size: var(--font-size-font-size-18-16, 18px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 132%;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+
+.shop-now {
+  color: var(--tlc-text-links-default-text, var(--tlc-text-links-default-text, #605858));
+  /* underline/lg/bold */
+  font-family: var(--font-family-body, "Calibre 2");
+  font-size: var(--font-size-font-size-18-16, 18px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 132%;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+
+.shop-now:hover {
+  background-color: var(--color-secondary-50);
+}
+
+.circle-text {
+  position: absolute;
+  top: var(--space-space-4x);
+  right: var(--space-space-4x);
+  background-color: var(--color-neutral-50);
+  color: var(--color-brand-700);
+  border-radius: 50%;
+  padding: var(--space-space-3x);
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-4);
+}
+
+@media (max-width: 768px) {
+  .twocolumn-offer-banner {
+    flex-direction: column;
+  }
+  .twocolumn-offer-banner-card {
+    margin-bottom: var(--space-space-6x);
+  }
+}
