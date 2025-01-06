@@ -1,70 +1,70 @@
-.category-block { 
-    background-color: #fcf3f2; 
-    padding: var(--space-space-40) var(--space-space-20); 
-    text-align: center; 
-  } 
-  
-  .category-block h2 { 
-    font-size: var(--font-size-9); 
-    color: var(--color-text-main); 
-    margin-bottom: var(--space-space-10); 
-  } 
-  
-  .category-block p { 
-    font-size: var(--text-m); 
-    font-weight: 700;
-    color: var(--color-text-main); 
-    margin: 0;
-  } 
-  
-  .category-block .category-block-cards { 
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: space-around; 
-    gap: var(--space-space-40); 
-  } 
-  
-  .category-block .category-block-card { 
-    max-width: 25%; 
-    flex: 1 0 calc(25% - var(--space-space-40)); 
-  } 
-  
-  .category-block .category-block-card img { 
-    max-width: 100%; 
-    height: auto; 
-    margin-bottom: var(--space-space-20); 
-  } 
-  
-  .category-block .category-block-card h3 { 
-    font-size: var(--font-size-6); 
-    color: var(--color-text-main); 
-    margin-bottom: var(--space-space-10); 
-  } 
-  
-  .category-block .category-block-card p { 
-    font-size: var(--font-size-4); 
-    color: var(--color-text-dark-1); 
-    margin-bottom: var(--space-space-20); 
-  } 
-  
-  .category-block .category-block-card a { 
-    font-size: var(--font-size-4); 
-    color: var(--color-primary-100); 
-    text-decoration: none; 
-  } 
-  
-  .category-block .category-block-card a:hover { 
-    text-decoration: underline; 
-  } 
-  
-  @media (max-width: 1024px) { 
-    .category-block .category-block-cards { 
-      flex-direction: column; 
-      align-items: center; 
-    } 
-    
-    .category-block .category-block-card { 
-      max-width: 100%; 
-    } 
+.category-block {
+  background-color: #fcf3f2;
+  padding: var(--space-space-40) var(--space-space-20);
+  text-align: center;
+  font-family: "Victoria Two";
+}
+
+.category-block h2 {
+  font-size: var(--font-size-9);
+  color: var(--color-text-main);
+  margin-bottom: var(--space-space-10);
+}
+
+.category-block p {
+  font-size: var(--text-m);
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin: 0;
+}
+
+.category-block .category-block-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: var(--space-space-40);
+}
+
+.category-block .category-block-card {
+  max-width: 25%;
+  flex: 1 0 calc(25% - var(--space-space-40));
+}
+
+.category-block .category-block-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: var(--space-space-20);
+}
+
+.category-block .category-block-card h3 {
+  font-size: var(--font-size-6);
+  color: var(--color-text-main);
+  margin-bottom: var(--space-space-10);
+}
+
+.category-block .category-block-card p {
+  font-size: var(--font-size-4);
+  color: var(--color-text-dark-1);
+  margin-bottom: var(--space-space-20);
+}
+
+.category-block .category-block-card a {
+  font-size: var(--font-size-4);
+  color: var(--color-primary-100);
+  text-decoration: none;
+}
+
+.category-block .category-block-card a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .category-block .category-block-cards {
+    flex-direction: column;
+    align-items: center;
   }
-  
+
+  .category-block .category-block-card {
+    max-width: 100%;
+  }
+}

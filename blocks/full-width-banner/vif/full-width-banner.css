@@ -1,0 +1,97 @@
+.full-width-banner-wrapper {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-width-banner {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 70vh; /* Reducing the height */
+  display: flex;
+  justify-content: flex-start; /* Move content to the left */
+  align-items: center;
+}
+
+.full-width-banner .text-content {
+  text-align: center;
+  color: #2f2f2f;
+  font-family: "Arial", sans-serif;
+  margin-left: 25%; /* Add margin to the left */
+}
+
+.full-width-banner .text-content h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  font-family: "Victoria Two";
+  color: #221d1d;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.full-width-banner .text-content h2 {
+  color: var(--tlc-logo-brand-logo-main, var(--tlc-logo-brand-logo-main, #333));
+  text-align: center;
+  /* label/sm/bold */
+  font-family: var(--font-family-body, "Calibre 2");
+  font-size: var(--font-size-font-size-14-12, 14px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 18.2px */
+  text-transform: uppercase;
+}
+
+.full-width-banner .text-content p {
+  color: var(--text-text-main, var(--text-text-main, #221d1d));
+  text-align: center;
+  margin: 0 0 10px 0 !important;
+  font-family: var(--font-family-body, "Calibre 2");
+  font-size: var(--font-size-font-size-16-14, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+}
+
+.full-width-banner .shop-now {
+  color: var(
+    --tlc-button-flat-default-text,
+    var(--tlc-button-flat-default-text, #4e3844)
+  );
+  /* underline/md/bold */
+  font-family: var(--font-family-body, "Calibre 2");
+  font-size: var(--font-size-font-size-16-14, 16px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 22.4px */
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .full-width-banner {
+    height: 50vh; /* Further reducing the height for mobile view */
+  }
+
+  .full-width-banner .text-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .full-width-banner .text-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .full-width-banner .shop-now {
+    font-size: 0.9rem;
+  }
+}

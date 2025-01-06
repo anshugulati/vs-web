@@ -1,40 +1,40 @@
 .video-banner-wrapper {
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
 }
 
 .video-banner {
-    width: 100%;
-    max-width: 1600px;
-    height: 0;
-    padding-bottom: 32.25%; /* 516px / 1600px * 100% */
-    position: relative;
-    margin-top: 30px;
+  width: 100%;
+  max-width: 1600px;
+  height: 0;
+  padding-bottom: 32.25%; /* 516px / 1600px * 100% */
+  position: relative;
+  margin-top: 30px;
 }
 
 .video-banner video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 @media (max-width: 767px) {
-    .video-banner-wrapper {
-        margin: 20px 0;
-    }
+  .video-banner-wrapper {
+    margin: 20px 0;
+  }
 
-    .video-banner {
-        padding-bottom: 56.25%; /* 9:16 aspect ratio */
-    }
-    
-    .video-banner video {
-        object-fit: contain; /* Ensure the entire video fits within the container */
-    }
+  .video-banner {
+    padding-bottom: 56.25%; /* 9:16 aspect ratio */
+  }
+
+  .video-banner video {
+    object-fit: contain; /* Ensure the entire video fits within the container */
+  }
 }
