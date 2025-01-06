@@ -21,6 +21,7 @@
     "@spectrum-icons/illustrations": "^3.6.7",
     "@spectrum-icons/ui": "^3.6.1",
     "@spectrum-icons/workflow": "^4.2.6",
+    "promotion-picker": "file:",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
   }

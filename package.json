@@ -67,6 +67,7 @@
     "webpack-dev-server": "^5.0.3"
   },
   "dependencies": {
+    "@adobe/aem-boilerplate": "file:",
     "@adobe/magento-storefront-event-collector": "^1.7.1",
     "@adobe/magento-storefront-events-sdk": "^1.7.1",
     "@dropins/storefront-pdp": "0.4.0",
