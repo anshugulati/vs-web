@@ -1,5 +1,5 @@
 .banner-bar-container {
-  padding: 0 !important;
+  padding: 25px 0 0 0 !important;
 }
 .banner-bar {
   background-color: var(--color-neutral-200);
