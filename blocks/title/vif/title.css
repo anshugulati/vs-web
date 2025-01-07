@@ -6,7 +6,7 @@
 .title h2 {
   font-size: var(--font-size-20-18, 20px);
   font-family: var(--font-family-heading, "Calibre 2");
-  color: var(--text-heading-main, #221D1D);
+  color: var(--text-heading-main, #221d1d);
   font-weight: 500;
   line-height: 130%;
   text-transform: uppercase;

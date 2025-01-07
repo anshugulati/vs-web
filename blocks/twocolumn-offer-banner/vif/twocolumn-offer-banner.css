@@ -1,7 +1,6 @@
 .twocolumn-offer-banner {
   display: flex;
   justify-content: space-between;
-  gap: var(--space-space-6x);
 }
 
 .twocolumn-offer-banner-card {
@@ -26,8 +25,6 @@
   color: var(--color-text-main);
   margin-block-start: 0.1em;
   margin-block-end: 0.1em;
-  
-  
 }
 
 .offer-details h1 {
@@ -57,7 +54,10 @@
 }
 
 .offer-details a {
-  color: var(--tlc-text-links-default-text, var(--tlc-text-links-default-text, #605858))  !important;
+  color: var(
+    --tlc-text-links-default-text,
+    var(--tlc-text-links-default-text, #605858)
+  ) !important;
   /* underline/lg/bold */
   font-family: var(--font-family-body, "Calibre 2");
   font-size: var(--font-size-font-size-18-16, 18px);
@@ -73,7 +73,10 @@
 }
 
 .shop-now {
-  color: var(--tlc-text-links-default-text, var(--tlc-text-links-default-text, #605858));
+  color: var(
+    --tlc-text-links-default-text,
+    var(--tlc-text-links-default-text, #605858)
+  );
   /* underline/lg/bold */
   font-family: var(--font-family-body, "Calibre 2");
   font-size: var(--font-size-font-size-18-16, 18px);

@@ -1,46 +1,46 @@
-.card-category { 
-  display: flex; 
-  flex-wrap: wrap; 
-  gap: 1rem; 
-  justify-content: center; 
-  background: #fff; 
-  padding: 1rem; 
+.card-category {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  background: #fff;
+  padding: 1rem;
 }
 
-.card-category .card-category-card { 
-  flex: 0 1 9%; 
-  max-width: 9%; 
-  text-align: center; 
+.card-category .card-category-card {
+  flex: 0 1 9%;
+  max-width: 9%;
+  text-align: center;
 }
 
-.card-category .card-category-card img { 
-  width: 100%; 
-  height: auto; 
-  border-radius: 5px; 
+.card-category .card-category-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
-.card-category .card-category-card p { 
-color: var(--text-text-main, var(--text-text-main, #221D1D));
-text-align: center;
-/* text/md/semi-bold */
-font-family: var(--font-family-body, "Calibre 2");
-font-size: var(--font-size-font-size-16-14, 16px);
-font-style: normal;
-font-weight: 500;
-line-height: 140%; /* 22.4px */
-margin-top: 5px;
+.card-category .card-category-card p {
+  color: var(--text-text-main, var(--text-text-main, #221d1d));
+  text-align: center;
+  /* text/md/semi-bold */
+  font-family: var(--font-family-body, "Calibre 2");
+  font-size: var(--font-size-font-size-16-14, 16px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%; /* 22.4px */
+  margin-top: 5px;
 }
 
-@media (max-width: 768px) { 
-  .card-category .card-category-card { 
-    flex: 0 1 25%; 
-    max-width: 25%; 
-  } 
+@media (max-width: 768px) {
+  .card-category .card-category-card {
+    flex: 0 1 25%;
+    max-width: 25%;
+  }
 }
 
-@media (max-width: 480px) { 
-  .card-category .card-category-card { 
-    flex: 0 1 50%; 
-    max-width: 50%; 
-  } 
+@media (max-width: 480px) {
+  .card-category .card-category-card {
+    flex: 0 1 50%;
+    max-width: 50%;
+  }
 }
