@@ -1,0 +1,42 @@
+.banner-bar-container {
+  padding: 0 !important;
+}
+.banner-bar {
+  background-color: var(--color-neutral-200);
+  padding: var(--space-space-2x) 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.banner-bar-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.banner-bar .banner-bar-link {
+  font-family: var(--type-brand-font-family);
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-4);
+  text-decoration: none;
+}
+
+.banner-bar a.banner-bar-link {
+  color: #E25E85 !important;
+}
+
+.banner-bar .banner-bar-link:hover {
+  text-decoration: underline;
+}
+
+.banner-bar .banner-bar-link span {
+  color: var(--color-text-main);
+}
+
+@media (max-width: 767px) {
+  .banner-bar-content {
+    flex-direction: column;
+    gap: var(--space-space-4);
+  }
+}

@@ -6,6 +6,10 @@
   padding: 0 0 0 0;
 }
 
+.banner-image-text.image-left {
+  flex-direction: row-reverse;
+}
+
 .banner-image-text .banner-image-text-content {
   flex: 0 0 50%; /* Adjusted width to 50% */
   text-align: center;
@@ -24,7 +28,7 @@
 }
 
 .banner-image-text h2 {
-  color: var(--text-text-main, var(--text-text-main, #221D1D));
+  color: var(--text-text-main, var(--text-text-main, #221d1d));
   text-align: center;
   font-family: "Victoria Two";
   font-size: var(--font-size-font-size-48-40, 48px);
@@ -35,7 +39,7 @@
 }
 
 .banner-image-text p {
-  color: var(--text-text-main, var(--text-text-main, #221D1D));
+  color: var(--text-text-main, var(--text-text-main, #221d1d));
   text-align: center; /* text/md/regular */
   font-family: var(--font-family-body, "Calibre 2");
   font-size: var(--font-size-font-size-16-14, 16px);
@@ -48,7 +52,10 @@
 .banner-image-text a.order-button {
   display: block;
   text-align: center;
-  color: var(--tlc-button-flat-default-text, var(--tlc-button-flat-default-text, #4E3844)); /* underline/md/bold */
+  color: var(
+    --tlc-button-flat-default-text,
+    var(--tlc-button-flat-default-text, #4e3844)
+  ); /* underline/md/bold */
   font-family: var(--font-family-body, "Calibre 2");
   font-size: var(--font-size-font-size-16-14, 16px);
   font-style: normal;
@@ -77,12 +84,12 @@
 
 @media (max-width: 768px) {
   .banner-image-text {
-      flex-direction: column;
-      text-align: center;
+    flex-direction: column;
+    text-align: center;
   }
   .banner-image-text .banner-image-text-content,
   .banner-image-text .banner-image-text-image {
-      flex-basis: 100%;
-      max-width: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
   }
 }
