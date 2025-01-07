@@ -1,3 +1,8 @@
+.blackoffer-banner-container {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
 .blackoffer-banner { 
   background-color: var(--color-neutral-black); 
   color: var(--color-neutral-50); 

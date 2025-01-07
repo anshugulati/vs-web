@@ -1,3 +1,7 @@
+.video-banner-container {
+  padding-bottom: 0 !important;
+}
+
 .video-banner-wrapper {
   width: 100%;
   overflow: hidden;

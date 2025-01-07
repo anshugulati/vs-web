@@ -1,0 +1,88 @@
+.banner-image-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fcf3f2;
+  padding: 0 0 0 0;
+}
+
+.banner-image-text .banner-image-text-content {
+  flex: 0 0 50%; /* Adjusted width to 50% */
+  text-align: center;
+  margin: auto; /* Center the content within its container */
+}
+
+.banner-image-text h3 {
+  color: var(--tlc-logo-brand-logo-main, var(--tlc-logo-brand-logo-main, #333));
+  text-align: center; /* label/sm/bold */
+  font-family: var(--font-family-body, "Calibre 2");
+  font-size: var(--font-size-font-size-14-12, 14px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%; /* 18.2px */
+  text-transform: uppercase;
+}
+
+.banner-image-text h2 {
+  color: var(--text-text-main, var(--text-text-main, #221D1D));
+  text-align: center;
+  font-family: "Victoria Two";
+  font-size: var(--font-size-font-size-48-40, 48px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 67.2px */
+  margin: 0 !important;
+}
+
+.banner-image-text p {
+  color: var(--text-text-main, var(--text-text-main, #221D1D));
+  text-align: center; /* text/md/regular */
+  font-family: var(--font-family-body, "Calibre 2");
+  font-size: var(--font-size-font-size-16-14, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+  margin: 0 !important;
+}
+
+.banner-image-text a.order-button {
+  display: block;
+  text-align: center;
+  color: var(--tlc-button-flat-default-text, var(--tlc-button-flat-default-text, #4E3844)); /* underline/md/bold */
+  font-family: var(--font-family-body, "Calibre 2");
+  font-size: var(--font-size-font-size-16-14, 16px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 22.4px */
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+  margin-top: 10px !important;
+}
+
+.banner-image-text .banner-image-text-image {
+  flex: 0 0 50%; /* Adjusted width to 50% */
+}
+
+.banner-image-text .banner-image-text-image img {
+  width: 100%;
+  height: auto;
+  max-height: 600px; /* Reduce the height of the image */
+  object-fit: cover; /* Prevents image distortion */
+  object-position: top; /* Adjusts the position of the image to ensure the face is visible */
+}
+
+@media (max-width: 768px) {
+  .banner-image-text {
+      flex-direction: column;
+      text-align: center;
+  }
+  .banner-image-text .banner-image-text-content,
+  .banner-image-text .banner-image-text-image {
+      flex-basis: 100%;
+      max-width: 100%;
+  }
+}
