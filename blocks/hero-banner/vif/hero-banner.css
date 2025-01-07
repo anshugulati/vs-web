@@ -4,7 +4,9 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 100vh; /* Adjusted height to reduce overall block height */
+  /*height: 100vh; Adjusted height to reduce overall block height */
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .hero-banner .hero-banner-content {
