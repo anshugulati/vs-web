@@ -1,4 +1,5 @@
 .hero-banner {
+  font-family: "Victoria Two";
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,7 +41,10 @@
 }
 
 .hero-banner .hero-banner-text-overlay .limited-time {
-  color: var(--tlc-logo-brand-logo-main, var(--tlc-logo-brand-logo-main, #ffffff));
+  color: var(
+    --tlc-logo-brand-logo-main,
+    var(--tlc-logo-brand-logo-main, #ffffff)
+  );
   text-align: center;
   font-family: var(--font-family-body, "Calibre 2");
   font-size: var(--font-size-font-size-14-12, 14px);
