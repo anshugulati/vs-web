@@ -1,0 +1,19 @@
+.title {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.title h2 {
+  font-size: var(--font-size-20-18, 20px);
+  font-family: var(--font-family-heading, "Calibre 2");
+  color: var(--text-heading-main, #221D1D);
+  font-weight: 500;
+  line-height: 130%;
+  text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+  .title h2 {
+    font-size: var(--font-size-4);
+  }
+}
