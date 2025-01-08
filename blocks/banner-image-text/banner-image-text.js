@@ -10,14 +10,14 @@ export default function decorate(block) {
 
   // Define new HTML structure
   const newHTML = `
+    <div class="banner-image-text-image">
+      <img src="${imgSrc}" alt="${imgAlt}">
+    </div>
     <div class="banner-image-text-content">
       <h3>${spotlightText}</h3>
       <h2>${mainHeadingHTML.split("<br><br>")[0]}</h2>
       <p>${mainHeadingHTML.split("<br><br>")[1]}</p>
       <a href="${link}" class="order-button">Shop Now</a>
-    </div>
-    <div class="banner-image-text-image">
-      <img src="${imgSrc}" alt="${imgAlt}">
     </div>
   `;
 

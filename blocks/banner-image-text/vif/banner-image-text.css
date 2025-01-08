@@ -10,12 +10,12 @@
   padding: 0 0 0 0;
 }
 
-.banner-image-text.image-left {
+.banner-image-text.image-right {
   flex-direction: row-reverse;
 }
 
 .banner-image-text .banner-image-text-content {
-  flex: 0 0 50%; /* Adjusted width to 50% */
+  flex: 0 0 70%; /* Adjusted width to 70% */
   text-align: center;
   margin: auto; /* Center the content within its container */
 }
@@ -35,7 +35,7 @@
   color: var(--text-text-main, var(--text-text-main, #221d1d));
   text-align: center;
   font-family: "Victoria Two";
-  font-size: var(--font-size-font-size-48-40, 48px);
+  font-size: var(--font-size-font-size-48-40, 38px);
   font-style: normal;
   font-weight: 400;
   line-height: 140%; /* 67.2px */
@@ -75,7 +75,7 @@
 }
 
 .banner-image-text .banner-image-text-image {
-  flex: 0 0 50%; /* Adjusted width to 50% */
+  flex: 0 0 30%; /* Adjusted width to 30% */
 }
 
 .banner-image-text .banner-image-text-image img {
