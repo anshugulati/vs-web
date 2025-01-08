@@ -45,6 +45,7 @@
 .banner-image-text h2 strong {
   display: block;
   font-weight: 400;
+  font-size: var(--font-size-font-size-48-40, 28px);
 }
 
 .banner-image-text p {
