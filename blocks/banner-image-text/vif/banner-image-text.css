@@ -42,6 +42,11 @@
   margin: 0 !important;
 }
 
+.banner-image-text h2 strong {
+  display: block;
+  font-weight: 400;
+}
+
 .banner-image-text p {
   color: var(--text-text-main, var(--text-text-main, #221d1d));
   text-align: center; /* text/md/regular */
