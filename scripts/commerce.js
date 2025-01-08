@@ -1,7 +1,7 @@
 /* eslint-disable import/prefer-default-export, import/no-cycle, no-use-before-define */
-import { getConfigValue } from './configs.js';
+import { getConfigValue } from "./configs.js";
 
-const API_MESH_BASE_CATEGORY_ID = '2';
+const API_MESH_BASE_CATEGORY_ID = "6";
 /* Common query fragments */
 export const priceFieldsFragment = `fragment priceFields on ProductViewPrice {
   regular {
@@ -951,24 +951,29 @@ export const promotionByUrlKeyQuery = `query($urlKey:String) {
 
 export async function performCatalogServiceQuery(query, variables) {
   const headers = {
-    'Content-Type': 'application/json',
-    'Magento-Website-Code': await getConfigValue('commerce-website-code'),
-    'Magento-Store-View-Code': await getConfigValue('commerce-store-view-code'),
-    'Magento-Store-Code': await getConfigValue('commerce-store-code'),
-    'Magento-Customer-Group': await getConfigValue('commerce-customer-group'),
+    "Content-Type": "application/json",
+    "Magento-Website-Code": await getConfigValue("commerce-website-code"),
+    "Magento-Store-View-Code": await getConfigValue("commerce-store-view-code"),
+    "Magento-Store-Code": await getConfigValue("commerce-store-code"),
+    "Magento-Customer-Group": await getConfigValue("commerce-customer-group"),
     // eslint-disable-next-line quote-props
-    'Store': await getConfigValue('commerce-store-view-code'),
+    Store: await getConfigValue("commerce-store-view-code"),
   };
-  if (document.documentElement.lang !== 'en') {
-    const setEnv = `${headers['Magento-Website-Code']}_en`;
-    headers['Magento-Store-View-Code-en'] = setEnv;
+  if (document.documentElement.lang !== "en") {
+    const setEnv = `${headers["Magento-Website-Code"]}_en`;
+    headers["Magento-Store-View-Code-en"] = setEnv;
   }
-  const apiCall = new URL(await getConfigValue('commerce-saas-endpoint'));
-  apiCall.searchParams.append('query', query.replace(/(?:\r\n|\r|\n|\t|[\s]{4})/g, ' ')
-    .replace(/\s\s+/g, ' '));
-  apiCall.searchParams.append('variables', variables ? JSON.stringify(variables) : null);
+  const apiCall = new URL(await getConfigValue("commerce-saas-endpoint"));
+  apiCall.searchParams.append(
+    "query",
+    query.replace(/(?:\r\n|\r|\n|\t|[\s]{4})/g, " ").replace(/\s\s+/g, " ")
+  );
+  apiCall.searchParams.append(
+    "variables",
+    variables ? JSON.stringify(variables) : null
+  );
   const response = await fetch(apiCall, {
-    method: 'GET',
+    method: "GET",
     headers,
   });
 
@@ -984,43 +989,57 @@ export async function performCatalogServiceQuery(query, variables) {
 export async function loadProduct(productSku) {
   let product;
   let productDL;
-  let sku = productSku || document.querySelector('meta[name=sku]')?.getAttribute('content');
+  let sku =
+    productSku ||
+    document.querySelector("meta[name=sku]")?.getAttribute("content");
   if (sku) {
-    const query = document.documentElement.lang === 'en' ? productDetailQuery : productDetailArQuery;
+    const query =
+      document.documentElement.lang === "en"
+        ? productDetailQuery
+        : productDetailArQuery;
     const result = await performCatalogServiceQuery(query, { sku });
 
     [product] = result.products;
     // To obtain product values in English for Datalayer for non-English websites
-    [productDL] = (document.documentElement.lang !== 'en' && result.products_en) ? result.products_en : result.products;
+    [productDL] =
+      document.documentElement.lang !== "en" && result.products_en
+        ? result.products_en
+        : result.products;
   } else {
-    const urlKey = window.location.pathname.split('/').at(-1);
-    const urlKeys = window.location.pathname.split('/');
-    const category = urlKeys[1].match(/^[a-z]{2}$/) ? urlKeys.slice(2, -1).join('/') : urlKeys.slice(1, -1).join('/');
+    const urlKey = window.location.pathname.split("/").at(-1);
+    const urlKeys = window.location.pathname.split("/");
+    const category = urlKeys[1].match(/^[a-z]{2}$/)
+      ? urlKeys.slice(2, -1).join("/")
+      : urlKeys.slice(1, -1).join("/");
 
     const filter = [
       {
-        attribute: 'url_key',
+        attribute: "url_key",
         eq: urlKey,
       },
     ];
 
     if (category) {
       filter.push({
-        attribute: 'categories',
+        attribute: "categories",
         in: category,
       });
     }
-    const query = document.documentElement.lang === 'en' ? urlKeyQuery : urlKeyArQuery;
+    const query =
+      document.documentElement.lang === "en" ? urlKeyQuery : urlKeyArQuery;
     const result = await performCatalogServiceQuery(query, {
       pageSize: 1,
       currentPage: 1,
-      phrase: '',
+      phrase: "",
       filter,
     });
 
     product = result.productSearch.items[0]?.productView;
     // To obtain product values in English for Datalayer for non-English websites
-    productDL = (document.documentElement.lang !== 'en' && result.productSearch_en) ? result.productSearch_en.items?.[0]?.productView : result.productSearch.items?.[0]?.productView;
+    productDL =
+      document.documentElement.lang !== "en" && result.productSearch_en
+        ? result.productSearch_en.items?.[0]?.productView
+        : result.productSearch.items?.[0]?.productView;
     sku = product?.sku;
   }
   return [sku, product, productDL];
@@ -1028,7 +1047,7 @@ export async function loadProduct(productSku) {
 
 export async function performRestQuery(url, useToken = false) {
   const headers = {
-    'Content-Type': 'application/json',
+    "Content-Type": "application/json",
   };
   if (useToken) {
     headers.Authorization = `Bearer ${getSignInToken()}`;
@@ -1036,7 +1055,7 @@ export async function performRestQuery(url, useToken = false) {
   const apiCall = new URL(url);
 
   const response = await fetch(apiCall, {
-    method: 'GET',
+    method: "GET",
     headers,
   });
 
@@ -1054,12 +1073,16 @@ export async function performRestQuery(url, useToken = false) {
   return queryResponse;
 }
 
-export async function performRestSubmit(url, data, useToken = false, setContentType = true) {
-  const headers = {
-  };
+export async function performRestSubmit(
+  url,
+  data,
+  useToken = false,
+  setContentType = true
+) {
+  const headers = {};
 
   if (setContentType) {
-    headers['Content-Type'] = 'application/x-www-form-urlencoded';
+    headers["Content-Type"] = "application/x-www-form-urlencoded";
   }
 
   if (useToken) {
@@ -1069,7 +1092,7 @@ export async function performRestSubmit(url, data, useToken = false, setContentT
   const apiCall = new URL(url);
 
   const response = await fetch(apiCall, {
-    method: 'POST',
+    method: "POST",
     body: data,
     headers,
   });
@@ -1083,9 +1106,14 @@ export async function performRestSubmit(url, data, useToken = false, setContentT
   return queryResponse;
 }
 
-export async function performRestMutation(url, data, useToken = false, method = 'POST') {
+export async function performRestMutation(
+  url,
+  data,
+  useToken = false,
+  method = "POST"
+) {
   const headers = {
-    'Content-Type': 'application/json',
+    "Content-Type": "application/json",
   };
   if (useToken) {
     headers.Authorization = `Bearer ${getSignInToken()}`;
@@ -1136,7 +1164,7 @@ export async function performCommerceRestQuery(url, useToken = false) {
   try {
     return performRestQuery(url, useToken);
   } catch (error) {
-    console.error('Error fetching data', error);
+    console.error("Error fetching data", error);
     return {
       success: false,
       message: error.message,
@@ -1144,11 +1172,16 @@ export async function performCommerceRestQuery(url, useToken = false) {
   }
 }
 
-export async function performCommerceRestMutation(url, data, useToken = false, method = 'POST') {
+export async function performCommerceRestMutation(
+  url,
+  data,
+  useToken = false,
+  method = "POST"
+) {
   try {
     return performRestMutation(url, data, useToken, method);
   } catch (error) {
-    console.error('Error fetching data', error);
+    console.error("Error fetching data", error);
     return {
       success: false,
       message: error.message,
@@ -1157,35 +1190,39 @@ export async function performCommerceRestMutation(url, data, useToken = false, m
 }
 
 export async function performAlgoliaMeshQuery(query, variables) {
-  const appId = await getConfigValue('x-algolia-application-id');
-  const apiKey = await getConfigValue('x-algolia-api-key');
+  const appId = await getConfigValue("x-algolia-application-id");
+  const apiKey = await getConfigValue("x-algolia-api-key");
   const headers = {
-    'Content-Type': 'application/json',
-    'X-Algolia-Application-Id': appId,
-    'X-Algolia-API-Key': apiKey,
-    path: '/1/indexes/*/queries',
+    "Content-Type": "application/json",
+    "X-Algolia-Application-Id": appId,
+    "X-Algolia-API-Key": apiKey,
+    path: "/1/indexes/*/queries",
   };
-  const queryResponse = await performAPIMeshGraphQLQuery(query, variables, headers);
+  const queryResponse = await performAPIMeshGraphQLQuery(
+    query,
+    variables,
+    headers
+  );
   return queryResponse;
 }
 
 export async function performAlgoliaQuery(variables) {
-  const agent = await getConfigValue('x-algolia-agent');
-  const appId = await getConfigValue('x-algolia-application-id');
-  const apiKey = await getConfigValue('x-algolia-api-key');
+  const agent = await getConfigValue("x-algolia-agent");
+  const appId = await getConfigValue("x-algolia-application-id");
+  const apiKey = await getConfigValue("x-algolia-api-key");
   const algoliaConfig = {
-    'x-algolia-agent': agent,
-    'x-algolia-application-id': appId,
-    'x-algolia-api-key': apiKey,
+    "x-algolia-agent": agent,
+    "x-algolia-application-id": appId,
+    "x-algolia-api-key": apiKey,
   };
 
   const searchParams = new URLSearchParams(algoliaConfig);
-  const algoliaDefaultUrl = await getConfigValue('algolia-default-url');
+  const algoliaDefaultUrl = await getConfigValue("algolia-default-url");
   const algoliaEndpoint = `${algoliaDefaultUrl}?${searchParams.toString()}`;
   const response = await fetch(algoliaEndpoint, {
-    method: 'POST',
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
     body: JSON.stringify({
       requests: [variables],
@@ -1195,31 +1232,41 @@ export async function performAlgoliaQuery(variables) {
 }
 
 export function getSignInToken() {
-  return getCookie('auth_user_token') ?? '';
+  return getCookie("auth_user_token") ?? "";
 }
 
-export async function performAPIMeshGraphQLQuery(query, variables, headers = {}) {
-  const endpoint = await getConfigValue('apimesh-endpoint');
-  const endpointMethod = await getConfigValue('apimesh-endpoint-method');
-  const locale = document.documentElement.lang || 'en';
-  const context = await getConfigValue('apimesh-context');
-  const market = await getConfigValue('apimesh-market');
+export async function performAPIMeshGraphQLQuery(
+  query,
+  variables,
+  headers = {}
+) {
+  const endpoint = await getConfigValue("apimesh-endpoint");
+  const endpointMethod = await getConfigValue("apimesh-endpoint-method");
+  const locale = document.documentElement.lang || "en";
+  const context = await getConfigValue("apimesh-context");
+  const market = await getConfigValue("apimesh-market");
 
   Object.assign(headers, {
     mesh_market: market,
     mesh_locale: locale,
     mesh_context: context,
-    'Magento-Website-Code': await getConfigValue('commerce-website-code'),
-    'Magento-Store-Code': await getConfigValue('commerce-store-code'),
-    'Magento-Store-View-Code': await getConfigValue('commerce-store-view-code'),
+    "Magento-Website-Code": await getConfigValue("commerce-website-code"),
+    "Magento-Store-Code": await getConfigValue("commerce-store-code"),
+    "Magento-Store-View-Code": await getConfigValue("commerce-store-view-code"),
   });
 
   const config = {
     endpoint,
-    method: endpointMethod ?? 'POST',
+    method: endpointMethod ?? "POST",
     headers,
   };
-  const response = await performMonolithGraphQLQuery(query, variables, true, false, config);
+  const response = await performMonolithGraphQLQuery(
+    query,
+    variables,
+    true,
+    false,
+    config
+  );
 
   return response;
 }
@@ -1229,16 +1276,16 @@ export async function performMonolithGraphQLQuery(
   variables,
   GET = true,
   USE_TOKEN = false,
-  config = null,
+  config = null
 ) {
-  let GRAPHQL_ENDPOINT = await getConfigValue('commerce-endpoint');
+  let GRAPHQL_ENDPOINT = await getConfigValue("commerce-endpoint");
   if (config?.endpoint) {
     GRAPHQL_ENDPOINT = config.endpoint;
   }
 
   const headers = {
-    'Content-Type': 'application/json',
-    Store: await getConfigValue('commerce-store-view-code'),
+    "Content-Type": "application/json",
+    Store: await getConfigValue("commerce-store-view-code"),
     ...config?.headers,
   };
 
@@ -1247,7 +1294,7 @@ export async function performMonolithGraphQLQuery(
   }
 
   if (USE_TOKEN) {
-    if (typeof USE_TOKEN === 'string') {
+    if (typeof USE_TOKEN === "string") {
       headers.Authorization = `Bearer ${USE_TOKEN}`;
     } else {
       const token = getSignInToken();
@@ -1257,7 +1304,7 @@ export async function performMonolithGraphQLQuery(
     }
   }
 
-  let method = 'POST';
+  let method = "POST";
   if (config?.method) {
     method = config.method;
   }
@@ -1267,18 +1314,20 @@ export async function performMonolithGraphQLQuery(
       method,
       headers,
       body: JSON.stringify({
-        query: query.replace(/(?:\r\n|\r|\n|\t|[\s]{4})/g, ' ').replace(/\s\s+/g, ' '),
+        query: query
+          .replace(/(?:\r\n|\r|\n|\t|[\s]{4})/g, " ")
+          .replace(/\s\s+/g, " "),
         variables,
       }),
     });
   } else {
     const endpoint = new URL(GRAPHQL_ENDPOINT);
-    endpoint.searchParams.set('query', query.replace(/(?:\r\n|\r|\n|\t|[\s]{4})/g, ' ').replace(/\s\s+/g, ' '));
-    endpoint.searchParams.set('variables', JSON.stringify(variables));
-    response = await fetch(
-      endpoint.toString(),
-      { headers },
+    endpoint.searchParams.set(
+      "query",
+      query.replace(/(?:\r\n|\r|\n|\t|[\s]{4})/g, " ").replace(/\s\s+/g, " ")
     );
+    endpoint.searchParams.set("variables", JSON.stringify(variables));
+    response = await fetch(endpoint.toString(), { headers });
   }
 
   if (!response.ok) {
@@ -1291,45 +1340,58 @@ export async function performMonolithGraphQLQuery(
 export async function fetchCategories(multilevel = false) {
   const categories = await performAPIMeshGraphQLQuery(
     multilevel ? categoriesQuery : categoriesLevel2Query,
-    { categoryId: API_MESH_BASE_CATEGORY_ID },
+    { categoryId: API_MESH_BASE_CATEGORY_ID }
   ).then((response) => response.data);
   return categories;
 }
 
 export async function fetchCategoriesByUrlKey(urlKey) {
-  const categories = await performAPIMeshGraphQLQuery(
-    categoriesByKeyQuery,
-    { urlKey },
-  ).then((response) => response.data);
+  const categories = await performAPIMeshGraphQLQuery(categoriesByKeyQuery, {
+    urlKey,
+  }).then((response) => response.data);
   return categories;
 }
 
 export async function getBreadcumbCategories(urlKey) {
-  return performAPIMeshGraphQLQuery(breadcrumbQuery, { urlKey }).then((response) => response.data);
+  return performAPIMeshGraphQLQuery(breadcrumbQuery, { urlKey }).then(
+    (response) => response.data
+  );
 }
 
 export async function getBreadcumbCategoriesForProduct(urlKey) {
   const variables = {
-    phrase: '',
+    phrase: "",
     filter: [
       {
-        attribute: 'url_key',
+        attribute: "url_key",
         eq: urlKey,
       },
     ],
     sort: [],
     pageSize: 10,
   };
-  return performAPIMeshGraphQLQuery(productByUrlKeyQuery, variables)
-    .then((response) => response.data);
+  return performAPIMeshGraphQLQuery(productByUrlKeyQuery, variables).then(
+    (response) => response.data
+  );
 }
 
-export function renderPrice(product, format, html = (strings, ...values) => strings.reduce((result, string, i) => result + string + (values[i] || ''), ''), Fragment = null) {
+export function renderPrice(
+  product,
+  format,
+  html = (strings, ...values) =>
+    strings.reduce(
+      (result, string, i) => result + string + (values[i] || ""),
+      ""
+    ),
+  Fragment = null
+) {
   // Simple product
   if (product.price) {
     const { regular, final } = product.price;
     if (regular.amount.value === final.amount.value) {
-      return html`<span class="price-final">${format(final.amount.value)}</span>`;
+      return html`<span class="price-final"
+        >${format(final.amount.value)}</span
+      >`;
     }
     return html`<${Fragment}>
       <span class="price-regular">${format(regular.amount.value)}</span> <span class="price-final">${format(final.amount.value)}</span>
@@ -1342,10 +1404,16 @@ export function renderPrice(product, format, html = (strings, ...values) => stri
     const { final: finalMax } = product.priceRange.maximum;
 
     if (finalMin.amount.value !== finalMax.amount.value) {
-      return html`
-      <div class="price-range">
-        ${finalMin.amount.value !== regularMin.amount.value ? html`<span class="price-regular">${format(regularMin.amount.value)}</span>` : ''}
-        <span class="price-from">${format(finalMin.amount.value)} - ${format(finalMax.amount.value)}</span>
+      return html` <div class="price-range">
+        ${finalMin.amount.value !== regularMin.amount.value
+          ? html`<span class="price-regular"
+              >${format(regularMin.amount.value)}</span
+            >`
+          : ""}
+        <span class="price-from"
+          >${format(finalMin.amount.value)} -
+          ${format(finalMax.amount.value)}</span
+        >
       </div>`;
     }
 
@@ -1355,7 +1423,9 @@ export function renderPrice(product, format, html = (strings, ...values) => stri
     </${Fragment}>`;
     }
 
-    return html`<span class="price-final">${format(finalMin.amount.value)}</span>`;
+    return html`<span class="price-final"
+      >${format(finalMin.amount.value)}</span
+    >`;
   }
 
   return null;
@@ -1376,7 +1446,9 @@ export async function getProduct(sku) {
   if (productsCache[sku]) {
     return productsCache[sku];
   }
-  const rawProductPromise = performCatalogServiceQuery(productDetailQuery, { sku });
+  const rawProductPromise = performCatalogServiceQuery(productDetailQuery, {
+    sku,
+  });
   const productPromise = rawProductPromise.then((productData) => {
     if (!productData?.products?.[0]) {
       return null;
@@ -1391,31 +1463,55 @@ export async function getProduct(sku) {
 
 // Store product view history in session storage
 export async function initProductViewHistory() {
-  const storeViewCode = await getConfigValue('commerce-store-view-code');
+  const storeViewCode = await getConfigValue("commerce-store-view-code");
   window.adobeDataLayer.push((dl) => {
-    dl.addEventListener('adobeDataLayer:change', (event) => {
-      const key = `${storeViewCode}:productViewHistory`;
-      let viewHistory = JSON.parse(window.localStorage.getItem(key) || '[]');
-      viewHistory = viewHistory.filter((item) => item.sku !== event.productContext.sku);
-      viewHistory.push({ date: new Date().toISOString(), sku: event.productContext.sku });
-      window.localStorage.setItem(key, JSON.stringify(viewHistory.slice(-10)));
-    }, { path: 'productContext' });
-    dl.addEventListener('place-order', () => {
-      const shoppingCartContext = dl.getState('shoppingCartContext');
+    dl.addEventListener(
+      "adobeDataLayer:change",
+      (event) => {
+        const key = `${storeViewCode}:productViewHistory`;
+        let viewHistory = JSON.parse(window.localStorage.getItem(key) || "[]");
+        viewHistory = viewHistory.filter(
+          (item) => item.sku !== event.productContext.sku
+        );
+        viewHistory.push({
+          date: new Date().toISOString(),
+          sku: event.productContext.sku,
+        });
+        window.localStorage.setItem(
+          key,
+          JSON.stringify(viewHistory.slice(-10))
+        );
+      },
+      { path: "productContext" }
+    );
+    dl.addEventListener("place-order", () => {
+      const shoppingCartContext = dl.getState("shoppingCartContext");
       if (!shoppingCartContext) {
         return;
       }
       const key = `${storeViewCode}:purchaseHistory`;
-      const purchasedProducts = shoppingCartContext.items.map((item) => item.product.sku);
-      const purchaseHistory = JSON.parse(window.localStorage.getItem(key) || '[]');
-      purchaseHistory.push({ date: new Date().toISOString(), items: purchasedProducts });
-      window.localStorage.setItem(key, JSON.stringify(purchaseHistory.slice(-5)));
+      const purchasedProducts = shoppingCartContext.items.map(
+        (item) => item.product.sku
+      );
+      const purchaseHistory = JSON.parse(
+        window.localStorage.getItem(key) || "[]"
+      );
+      purchaseHistory.push({
+        date: new Date().toISOString(),
+        items: purchasedProducts,
+      });
+      window.localStorage.setItem(
+        key,
+        JSON.stringify(purchaseHistory.slice(-5))
+      );
     });
   });
 }
 
 export function setJsonLd(data, name) {
-  const existingScript = document.head.querySelector(`script[data-name="${name}"]`);
+  const existingScript = document.head.querySelector(
+    `script[data-name="${name}"]`
+  );
   if (existingScript) {
     const existingData = JSON.parse(existingScript.innerHTML);
     Object.assign(existingData, data);
@@ -1423,8 +1519,8 @@ export function setJsonLd(data, name) {
     return;
   }
 
-  const script = document.createElement('script');
-  script.type = 'application/ld+json';
+  const script = document.createElement("script");
+  script.type = "application/ld+json";
 
   script.innerHTML = JSON.stringify(data);
   script.dataset.name = name;
@@ -1432,15 +1528,18 @@ export function setJsonLd(data, name) {
 }
 
 export function isPDP() {
-  return !!document.querySelector('.product-details');
+  return !!document.querySelector(".product-details");
 }
 
 export function isPLP() {
-  return !!document.querySelector('.product-listing') || !!document.querySelector('.algolia-product-listing');
+  return (
+    !!document.querySelector(".product-listing") ||
+    !!document.querySelector(".algolia-product-listing")
+  );
 }
 
 export function isOrderConfirmation() {
-  return !!document.querySelector('.order-confirmation');
+  return !!document.querySelector(".order-confirmation");
 }
 
 /**
@@ -1451,11 +1550,11 @@ export function isOrderConfirmation() {
  * @returns {string} the value of the cookie
  */
 export function getCookie(cName) {
-  const cookies = document.cookie.split(';');
+  const cookies = document.cookie.split(";");
   let foundValue;
 
   cookies.forEach((cookie) => {
-    const [name, value] = cookie.trim().split('=');
+    const [name, value] = cookie.trim().split("=");
     if (name === cName) {
       foundValue = decodeURIComponent(value);
     }
@@ -1474,12 +1573,12 @@ export function getCookie(cName) {
  */
 export function setCookie(cname, cvalue, exdays, domain, isSecured = false) {
   const date = new Date();
-  let expires = '';
+  let expires = "";
   date.setTime(date.getTime() + exdays * 24 * 60 * 60 * 1000);
   if (exdays > 0) {
     expires = `expires=${date.toUTCString()}`;
   } else if (exdays < 0) {
-    expires = 'expires=Thu, 01 Jan 1970 00:00:00 UTC';
+    expires = "expires=Thu, 01 Jan 1970 00:00:00 UTC";
   }
   if (isSecured) {
     document.cookie = `${cname}=${cvalue};${expires};path=/;domain=${domain}; SameSite=None; Secure`;
@@ -1488,14 +1587,19 @@ export function setCookie(cname, cvalue, exdays, domain, isSecured = false) {
   document.cookie = `${cname}=${cvalue};${expires};path=/`;
 }
 
-export async function fetchCommerceCategories(categoryId = API_MESH_BASE_CATEGORY_ID) {
-  const enableShoeSizeNavigation = await getConfigValue('enable-shoe-size-navigation');
-  const query = enableShoeSizeNavigation ? commerceCategoryEDS : commerceCategories;
+export async function fetchCommerceCategories(
+  categoryId = API_MESH_BASE_CATEGORY_ID
+) {
+  const enableShoeSizeNavigation = await getConfigValue(
+    "enable-shoe-size-navigation"
+  );
+  const query = enableShoeSizeNavigation
+    ? commerceCategoryEDS
+    : commerceCategories;
 
-  const categoryResponse = await performAPIMeshGraphQLQuery(
-    query,
-    { categoryId },
-  ).then((response) => response);
+  const categoryResponse = await performAPIMeshGraphQLQuery(query, {
+    categoryId,
+  }).then((response) => response);
 
   return {
     items: categoryResponse?.data?.commerce_categories?.items,
@@ -1522,25 +1626,22 @@ export async function getProductData(sku) {
 
   const {
     data: { productSearch: products },
-  } = await performAPIMeshGraphQLQuery(
-    productDetailsBySkuQuery,
-    {
-      phrase: '',
-      filter: [
-        {
-          attribute: 'sku',
-          eq: sku,
-        },
-      ],
-      sort: [
-        {
-          attribute: 'price',
-          direction: 'DESC',
-        },
-      ],
-      pageSize: 10,
-    },
-  );
+  } = await performAPIMeshGraphQLQuery(productDetailsBySkuQuery, {
+    phrase: "",
+    filter: [
+      {
+        attribute: "sku",
+        eq: sku,
+      },
+    ],
+    sort: [
+      {
+        attribute: "price",
+        direction: "DESC",
+      },
+    ],
+    pageSize: 10,
+  });
 
   if (products?.items.length > 0) {
     return products.items[0].productView;
@@ -1564,7 +1665,9 @@ export async function getProductPromotionByRuleId(ruleId) {
 }
 
 export async function getFreeGiftProductImageBySku(sku) {
-  const { data: { products } } = await performAPIMeshGraphQLQuery(productDetailsBySkuListQuery, {
+  const {
+    data: { products },
+  } = await performAPIMeshGraphQLQuery(productDetailsBySkuListQuery, {
     sku: [sku],
   });
   return products;
@@ -1594,9 +1697,8 @@ export async function getPromotionByUrlKey(urlPath) {
   const url = urlPath.match(/promotion\/[^/]+/);
   const urlKey = url ? url[0] : null;
 
-  const promotion = await performAPIMeshGraphQLQuery(
-    promotionByUrlKeyQuery,
-    { urlKey },
-  ).then((response) => response.data);
+  const promotion = await performAPIMeshGraphQLQuery(promotionByUrlKeyQuery, {
+    urlKey,
+  }).then((response) => response.data);
   return promotion;
 }
