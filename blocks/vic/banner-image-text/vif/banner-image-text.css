@@ -17,21 +17,18 @@
 .banner-image-text .banner-image-text-content {
   flex: 0 0 50%; /* Adjusted width to 70% */
   text-align: center;
-  margin: auto; 
-  padding: 0 40px;
-  /* Center the content within its container */
+  margin: auto; /* Center the content within its container */
 }
 
 .banner-image-text h3 {
   color: var(--tlc-logo-brand-logo-main, var(--tlc-logo-brand-logo-main, #333));
   text-align: center; /* label/sm/bold */
-  font-family: var(--font-family-body, "Victoria Two");
-  font-size: var(--font-size-font-size-14-12, 16px);
+  font-family: var(--font-family-body, "Calibre 2");
+  font-size: var(--font-size-font-size-14-12, 14px);
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 130%; /* 18.2px */
   text-transform: uppercase;
-  letter-spacing: 2px;
 }
 
 .banner-image-text h2 {
@@ -40,10 +37,9 @@
   font-family: "Victoria Two";
   font-size: var(--font-size-font-size-48-40, 36px);
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 140%; /* 67.2px */
   margin: 0 !important;
-  letter-spacing: 1.2px;
 }
 
 .banner-image-text h2 strong {
@@ -55,13 +51,12 @@
 .banner-image-text p {
   color: var(--text-text-main, var(--text-text-main, #221d1d));
   text-align: center; /* text/md/regular */
-  font-family: var(--font-family-body, "Victoria Two");
+  font-family: var(--font-family-body, "Calibre 2");
   font-size: var(--font-size-font-size-16-14, 16px);
   font-style: normal;
   font-weight: 400;
   line-height: 140%; /* 22.4px */
   margin: 0 !important;
-  letter-spacing: 1.2px;
 }
 
 .banner-image-text a.order-button {
@@ -71,10 +66,10 @@
     --tlc-button-flat-default-text,
     var(--tlc-button-flat-default-text, #4e3844)
   ); /* underline/md/bold */
-  font-family: var(--font-family-body, "Victoria Two");
+  font-family: var(--font-family-body, "Calibre 2");
   font-size: var(--font-size-font-size-16-14, 16px);
   font-style: normal;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 140%; /* 22.4px */
   text-decoration-line: underline;
   text-decoration-style: solid;
@@ -83,8 +78,6 @@
   text-underline-offset: auto;
   text-underline-position: from-font;
   margin-top: 10px !important;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
 }
 
 .banner-image-text .banner-image-text-image {
@@ -109,24 +102,4 @@
     flex-basis: 100%;
     max-width: 100%;
   }
-}
-
-.banner-image-text.dark-bg {
-  background-color: #8e1b22;
-}
-
-.banner-image-text.dark-bg h2 {
-  color: #fff;
-}
-
-.banner-image-text.dark-bg p {
-  color: #fff;
-}
-
-.banner-image-text.dark-bg a.order-button {
-  color: #fff;
-}
-
-.banner-image-text.dark-bg h3 {
-  color: #fff;
 }

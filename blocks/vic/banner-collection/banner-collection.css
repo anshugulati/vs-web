@@ -1,0 +1,82 @@
+.banner-collection {
+  display: flex;
+  flex-wrap: wrap;
+  background: #f8f5f2;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.banner-collection .banner-collection-image {
+  flex: 0 0 30%; /* Adjusted width to 30% */
+  order: 2; /* Ensure the image appears on the right */
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.banner-collection .banner-collection-image img {
+  width: 100%;
+  height: auto;
+}
+
+.banner-collection .banner-collection-content {
+  flex: 0 0 70%; /* Adjusted width to 70% */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner-collection .banner-collection-content .limited-edition {
+  font-family: 'Victoria Two', sans-serif;
+  font-size: 14px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.banner-collection .banner-collection-content .collection-title {
+  font-family: 'Victoria Two', sans-serif;
+  font-size: 36px;
+  color: #111;
+  margin: 10px 0;
+}
+
+.banner-collection .banner-collection-content .collection-subtitle {
+  font-family: 'Victoria Two', sans-serif;
+  font-size: 24px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.banner-collection .banner-collection-content .collection-description {
+  font-family: 'Victoria Two', sans-serif;
+  font-size: 16px;
+  color: #555;
+  margin: 20px 0;
+}
+
+.banner-collection .banner-collection-content .shop-now {
+  font-family: 'Victoria Two', sans-serif;
+  font-size: 16px;
+  color: #007bff;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.banner-collection .banner-collection-content .shop-now:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .banner-collection {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .banner-collection .banner-collection-image,
+  .banner-collection .banner-collection-content {
+    flex-basis: 100%;
+    max-width: 100%;
+    order: initial; /* Reset order for mobile view */
+  }
+}
