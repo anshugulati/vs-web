@@ -13,27 +13,42 @@
 
 .blackoffer-banner h1 {
   font-size: var(--font-size-10);
-  line-height: var(--line-height-m);
   margin: var(--space-space-4x) 0;
 }
 
 .blackoffer-banner h2 {
-  font-size: var(--font-size-8);
+  font-size: 26px;
   line-height: var(--line-height-m);
   margin: var(--space-space-4x) 0;
+  letter-spacing: 4px;
 }
 
 .blackoffer-banner p {
   font-size: var(--font-size-6);
   margin: var(--space-space-4x) 0;
+  letter-spacing: 2px;
+  font-weight: 400;
 }
 
 .blackoffer-banner .shoplink {
-  margin-top: var(--space-space-4x);
-  font-size: var(--font-size-4);
-  line-height: var(--line-height-m);
-  text-decoration: underline;
-  color: var(--color-neutral-50) !important;
+    text-align: center;
+    font-family: var(--font-family-body, "Victoria Two");
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+    margin-top: 10px !important;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.blackoffer-banner a.shoplink {
+  color: white;
 }
 
 .blackoffer-banner-wrapper {
