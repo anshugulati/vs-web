@@ -27,7 +27,7 @@
   font-size: var(--font-size-6);
   margin: var(--space-space-4x) 0;
   letter-spacing: 2px;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .blackoffer-banner .shoplink {
@@ -45,6 +45,7 @@
     margin-top: 10px !important;
     letter-spacing: 1.2px;
     text-transform: uppercase;
+    text-decoration-line: underline;
 }
 
 .blackoffer-banner a.shoplink {
